@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:ACNHGuide.ViewModels"
+             mc:Ignorable="d"
+             x:Class="ACNHGuide.Views.CrittersPage"
+             BackgroundColor="#f3daf4">
+    <ContentPage.BindingContext>
+        <vm:CrittersViewModel></vm:CrittersViewModel>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+            <CollectionView Margin="5, 5, 5, 0" ItemsSource="{Binding Critters}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="0, 0, 0, 15">
+                        <Frame BackgroundColor="#f5efd1" CornerRadius="15">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="64"></RowDefinition>
+                                    <RowDefinition Height="64"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="64"></ColumnDefinition>
+                                    <ColumnDefinition Width="32"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Source="{Binding Icon}"
+                                           Grid.Row="0"
+                                           Grid.Column="0">
+                                </Image>
+                                <Label Text="{Binding Name}"
+                                       Grid.Row="1"
+                                       Grid.Column="0"></Label>
+
+                                <Image Source="{Binding SellIcon}"
+                                       Grid.RowSpan="2"
+                                       Grid.Column="1"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"></Image>
+
+                                <Label Text="{Binding SellPrice}"
+                                       Grid.RowSpan="2"
+                                       Grid.Column="2"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Start"></Label>
+
+                                <Label Text="{Binding Location}"
+                                       Grid.Row="0"
+                                       Grid.Column="3"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="StartAndExpand"></Label>
+
+                                <Label Text="{Binding Time}"
+                                       Grid.Row="1"
+                                       Grid.Column="3"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="StartAndExpand"></Label>
+                            </Grid>
+
+                        </Frame>
+                    </StackLayout>
+                        
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+    </ContentPage.Content>
+</ContentPage>
