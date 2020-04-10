@@ -16,13 +16,21 @@ namespace ACNHGuide.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CrittersPage : ContentPage
     {
-        //private CrittersViewModel _crittersViewModel;
         public CrittersPage()
         {
             InitializeComponent();
+        }
 
-            //this._crittersViewModel = new CrittersViewModel();
-            //this.BindingContext = this._crittersViewModel.Critters;
+        void OnImageNameTapped(object sender, EventArgs args)
+        {
+            try
+            {
+                DisplayAlert("Test", "Test", "Cancel");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

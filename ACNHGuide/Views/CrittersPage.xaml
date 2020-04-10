@@ -12,8 +12,15 @@
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
-            <CollectionView Margin="5, 5, 5, 0" ItemsSource="{Binding Critters}">
-                <CollectionView.ItemTemplate>
+            <CollectionView Margin="5, 5, 5, 0"
+                            HorizontalOptions="FillAndExpand"
+                            ItemsSource="{Binding Critters}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout
+                   Orientation="Vertical" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="0, 0, 0, 15">
                         <Frame BackgroundColor="#f5efd1" CornerRadius="15">
@@ -21,6 +28,7 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="64"></RowDefinition>
                                     <RowDefinition Height="64"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
                                 </Grid.RowDefinitions>
 
                                 <Grid.ColumnDefinitions>
@@ -45,11 +53,13 @@
                                        VerticalOptions="Center"
                                        HorizontalOptions="Start"></Image>
 
-                                <Label Text="{Binding SellPrice}"
-                                       Grid.RowSpan="2"
-                                       Grid.Column="2"
-                                       VerticalOptions="Center"
-                                       HorizontalOptions="Start"></Label>
+                                <StackLayout VerticalOptions="CenterAndExpand" Grid.RowSpan="2" Grid.Column="2">
+                                    <Label Text="{Binding SellPricePenalty,
+                                                          StringFormat='{0} (-20%)'}"></Label>
+                                    <Label Text="{Binding SellPrice}"></Label>
+                                    <Label Text="{Binding SellPriceBonus,
+                                                          StringFormat='{0} (+50%)'}"></Label>
+                                </StackLayout>
 
                                 <Label Text="{Binding Location}"
                                        Grid.Row="0"
@@ -62,8 +72,23 @@
                                        Grid.Column="3"
                                        VerticalOptions="Center"
                                        HorizontalOptions="StartAndExpand"></Label>
-                            </Grid>
+                                
+                                <Label Text="Jan Feb Mar Apr May Jun Jul Aug Sept Oct Nov Dec"
+                                       Grid.RowSpan="2"
+                                       Grid.Column="4"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="StartAndExpand"></Label>
 
+                                <Image Source="{Binding DonatedIcon}"
+                                       Grid.Row="3"
+                                       Grid.Column="0">
+                                    <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                            Tapped="OnImageNameTapped"
+                                            NumberOfTapsRequired="1" />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Grid>
                         </Frame>
                     </StackLayout>
                         

@@ -21,7 +21,7 @@ namespace ACNHGuide.ViewModels
             {
                 Name = "Common Butterfly",
                 SellIcon = "BellCoin.png",
-                SellPrice = 160000002222222222,
+                SellPrice = 2000,
                 Time = "4am - 7pm",
                 Location = "Flying",
                 Icon = "NH_Icon_commonbutterfly.png"
