@@ -15,6 +15,7 @@ namespace ACNHGuide.Models
         public string Location { get; set; }
         public string Icon { get; set; }
         public string Time { get; set; }
+        public string Months { get; set; }
         public double SellPricePenalty
         {
             get

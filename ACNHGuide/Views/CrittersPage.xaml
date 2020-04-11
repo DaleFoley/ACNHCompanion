@@ -32,7 +32,7 @@
                                 </Grid.RowDefinitions>
 
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="64"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="32"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -41,11 +41,14 @@
 
                                 <Image Source="{Binding Icon}"
                                            Grid.Row="0"
-                                           Grid.Column="0">
+                                           Grid.Column="0"
+                                       HorizontalOptions="StartAndExpand">
                                 </Image>
                                 <Label Text="{Binding Name}"
                                        Grid.Row="1"
-                                       Grid.Column="0"></Label>
+                                       Grid.Column="0"
+                                       Margin="0, 0, 0, 0"
+                                       HorizontalOptions="StartAndExpand"></Label>
 
                                 <Image Source="{Binding SellIcon}"
                                        Grid.RowSpan="2"
@@ -73,7 +76,7 @@
                                        VerticalOptions="Center"
                                        HorizontalOptions="StartAndExpand"></Label>
                                 
-                                <Label Text="Jan Feb Mar Apr May Jun Jul Aug Sept Oct Nov Dec"
+                                <Label Text="{Binding Months}"
                                        Grid.RowSpan="2"
                                        Grid.Column="4"
                                        VerticalOptions="Center"
@@ -81,7 +84,10 @@
 
                                 <Image Source="{Binding DonatedIcon}"
                                        Grid.Row="3"
-                                       Grid.Column="0">
+                                       Grid.Column="0"
+                                       HorizontalOptions="StartAndExpand"
+                                       HeightRequest="48"
+                                       WidthRequest="48">
                                     <Image.GestureRecognizers>
                                     <TapGestureRecognizer
                                             Tapped="OnImageNameTapped"

@@ -14,31 +14,38 @@ namespace ACNHGuide.ViewModels
         public List<Critter> Critters { get; set; }
         public CrittersViewModel()
         {
+            DatabaseManager db = new DatabaseManager();
+            List<DBModels.Critter> dbCritters = db.GetAllCritters();
+
             Title = "Critters";
             Critters = new List<Critter>();
 
-            Critter TestCritterOne = new Critter
+            foreach (DBModels.Critter dbCritter in dbCritters)
             {
-                Name = "Common Butterfly",
-                SellIcon = "BellCoin.png",
-                SellPrice = 2000,
-                Time = "4am - 7pm",
-                Location = "Flying",
-                Icon = "Common_butterfly.png"
-            };
+                string pathToImage = "";
+                if(dbCritter.type == "bug")
+                {
+                    pathToImage = "bug/" + dbCritter.image_name;
+                }
+                else if(dbCritter.type == "fish")
+                {
+                    pathToImage = "fish/" + dbCritter.image_name;
+                }
 
-            Critter TestCritterTwo = new Critter
-            {
-                Name = "Common Butterfly",
-                SellIcon = "BellCoin.png",
-                SellPrice = 160,
-                Time = "4am - 7pm",
-                Location = "Flying",
-                Icon = "Common_bluebottle.png"
-            };
+                Models.Critter critterToAdd = new Models.Critter
+                {
+                    Name = dbCritter.critter_name,
+                    SellIcon = "BellCoin.png",
+                    SellPrice = dbCritter.sell_price,
+                    Time = dbCritter.time,
+                    Location = dbCritter.location,
+                    IsDonated = dbCritter.is_donated,
+                    Months = dbCritter.months,
+                    Icon = pathToImage
+                };
 
-            Critters.Add(TestCritterOne);
-            Critters.Add(TestCritterTwo);
+                Critters.Add(critterToAdd);
+            }
         }
     }
 }

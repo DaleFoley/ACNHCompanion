@@ -19,6 +19,7 @@ namespace ACNHGuide.Views
         public CrittersPage()
         {
             InitializeComponent();
+            //BindingContext = new CrittersViewModel();
         }
 
         void OnImageNameTapped(object sender, EventArgs args)
