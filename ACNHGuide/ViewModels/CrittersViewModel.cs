@@ -24,7 +24,7 @@ namespace ACNHGuide.ViewModels
                 SellPrice = 2000,
                 Time = "4am - 7pm",
                 Location = "Flying",
-                Icon = "NH_Icon_commonbutterfly.png"
+                Icon = "Common_butterfly.png"
             };
 
             Critter TestCritterTwo = new Critter
@@ -34,7 +34,7 @@ namespace ACNHGuide.ViewModels
                 SellPrice = 160,
                 Time = "4am - 7pm",
                 Location = "Flying",
-                Icon = "NH_Icon_commonbutterfly.png"
+                Icon = "Common_bluebottle.png"
             };
 
             Critters.Add(TestCritterOne);

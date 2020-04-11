@@ -3,12 +3,13 @@ from bs4 import BeautifulSoup
 import requests
 import sqlite3
 import re
+import base64
 
 # This is a one-off script to populate a sqlite database with required data for the app, in this case 'bugs' data.
 # It also grabs any related images and adds them to our project.
 
 # TODO: iOS assets
-path_assets = "../../ACNHGuide.Android/Resources/drawable"
+path_assets = "../../ACNHGuide.Android/Resources/drawable/"
 path_sqlite = "../../app_data.db"
 
 table_name_bugs = 'bugs'
@@ -114,6 +115,27 @@ def insert_bugs(html_content):
     db_connection.commit()
 
 
+def download_animal_images(html_content):
+    for idx in range(1, len(html_content)):
+        html_table_row = html_content[idx]
+
+        name = html_table_row.contents[1].text.strip().replace('-', '_').replace(' ', '_').replace('\'', '')
+        image = html_table_row.contents[2]
+
+        # Test base64 later..
+        # image_src_base64 = image.a.img.attrs['src']
+        image_src_url = image.a.img.attrs['data-src']
+        image_response = requests.get(image_src_url)
+
+        if image_response.status_code == 200:
+            image_data = image_response.content
+            f = open(path_assets + name + '.png', 'wb')
+            f.write(image_data)
+            f.close()
+        else:
+            breakpoint()
+
+
 response = requests.get('https://animalcrossing.fandom.com/wiki/Bugs_(New_Horizons)')
 
 if response.status_code == 200:
@@ -126,5 +148,7 @@ if response.status_code == 200:
 
     bug_rows_southern = html_source.findAll('table')[4].findAll('table')[0].findAll('tr')
     insert_animal_months(bug_rows_southern, table_name_southern_months)
+
+    download_animal_images(bug_rows_northern)
 
 db_connection.close()
