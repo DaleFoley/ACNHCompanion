@@ -8,7 +8,8 @@ namespace ACNHCompanion.Models
     {
         Browse,
         About,
-        Critters
+        Critters,
+        Main
     }
     public class HomeMenuItem
     {

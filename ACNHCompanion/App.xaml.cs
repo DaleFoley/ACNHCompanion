@@ -14,7 +14,7 @@ namespace ACNHCompanion
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new MainPage();
+            MainPage = new MasterDetailExtras();
         }
 
         protected override void OnStart()

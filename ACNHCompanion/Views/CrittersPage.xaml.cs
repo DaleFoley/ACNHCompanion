@@ -19,7 +19,6 @@ namespace ACNHCompanion.Views
         public CrittersPage()
         {
             InitializeComponent();
-            //BindingContext = new CrittersViewModel();
         }
 
         void OnImageNameTapped(object sender, EventArgs args)
@@ -33,5 +32,7 @@ namespace ACNHCompanion.Views
                 throw ex;
             }
         }
+
+
     }
 }

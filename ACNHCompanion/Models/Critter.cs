@@ -16,6 +16,7 @@ namespace ACNHCompanion.Models
         public string Icon { get; set; }
         public string Time { get; set; }
         public string Months { get; set; }
+        public string Rarity { get; set; }
         public double SellPricePenalty
         {
             get

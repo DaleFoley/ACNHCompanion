@@ -3,13 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:vm="clr-namespace:ACNHCompanion.ViewModels"
              mc:Ignorable="d"
              x:Class="ACNHCompanion.Views.CrittersPage"
              BackgroundColor="#f3daf4">
-    <ContentPage.BindingContext>
-        <vm:CrittersViewModel></vm:CrittersViewModel>
-    </ContentPage.BindingContext>
     
     <ContentPage.Content>
             <CollectionView Margin="5, 5, 5, 0"
@@ -28,7 +24,7 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="64"></RowDefinition>
                                     <RowDefinition Height="64"></RowDefinition>
-                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="32"></RowDefinition>
                                 </Grid.RowDefinitions>
 
                                 <Grid.ColumnDefinitions>
@@ -38,12 +34,13 @@
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-
+                                
                                 <Image Source="{Binding Icon}"
                                            Grid.Row="0"
                                            Grid.Column="0"
                                        HorizontalOptions="StartAndExpand">
                                 </Image>
+                                
                                 <Label Text="{Binding Name}"
                                        Grid.Row="1"
                                        Grid.Column="0"
@@ -81,19 +78,36 @@
                                        Grid.Column="4"
                                        VerticalOptions="Center"
                                        HorizontalOptions="StartAndExpand"></Label>
-
+                                
                                 <Image Source="{Binding DonatedIcon}"
-                                       Grid.Row="3"
+                                       Grid.Row="2"
                                        Grid.Column="0"
                                        HorizontalOptions="StartAndExpand"
-                                       HeightRequest="48"
-                                       WidthRequest="48">
+                                       VerticalOptions="StartAndExpand"
+                                       HeightRequest="32"
+                                       WidthRequest="32">
                                     <Image.GestureRecognizers>
                                     <TapGestureRecognizer
                                             Tapped="OnImageNameTapped"
                                             NumberOfTapsRequired="1" />
                                     </Image.GestureRecognizers>
                                 </Image>
+
+                                <BoxView BackgroundColor="LightGray"
+                                         Grid.Row="2"
+                                         Grid.Column="1"
+                                         Grid.ColumnSpan="4"
+                                         CornerRadius="15"
+                                         MinimumHeightRequest="20"></BoxView>
+                                
+                                <Label Text="{Binding Rarity}"
+                                       Grid.Row="2"
+                                       Grid.Column="1"
+                                       Grid.ColumnSpan="4"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="StartAndExpand"
+                                       Margin="5, 0, 0, 0"></Label>
+                                         
                             </Grid>
                         </Frame>
                     </StackLayout>

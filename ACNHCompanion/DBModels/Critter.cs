@@ -15,5 +15,6 @@ namespace ACNHCompanion.DBModels
         public string image_name { get; set; }
         public bool is_donated { get; set; }
         public string months { get; set; }
+        public string rarity { get; set; }
     }
 }

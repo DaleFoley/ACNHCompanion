@@ -9,29 +9,20 @@ using ACNHCompanion.Views;
 
 namespace ACNHCompanion.ViewModels
 {
-    class CrittersViewModel : BaseViewModel
+    public class CrittersViewModel : BaseViewModel
     {
         public List<Critter> Critters { get; set; }
+
         public CrittersViewModel()
         {
             DatabaseManager db = new DatabaseManager();
-            List<DBModels.Critter> dbCritters = db.GetAllCritters();
+            List<DBModels.Critter> dbCritters = db.GetFishNorthern();
 
-            Title = "Critters";
+            Title = "Fish";
             Critters = new List<Critter>();
 
             foreach (DBModels.Critter dbCritter in dbCritters)
             {
-                string pathToImage = "";
-                if(dbCritter.type == "bug")
-                {
-                    pathToImage = "bug/" + dbCritter.image_name;
-                }
-                else if(dbCritter.type == "fish")
-                {
-                    pathToImage = "fish/" + dbCritter.image_name;
-                }
-
                 Models.Critter critterToAdd = new Models.Critter
                 {
                     Name = dbCritter.critter_name,
@@ -41,7 +32,8 @@ namespace ACNHCompanion.ViewModels
                     Location = dbCritter.location,
                     IsDonated = dbCritter.is_donated,
                     Months = dbCritter.months,
-                    Icon = pathToImage
+                    Rarity = dbCritter.rarity,
+                    Icon = dbCritter.image_name
                 };
 
                 Critters.Add(critterToAdd);

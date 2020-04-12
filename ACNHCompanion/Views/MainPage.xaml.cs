@@ -18,10 +18,7 @@ namespace ACNHCompanion.Views
         public MainPage()
         {
             InitializeComponent();
-
             MasterBehavior = MasterBehavior.Popover;
-
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -30,9 +27,6 @@ namespace ACNHCompanion.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
-                        break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;

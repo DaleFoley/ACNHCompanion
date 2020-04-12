@@ -6,8 +6,8 @@ import sqlite3
 import re
 import logging
 
-# This is a one-off script to populate a sqlite database with required data for the app, in this case 'bugs' and 'fish'
-# data. It also grabs any related images and adds them to our project.
+# This is a one-off script to populate a sqlite database with ACNH data. Fish, Bugs, Villagers etc..
+# Keep in mind HTML structural changes on target sites will most likely cause errors and/or malformed scraped data.
 
 # TODO: copy images to iOS path
 
@@ -83,11 +83,29 @@ def insert_critter_months(p_html_content, p_destination_table, p_contents_index_
                            (name, months))
 
 
+def get_rarity_data(p_url):
+    rarity = None
+    response = requests.get(p_url)
+
+    if response.status_code == 200:
+        html_doc = response.text
+        html_source = BeautifulSoup(html_doc, 'html.parser')
+
+        rarity = html_source.find("div", {"data-source": "rarity"}).div.text
+
+    return rarity
+
+
 def insert_fish_and_scrape_images(p_html_content):
     for idx in range(1, len(p_html_content)):
         fish_row = p_html_content[idx]
 
         fish_name = fish_row.contents[1].text.strip()
+
+        anchor_row = fish_row.contents[1].a
+        url_to_extended_info = url_animalcrossing_fandom + anchor_row.attrs['href']
+        rarity = get_rarity_data(url_to_extended_info)
+
         fish_image_name = 'fish_' + fish_row.contents[1].text.strip().replace('-', '_').replace(' ', '_')\
             .replace('\'', '') + ".png"
         fish_image = fish_row.contents[2]
@@ -98,8 +116,8 @@ def insert_fish_and_scrape_images(p_html_content):
 
         time = format_time(time)
 
-        db_command.execute('''insert into ''' + table_name_critters + ''' values (?, ?, ?, ?, ?, ?, ?, ?)''',
-                           (fish_name, sell_price, location, time, shadow_size, 'fish', fish_image_name, 0))
+        db_command.execute('''insert into ''' + table_name_critters + ''' values (?, ?, ?, ?, ?, ?, ?, ?, ?)''',
+                           (fish_name, sell_price, location, time, shadow_size, 'fish', fish_image_name, rarity, 0))
 
         download_critter_image(fish_image, fish_image_name)
 
@@ -109,6 +127,11 @@ def insert_bugs_and_scrape_images(p_html_content):
         bug_row = p_html_content[idx]
 
         bug_name = bug_row.contents[1].text.strip()
+
+        anchor_row = bug_row.contents[1].a
+        url_to_extended_info = url_animalcrossing_fandom + anchor_row.attrs['href']
+        rarity = get_rarity_data(url_to_extended_info)
+
         bug_image_name = 'bug_' + bug_row.contents[1].text.strip().replace('-', '_').replace(' ', '_')\
             .replace('\'', '') + ".png"
         bug_image = bug_row.contents[2]
@@ -118,8 +141,8 @@ def insert_bugs_and_scrape_images(p_html_content):
 
         time = format_time(time)
 
-        db_command.execute('''insert into ''' + table_name_critters + ''' values (?, ?, ?, ?, ?, ?, ?, ?)''',
-                           (bug_name, sell_price, location, time, None, 'bug', bug_image_name, 0))
+        db_command.execute('''insert into ''' + table_name_critters + ''' values (?, ?, ?, ?, ?, ?, ?, ?, ?)''',
+                           (bug_name, sell_price, location, time, None, 'bug', bug_image_name, rarity, 0))
 
         download_critter_image(bug_image, bug_image_name)
 
@@ -150,6 +173,7 @@ def setup_db_schemas(p_db_command):
             shadow_size text null,
             type text,
             image_name text,
+            rarity text,
             is_donated integer default 0)''')
 
     p_db_command.execute('''drop table if exists ''' + table_name_northern_months)
@@ -189,8 +213,8 @@ def setup_db_schemas(p_db_command):
         as 
            select ''' + table_name_critters + '''.*, ''' + table_name_northern_months + '''.months
            from ''' + table_name_critters + '''
-           inner join ''' + table_name_southern_months + ''' on ''' +
-                         table_name_southern_months + '''.critter_name = ''' +
+           inner join ''' + table_name_northern_months + ''' on ''' +
+                         table_name_northern_months + '''.critter_name = ''' +
                          table_name_critters + '''.critter_name 
            where ''' + table_name_critters + '''.type = 'fish'
            order by ''' + table_name_critters + '''.critter_name''')
@@ -223,12 +247,14 @@ ascii_checkmark = 10003
 
 db_connection = sqlite3.connect(path_sqlite)
 
+url_animalcrossing_fandom = 'https://animalcrossing.fandom.com'
+
 try:
     db_command = db_connection.cursor()
 
     setup_db_schemas(db_command)
 
-    response = requests.get('https://animalcrossing.fandom.com/wiki/Bugs_(New_Horizons)')
+    response = requests.get(url_animalcrossing_fandom + '/wiki/Bugs_(New_Horizons)')
 
     if response.status_code == 200:
         html_doc = response.text
@@ -241,7 +267,7 @@ try:
         bug_rows_southern = html_source.findAll('table')[4].findAll('table')[0].findAll('tr')
         insert_critter_months(bug_rows_southern, table_name_southern_months)
 
-    response = requests.get('https://animalcrossing.fandom.com/wiki/Fish_(New_Horizons)')
+    response = requests.get(url_animalcrossing_fandom + '/wiki/Fish_(New_Horizons)')
 
     if response.status_code == 200:
         html_doc = response.text
@@ -252,7 +278,7 @@ try:
         insert_critter_months(fish_rows_northern, table_name_northern_months, 1)
 
         fish_rows_southern = html_source.findAll('table')[4].findAll('tr')
-        insert_critter_months(fish_rows_northern, table_name_southern_months, 1)
+        insert_critter_months(fish_rows_southern, table_name_southern_months, 1)
 
 except BaseException as error:
     logger = logging.getLogger("scrape")
