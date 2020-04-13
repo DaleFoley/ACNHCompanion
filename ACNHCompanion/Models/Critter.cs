@@ -10,6 +10,7 @@ namespace ACNHCompanion.Models
         public bool IsDonated = false;
         public string Name { get; set; }
         public string SellIcon { get; set; }
+        public string ShadowSizeIcon { get; set; }
         public long SellPrice { get; set; }
 
         public string Location { get; set; }
@@ -17,6 +18,7 @@ namespace ACNHCompanion.Models
         public string Time { get; set; }
         public string Months { get; set; }
         public string Rarity { get; set; }
+        public string ShadowSize { get; set; }
         public double SellPricePenalty
         {
             get

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,6 +7,7 @@ namespace ACNHCompanion.DBModels
 {
     public class Critter
     {
+        [PrimaryKey, AutoIncrement]
         public string critter_name { get; set; }
         public int sell_price { get; set; }
         public string location { get; set; }

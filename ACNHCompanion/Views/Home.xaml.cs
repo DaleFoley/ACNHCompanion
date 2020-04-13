@@ -13,14 +13,14 @@ namespace ACNHCompanion.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Home : TabbedPage
     {
-        public CrittersViewModel FishTab { get; set; }
+        public FishViewModel FishTab { get; set; }
         public BugsViewModel BugsTab { get; set; }
 
         public Home()
         {
             InitializeComponent();
 
-            FishTab = new CrittersViewModel();
+            FishTab = new FishViewModel();
             BugsTab = new BugsViewModel();
 
             NavigationPage bugsPage = new NavigationPage(new CrittersPage());

@@ -6181,124 +6181,145 @@ namespace ACNHCompanion.Droid
 			public const int fish_Sea_horse = 2131165430;
 			
 			// aapt resource value: 0x7F0700F7
-			public const int fish_Snapping_Turtle = 2131165431;
+			public const int fish_shadow_size_1 = 2131165431;
 			
 			// aapt resource value: 0x7F0700F8
-			public const int fish_Soft_shelled_turtle = 2131165432;
+			public const int fish_shadow_size_2 = 2131165432;
 			
 			// aapt resource value: 0x7F0700F9
-			public const int fish_Squid = 2131165433;
+			public const int fish_shadow_size_3 = 2131165433;
 			
 			// aapt resource value: 0x7F0700FA
-			public const int fish_Stringfish = 2131165434;
+			public const int fish_shadow_size_4 = 2131165434;
 			
 			// aapt resource value: 0x7F0700FB
-			public const int fish_Sturgeon = 2131165435;
+			public const int fish_shadow_size_5 = 2131165435;
 			
 			// aapt resource value: 0x7F0700FC
-			public const int fish_Suckerfish = 2131165436;
+			public const int fish_shadow_size_6 = 2131165436;
 			
 			// aapt resource value: 0x7F0700FD
-			public const int fish_Surgeonfish = 2131165437;
+			public const int fish_Snapping_Turtle = 2131165437;
 			
 			// aapt resource value: 0x7F0700FE
-			public const int fish_Sweetfish = 2131165438;
+			public const int fish_Soft_shelled_turtle = 2131165438;
 			
 			// aapt resource value: 0x7F0700FF
-			public const int fish_Tadpole = 2131165439;
+			public const int fish_Squid = 2131165439;
 			
 			// aapt resource value: 0x7F070100
-			public const int fish_Tilapia = 2131165440;
+			public const int fish_Stringfish = 2131165440;
 			
 			// aapt resource value: 0x7F070101
-			public const int fish_Tuna = 2131165441;
+			public const int fish_Sturgeon = 2131165441;
 			
 			// aapt resource value: 0x7F070102
-			public const int fish_Whale_shark = 2131165442;
+			public const int fish_Suckerfish = 2131165442;
 			
 			// aapt resource value: 0x7F070103
-			public const int fish_Yellow_perch = 2131165443;
+			public const int fish_Surgeonfish = 2131165443;
 			
 			// aapt resource value: 0x7F070104
-			public const int fish_Zebra_turkeyfish = 2131165444;
+			public const int fish_Sweetfish = 2131165444;
 			
 			// aapt resource value: 0x7F070105
-			public const int gift = 2131165445;
+			public const int fish_Tadpole = 2131165445;
 			
 			// aapt resource value: 0x7F070106
-			public const int house_false = 2131165446;
+			public const int fish_Tilapia = 2131165446;
 			
 			// aapt resource value: 0x7F070107
-			public const int house_true = 2131165447;
+			public const int fish_Tuna = 2131165447;
 			
 			// aapt resource value: 0x7F070108
-			public const int ic_mtrl_chip_checked_black = 2131165448;
+			public const int fish_Whale_shark = 2131165448;
 			
 			// aapt resource value: 0x7F070109
-			public const int ic_mtrl_chip_checked_circle = 2131165449;
+			public const int fish_Yellow_perch = 2131165449;
 			
 			// aapt resource value: 0x7F07010A
-			public const int ic_mtrl_chip_close_circle = 2131165450;
+			public const int fish_Zebra_turkeyfish = 2131165450;
 			
 			// aapt resource value: 0x7F07010B
-			public const int mtrl_snackbar_background = 2131165451;
+			public const int gift = 2131165451;
 			
 			// aapt resource value: 0x7F07010C
-			public const int mtrl_tabs_default_indicator = 2131165452;
+			public const int house_false = 2131165452;
 			
 			// aapt resource value: 0x7F07010D
-			public const int navigation_empty_icon = 2131165453;
+			public const int house_true = 2131165453;
 			
 			// aapt resource value: 0x7F07010E
-			public const int north_hemi_selected = 2131165454;
+			public const int ic_mtrl_chip_checked_black = 2131165454;
 			
 			// aapt resource value: 0x7F07010F
-			public const int notification_action_background = 2131165455;
+			public const int ic_mtrl_chip_checked_circle = 2131165455;
 			
 			// aapt resource value: 0x7F070110
-			public const int notification_bg = 2131165456;
+			public const int ic_mtrl_chip_close_circle = 2131165456;
 			
 			// aapt resource value: 0x7F070111
-			public const int notification_bg_low = 2131165457;
+			public const int mtrl_snackbar_background = 2131165457;
 			
 			// aapt resource value: 0x7F070112
-			public const int notification_bg_low_normal = 2131165458;
+			public const int mtrl_tabs_default_indicator = 2131165458;
 			
 			// aapt resource value: 0x7F070113
-			public const int notification_bg_low_pressed = 2131165459;
+			public const int navigation_empty_icon = 2131165459;
 			
 			// aapt resource value: 0x7F070114
-			public const int notification_bg_normal = 2131165460;
+			public const int north_hemi_selected = 2131165460;
 			
 			// aapt resource value: 0x7F070115
-			public const int notification_bg_normal_pressed = 2131165461;
+			public const int notification_action_background = 2131165461;
 			
 			// aapt resource value: 0x7F070116
-			public const int notification_icon_background = 2131165462;
+			public const int notification_bg = 2131165462;
 			
 			// aapt resource value: 0x7F070117
-			public const int notification_template_icon_bg = 2131165463;
+			public const int notification_bg_low = 2131165463;
 			
 			// aapt resource value: 0x7F070118
-			public const int notification_template_icon_low_bg = 2131165464;
+			public const int notification_bg_low_normal = 2131165464;
 			
 			// aapt resource value: 0x7F070119
-			public const int notification_tile_bg = 2131165465;
+			public const int notification_bg_low_pressed = 2131165465;
 			
 			// aapt resource value: 0x7F07011A
-			public const int notify_panel_notification_icon_bg = 2131165466;
+			public const int notification_bg_normal = 2131165466;
 			
 			// aapt resource value: 0x7F07011B
-			public const int south_hemi_selected = 2131165467;
+			public const int notification_bg_normal_pressed = 2131165467;
 			
 			// aapt resource value: 0x7F07011C
-			public const int tooltip_frame_dark = 2131165468;
+			public const int notification_icon_background = 2131165468;
 			
 			// aapt resource value: 0x7F07011D
-			public const int tooltip_frame_light = 2131165469;
+			public const int notification_template_icon_bg = 2131165469;
 			
 			// aapt resource value: 0x7F07011E
-			public const int xamarin_logo = 2131165470;
+			public const int notification_template_icon_low_bg = 2131165470;
+			
+			// aapt resource value: 0x7F07011F
+			public const int notification_tile_bg = 2131165471;
+			
+			// aapt resource value: 0x7F070120
+			public const int notify_panel_notification_icon_bg = 2131165472;
+			
+			// aapt resource value: 0x7F070121
+			public const int search = 2131165473;
+			
+			// aapt resource value: 0x7F070122
+			public const int south_hemi_selected = 2131165474;
+			
+			// aapt resource value: 0x7F070123
+			public const int tooltip_frame_dark = 2131165475;
+			
+			// aapt resource value: 0x7F070124
+			public const int tooltip_frame_light = 2131165476;
+			
+			// aapt resource value: 0x7F070125
+			public const int xamarin_logo = 2131165477;
 			
 			static Drawable()
 			{

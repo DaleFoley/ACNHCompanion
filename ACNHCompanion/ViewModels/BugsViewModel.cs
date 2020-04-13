@@ -7,12 +7,9 @@ namespace ACNHCompanion.ViewModels
 {
     public class BugsViewModel : BaseViewModel
     {
-        public List<Critter> Critters { get; set; }
-
         public BugsViewModel()
         {
-            DatabaseManager db = new DatabaseManager();
-            List<DBModels.Critter> dbCritters = db.GetBugsNorthern();
+            List<DBModels.Critter> dbCritters = App.ApplicationDatabase.GetBugsNorthern();
 
             Title = "Bugs";
             Critters = new List<Critter>();

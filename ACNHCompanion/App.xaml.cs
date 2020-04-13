@@ -8,10 +8,12 @@ namespace ACNHCompanion
 {
     public partial class App : Application
     {
-
+        public static DatabaseManager ApplicationDatabase;
         public App()
         {
             InitializeComponent();
+
+            ApplicationDatabase = new DatabaseManager();
 
             DependencyService.Register<MockDataStore>();
             MainPage = new MasterDetailExtras();

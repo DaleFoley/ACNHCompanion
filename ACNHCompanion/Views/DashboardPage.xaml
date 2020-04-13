@@ -5,9 +5,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="ACNHCompanion.Views.DashboardPage"
-             Title="{Binding Title}"
+             Title="Dashboard"
              x:Name="Dashboard"
              BackgroundColor="#f3daf4">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+                 IconImageSource="search.png"
+                 Order="Primary"
+                 Priority="0"
+            Text="Search"/>
+    </ContentPage.ToolbarItems>
 
     <StackLayout Margin="5, 5, 5, 0">
         <Frame Padding="8" BackgroundColor="#f5efd1" CornerRadius="10">

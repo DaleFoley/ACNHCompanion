@@ -174,7 +174,7 @@ def setup_db_schemas(p_db_command):
             type text,
             image_name text,
             rarity text,
-            is_donated integer default 0)''')
+            is_donated default 0)''')
 
     p_db_command.execute('''drop table if exists ''' + table_name_northern_months)
     p_db_command.execute('''create table ''' + table_name_northern_months + ''' (id integer primary key,

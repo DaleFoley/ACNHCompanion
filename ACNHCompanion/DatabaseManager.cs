@@ -13,6 +13,8 @@ namespace ACNHCompanion
         public DatabaseManager()
         {
             _dbConnection = DependencyService.Get<IDBInterface>().CreateConnection();
+
+            //_dbConnection.CreateTable<>
         }
 
         public List<Critter> GetFishNorthern()
