@@ -91,7 +91,9 @@ def get_rarity_data(p_url):
         html_doc = response.text
         html_source = BeautifulSoup(html_doc, 'html.parser')
 
-        rarity = html_source.find("div", {"data-source": "rarity"}).div.text
+        rarity_div = html_source.find("div", {"data-source": "rarity"})
+        if rarity_div is not None:
+            rarity = rarity_div.div.text
 
     return rarity
 
@@ -116,8 +118,9 @@ def insert_fish_and_scrape_images(p_html_content):
 
         time = format_time(time)
 
-        db_command.execute('''insert into ''' + table_name_critters + ''' values (?, ?, ?, ?, ?, ?, ?, ?, ?)''',
-                           (fish_name, sell_price, location, time, shadow_size, 'fish', fish_image_name, rarity, 0))
+        db_command.execute('''insert into ''' + table_name_critters + '''
+                            (critter_name, sell_price, location, time, shadow_size, type, image_name, rarity) values (?, ?, ?, ?, ?, ?, ?, ?)''',
+                           (fish_name, sell_price, location, time, shadow_size, 'fish', fish_image_name, rarity))
 
         download_critter_image(fish_image, fish_image_name)
 
@@ -141,8 +144,9 @@ def insert_bugs_and_scrape_images(p_html_content):
 
         time = format_time(time)
 
-        db_command.execute('''insert into ''' + table_name_critters + ''' values (?, ?, ?, ?, ?, ?, ?, ?, ?)''',
-                           (bug_name, sell_price, location, time, None, 'bug', bug_image_name, rarity, 0))
+        db_command.execute('''insert into ''' + table_name_critters + '''
+                            (critter_name, sell_price, location, time, shadow_size, type, image_name, rarity) values (?, ?, ?, ?, ?, ?, ?, ?)''',
+                           (bug_name, sell_price, location, time, None, 'bug', bug_image_name, rarity))
 
         download_critter_image(bug_image, bug_image_name)
 
@@ -166,7 +170,8 @@ def download_critter_image(p_image_tag, p_path_image):
 
 def setup_db_schemas(p_db_command):
     p_db_command.execute('''drop table if exists ''' + table_name_critters)
-    p_db_command.execute('''create table ''' + table_name_critters + ''' (critter_name text primary key,
+    p_db_command.execute('''create table ''' + table_name_critters + ''' (id integer primary key,
+            critter_name text,
             sell_price integer,
             location text,
             time text,

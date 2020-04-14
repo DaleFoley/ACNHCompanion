@@ -13,15 +13,21 @@ namespace ACNHCompanion.ViewModels
     {
         public FishViewModel()
         {
-            List<DBModels.Critter> dbCritters = App.ApplicationDatabase.GetFishNorthern();
+            RefreshViewModel();
+        }
+
+        public void RefreshViewModel()
+        {
+            List<DBModels.CritterMonth> dbCritters = App.ApplicationDatabase.GetFishNorthern();
 
             Title = "Fish";
-            Critters = new List<Critter>();
 
-            foreach (DBModels.Critter dbCritter in dbCritters)
+            //TODO: DRY
+            foreach (DBModels.CritterMonth dbCritter in dbCritters)
             {
                 Models.Critter critterToAdd = new Models.Critter
                 {
+                    Id = dbCritter.id,
                     Name = dbCritter.critter_name,
                     SellIcon = "BellCoin",
                     SellPrice = dbCritter.sell_price,
@@ -31,7 +37,8 @@ namespace ACNHCompanion.ViewModels
                     Months = dbCritter.months,
                     Rarity = dbCritter.rarity,
                     Icon = dbCritter.image_name,
-                    ShadowSize = dbCritter.shadow_size                   
+                    ShadowSize = dbCritter.shadow_size,
+                    Type = dbCritter.type
                 };
 
                 critterToAdd.ShadowSizeIcon = GetShadowSizeIcon(critterToAdd.ShadowSize);
@@ -55,6 +62,8 @@ namespace ACNHCompanion.ViewModels
                 case "5":
                     return "fish_shadow_size_5.png";
                 case "6":
+                    return "fish_shadow_size_6.png";
+                case "6 (Fin)":
                     return "fish_shadow_size_6.png";
                 default:
                     return "";

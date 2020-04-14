@@ -25,7 +25,26 @@ namespace ACNHCompanion.Views
         {
             try
             {
-                DisplayAlert("Test", "Test", "Cancel");
+                TappedEventArgs e = (TappedEventArgs)args;
+
+                Critter critterSelected = (Critter)e.Parameter;
+                critterSelected.IsDonated = critterSelected.IsDonated ? false : true;
+
+                DBModels.Critters critterToUpdate = new DBModels.Critters
+                {
+                    critter_name = critterSelected.Name,
+                    id = critterSelected.Id,
+                    image_name = critterSelected.Icon,
+                    is_donated = critterSelected.IsDonated,
+                    location = critterSelected.Location,
+                    rarity = critterSelected.Rarity,
+                    sell_price = (int)critterSelected.SellPrice,
+                    shadow_size = critterSelected.ShadowSize,
+                    time = critterSelected.Time,
+                    type = critterSelected.Type
+                };
+
+                App.ApplicationDatabase.UpdateCritterIsDonated(critterToUpdate);
             }
             catch (Exception ex)
             {

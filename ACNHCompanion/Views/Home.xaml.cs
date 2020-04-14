@@ -23,18 +23,18 @@ namespace ACNHCompanion.Views
             FishTab = new FishViewModel();
             BugsTab = new BugsViewModel();
 
-            NavigationPage bugsPage = new NavigationPage(new CrittersPage());
-            bugsPage.IconImageSource = "bug_Bell_cricket.png";
-            bugsPage.Title = "Bugs";
-            bugsPage.BindingContext = BugsTab;
-
             NavigationPage fishPage = new NavigationPage(new CrittersPage());
             fishPage.IconImageSource = "fish_anchovy.png";
             fishPage.Title = "Fish";
             fishPage.BindingContext = FishTab;
 
-            Children.Add(bugsPage);
+            NavigationPage bugsPage = new NavigationPage(new CrittersPage());
+            bugsPage.IconImageSource = "bug_Bell_cricket.png";
+            bugsPage.Title = "Bugs";
+            bugsPage.BindingContext = BugsTab;
+
             Children.Add(fishPage);
+            Children.Add(bugsPage);
         }
     }
 }

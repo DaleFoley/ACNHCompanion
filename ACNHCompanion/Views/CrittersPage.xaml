@@ -103,7 +103,7 @@
                                     <Image.GestureRecognizers>
                                     <TapGestureRecognizer
                                         Tapped="OnImageNameTapped"
-                                        CommandParameter="{Binding Icon}"
+                                        CommandParameter="{Binding}"
                                         />
                                     </Image.GestureRecognizers>
                                 </Image>

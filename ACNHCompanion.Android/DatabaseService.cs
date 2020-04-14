@@ -24,15 +24,16 @@ namespace ACNHCompanion.Droid
 
         public SQLiteConnection CreateConnection()
         {
-            var sqliteFilename = "app_data.db";
+            string sqliteFilename = "app_data.db";
             string documentsDirectoryPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
-            var path = Path.Combine(documentsDirectoryPath, sqliteFilename);
+            
+            string pathToSQLDatabase = Path.Combine(documentsDirectoryPath, sqliteFilename);
 
-            if(!File.Exists(path))
+            if (!File.Exists(pathToSQLDatabase))
             {
                 using (var binaryReader = new BinaryReader(Application.Context.Assets.Open(sqliteFilename)))
                 {
-                    using (var binaryWriter = new BinaryWriter(new FileStream(path, FileMode.Create)))
+                    using (var binaryWriter = new BinaryWriter(new FileStream(pathToSQLDatabase, FileMode.Create)))
                     {
                         byte[] buffer = new byte[2048];
                         int length = 0;
@@ -44,7 +45,7 @@ namespace ACNHCompanion.Droid
                 }
             }
 
-            var conn = new SQLiteConnection(path);
+            var conn = new SQLiteConnection(pathToSQLDatabase, SQLiteOpenFlags.ReadWrite);
 
             return conn;
         }
