@@ -2,17 +2,22 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using ACNHCompanion.Views;
+using System.Collections.Generic;
+using ACNHCompanion.Models;
 
 namespace ACNHCompanion
 {
     public partial class App : Application
     {
         public static DatabaseManager ApplicationDatabase;
+        public static List<Config> Config;
         public App()
         {
             InitializeComponent();
 
             ApplicationDatabase = new DatabaseManager();
+            Config = ApplicationDatabase.GetConfigValues();
+
             MainPage = new MasterDetailExtras();
         }
 

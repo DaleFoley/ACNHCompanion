@@ -16,6 +16,20 @@ namespace ACNHCompanion
             _dbConnection = DependencyService.Get<IDBInterface>().CreateConnection();
         }
 
+        public List<Config> GetConfigValues()
+        {
+            return _dbConnection.Query<Config>("select * from [config]");
+        }
+
+        public void UpdateConfigValue(Config configToUpdate)
+        {
+            int rowsUpdated = _dbConnection.Update(configToUpdate);
+            if (rowsUpdated == 0)
+            {
+                //Row didn't update, now what?
+            }
+        }
+
         public List<CritterMonths> GetFishNorthern()
         {
             return _dbConnection.Query<CritterMonths>("select * from [v_fish_northern]");

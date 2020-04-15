@@ -6,6 +6,7 @@ using Xamarin.Forms;
 
 using ACNHCompanion.Models;
 using ACNHCompanion.Views;
+using System.Linq;
 
 namespace ACNHCompanion.ViewModels
 {
@@ -18,9 +19,19 @@ namespace ACNHCompanion.ViewModels
 
         public void RefreshViewModel()
         {
-            List<CritterMonths> dbFish = App.ApplicationDatabase.GetFishNorthern();
+            Config hemisphereConfig = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
+            List<CritterMonths> dbFish = null;
 
-            Title = "Fish";
+            if (hemisphereConfig.Value == "north")
+            {
+                dbFish = App.ApplicationDatabase.GetFishNorthern();
+            }
+            else
+            {
+                dbFish = App.ApplicationDatabase.GetFishSouthern();
+            }
+
+            Title = "Fish - " + hemisphereConfig.Value;
             CrittersToDisplay = GetCritterViewModelCollection(dbFish);
         }
     }

@@ -76,13 +76,13 @@ def setup_db_schemas(p_db_command):
            where ''' + table_name_critters + '''.Type = 'fish'
            order by ''' + table_name_critters + '''.CritterName''')
 
+
+def insert_predefined_values(p_db_command):
     p_db_command.execute('''insert into ''' + table_name_config +
-                         ''' (Name, Value) values (?, ?)''', 'hemisphere', 'north')
+                         ''' (Name, Value) values (?, ?)''', ('hemisphere', 'North'))
     p_db_command.execute('''insert into ''' + table_name_config +
-                         ''' (Name, Value) values (?, ?)''', 'version', '1.0.0')
+                         ''' (Name, Value) values (?, ?)''', ('version', '1.0.0'))
 
 
 db_connection = sqlite3.connect(path_sqlite)
 db_command = db_connection.cursor()
-
-setup_db_schemas(db_command)

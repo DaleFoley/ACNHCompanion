@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ACNHCompanion.Models;
+using ACNHCompanion.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -16,19 +18,49 @@ namespace ACNHCompanion.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MasterDetailExtrasMaster : ContentPage
     {
-
+        private MasterDetailExtrasMasterViewModel _view;
         public MasterDetailExtrasMaster()
         {
             InitializeComponent();
+
+            MasterDetailExtrasMasterViewModel _view = new MasterDetailExtrasMasterViewModel();
+            this.BindingContext = _view;
+
+            _view = (MasterDetailExtrasMasterViewModel)this.BindingContext;
+
+            Config hemisphereCurrent = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
+            string hemisphereValue = hemisphereCurrent.Value;
+
+            if (hemisphereValue.ToLower() == "south")
+            {
+                _view.Hemisphere = "south_hemi_selected";
+            }
+            else
+            {
+                _view.Hemisphere = "north_hemi_selected";
+            }
         }
 
         void TapGestureRecognizer_Tapped(object sender, EventArgs args)
         {
-            Image i = (Image)sender;
-            i.Source = "north_hemi_selected.png";
+            _view = (MasterDetailExtrasMasterViewModel)this.BindingContext;
 
-            DisplayAlert("test", "test", "test");
-            Debugger.Break();
+            Config hemisphereCurrent = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
+            string hemisphereValue = hemisphereCurrent.Value;
+
+            if(hemisphereValue.ToLower() == "north")
+            {
+                _view.Hemisphere = "south_hemi_selected";
+                hemisphereCurrent.Value = "South";
+            }
+            else
+            {
+                _view.Hemisphere = "north_hemi_selected";
+                hemisphereCurrent.Value = "North";
+            }
+
+            App.ApplicationDatabase.UpdateConfigValue(hemisphereCurrent);
+            App.Config = App.ApplicationDatabase.GetConfigValues();
         }
     }
 }

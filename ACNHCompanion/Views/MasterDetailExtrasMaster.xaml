@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="ACNHCompanion.Views.MasterDetailExtrasMaster"
              Title="Master">
+    
   <StackLayout>
         <Grid BackgroundColor="#03A9F4">
             <Grid.RowDefinitions>
@@ -16,7 +17,7 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Image Source="south_hemi_selected.png">
+            <Image Source="{Binding Hemisphere}">
                 <Image.GestureRecognizers>
                     <TapGestureRecognizer
                             Tapped="TapGestureRecognizer_Tapped"

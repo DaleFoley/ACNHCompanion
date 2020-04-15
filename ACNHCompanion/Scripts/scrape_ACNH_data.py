@@ -172,6 +172,9 @@ def download_critter_image(p_image_tag, p_path_image):
 
 
 try:
+    setup_db_schemas(db_command)
+    insert_predefined_values(db_command)
+
     response = requests.get(url_animalcrossing_fandom + '/wiki/Bugs_(New_Horizons)')
 
     if response.status_code == 200:
