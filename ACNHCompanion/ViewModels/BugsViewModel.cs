@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Text;
 
 namespace ACNHCompanion.ViewModels
@@ -15,9 +16,19 @@ namespace ACNHCompanion.ViewModels
 
         public void RefreshViewModel()
         {
-            List<CritterMonths> dbBugs = App.ApplicationDatabase.GetBugsNorthern();
-            
-            Title = "Bugs";
+            Config hemisphereConfig = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
+            List<CritterMonths> dbBugs = null;
+
+            if (hemisphereConfig.Value.ToLower() == "north")
+            {
+                dbBugs = App.ApplicationDatabase.GetBugsNorthern();
+            }
+            else
+            {
+                dbBugs = App.ApplicationDatabase.GetBugsSouthern();
+            }
+
+            Title = "Bugs - " + hemisphereConfig.Value;
             CrittersToDisplay = GetCritterViewModelCollection(dbBugs);
         }
     }

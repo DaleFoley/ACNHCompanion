@@ -9,126 +9,129 @@
              Title="{Binding Title}">
     
     <ContentPage.Content>
+        <RefreshView IsRefreshing="{Binding IsRefreshing}"
+                    Command="{Binding RefreshCommand}">
             <CollectionView Margin="5, 5, 5, 0"
                             HorizontalOptions="FillAndExpand"
                             ItemsSource="{Binding CrittersToDisplay}">
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout
                    Orientation="Vertical" />
-            </CollectionView.ItemsLayout>
+                </CollectionView.ItemsLayout>
 
-            <CollectionView.ItemTemplate>
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="0, 0, 0, 15">
-                        <Frame BackgroundColor="#f5efd1" CornerRadius="15">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"></RowDefinition>
-                                    <RowDefinition Height="64"></RowDefinition>
-                                    <RowDefinition Height="*"></RowDefinition>
-                                </Grid.RowDefinitions>
+                            <Frame BackgroundColor="#f5efd1" CornerRadius="15">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="64"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
 
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="auto"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                    <ColumnDefinition Width="*"></ColumnDefinition>
-                                </Grid.ColumnDefinitions>
-                                
-                                <Image Source="{Binding Icon}"
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Source="{Binding Icon}"
                                            Grid.Row="0"
                                            Grid.Column="0"
                                        HorizontalOptions="StartAndExpand">
-                                </Image>
-                                
-                                <Label Text="{Binding Name}"
+                                    </Image>
+
+                                    <Label Text="{Binding Name}"
                                        Grid.Row="1"
                                        Grid.Column="0"
                                        Margin="0, 0, 0, 0"
                                        HorizontalOptions="StartAndExpand"></Label>
-                                
-                                <Label Text="{Binding ShadowSize}"
+
+                                    <Label Text="{Binding ShadowSize}"
                                        Grid.Row="0"
                                        Grid.Column="1"
                                        HorizontalOptions="Center"
                                        VerticalOptions="Start"></Label>
 
-                                <Image Source="{Binding ShadowSizeIcon}"
+                                    <Image Source="{Binding ShadowSizeIcon}"
                                            Grid.Row="1"
                                            Grid.Column="1"
                                        HorizontalOptions="Center">
-                                </Image>
+                                    </Image>
 
-                                <Image Source="{Binding SellIcon}"
+                                    <Image Source="{Binding SellIcon}"
                                        Grid.RowSpan="2"
                                        Grid.Column="2"
                                        VerticalOptions="Center"
                                        HorizontalOptions="Start"></Image>
 
-                                <StackLayout VerticalOptions="CenterAndExpand" Grid.RowSpan="2" Grid.Column="3">
-                                    <Label Text="{Binding SellPricePenalty,
+                                    <StackLayout VerticalOptions="CenterAndExpand" Grid.RowSpan="2" Grid.Column="3">
+                                        <Label Text="{Binding SellPricePenalty,
                                                           StringFormat='{0} (-20%)'}"></Label>
-                                    <Label Text="{Binding SellPrice}"></Label>
-                                    <Label Text="{Binding SellPriceBonus,
+                                        <Label Text="{Binding SellPrice}"></Label>
+                                        <Label Text="{Binding SellPriceBonus,
                                                           StringFormat='{0} (+50%)'}"></Label>
-                                </StackLayout>
+                                    </StackLayout>
 
-                                <Label Text="{Binding Location}"
+                                    <Label Text="{Binding Location}"
                                        Grid.Row="0"
                                        Grid.Column="4"
                                        VerticalOptions="StartAndExpand"
                                        HorizontalOptions="StartAndExpand"></Label>
 
-                                <Label Text="{Binding Time}"
+                                    <Label Text="{Binding Time}"
                                        Grid.Row="1"
                                        Grid.Column="4"
                                        VerticalOptions="End"
                                        HorizontalOptions="StartAndExpand"></Label>
-                                
-                                <Label Text="{Binding Months}"
+
+                                    <Label Text="{Binding Months}"
                                        Grid.RowSpan="2"
                                        Grid.Column="5"
                                        VerticalOptions="StartAndExpand"
                                        HorizontalOptions="StartAndExpand"></Label>
-                                
-                                <Image Source="{Binding DonatedIcon}"
+
+                                    <Image Source="{Binding DonatedIcon}"
                                        Grid.Row="2"
                                        Grid.Column="0"
                                        HorizontalOptions="StartAndExpand"
                                        VerticalOptions="StartAndExpand"
                                        HeightRequest="32"
                                        WidthRequest="32">
-                                    <Image.GestureRecognizers>
-                                    <TapGestureRecognizer
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
                                         Tapped="OnDonatedTapped"
                                         CommandParameter="{Binding}"
                                         />
-                                    </Image.GestureRecognizers>
-                                </Image>
+                                        </Image.GestureRecognizers>
+                                    </Image>
 
-                                <BoxView BackgroundColor="LightGray"
+                                    <BoxView BackgroundColor="LightGray"
                                          Grid.Row="2"
                                          Grid.Column="2"
                                          Grid.ColumnSpan="4"
                                          CornerRadius="15"
                                          MinimumHeightRequest="20"></BoxView>
-                                
-                                <Label Text="{Binding Rarity}"
+
+                                    <Label Text="{Binding Rarity}"
                                        Grid.Row="2"
                                        Grid.Column="2"
                                        Grid.ColumnSpan="4"
                                        VerticalOptions="CenterAndExpand"
                                        HorizontalOptions="StartAndExpand"
                                        Margin="5, 0, 0, 0"></Label>
-                                         
-                            </Grid>
-                        </Frame>
-                    </StackLayout>
-                        
+
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+        </RefreshView>
     </ContentPage.Content>
 </ContentPage>

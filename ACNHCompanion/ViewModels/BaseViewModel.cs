@@ -12,8 +12,15 @@ using System.Collections.ObjectModel;
 
 namespace ACNHCompanion.ViewModels
 {
-    public class BaseViewModel
+    public class BaseViewModel : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
+        }
+
+        //Raise notify on collection changed..
         public ObservableCollection<Critter> CrittersToDisplay { get; set; }
         public string Title { get; set; }
 
