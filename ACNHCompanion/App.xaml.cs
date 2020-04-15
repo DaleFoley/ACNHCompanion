@@ -4,6 +4,7 @@ using Xamarin.Forms.Xaml;
 using ACNHCompanion.Views;
 using System.Collections.Generic;
 using ACNHCompanion.Models;
+using System.Diagnostics;
 
 namespace ACNHCompanion
 {

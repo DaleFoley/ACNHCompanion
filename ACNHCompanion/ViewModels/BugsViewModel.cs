@@ -15,23 +15,11 @@ namespace ACNHCompanion.ViewModels
             RefreshViewModel();
         }
 
-        //DRY
-        private bool _isRefreshing = false;
-        public bool IsRefreshing
-        {
-            get { return _isRefreshing; }
-            set
-            {
-                _isRefreshing = value;
-                OnNotifyPropertyChanged(nameof(IsRefreshing));
-            }
-        }
-
         public Command RefreshCommand
         {
             get
             {
-                return new Command(async () =>
+                return new Command(() =>
                 {
                     IsRefreshing = true;
 

@@ -54,6 +54,17 @@ namespace ACNHCompanion.ViewModels
             CrittersToDisplay = new ObservableCollection<Critter>();
         }
 
+        private bool _isRefreshing = false;
+        public bool IsRefreshing
+        {
+            get { return _isRefreshing; }
+            set
+            {
+                _isRefreshing = value;
+                OnNotifyPropertyChanged(nameof(IsRefreshing));
+            }
+        }
+
         private string GetShadowSizeIcon(string shadowSize)
         {
             //TODO: Get better looking images for shadow size.
