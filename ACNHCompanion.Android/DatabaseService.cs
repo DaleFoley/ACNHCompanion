@@ -29,8 +29,9 @@ namespace ACNHCompanion.Droid
             
             string pathToSQLDatabase = Path.Combine(documentsDirectoryPath, sqliteFilename);
 
-            if (!File.Exists(pathToSQLDatabase))
-            {
+            //Uncomment when publishing to prod, once a base release is settled the database shouldn't be overwritten on startup..
+            //if (!File.Exists(pathToSQLDatabase))
+            //{
                 using (var binaryReader = new BinaryReader(Application.Context.Assets.Open(sqliteFilename)))
                 {
                     using (var binaryWriter = new BinaryWriter(new FileStream(pathToSQLDatabase, FileMode.Create)))
@@ -43,7 +44,7 @@ namespace ACNHCompanion.Droid
                         }
                     }
                 }
-            }
+            //}
 
             var conn = new SQLiteConnection(pathToSQLDatabase, SQLiteOpenFlags.ReadWrite);
 

@@ -2,9 +2,10 @@ from bs4 import BeautifulSoup
 from PIL import Image
 
 import requests
-import sqlite3
 import re
 import logging
+
+from setup_app_data import *
 
 # This is a one-off script to populate a sqlite database with ACNH data. Fish, Bugs, Villagers etc..
 # Keep in mind HTML structural changes on target sites will most likely cause errors and/or malformed scraped data.
@@ -79,7 +80,7 @@ def insert_critter_months(p_html_content, p_destination_table, p_contents_index_
             months_available.append("dec")
 
         months = ' '.join(months_available)
-        db_command.execute('insert into ' + p_destination_table + ' (critter_name, months) values (?, ?)',
+        db_command.execute('insert into ' + p_destination_table + ' (CritterName, Months) values (?, ?)',
                            (name, months))
 
 
@@ -119,7 +120,8 @@ def insert_fish_and_scrape_images(p_html_content):
         time = format_time(time)
 
         db_command.execute('''insert into ''' + table_name_critters + '''
-                            (critter_name, sell_price, location, time, shadow_size, type, image_name, rarity) values (?, ?, ?, ?, ?, ?, ?, ?)''',
+                            (CritterName, SellPrice, Location, Time, ShadowSize, Type, ImageName, Rarity) ''' +
+                           '''values (?, ?, ?, ?, ?, ?, ?, ?)''',
                            (fish_name, sell_price, location, time, shadow_size, 'fish', fish_image_name, rarity))
 
         download_critter_image(fish_image, fish_image_name)
@@ -145,7 +147,8 @@ def insert_bugs_and_scrape_images(p_html_content):
         time = format_time(time)
 
         db_command.execute('''insert into ''' + table_name_critters + '''
-                            (critter_name, sell_price, location, time, shadow_size, type, image_name, rarity) values (?, ?, ?, ?, ?, ?, ?, ?)''',
+                            (CritterName, SellPrice, Location, Time, ShadowSize, Type, ImageName, Rarity) ''' +
+                           '''values (?, ?, ?, ?, ?, ?, ?, ?)''',
                            (bug_name, sell_price, location, time, None, 'bug', bug_image_name, rarity))
 
         download_critter_image(bug_image, bug_image_name)
@@ -168,97 +171,7 @@ def download_critter_image(p_image_tag, p_path_image):
         breakpoint()
 
 
-def setup_db_schemas(p_db_command):
-    p_db_command.execute('''drop table if exists ''' + table_name_critters)
-    p_db_command.execute('''create table ''' + table_name_critters + ''' (id integer primary key,
-            critter_name text,
-            sell_price integer,
-            location text,
-            time text,
-            shadow_size text null,
-            type text,
-            image_name text,
-            rarity text,
-            is_donated default 0)''')
-
-    p_db_command.execute('''drop table if exists ''' + table_name_northern_months)
-    p_db_command.execute('''create table ''' + table_name_northern_months + ''' (id integer primary key,
-            critter_name text,
-            months text)''')
-
-    p_db_command.execute('''drop table if exists ''' + table_name_southern_months)
-    p_db_command.execute('''create table ''' + table_name_southern_months + ''' (id integer primary key,
-            critter_name text,
-            months text)''')
-
-    p_db_command.execute('''drop view if exists ''' + view_name_bugs_northern)
-    p_db_command.execute('create view ' + view_name_bugs_northern + '''
-    as 
-       select ''' + table_name_critters + '''.*, ''' + table_name_northern_months + '''.months
-       from ''' + table_name_critters + '''
-       inner join ''' + table_name_northern_months + ''' on ''' +
-                         table_name_northern_months + '''.critter_name = ''' +
-                         table_name_critters + '''.critter_name 
-       where ''' + table_name_critters + '''.type = 'bug'
-       order by ''' + table_name_critters + '''.critter_name''')
-
-    p_db_command.execute('''drop view if exists ''' + view_name_bugs_southern)
-    p_db_command.execute('create view ' + view_name_bugs_southern + '''
-        as 
-           select ''' + table_name_critters + '''.*, ''' + table_name_southern_months + '''.months
-           from ''' + table_name_critters + '''
-           inner join ''' + table_name_southern_months + ''' on ''' +
-                         table_name_southern_months + '''.critter_name = ''' +
-                         table_name_critters + '''.critter_name 
-           where ''' + table_name_critters + '''.type = 'bug'
-           order by ''' + table_name_critters + '''.critter_name''')
-
-    p_db_command.execute('''drop view if exists ''' + view_name_fish_northern)
-    p_db_command.execute('create view ' + view_name_fish_northern + '''
-        as 
-           select ''' + table_name_critters + '''.*, ''' + table_name_northern_months + '''.months
-           from ''' + table_name_critters + '''
-           inner join ''' + table_name_northern_months + ''' on ''' +
-                         table_name_northern_months + '''.critter_name = ''' +
-                         table_name_critters + '''.critter_name 
-           where ''' + table_name_critters + '''.type = 'fish'
-           order by ''' + table_name_critters + '''.critter_name''')
-
-    p_db_command.execute('''drop view if exists ''' + view_name_fish_southern)
-    p_db_command.execute('create view ' + view_name_fish_southern + '''
-        as 
-           select ''' + table_name_critters + '''.*, ''' + table_name_southern_months + '''.months
-           from ''' + table_name_critters + '''
-           inner join ''' + table_name_southern_months + ''' on ''' +
-                         table_name_southern_months + '''.critter_name = ''' +
-                         table_name_critters + '''.critter_name 
-           where ''' + table_name_critters + '''.type = 'fish'
-           order by ''' + table_name_critters + '''.critter_name''')
-
-
-path_android_assets = "../../ACNHCompanion.Android/Resources/drawable/"
-path_sqlite = "../../app_data.db"
-
-table_name_critters = 'critters'
-table_name_northern_months = 'northern_months'
-table_name_southern_months = 'southern_months'
-
-view_name_bugs_northern = 'v_bugs_northern'
-view_name_bugs_southern = 'v_bugs_southern'
-view_name_fish_northern = 'v_fish_northern'
-view_name_fish_southern = 'v_fish_southern'
-
-ascii_checkmark = 10003
-
-db_connection = sqlite3.connect(path_sqlite)
-
-url_animalcrossing_fandom = 'https://animalcrossing.fandom.com'
-
 try:
-    db_command = db_connection.cursor()
-
-    setup_db_schemas(db_command)
-
     response = requests.get(url_animalcrossing_fandom + '/wiki/Bugs_(New_Horizons)')
 
     if response.status_code == 200:

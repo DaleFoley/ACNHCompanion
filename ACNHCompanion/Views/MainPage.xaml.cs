@@ -21,32 +21,32 @@ namespace ACNHCompanion.Views
             MasterBehavior = MasterBehavior.Popover;
         }
 
-        public async Task NavigateFromMenu(int id)
-        {
-            if (!MenuPages.ContainsKey(id))
-            {
-                switch (id)
-                {
-                    case (int)MenuItemType.About:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
-                        break;
-                    case (int)MenuItemType.Critters:
-                        MenuPages.Add(id, new NavigationPage(new CrittersPage()));
-                        break;
-                }
-            }
+        //public async Task NavigateFromMenu(int id)
+        //{
+        //    if (!MenuPages.ContainsKey(id))
+        //    {
+        //        switch (id)
+        //        {
+        //            case (int)MenuItemType.About:
+        //                MenuPages.Add(id, new NavigationPage(new AboutPage()));
+        //                break;
+        //            case (int)MenuItemType.Critters:
+        //                MenuPages.Add(id, new NavigationPage(new CrittersPage()));
+        //                break;
+        //        }
+        //    }
 
-            var newPage = MenuPages[id];
+        //    var newPage = MenuPages[id];
 
-            if (newPage != null && Detail != newPage)
-            {
-                Detail = newPage;
+        //    if (newPage != null && Detail != newPage)
+        //    {
+        //        Detail = newPage;
 
-                if (Device.RuntimePlatform == Device.Android)
-                    await Task.Delay(100);
+        //        if (Device.RuntimePlatform == Device.Android)
+        //            await Task.Delay(100);
 
-                IsPresented = false;
-            }
-        }
+        //        IsPresented = false;
+        //    }
+        //}
     }
 }

@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using ACNHCompanion.Models;
 using ACNHCompanion.Views;
 using ACNHCompanion.ViewModels;
+using System.Diagnostics;
 
 namespace ACNHCompanion.Views
 {
@@ -21,7 +22,7 @@ namespace ACNHCompanion.Views
             InitializeComponent();
         }
 
-        void OnImageNameTapped(object sender, EventArgs args)
+        void OnDonatedTapped(object sender, EventArgs args)
         {
             try
             {
@@ -30,28 +31,27 @@ namespace ACNHCompanion.Views
                 Critter critterSelected = (Critter)e.Parameter;
                 critterSelected.IsDonated = critterSelected.IsDonated ? false : true;
 
-                DBModels.Critters critterToUpdate = new DBModels.Critters
+                Critters critterToUpdate = new Critters
                 {
-                    critter_name = critterSelected.Name,
-                    id = critterSelected.Id,
-                    image_name = critterSelected.Icon,
-                    is_donated = critterSelected.IsDonated,
-                    location = critterSelected.Location,
-                    rarity = critterSelected.Rarity,
-                    sell_price = (int)critterSelected.SellPrice,
-                    shadow_size = critterSelected.ShadowSize,
-                    time = critterSelected.Time,
-                    type = critterSelected.Type
+                    CritterName = critterSelected.Name,
+                    ID = critterSelected.Id,
+                    ImageName = critterSelected.Icon,
+                    IsDonated = critterSelected.IsDonated,
+                    Location = critterSelected.Location,
+                    Rarity = critterSelected.Rarity,
+                    SellPrice = (int)critterSelected.SellPrice,
+                    ShadowSize = critterSelected.ShadowSize,
+                    Time = critterSelected.Time,
+                    Type = critterSelected.Type
                 };
 
                 App.ApplicationDatabase.UpdateCritterIsDonated(critterToUpdate);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                throw ex;
+                Debugger.Break();
+                throw;
             }
         }
-
-
     }
 }

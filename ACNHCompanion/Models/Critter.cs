@@ -7,10 +7,8 @@ using Xamarin.Forms;
 
 namespace ACNHCompanion.Models
 {
-    //All of this could be done at the database level..
     public class Critter : INotifyPropertyChanged
     {
-
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
         {

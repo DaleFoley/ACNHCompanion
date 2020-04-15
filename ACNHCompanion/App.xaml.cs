@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using ACNHCompanion.Services;
 using ACNHCompanion.Views;
 
 namespace ACNHCompanion
@@ -14,8 +13,6 @@ namespace ACNHCompanion
             InitializeComponent();
 
             ApplicationDatabase = new DatabaseManager();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new MasterDetailExtras();
         }
 

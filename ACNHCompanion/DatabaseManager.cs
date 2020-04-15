@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
-using ACNHCompanion.DBModels;
+using ACNHCompanion.Models;
 using SQLite;
 using Xamarin.Forms;
 
@@ -16,30 +16,34 @@ namespace ACNHCompanion
             _dbConnection = DependencyService.Get<IDBInterface>().CreateConnection();
         }
 
-        public List<CritterMonth> GetFishNorthern()
+        public List<CritterMonths> GetFishNorthern()
         {
-            return _dbConnection.Query<CritterMonth>("select * from [v_fish_northern]");
+            return _dbConnection.Query<CritterMonths>("select * from [v_fish_northern]");
         }
 
-        public List<CritterMonth> GetFishSouthern()
+        public List<CritterMonths> GetFishSouthern()
         {
-            return _dbConnection.Query<CritterMonth>("select * from [v_fish_southern]");
+            return _dbConnection.Query<CritterMonths>("select * from [v_fish_southern]");
         }
 
-        public List<CritterMonth> GetBugsSouthern()
+        public List<CritterMonths> GetBugsSouthern()
         {
-            return _dbConnection.Query<CritterMonth>("select * from [v_bugs_southern]");
+            return _dbConnection.Query<CritterMonths>("select * from [v_bugs_southern]");
         }
 
-        public List<CritterMonth> GetBugsNorthern()
+        public List<CritterMonths> GetBugsNorthern()
         {
-            return _dbConnection.Query<CritterMonth>("select * from [v_bugs_northern]");
+            return _dbConnection.Query<CritterMonths>("select * from [v_bugs_northern]");
         }
 
         public void UpdateCritterIsDonated(Critters critterToUpdate)
         {
             //Doing nothing with this variable.
-            int i = _dbConnection.Update(critterToUpdate);
+            int rowsUpdated = _dbConnection.Update(critterToUpdate);
+            if(rowsUpdated == 0)
+            {
+                //Row didn't update, now what?
+            }
         }
     }
 }
