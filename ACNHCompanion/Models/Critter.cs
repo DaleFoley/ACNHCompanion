@@ -32,6 +32,7 @@ namespace ACNHCompanion.Models
             }
         }
 
+        //Change to auto property.
         private string _name;
         public string Name { get { return _name; } set { _name = value; OnNotifyPropertyChanged(); } }
 
@@ -42,7 +43,22 @@ namespace ACNHCompanion.Models
         public string Location { get; set; }
         public string Icon { get; set; }
         public string Time { get; set; }
-        public string Months { get; set; }
+
+        public string _months;
+        public string Months
+        {
+            get
+            {
+                return _months;
+            }
+
+            set
+            {
+                _months = value;
+                OnNotifyPropertyChanged("Months");
+            }
+        }
+
         public string Rarity { get; set; }
         public string ShadowSize { get; set; }
         public string Type { get; set; }

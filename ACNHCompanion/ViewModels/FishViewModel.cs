@@ -18,6 +18,7 @@ namespace ACNHCompanion.ViewModels
             RefreshViewModel();
         }
 
+        //DRY
         private bool _isRefreshing = false;
         public bool IsRefreshing
         {

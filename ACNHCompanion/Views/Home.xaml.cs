@@ -23,15 +23,15 @@ namespace ACNHCompanion.Views
             FishTab = new FishViewModel();
             BugsTab = new BugsViewModel();
 
-            NavigationPage fishPage = new NavigationPage(new CrittersPage());
+            NavigationPage fishPage = new NavigationPage(new CrittersPage(FishTab));
             fishPage.IconImageSource = "fish_anchovy.png";
             fishPage.Title = "Fish";
-            fishPage.BindingContext = FishTab;
+            //fishPage.BindingContext = FishTab;
 
-            NavigationPage bugsPage = new NavigationPage(new CrittersPage());
+            NavigationPage bugsPage = new NavigationPage(new CrittersPage(BugsTab));
             bugsPage.IconImageSource = "bug_Bell_cricket.png";
             bugsPage.Title = "Bugs";
-            bugsPage.BindingContext = BugsTab;
+            //bugsPage.BindingContext = BugsTab;
 
             Children.Add(fishPage);
             Children.Add(bugsPage);

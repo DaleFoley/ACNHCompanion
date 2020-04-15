@@ -17,9 +17,14 @@ namespace ACNHCompanion.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CrittersPage : ContentPage
     {
-        public CrittersPage()
+        public BaseViewModel _critterView { get; set; }
+        public CrittersPage(BaseViewModel critterView)
         {
+            _critterView = critterView;
+            this.BindingContext = critterView;
+
             InitializeComponent();
+
         }
 
         void OnDonatedTapped(object sender, EventArgs args)

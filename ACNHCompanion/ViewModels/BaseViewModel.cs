@@ -20,9 +20,34 @@ namespace ACNHCompanion.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
         }
 
-        //Raise notify on collection changed..
-        public ObservableCollection<Critter> CrittersToDisplay { get; set; }
-        public string Title { get; set; }
+        private ObservableCollection<Critter> _crittersToDisplay;
+        public ObservableCollection<Critter> CrittersToDisplay 
+        {
+            get
+            {
+                return _crittersToDisplay;
+            }
+            set
+            {
+                _crittersToDisplay = value;
+                OnNotifyPropertyChanged(nameof(CrittersToDisplay));
+            }
+        }
+
+        private string _title;
+        public string Title 
+        {
+            get
+            {
+                return _title;
+            }
+
+            set
+            {
+                _title = value;
+                OnNotifyPropertyChanged(nameof(Title));
+            }
+        }
 
         public BaseViewModel()
         {
@@ -31,6 +56,7 @@ namespace ACNHCompanion.ViewModels
 
         private string GetShadowSizeIcon(string shadowSize)
         {
+            //TODO: Get better looking images for shadow size.
             switch (shadowSize)
             {
                 case "1":
