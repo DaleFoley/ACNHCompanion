@@ -3,11 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:ACNHCompanion.ViewModels"
              mc:Ignorable="d"
              x:Class="ACNHCompanion.Views.DashboardPage"
              Title="Dashboard"
-             x:Name="Dashboard"
-             BackgroundColor="#f3daf4">
+             x:Name="Dashboard"            
+             BackgroundColor="#f3daf4"
+             BindingContext="DashboardViewModel">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem 
@@ -21,7 +23,11 @@
         <Frame Padding="8" BackgroundColor="#f5efd1" CornerRadius="10">
             <StackLayout>
                 <Label Text="Welcome" HorizontalOptions="Center" FontSize="Large"></Label>
-                <Label Text="Current Time" HorizontalOptions="Center" FontSize="Large"></Label>
+                <Label Text="{Binding LocalTime, StringFormat='The time is {0:T}'}" HorizontalOptions="Center" FontSize="Large">
+                    <Label.BindingContext>
+                        <local:DashboardViewModel />
+                    </Label.BindingContext>
+                </Label>
             </StackLayout>
         </Frame>
 

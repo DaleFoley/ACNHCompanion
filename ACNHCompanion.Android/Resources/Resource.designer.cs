@@ -6321,17 +6321,29 @@ namespace ACNHCompanion.Droid
 			// aapt resource value: 0x7F070124
 			public const int splashscreen = 2131165476;
 			
-			// aapt resource value: 0x7F070125
-			public const int tomnook = 2131165477;
-			
 			// aapt resource value: 0x7F070126
-			public const int tooltip_frame_dark = 2131165478;
+			public const int tomnook = 2131165478;
+			
+			// aapt resource value: 0x7F070125
+			public const int tom_nook_face = 2131165477;
 			
 			// aapt resource value: 0x7F070127
-			public const int tooltip_frame_light = 2131165479;
+			public const int tooltip_frame_dark = 2131165479;
 			
 			// aapt resource value: 0x7F070128
-			public const int xamarin_logo = 2131165480;
+			public const int tooltip_frame_light = 2131165480;
+			
+			// aapt resource value: 0x7F07012B
+			public const int villagers_icon = 2131165483;
+			
+			// aapt resource value: 0x7F070129
+			public const int villager_add = 2131165481;
+			
+			// aapt resource value: 0x7F07012A
+			public const int villager_remove = 2131165482;
+			
+			// aapt resource value: 0x7F07012C
+			public const int xamarin_logo = 2131165484;
 			
 			static Drawable()
 			{

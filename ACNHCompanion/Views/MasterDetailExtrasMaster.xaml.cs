@@ -61,6 +61,13 @@ namespace ACNHCompanion.Views
 
             App.ApplicationDatabase.UpdateConfigValue(hemisphereCurrent);
             App.Config = App.ApplicationDatabase.GetConfigValues();
+
+            //Refresh the detail page tab pages.
+            MasterDetailPage parentPage = (MasterDetailPage)this.Parent;
+            Home detailPage = (Home)parentPage.Detail;
+
+            detailPage.FishTab.RefreshViewModel();
+            detailPage.BugsTab.RefreshViewModel();
         }
     }
 }

@@ -15,6 +15,7 @@ namespace ACNHCompanion.Views
     {
         public FishViewModel FishTab { get; set; }
         public BugsViewModel BugsTab { get; set; }
+        public VillagersViewModel VillagersTab { get; set; }
 
         public Home()
         {
@@ -22,19 +23,23 @@ namespace ACNHCompanion.Views
 
             FishTab = new FishViewModel();
             BugsTab = new BugsViewModel();
+            VillagersTab = new VillagersViewModel();
 
             NavigationPage fishPage = new NavigationPage(new CrittersPage(FishTab));
             fishPage.IconImageSource = "fish_anchovy.png";
             fishPage.Title = "Fish";
-            //fishPage.BindingContext = FishTab;
 
             NavigationPage bugsPage = new NavigationPage(new CrittersPage(BugsTab));
             bugsPage.IconImageSource = "bug_Bell_cricket.png";
             bugsPage.Title = "Bugs";
-            //bugsPage.BindingContext = BugsTab;
+
+            NavigationPage villagersPage = new NavigationPage(new VillagersPage(VillagersTab));
+            villagersPage.IconImageSource = "villagers_icon.png";
+            villagersPage.Title = "Villagers";
 
             Children.Add(fishPage);
             Children.Add(bugsPage);
+            Children.Add(villagersPage);
         }
     }
 }

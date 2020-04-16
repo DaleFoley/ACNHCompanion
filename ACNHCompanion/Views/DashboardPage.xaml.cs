@@ -11,6 +11,7 @@ using ACNHCompanion.Models;
 using ACNHCompanion.Views;
 using ACNHCompanion.ViewModels;
 
+//TODO: Change time display to something like 12th Apr 12:32PM 
 namespace ACNHCompanion.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer

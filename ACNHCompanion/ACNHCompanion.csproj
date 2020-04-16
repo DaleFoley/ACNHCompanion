@@ -3,6 +3,11 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <Authors>Dale Foley</Authors>
+    <Company>DaleF</Company>
+    <Product>ACNH Companion App</Product>
+    <Description>Companion application to be used alongside Animal Crossing New Horizon. Detail critters that can be caught based on chosen hemisphere. Show useful information at a glance for these critters (i.e sell price based on discounts and penalties). Detail a list of villagers that can be acquired in-game. Display upcoming events.</Description>
+    <Copyright>Dale F 2020</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -32,10 +37,13 @@
     <EmbeddedResource Update="Views\SplashScreen.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\VillagersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Scripts\" />
+    <Folder Include="Scripts\SQL\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
