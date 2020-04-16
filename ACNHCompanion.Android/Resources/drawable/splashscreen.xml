@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:minWidth="25px"
-    android:minHeight="25px"
-    android:background="@color/appPrimary">
 
-    <TextView
-        android:text="ACNH Application Is Loading..."
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="29.5dp"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/textView1"
-        android:gravity="center"/>
-
-    <bitmap
-    android:src="@drawable/tomnook"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/imageView1" />
-
-</LinearLayout>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <color android:color="@color/appPrimary"/>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/tomnook"
+            android:tileMode="disabled"
+            android:gravity="center"/>
+    </item>
+    <item android:top="400dp">
+        <bitmap
+            android:src="@drawable/loading"
+            android:gravity="center"/>
+    </item>
+</layer-list>
