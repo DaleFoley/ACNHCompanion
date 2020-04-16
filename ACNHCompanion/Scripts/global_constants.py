@@ -4,6 +4,7 @@ path_sqlite = "../../app_data.db"
 table_name_critters = 'critters'
 table_name_northern_months = 'northern_months'
 table_name_southern_months = 'southern_months'
+table_name_villagers = 'villagers'
 table_name_config = 'config'
 
 view_name_bugs_northern = 'v_bugs_northern'

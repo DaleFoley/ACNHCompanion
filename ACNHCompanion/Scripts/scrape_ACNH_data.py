@@ -7,6 +7,7 @@ import logging
 
 from setup_app_data import *
 
+
 # This is a one-off script to populate a sqlite database with ACNH data. Fish, Bugs, Villagers etc..
 # Keep in mind HTML structural changes on target sites will most likely cause errors and/or malformed scraped data.
 
@@ -99,8 +100,39 @@ def get_rarity_data(p_url):
     return rarity
 
 
+def insert_villagers_and_scrape_images(p_html_content):
+    row_count = len(p_html_content)
+
+    for idx in range(1, row_count):
+        villager_row = p_html_content[idx]
+
+        villager_name = villager_row.contents[1].text.strip()
+        villager_image_name = 'villager_' + villager_name.replace('-', '_').replace(' ', '_').replace('\'', '') + ".png"
+
+        villager_image = villager_row.contents[2]
+        villager_personality = villager_row.contents[3].text.strip()
+        villager_species = villager_row.contents[4].text.strip()
+        villager_birthday = villager_row.contents[5].text.strip()
+        villager_catchphrase = villager_row.contents[6].text.strip()
+
+        db_command.execute('''insert into ''' + table_name_villagers + '''
+                            (Name, Personality, Species, Birthday, Catchphrase, ImageName) ''' +
+                           '''values (?, ?, ?, ?, ?, ?)''',
+                           (villager_name,
+                            villager_personality,
+                            villager_species,
+                            villager_birthday,
+                            villager_catchphrase,
+                            villager_image_name))
+
+        download_villager_image(villager_image, villager_image_name)
+
+
+
 def insert_fish_and_scrape_images(p_html_content):
-    for idx in range(1, len(p_html_content)):
+    row_count = len(p_html_content)
+
+    for idx in range(1, row_count):
         fish_row = p_html_content[idx]
 
         fish_name = fish_row.contents[1].text.strip()
@@ -109,7 +141,7 @@ def insert_fish_and_scrape_images(p_html_content):
         url_to_extended_info = url_animalcrossing_fandom + anchor_row.attrs['href']
         rarity = get_rarity_data(url_to_extended_info)
 
-        fish_image_name = 'fish_' + fish_row.contents[1].text.strip().replace('-', '_').replace(' ', '_')\
+        fish_image_name = 'fish_' + fish_name.replace('-', '_').replace(' ', '_') \
             .replace('\'', '') + ".png"
         fish_image = fish_row.contents[2]
         sell_price = fish_row.contents[3].text.strip()
@@ -128,7 +160,9 @@ def insert_fish_and_scrape_images(p_html_content):
 
 
 def insert_bugs_and_scrape_images(p_html_content):
-    for idx in range(1, len(p_html_content)):
+    row_count = len(p_html_content)
+
+    for idx in range(1, row_count):
         bug_row = p_html_content[idx]
 
         bug_name = bug_row.contents[1].text.strip()
@@ -137,7 +171,7 @@ def insert_bugs_and_scrape_images(p_html_content):
         url_to_extended_info = url_animalcrossing_fandom + anchor_row.attrs['href']
         rarity = get_rarity_data(url_to_extended_info)
 
-        bug_image_name = 'bug_' + bug_row.contents[1].text.strip().replace('-', '_').replace(' ', '_')\
+        bug_image_name = 'bug_' + bug_name.replace('-', '_').replace(' ', '_') \
             .replace('\'', '') + ".png"
         bug_image = bug_row.contents[2]
         sell_price = bug_row.contents[3].text.strip()
@@ -152,6 +186,23 @@ def insert_bugs_and_scrape_images(p_html_content):
                            (bug_name, sell_price, location, time, None, 'bug', bug_image_name, rarity))
 
         download_critter_image(bug_image, bug_image_name)
+
+
+def download_villager_image(p_image_tag, p_path_image):
+    image_src_url = p_image_tag.a.attrs['href']
+    image_response = requests.get(image_src_url)
+
+    path_saved_image = path_android_assets + p_path_image
+    if image_response.status_code == 200:
+        image_data = image_response.content
+
+        image_file = open(path_saved_image, 'wb')
+        image_file.write(image_data)
+        image_file.close()
+
+        crop_image_to_size(path_saved_image)
+    else:
+        breakpoint()
 
 
 def download_critter_image(p_image_tag, p_path_image):
@@ -174,6 +225,17 @@ def download_critter_image(p_image_tag, p_path_image):
 try:
     setup_db_schemas(db_command)
     insert_predefined_values(db_command)
+
+    response = requests.get(url_animalcrossing_fandom + '/wiki/Villager_list_(New_Horizons)')
+
+    if response.status_code == 200:
+        html_doc = response.text
+        html_source = BeautifulSoup(html_doc, 'html.parser')
+
+        villager_rows = html_source.findAll('table')[2].findAll('tr')
+        insert_villagers_and_scrape_images(villager_rows)
+
+        breakpoint()
 
     response = requests.get(url_animalcrossing_fandom + '/wiki/Bugs_(New_Horizons)')
 
@@ -200,6 +262,7 @@ try:
 
         fish_rows_southern = html_source.findAll('table')[4].findAll('tr')
         insert_critter_months(fish_rows_southern, table_name_southern_months, 1)
+
 
 except BaseException as error:
     logger = logging.getLogger("scrape")

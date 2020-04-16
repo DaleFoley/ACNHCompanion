@@ -1,4 +1,4 @@
-from strings import *
+from global_constants import *
 
 import sqlite3
 
@@ -15,6 +15,15 @@ def setup_db_schemas(p_db_command):
             ImageName text,
             Rarity text,
             IsDonated integer default 0)''')
+
+    p_db_command.execute('''drop table if exists ''' + table_name_villagers)
+    p_db_command.execute('''create table ''' + table_name_villagers + ''' (ID integer primary key,
+            Name text,
+            Personality text,
+            Species text,
+            Birthday text,
+            Catchphrase text,
+            ImageName text)''')
 
     p_db_command.execute('''drop table if exists ''' + table_name_config)
     p_db_command.execute('''create table ''' + table_name_config + ''' (ID integer primary key,
