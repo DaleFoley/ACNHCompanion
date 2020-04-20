@@ -10,8 +10,8 @@ using Xamarin.Forms.Xaml;
 using ACNHCompanion.Models;
 using ACNHCompanion.Views;
 using ACNHCompanion.ViewModels;
+using System.Diagnostics;
 
-//TODO: Change time display to something like 12th Apr 12:32PM 
 namespace ACNHCompanion.Views
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
@@ -26,7 +26,8 @@ namespace ACNHCompanion.Views
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            popupImageView.IsVisible = true;
+            sortFilterContentView.IsVisible = true;
+            sortFilterContentView.InputTransparent = false;
         }
     }
 }

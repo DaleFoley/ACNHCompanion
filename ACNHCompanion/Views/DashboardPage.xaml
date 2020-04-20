@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:ACNHCompanion.ViewModels"
+             xmlns:views="clr-namespace:ACNHCompanion.Views"
              mc:Ignorable="d"
              x:Class="ACNHCompanion.Views.DashboardPage"
              Title="Dashboard"
@@ -19,8 +20,7 @@
                  Text="Search"/>
     </ContentPage.ToolbarItems>
     
-    <RelativeLayout Margin="5, 5, 5, 0">
-
+    <RelativeLayout Margin="5, 5, 5, 0" x:Name="contentLayout">
         <Frame x:Name="headerFrame" Padding="8"
                BackgroundColor="#f5efd1"
                CornerRadius="10"
@@ -93,193 +93,11 @@
             </Grid>
         </Frame>
 
-        <ContentView x:Name="popupImageView"
-                     BackgroundColor="#C0808080"
-                     IsVisible="true"
-                     RelativeLayout.XConstraint =
-              "{ConstraintExpression Type=RelativeToParent,
-                                     Property=X,
-                                     Factor=0,
-                                     Constant=0}"
-                     RelativeLayout.YConstraint =
-              "{ConstraintExpression Type=RelativeToParent,
-                                     Property=Y,
-                                     Factor=0,
-                                     Constant=0}"
-                     RelativeLayout.WidthConstraint=
-               "{ConstraintExpression Type=RelativeToParent,
-                                      Property=Width}"
-                    RelativeLayout.HeightConstraint=
-               "{ConstraintExpression Type=RelativeToParent,
-                                      Property=Height}">
-
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"></RowDefinition>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-
-                <Frame  Grid.Row="0"
-                        Grid.Column="0"
-                        BackgroundColor="White"
-                        Margin="15, 15, 15, 0"
-                        CornerRadius="15">
-
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"></RowDefinition>
-                            <RowDefinition Height="auto"></RowDefinition>
-                            <RowDefinition Height="auto"></RowDefinition>
-                            <RowDefinition Height="auto"></RowDefinition>
-                            <RowDefinition Height="auto"></RowDefinition>
-                            <RowDefinition Height="auto"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                        
-                        <Label  Text="Filter"
-                                FontSize="Large"
-                                HorizontalOptions="Start"
-                                VerticalOptions="CenterAndExpand"
-                                Grid.Row="0"
-                                Grid.Column="0">                            
-                        </Label>
-                        
-                        <ImageButton    Source="close"
-                                        HeightRequest="32"
-                                        HorizontalOptions="End"
-                                        VerticalOptions="CenterAndExpand"
-                                        Grid.Row="0"
-                                        Grid.Column="0">                            
-                        </ImageButton>
-
-                        <BoxView    BackgroundColor="Gray"
-                                    Grid.Row="1"
-                                    HeightRequest="1">                            
-                        </BoxView>
-
-                        <Grid Grid.Row="2" Grid.Column="0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"></RowDefinition>
-                                <RowDefinition Height="auto"></RowDefinition>
-                            </Grid.RowDefinitions>
-
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-
-                            <Label  Text="Donated"
-                                    Grid.Row="0"
-                                    Grid.Column="0"
-                                    VerticalOptions="CenterAndExpand">
-                            </Label>
-
-                            <Switch IsToggled="false" 
-                                    Grid.Row="0"
-                                    Grid.Column="1"/>
-
-                            <Label  Text="Catchable Now"
-                                    Grid.Row="1"
-                                    Grid.Column="0"
-                                    VerticalOptions="CenterAndExpand">
-                            </Label>
-
-                            <Switch IsToggled="true" 
-                                    Grid.Row="1"
-                                    Grid.Column="1"/>
-                        </Grid>
-
-                        <Label  Text="Sort By"
-                                FontSize="Large"
-                                HorizontalOptions="Start"
-                                VerticalOptions="CenterAndExpand"
-                                Grid.Row="3"
-                                Grid.Column="0">
-                        </Label>
-
-                        <BoxView    BackgroundColor="Gray"
-                                    Grid.Row="4"
-                                    HeightRequest="1">
-                        </BoxView>
-
-                        <Grid Grid.Row="5" Grid.Column="0">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"></RowDefinition>
-                                <RowDefinition Height="auto"></RowDefinition>
-                                <RowDefinition Height="auto"></RowDefinition>
-                                <RowDefinition Height="auto"></RowDefinition>
-                            </Grid.RowDefinitions>
-
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                                <ColumnDefinition Width="*"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-
-                            <Label  Text="Name"
-                                    Grid.Row="0"
-                                    Grid.Column="0"
-                                    VerticalOptions="CenterAndExpand">
-                            </Label>
-
-                            <Picker Title="Asc/Desc" 
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    VerticalOptions="CenterAndExpand"/>
-
-                            <Label  Text="Price"
-                                    Grid.Row="1"
-                                    Grid.Column="0"
-                                    VerticalOptions="CenterAndExpand">
-                            </Label>
-
-                            <Picker Title="Asc/Desc"
-                                    Grid.Row="1"
-                                    Grid.Column="1"
-                                    VerticalOptions="CenterAndExpand"/>
-
-                            <Label  Text="Rarity"
-                                    Grid.Row="2"
-                                    Grid.Column="0"
-                                    VerticalOptions="CenterAndExpand">
-                            </Label>
-
-                            <Picker Title="Asc/Desc"
-                                    Grid.Row="2"
-                                    Grid.Column="1"
-                                    VerticalOptions="CenterAndExpand"/>
-
-                            <Label  Text="Location"
-                                    Grid.Row="3"
-                                    Grid.Column="0"
-                                    VerticalOptions="CenterAndExpand">
-                            </Label>
-
-                            <Picker Title="Asc/Desc"
-                                    Grid.Row="3"
-                                    Grid.Column="1"
-                                    VerticalOptions="CenterAndExpand"/>
-                        </Grid>
-                    </Grid>
-
-                </Frame>
-            </Grid>
-            <!--<StackLayout Padding="15, 15, 15, 0"                         
-                         VerticalOptions="Start"
-                         HorizontalOptions="Fill">
-                <StackLayout Orientation="Vertical"
-                             BackgroundColor="White">
-                    
-                    
-                </StackLayout>
-            </StackLayout>-->
-        </ContentView>
-
+        <views:SortFilterContentView    x:Name="sortFilterContentView"
+                                        InputTransparent="True"
+                                        IsVisible="False">
+        </views:SortFilterContentView>
+        
     </RelativeLayout>
 </ContentPage>
 
