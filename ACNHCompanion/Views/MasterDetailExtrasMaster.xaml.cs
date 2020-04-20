@@ -41,7 +41,7 @@ namespace ACNHCompanion.Views
             }
         }
 
-        void TapGestureRecognizer_Tapped(object sender, EventArgs args)
+        void HemisphereTapGestureRecognizer_Tapped(object sender, EventArgs args)
         {
             _view = (MasterDetailExtrasMasterViewModel)this.BindingContext;
 

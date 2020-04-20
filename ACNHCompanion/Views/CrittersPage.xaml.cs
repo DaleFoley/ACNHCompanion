@@ -21,9 +21,11 @@ namespace ACNHCompanion.Views
         public CrittersPage(BaseViewModel critterView)
         {
             _critterView = critterView;
-            this.BindingContext = critterView;
+            BindingContext = critterView;
 
             InitializeComponent();
+
+            sortFilterContentView.CritterViewModel = _critterView;
         }
 
         void OnDonatedTapped(object sender, EventArgs args)
@@ -49,7 +51,7 @@ namespace ACNHCompanion.Views
                     Type = critterSelected.Type
                 };
 
-                App.ApplicationDatabase.UpdateCritterIsDonated(critterToUpdate);
+                App.ApplicationDatabase.UpdateCritter(critterToUpdate);
             }
             catch (Exception)
             {

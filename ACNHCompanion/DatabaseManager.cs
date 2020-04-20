@@ -23,41 +23,32 @@ namespace ACNHCompanion
 
         public void UpdateConfigValue(Config configToUpdate)
         {
-            int rowsUpdated = _dbConnection.Update(configToUpdate);
-            if (rowsUpdated == 0)
-            {
-                //Row didn't update, now what?
-            }
+            _dbConnection.Update(configToUpdate);
         }
 
-        public List<CritterMonths> GetFishNorthern()
+        public List<CritterMonths> GetFishNorthern(string filterString = null)
         {
-            return _dbConnection.Query<CritterMonths>("select * from [v_fish_northern]");
+            return _dbConnection.Query<CritterMonths>("select * from [v_fish_northern] where 1=1 " + filterString);
         }
 
-        public List<CritterMonths> GetFishSouthern()
+        public List<CritterMonths> GetFishSouthern(string filterString = null)
         {
-            return _dbConnection.Query<CritterMonths>("select * from [v_fish_southern]");
+            return _dbConnection.Query<CritterMonths>("select * from [v_fish_southern] where 1=1 " + filterString);
         }
 
-        public List<CritterMonths> GetBugsSouthern()
+        public List<CritterMonths> GetBugsSouthern(string filterString = null)
         {
-            return _dbConnection.Query<CritterMonths>("select * from [v_bugs_southern]");
+            return _dbConnection.Query<CritterMonths>("select * from [v_bugs_southern] where 1=1 " + filterString);
         }
 
-        public List<CritterMonths> GetBugsNorthern()
+        public List<CritterMonths> GetBugsNorthern(string filterString = null)
         {
-            return _dbConnection.Query<CritterMonths>("select * from [v_bugs_northern]");
+            return _dbConnection.Query<CritterMonths>("select * from [v_bugs_northern] where 1=1 " + filterString);
         }
 
-        public void UpdateCritterIsDonated(Critters critterToUpdate)
+        public void UpdateCritter(Critters critterToUpdate)
         {
-            //Doing nothing with this variable.
-            int rowsUpdated = _dbConnection.Update(critterToUpdate);
-            if(rowsUpdated == 0)
-            {
-                //Row didn't update, now what?
-            }
+            _dbConnection.Update(critterToUpdate);
         }
     }
 }

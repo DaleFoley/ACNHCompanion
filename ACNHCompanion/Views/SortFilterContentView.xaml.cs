@@ -1,4 +1,5 @@
-﻿using ACNHCompanion.ViewModels;
+﻿using ACNHCompanion.Models;
+using ACNHCompanion.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,9 @@ namespace ACNHCompanion.Views
     public partial class SortFilterContentView : ContentView
     {
         private SortFilterViewModel _sortFilterViewModel;
+        private string _filterString;
+
+        public BaseViewModel CritterViewModel { get; set; }
 
         public SortFilterContentView()
         {
@@ -21,13 +25,41 @@ namespace ACNHCompanion.Views
 
             _sortFilterViewModel = new SortFilterViewModel();
             BindingContext = _sortFilterViewModel;
-
         }
 
-        private void ImageButton_Clicked(object sender, EventArgs e)
+        private void CloseButton_Clicked(object sender, EventArgs e)
         {
-            this.IsVisible = false;
-            this.InputTransparent = true;
+            IsVisible = false;
+            InputTransparent = true;
+
+            _filterString = "";
+
+            if (IsDonated.IsToggled) { _filterString = "and IsDonated <> 0 "; }
+
+            //TODO: Can we utilize DB model here? What if column names change?
+            _filterString += "order by ";
+
+            bool isOrderByID = true;
+
+            if (SortByName.SelectedItem.ToString().ToLower() != "none") { _filterString += "CritterName " + SortByName.SelectedItem + ", "; isOrderByID = false; }
+            if (SortByPrice.SelectedItem.ToString().ToLower() != "none") { _filterString += "SellPrice " + SortByPrice.SelectedItem + ", "; isOrderByID = false; }
+            if (SortByRarity.SelectedItem.ToString().ToLower() != "none") { _filterString += "Rarity " + SortByRarity.SelectedItem + ", "; isOrderByID = false; }
+            if (SortByLocation.SelectedItem.ToString().ToLower() != "none") { _filterString += "Location " + SortByLocation.SelectedItem; isOrderByID = false; }
+            _filterString = _filterString.TrimEnd(',', ' ');
+
+            if (isOrderByID) { _filterString += " ID asc"; }
+
+            //TODO: Don't think we have to keep assigning to fvm/bvm.
+            if (CritterViewModel.GetType().Equals(typeof(FishViewModel)))
+            {
+                FishViewModel fvm = (FishViewModel)CritterViewModel;
+                fvm.RefreshViewModel(_filterString);
+            }
+            else
+            {
+                BugsViewModel bvm = (BugsViewModel)CritterViewModel;
+                bvm.RefreshViewModel(_filterString);
+            }
         }
     }
 }

@@ -11,9 +11,12 @@ namespace ACNHCompanion.ViewModels
 
         public SortFilterViewModel()
         {
-            SortCriteria = new string[2];
+            SortCriteria = new string[3];
             SortCriteria[0] = "Asc";
             SortCriteria[1] = "Desc";
+            SortCriteria[2] = "None";
+
+            DefaultSelectedIndex = 2;
         }
     }
 }

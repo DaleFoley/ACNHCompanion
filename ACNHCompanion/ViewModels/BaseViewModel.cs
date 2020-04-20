@@ -14,6 +14,8 @@ namespace ACNHCompanion.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
+        public string FilterString;
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
         {

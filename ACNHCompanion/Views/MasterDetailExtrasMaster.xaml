@@ -49,7 +49,7 @@
                     Margin="0, 0, 15, 0">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer
-                            Tapped="TapGestureRecognizer_Tapped"
+                            Tapped="HemisphereTapGestureRecognizer_Tapped"
                             NumberOfTapsRequired="1"/>
                     </Image.GestureRecognizers>
                 </Image>

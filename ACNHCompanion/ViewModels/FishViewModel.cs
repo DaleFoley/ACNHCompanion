@@ -33,18 +33,18 @@ namespace ACNHCompanion.ViewModels
             }
         }
 
-        public void RefreshViewModel()
+        public void RefreshViewModel(string filterString = "")
         {
             Config hemisphereConfig = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
             List<CritterMonths> dbFish = null;
 
             if (hemisphereConfig.Value.ToLower() == "north")
             {
-                dbFish = App.ApplicationDatabase.GetFishNorthern();
+                dbFish = App.ApplicationDatabase.GetFishNorthern(filterString);
             }
             else
             {
-                dbFish = App.ApplicationDatabase.GetFishSouthern();
+                dbFish = App.ApplicationDatabase.GetFishSouthern(filterString);
             }
 
             Title = "Fish - " + hemisphereConfig.Value;

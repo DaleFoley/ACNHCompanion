@@ -30,18 +30,18 @@ namespace ACNHCompanion.ViewModels
             }
         }
 
-        public void RefreshViewModel()
+        public void RefreshViewModel(string filterString = "")
         {
             Config hemisphereConfig = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
             List<CritterMonths> dbBugs = null;
 
-            if (hemisphereConfig.Value.ToLower() == "north")
+            if(hemisphereConfig.Value.ToLower() == "north")
             {
-                dbBugs = App.ApplicationDatabase.GetBugsNorthern();
+                dbBugs = App.ApplicationDatabase.GetBugsNorthern(filterString);
             }
             else
             {
-                dbBugs = App.ApplicationDatabase.GetBugsSouthern();
+                dbBugs = App.ApplicationDatabase.GetBugsSouthern(filterString);
             }
 
             Title = "Bugs - " + hemisphereConfig.Value;
