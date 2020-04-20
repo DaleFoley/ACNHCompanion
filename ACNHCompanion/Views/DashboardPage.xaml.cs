@@ -23,5 +23,10 @@ namespace ACNHCompanion.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            popupImageView.IsVisible = true;
+        }
     }
 }

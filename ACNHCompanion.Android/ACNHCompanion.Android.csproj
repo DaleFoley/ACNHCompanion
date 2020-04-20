@@ -1557,7 +1557,7 @@
     <AndroidResource Include="Resources\drawable\villager_Raymond.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\villager_Renée.png" />
+    <AndroidResource Include="Resources\drawable\villager_Renee.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\villager_Reneigh.png" />
@@ -1803,7 +1803,7 @@
     <AndroidResource Include="Resources\drawable\villager_Walt.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\villager_Wart_Jr..png" />
+    <AndroidResource Include="Resources\drawable\villager_Wart_Jr.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\villager_Weber.png" />
@@ -1831,6 +1831,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\villager_Zucker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

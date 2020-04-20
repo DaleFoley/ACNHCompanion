@@ -27,8 +27,11 @@ namespace ACNHCompanion
         {
             InitializeComponent();
 
-            ApplicationDatabase = new DatabaseManager();
-            Config = ApplicationDatabase.GetConfigValues();
+            if (!DesignMode.IsDesignModeEnabled)
+            {
+                ApplicationDatabase = new DatabaseManager();
+                Config = ApplicationDatabase.GetConfigValues();
+            }
 
             MainPage = new MasterDetailExtras();
         }
