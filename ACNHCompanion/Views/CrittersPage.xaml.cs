@@ -24,7 +24,6 @@ namespace ACNHCompanion.Views
             this.BindingContext = critterView;
 
             InitializeComponent();
-
         }
 
         void OnDonatedTapped(object sender, EventArgs args)
@@ -61,8 +60,8 @@ namespace ACNHCompanion.Views
 
         private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            //sortFilterContentView.IsVisible = true;
-            //sortFilterContentView.InputTransparent = false;
+            sortFilterContentView.IsVisible = true;
+            sortFilterContentView.InputTransparent = false;
         }
     }
 }
