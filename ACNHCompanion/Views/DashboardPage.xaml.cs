@@ -24,10 +24,9 @@ namespace ACNHCompanion.Views
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
         {
-            sortFilterContentView.IsVisible = true;
-            sortFilterContentView.InputTransparent = false;
+
         }
     }
 }

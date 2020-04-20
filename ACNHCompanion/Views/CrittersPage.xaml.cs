@@ -58,5 +58,11 @@ namespace ACNHCompanion.Views
                 throw;
             }
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+            //sortFilterContentView.IsVisible = true;
+            //sortFilterContentView.InputTransparent = false;
+        }
     }
 }

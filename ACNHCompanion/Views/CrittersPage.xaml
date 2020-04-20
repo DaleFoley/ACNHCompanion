@@ -3,10 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:ACNHCompanion.Views"
              mc:Ignorable="d"
              x:Class="ACNHCompanion.Views.CrittersPage"
              BackgroundColor="#f3daf4"
              Title="{Binding Title}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+                 IconImageSource="search.png"
+                 Order="Primary"
+                 Priority="0"
+                 Text="Search"/>
+        <ToolbarItem 
+                 IconImageSource="filter.png"
+                 Order="Primary"
+                 Priority="1"
+                 Text="Search"
+                 Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
         <RefreshView IsRefreshing="{Binding IsRefreshing}"
@@ -40,12 +55,14 @@
                                     </Grid.ColumnDefinitions>
 
                                     <Image Source="{Binding Icon}"
+                                           d:Source="fish_Char"
                                            Grid.Row="0"
                                            Grid.Column="0"
                                        HorizontalOptions="StartAndExpand">
                                     </Image>
 
                                     <Label Text="{Binding Name}"
+                                           d:Text="Char"
                                        Grid.Row="1"
                                        Grid.Column="0"
                                        Margin="0, 0, 0, 0"
@@ -128,11 +145,227 @@
                                 </Grid>
                             </Frame>
                         </StackLayout>
-
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
         </RefreshView>
     </ContentPage.Content>
 
+    <!-- Design time XAML for previewing layout changes. Is there a more elegant way to do this?-->
+    <d:ContentPage.Content>
+        <d:StackLayout>
+            <Frame BackgroundColor="#f5efd1" CornerRadius="15">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="64"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image  Source="fish_Char"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="StartAndExpand">
+                    </Image>
+
+                    <Label  Text="Char"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="0, 0, 0, 0"
+                            HorizontalOptions="StartAndExpand"></Label>
+
+                    <Label  Text="6"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start"></Label>
+
+                    <Image  Source="fish_shadow_size_6"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            HorizontalOptions="Center">
+                    </Image>
+
+                    <Image  Source="BellCoin"
+                            Grid.RowSpan="2"
+                            Grid.Column="2"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"></Image>
+
+                    <StackLayout VerticalOptions="CenterAndExpand" Grid.RowSpan="2" Grid.Column="3">
+                        <Label Text="1000 (-20%)"></Label>
+                        <Label Text="1200"></Label>
+                        <Label Text="1500 (+50%)"></Label>
+                    </StackLayout>
+
+                    <Label  Text="Water"
+                            Grid.Row="0"
+                            Grid.Column="4"
+                            VerticalOptions="StartAndExpand"
+                            HorizontalOptions="StartAndExpand"></Label>
+
+                    <Label  Text="7AM - 9PM"
+                            Grid.Row="1"
+                            Grid.Column="4"
+                            VerticalOptions="End"
+                            HorizontalOptions="StartAndExpand"></Label>
+
+                    <Label Text="Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+                                       Grid.RowSpan="2"
+                                       Grid.Column="5"
+                                       VerticalOptions="StartAndExpand"
+                                       HorizontalOptions="StartAndExpand"></Label>
+
+                    <Image Source="donated_false"
+                                       Grid.Row="2"
+                                       Grid.Column="0"
+                                       HorizontalOptions="StartAndExpand"
+                                       VerticalOptions="StartAndExpand"
+                                       HeightRequest="32"
+                                       WidthRequest="32">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                        Tapped="OnDonatedTapped"
+                                        CommandParameter="{Binding}"
+                                        />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <BoxView BackgroundColor="LightGray"
+                                         Grid.Row="2"
+                                         Grid.Column="2"
+                                         Grid.ColumnSpan="4"
+                                         CornerRadius="15"
+                                         MinimumHeightRequest="20"></BoxView>
+
+                    <Label Text="Uncommon"
+                                       Grid.Row="2"
+                                       Grid.Column="2"
+                                       Grid.ColumnSpan="4"
+                                       VerticalOptions="CenterAndExpand"
+                                       HorizontalOptions="StartAndExpand"
+                                       Margin="5, 0, 0, 0"></Label>
+                </Grid>
+            </Frame>
+
+            <Frame BackgroundColor="#f5efd1" CornerRadius="15">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="64"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image  Source="fish_Char"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            HorizontalOptions="StartAndExpand">
+                    </Image>
+
+                    <Label  Text="Char"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="0, 0, 0, 0"
+                            HorizontalOptions="StartAndExpand"></Label>
+
+                    <Label  Text="6"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start"></Label>
+
+                    <Image  Source="fish_shadow_size_6"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            HorizontalOptions="Center">
+                    </Image>
+
+                    <Image  Source="BellCoin"
+                            Grid.RowSpan="2"
+                            Grid.Column="2"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"></Image>
+
+                    <StackLayout VerticalOptions="CenterAndExpand" Grid.RowSpan="2" Grid.Column="3">
+                        <Label Text="1000 (-20%)"></Label>
+                        <Label Text="1200"></Label>
+                        <Label Text="1500 (+50%)"></Label>
+                    </StackLayout>
+
+                    <Label  Text="Water"
+                            Grid.Row="0"
+                            Grid.Column="4"
+                            VerticalOptions="StartAndExpand"
+                            HorizontalOptions="StartAndExpand"></Label>
+
+                    <Label  Text="7AM - 9PM"
+                            Grid.Row="1"
+                            Grid.Column="4"
+                            VerticalOptions="End"
+                            HorizontalOptions="StartAndExpand"></Label>
+
+                    <Label Text="Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+                                       Grid.RowSpan="2"
+                                       Grid.Column="5"
+                                       VerticalOptions="StartAndExpand"
+                                       HorizontalOptions="StartAndExpand"></Label>
+
+                    <Image Source="donated_false"
+                                       Grid.Row="2"
+                                       Grid.Column="0"
+                                       HorizontalOptions="StartAndExpand"
+                                       VerticalOptions="StartAndExpand"
+                                       HeightRequest="32"
+                                       WidthRequest="32">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                        Tapped="OnDonatedTapped"
+                                        CommandParameter="{Binding}"
+                                        />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <BoxView BackgroundColor="LightGray"
+                                         Grid.Row="2"
+                                         Grid.Column="2"
+                                         Grid.ColumnSpan="4"
+                                         CornerRadius="15"
+                                         MinimumHeightRequest="20"></BoxView>
+
+                    <Label Text="Uncommon"
+                                       Grid.Row="2"
+                                       Grid.Column="2"
+                                       Grid.ColumnSpan="4"
+                                       VerticalOptions="CenterAndExpand"
+                                       HorizontalOptions="StartAndExpand"
+                                       Margin="5, 0, 0, 0"></Label>
+                </Grid>
+            </Frame>
+
+        </d:StackLayout>
+    </d:ContentPage.Content>
+
+    <!--<views:SortFilterContentView    x:Name="sortFilterContentView"
+                                    InputTransparent="True"
+                                    IsVisible="False">
+    </views:SortFilterContentView>-->
+    
 </ContentPage>

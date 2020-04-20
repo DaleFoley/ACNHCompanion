@@ -18,6 +18,12 @@
                  Order="Primary"
                  Priority="0"
                  Text="Search"/>
+        <ToolbarItem 
+                 IconImageSource="filter.png"
+                 Order="Primary"
+                 Priority="1"
+                 Text="Search"
+                 Clicked="ToolbarItem_Clicked"/>        
     </ContentPage.ToolbarItems>
     
     <RelativeLayout Margin="5, 5, 5, 0" x:Name="contentLayout">
@@ -88,16 +94,9 @@
                        Text="No Villagers Set"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"></Label>
-
-                <Button Grid.Column="1" Grid.Row="2" Text="test" Clicked="Button_Clicked" />
             </Grid>
         </Frame>
-
-        <views:SortFilterContentView    x:Name="sortFilterContentView"
-                                        InputTransparent="True"
-                                        IsVisible="False">
-        </views:SortFilterContentView>
-        
     </RelativeLayout>
+    
 </ContentPage>
 
