@@ -29,12 +29,18 @@ namespace ACNHCompanion.Views
 
         private void CloseButton_Clicked(object sender, EventArgs e)
         {
+
+        }
+
+        private void ApplyButton_Clicked(object sender, EventArgs e)
+        {
             IsVisible = false;
             InputTransparent = true;
 
             _filterString = "";
 
-            if (IsDonated.IsToggled) { _filterString = "and IsDonated <> 0 "; }
+            if (IsCatchable.IsToggled) { _filterString = "and IsCatchableBasedOnTime <> 0 and IsCatchableBasedOnMonth <> 0 "; }
+            if (IsDonated.IsToggled) { _filterString += "and IsDonated <> 0 "; }
 
             //TODO: Can we utilize DB model here? What if column names change?
             _filterString += "order by ";
@@ -53,11 +59,13 @@ namespace ACNHCompanion.Views
             if (CritterViewModel.GetType().Equals(typeof(FishViewModel)))
             {
                 FishViewModel fvm = (FishViewModel)CritterViewModel;
+                fvm.FilterString = _filterString;
                 fvm.RefreshViewModel(_filterString);
             }
             else
             {
                 BugsViewModel bvm = (BugsViewModel)CritterViewModel;
+                bvm.FilterString = _filterString;
                 bvm.RefreshViewModel(_filterString);
             }
         }

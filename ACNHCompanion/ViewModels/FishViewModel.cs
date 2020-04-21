@@ -26,7 +26,7 @@ namespace ACNHCompanion.ViewModels
                 {
                     IsRefreshing = true;
 
-                    RefreshViewModel();
+                    RefreshViewModel(FilterString);
 
                     IsRefreshing = false;
                 });

@@ -107,7 +107,8 @@
 
                         <Switch     IsToggled="true" 
                                     Grid.Row="1"
-                                    Grid.Column="1"/>
+                                    Grid.Column="1"
+                                    x:Name="IsCatchable"/>
                     </Grid>
 
                     <Label      Text="Sort By"
@@ -125,6 +126,7 @@
 
                     <Grid Grid.Row="5" Grid.Column="0">
                         <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
@@ -191,6 +193,12 @@
                                     ItemsSource="{Binding SortCriteria}"
                                     SelectedIndex="{Binding DefaultSelectedIndex}"
                                     x:Name="SortByLocation"/>
+
+                        <Button Grid.Row="4"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Text="Apply"
+                                Clicked="ApplyButton_Clicked"/>
                     </Grid>
                 </Grid>
 

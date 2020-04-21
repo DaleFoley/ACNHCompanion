@@ -17,5 +17,8 @@ namespace ACNHCompanion.Models
         public bool IsDonated { get; set; }
         public string Months { get; set; }
         public string Rarity { get; set; }
+        public bool IsCatchableBasedOnMonth { get; set; }
+        public bool IsCatchableBasedOnTime { get; set; }
+
     }
 }

@@ -55,6 +55,7 @@ namespace ACNHCompanion.Views
             }
             catch (Exception)
             {
+                //TODO: Logging exceptions..
                 Debugger.Break();
                 throw;
             }
