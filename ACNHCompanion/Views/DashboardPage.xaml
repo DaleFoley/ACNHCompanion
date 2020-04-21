@@ -17,16 +17,12 @@
                  IconImageSource="search.png"
                  Order="Primary"
                  Priority="0"
-                 Text="Search"/>
-        <ToolbarItem 
-                 IconImageSource="filter.png"
-                 Order="Primary"
-                 Priority="1"
                  Text="Search"
-                 Clicked="ToolbarItem_Clicked"/>        
+                 x:Name="GlobalSearch"
+                 Clicked="SearchBarGlobal_SearchButtonPressed"/>
     </ContentPage.ToolbarItems>
     
-    <RelativeLayout Margin="5, 5, 5, 0" x:Name="contentLayout">
+    <RelativeLayout Margin="5, 5, 5, 0" x:Name="contentLayout">       
         <Frame x:Name="headerFrame" Padding="8"
                BackgroundColor="#f5efd1"
                CornerRadius="10"
@@ -96,6 +92,29 @@
                        HorizontalOptions="Center"></Label>
             </Grid>
         </Frame>
+
+        <Frame BackgroundColor="#C0808080"
+               IsVisible="False"
+               InputTransparent="True"
+               x:Name="SearchFrame"
+               RelativeLayout.XConstraint =
+          "{ConstraintExpression    Type=RelativeToParent,
+                                    Property=X,
+                                    Factor=0,
+                                    Constant=0}"
+                   RelativeLayout.YConstraint =
+          "{ConstraintExpression    Type=RelativeToParent,
+                                    Property=Y,
+                                    Factor=0,
+                                    Constant=0}"
+                   RelativeLayout.WidthConstraint=
+           "{ConstraintExpression   Type=RelativeToParent,
+                                    Property=Width}">
+            <SearchBar Placeholder="critter name, villager name etc.."
+                       BackgroundColor="White"
+                       SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+        </Frame>
+
     </RelativeLayout>
     
 </ContentPage>

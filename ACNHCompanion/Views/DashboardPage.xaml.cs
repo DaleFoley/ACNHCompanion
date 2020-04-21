@@ -24,9 +24,18 @@ namespace ACNHCompanion.Views
             InitializeComponent();
         }
 
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        private void SearchBarGlobal_SearchButtonPressed(object sender, EventArgs e)
         {
+            SearchFrame.IsVisible = SearchFrame.IsVisible ? false : true;
+            SearchFrame.InputTransparent = SearchFrame.InputTransparent ? true : false;
+        }
 
+        async private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
+        {
+            SearchBar s = (SearchBar)sender;
+            string searchCriteria = s.Text;
+
+            await Navigation.PushModalAsync(new SearchResultsPage(searchCriteria));
         }
     }
 }

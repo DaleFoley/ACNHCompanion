@@ -29,7 +29,8 @@ namespace ACNHCompanion.Views
 
         private void CloseButton_Clicked(object sender, EventArgs e)
         {
-
+            IsVisible = false;
+            InputTransparent = true;
         }
 
         private void ApplyButton_Clicked(object sender, EventArgs e)

@@ -35,23 +35,12 @@ namespace ACNHCompanion.Views
                 TappedEventArgs e = (TappedEventArgs)args;
 
                 Critter critterSelected = (Critter)e.Parameter;
-                critterSelected.IsDonated = critterSelected.IsDonated ? false : true;
 
-                Critters critterToUpdate = new Critters
-                {
-                    CritterName = critterSelected.Name,
-                    ID = critterSelected.Id,
-                    ImageName = critterSelected.Icon,
-                    IsDonated = critterSelected.IsDonated,
-                    Location = critterSelected.Location,
-                    Rarity = critterSelected.Rarity,
-                    SellPrice = (int)critterSelected.SellPrice,
-                    ShadowSize = critterSelected.ShadowSize,
-                    Time = critterSelected.Time,
-                    Type = critterSelected.Type
-                };
+                int critterID = critterSelected.Id;
+                bool isDonated = critterSelected.IsDonated ? false : true;
 
-                App.ApplicationDatabase.UpdateCritter(critterToUpdate);
+                App.ApplicationDatabase.UpdateCritterIsDonated(critterID, isDonated);
+                critterSelected.IsDonated = isDonated;
             }
             catch (Exception)
             {

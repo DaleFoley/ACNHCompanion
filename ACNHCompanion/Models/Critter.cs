@@ -62,6 +62,8 @@ namespace ACNHCompanion.Models
         public string Rarity { get; set; }
         public string ShadowSize { get; set; }
         public string Type { get; set; }
+        public string CatchStartTime { get; set; }
+        public string CatchEndTime { get; set; }
         public double SellPricePenalty
         {
             get

@@ -85,6 +85,32 @@ namespace ACNHCompanion
             return _dbConnection.Query<CritterMonths>("select * from [v_bugs_northern] where 1=1 " + filterString);
         }
 
+        public List<CritterMonths> GetBugsNorthernSearch(string searchCriteria)
+        {
+            return _dbConnection.Query<CritterMonths>("select * from [v_bugs_northern] where CritterName like '" + searchCriteria + "%'");
+        }
+
+        public List<CritterMonths> GetBugsSouthernSearch(string searchCriteria)
+        {
+            return _dbConnection.Query<CritterMonths>("select * from [v_bugs_southern] where CritterName like '" + searchCriteria + "%'");
+        }
+
+        public List<CritterMonths> GetFishNorthernSearch(string searchCriteria)
+        {
+            return _dbConnection.Query<CritterMonths>("select * from [v_fish_northern] where CritterName like '" + searchCriteria + "%'");
+        }
+
+        public List<CritterMonths> GetFishSouthernSearch(string searchCriteria)
+        {
+            return _dbConnection.Query<CritterMonths>("select * from [v_fish_southern] where CritterName like '" + searchCriteria + "%'");
+        }
+
+        public void UpdateCritterIsDonated(int ID, bool isDonated)
+        {
+            SQLiteCommand sqLiteCommand = _dbConnection.CreateCommand("update [critters] set IsDonated = ? where ID = ?", isDonated, ID);
+            sqLiteCommand.ExecuteNonQuery();
+        }
+
         public void UpdateCritter(Critters critterToUpdate)
         {
             _dbConnection.Update(critterToUpdate);
