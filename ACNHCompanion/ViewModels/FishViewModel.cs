@@ -26,25 +26,25 @@ namespace ACNHCompanion.ViewModels
                 {
                     IsRefreshing = true;
 
-                    RefreshViewModel(FilterString);
+                    RefreshViewModel();
 
                     IsRefreshing = false;
                 });
             }
         }
 
-        public void RefreshViewModel(string filterString = "")
+        public void RefreshViewModel()
         {
             Config hemisphereConfig = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
             List<CritterMonths> dbFish = null;
 
             if (hemisphereConfig.Value.ToLower() == "north")
             {
-                dbFish = App.ApplicationDatabase.GetFishNorthern(filterString);
+                dbFish = App.ApplicationDatabase.GetFishNorthern(FilterString);
             }
             else
             {
-                dbFish = App.ApplicationDatabase.GetFishSouthern(filterString);
+                dbFish = App.ApplicationDatabase.GetFishSouthern(FilterString);
             }
 
             Title = "Fish - " + hemisphereConfig.Value;

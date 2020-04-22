@@ -11,10 +11,9 @@ namespace ACNHCompanion.ViewModels
 {
     public class MasterDetailExtrasMasterViewModel : INotifyPropertyChanged
     {
-        //TODO: static global?
         public MasterDetailExtrasMasterViewModel()
         {
-            _hemisphere = "north_hemi_selected";
+            _hemisphere = "North";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

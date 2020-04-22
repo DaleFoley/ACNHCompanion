@@ -8,7 +8,8 @@
              Title="Master">
     
   <StackLayout>
-        <Grid BackgroundColor="LightGreen">
+        <Grid BackgroundColor="LightGreen"
+              VerticalOptions="FillAndExpand">
             <Grid.RowDefinitions>
                 <RowDefinition Height="128"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
@@ -18,12 +19,15 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Image Source="tom_nook_face">
+            <Image Grid.Row="0" Grid.Column="0" Source="tom_nook_face">
             </Image>
 
-            <Grid Grid.Row="1" Grid.Column="0" BackgroundColor="White">
+            <Grid Grid.Row="1"
+                  Grid.Column="0"
+                  BackgroundColor="white">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="1"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
@@ -37,37 +41,29 @@
                        Grid.Column="0"
                        Text="What hemisphere are you on: "
                        FontSize="Large"
-                       VerticalOptions="Center"
+                       VerticalOptions="CenterAndExpand"
                        Margin="5, 0, 0, 0"></Label>
+                
+                <Button Grid.Row="1"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        Text="{Binding Hemisphere}"
+                        d:Text="North"
+                        Clicked="HemisphereButton_Clicked"/>
 
-                <Image Source="{Binding Hemisphere}"
-                    d:Source="north_hemi_selected"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    HeightRequest="76"
-                    HorizontalOptions="End"
-                    Margin="0, 0, 15, 0">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Tapped="HemisphereTapGestureRecognizer_Tapped"
-                            NumberOfTapsRequired="1"/>
-                    </Image.GestureRecognizers>
-                </Image>
-
-                <BoxView Grid.Row="1"
+                <BoxView Grid.Row="2"
                          Grid.Column="0"
                          Grid.ColumnSpan="2"
-                         BackgroundColor="AntiqueWhite"></BoxView>
-                
-                <!--<Label Grid.Row="2"
-                       Grid.Column="0" 
-                       Text="Notify Of Turnip Price Change: "
-                       FontSize="Large"
-                       VerticalOptions="Center"></Label>
-                
-                <Switch Grid.Row="2"
-                        Grid.Column="1"
-                        IsToggled="false" />-->
+                         BackgroundColor="Gray"></BoxView>
+
+                <Button Grid.Row="3"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        VerticalOptions="End"
+                        Margin="5, 5, 5, 5"
+                        Text="Reset"
+                        BackgroundColor="Red"
+                        Clicked="ResetButton_Clicked"/>
             </Grid>
             
         </Grid>

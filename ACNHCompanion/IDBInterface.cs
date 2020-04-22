@@ -8,5 +8,6 @@ namespace ACNHCompanion
     public interface IDBInterface
     {
         SQLiteConnection CreateConnection();
+        void RestoreAppData();
     }
 }

@@ -19,7 +19,7 @@ namespace ACNHCompanion.Droid
 {
     public class DatabaseService : ACNHCompanion.IDBInterface
     {
-        private const string sqliteDBFileName = "app_data.db";
+        private const string APP_DATA = "app_data.db";
 
         private string _pathDocumentsDirectory;
         public DatabaseService()
@@ -66,20 +66,24 @@ namespace ACNHCompanion.Droid
             }
         }
 
+        public void RestoreAppData()
+        {
+            string pathToSQLDatabase = Path.Combine(_pathDocumentsDirectory, APP_DATA);
+            CopyAssetFileToLocation(APP_DATA, pathToSQLDatabase);
+        }
+
         public SQLiteConnection CreateConnection()
         {
             CopySQLiteDDLFiles();
 
-            string pathToSQLDatabase = Path.Combine(_pathDocumentsDirectory, sqliteDBFileName);
+            string pathToSQLDatabase = Path.Combine(_pathDocumentsDirectory, APP_DATA);
 
             if (!File.Exists(pathToSQLDatabase))
             {
-                CopyAssetFileToLocation(sqliteDBFileName, pathToSQLDatabase);
+                CopyAssetFileToLocation(APP_DATA, pathToSQLDatabase);
             }
 
-            var conn = new SQLiteConnection(pathToSQLDatabase, SQLiteOpenFlags.ReadWrite);
-
-            return conn;
+            return new SQLiteConnection(pathToSQLDatabase, SQLiteOpenFlags.ReadWrite);
         }
     }
 }

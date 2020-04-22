@@ -61,13 +61,13 @@ namespace ACNHCompanion.Views
             {
                 FishViewModel fvm = (FishViewModel)CritterViewModel;
                 fvm.FilterString = _filterString;
-                fvm.RefreshViewModel(_filterString);
+                fvm.RefreshViewModel();
             }
             else
             {
                 BugsViewModel bvm = (BugsViewModel)CritterViewModel;
                 bvm.FilterString = _filterString;
-                bvm.RefreshViewModel(_filterString);
+                bvm.RefreshViewModel();
             }
         }
     }
