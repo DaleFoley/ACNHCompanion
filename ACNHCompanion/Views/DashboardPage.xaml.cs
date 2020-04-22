@@ -32,8 +32,8 @@ namespace ACNHCompanion.Views
 
         async private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
         {
-            SearchBar s = (SearchBar)sender;
-            string searchCriteria = s.Text;
+            SearchBar searchBar = (SearchBar)sender;
+            string searchCriteria = searchBar.Text;
 
             await Navigation.PushModalAsync(new SearchResultsPage(searchCriteria));
         }

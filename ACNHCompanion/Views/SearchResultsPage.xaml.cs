@@ -1,6 +1,8 @@
-﻿using ACNHCompanion.ViewModels;
+﻿using ACNHCompanion.Models;
+using ACNHCompanion.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,5 +24,27 @@ namespace ACNHCompanion.Views
             BindingContext = globalSearchViewModel;
         }
 
+        //DRY - CrittersPage
+        void OnDonatedTapped(object sender, EventArgs args)
+        {
+            try
+            {
+                TappedEventArgs e = (TappedEventArgs)args;
+
+                Critter critterSelected = (Critter)e.Parameter;
+
+                int critterID = critterSelected.Id;
+                bool isDonated = critterSelected.IsDonated ? false : true;
+
+                App.ApplicationDatabase.UpdateCritterIsDonated(critterID, isDonated);
+                critterSelected.IsDonated = isDonated;
+            }
+            catch (Exception)
+            {
+                //TODO: Logging exceptions..
+                Debugger.Break();
+                throw;
+            }
+        }
     }
 }
