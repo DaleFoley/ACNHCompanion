@@ -28,7 +28,14 @@ namespace ACNHCompanion
             Config configVersionParameter = GetConfigValues("version").FirstOrDefault();
             if (configVersionParameter is null)
             {
-                return;
+                configVersionParameter = new Config
+                {
+                    Name = "version",
+                    Value = "100",
+                    IsEnabled = 1
+                };
+
+                InsertConfigValue(configVersionParameter);
             }
 
             int configVersionValue = int.Parse(configVersionParameter.Value);
@@ -39,12 +46,15 @@ namespace ACNHCompanion
                 if(configVersionValue < sqlFileVersion)
                 {
                     string sqlContent = File.ReadAllText(sqlFileToApply);
+                    string[] sqlContentLines = sqlContent.Split(';');
 
-                    SQLiteCommand sqLiteCommand = _dbConnection.CreateCommand(sqlContent);
-                    sqLiteCommand.ExecuteNonQuery();
+                    foreach (string sqlCommand in sqlContentLines)
+                    {
+                        if (string.IsNullOrEmpty(sqlCommand)) { continue; }
+                        int i = _dbConnection.Execute(sqlCommand);
+                    }
 
                     configVersionParameter.Value = sqlFileVersion.ToString();
-                    UpdateConfigValue(configVersionParameter);
                 }
             }
         }
@@ -58,6 +68,11 @@ namespace ACNHCompanion
         {
             List<Config> configValues = _dbConnection.Query<Config>("select * from [config] where Name = ?", name);
             return configValues;
+        }
+
+        public void InsertConfigValue(Config configToInsert)
+        {
+            _dbConnection.Insert(configToInsert);
         }
 
         public void UpdateConfigValue(Config configToUpdate)

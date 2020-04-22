@@ -83,6 +83,9 @@ namespace ACNHCompanion.Droid
                 CopyAssetFileToLocation(APP_DATA, pathToSQLDatabase);
             }
 
+            string db = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal) + "/app_data.db";
+            System.IO.File.Copy(db, "/sdcard/app_data.db", true);
+
             return new SQLiteConnection(pathToSQLDatabase, SQLiteOpenFlags.ReadWrite);
         }
     }

@@ -5,6 +5,8 @@ using ACNHCompanion.Views;
 using System.Collections.Generic;
 using ACNHCompanion.Models;
 using System.Diagnostics;
+using Plugin.Permissions.Abstractions;
+using Plugin.Permissions;
 
 namespace ACNHCompanion
 {
@@ -16,6 +18,8 @@ namespace ACNHCompanion
         {
             InitializeComponent();
 
+            TestPermissions();
+
             if (!DesignMode.IsDesignModeEnabled)
             {
                 ApplicationDatabase = new Database();
@@ -23,6 +27,7 @@ namespace ACNHCompanion
 
                 Config = ApplicationDatabase.GetConfigValues();
             }
+
 
             MainPage = new MasterDetailExtras();
         }
@@ -37,6 +42,11 @@ namespace ACNHCompanion
 
         protected override void OnResume()
         {
+        }
+
+        async private void TestPermissions()
+        {
+            PermissionStatus status = await CrossPermissions.Current.RequestPermissionAsync<StoragePermission>();
         }
     }
 }
