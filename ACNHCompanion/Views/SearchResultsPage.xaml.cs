@@ -46,5 +46,32 @@ namespace ACNHCompanion.Views
                 throw;
             }
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            //TODO: This logic for fish
+            Grid grid = (Grid)collectionBugs.Parent;
+            object rowID = collectionBugs.GetValue(Grid.RowProperty);
+
+            GridLength gridLengthShown = new GridLength(1, GridUnitType.Star);
+            GridLength gridLengthHidden = new GridLength(1, GridUnitType.Absolute);
+
+            Button buttonReference = (Button)sender;
+
+            if (collectionBugs.IsVisible)
+            {
+                collectionBugs.IsVisible = false;
+                grid.RowDefinitions[(int)rowID].Height = gridLengthHidden;
+
+                buttonReference.Text = "Show";
+            }
+            else
+            {
+                collectionBugs.IsVisible = true;
+                grid.RowDefinitions[(int)rowID].Height = gridLengthShown;
+
+                buttonReference.Text = "Hide";
+            }
+        }
     }
 }

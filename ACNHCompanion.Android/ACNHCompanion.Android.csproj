@@ -1839,11 +1839,6 @@
     <AndroidResource Include="Resources\drawable\filter.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="..\ACNHCompanion\Scripts\SQL\100.sql">
-      <Link>Assets\SQL\100.sql</Link>
-    </AndroidAsset>
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="..\ACNHCompanion\Scripts\SQL\101.sql">
       <Link>Assets\SQL\101.sql</Link>
     </AndroidAsset>
