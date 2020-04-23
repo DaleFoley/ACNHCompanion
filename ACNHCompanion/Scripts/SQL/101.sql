@@ -165,6 +165,8 @@ update critters set CatchStartTime = '00:00', CatchEndTime = '23:59' where ID = 
 update critters set CatchStartTime = '21:00', CatchEndTime = '04:00' where ID = 159;
 update critters set CatchStartTime = '00:00', CatchEndTime = '23:59' where ID = 160;
 
+update critters set Rarity = 'Uncommon (★★★)' where ID = 136;
+
 drop view if exists v_base_critters;
 create view v_base_critters
 as
@@ -282,7 +284,4 @@ as
    from v_base_critters
    inner join southern_months on southern_months.CritterName = v_base_critters.CritterName
    where v_base_critters.Type = 'fish'
-   order by v_base_critters.CritterName;	
-  
-update config set [Value] = 101 where Name = 'version';
-update critters set Rarity = 'Uncommon (★★★)' where ID = 136;
+   order by v_base_critters.CritterName;

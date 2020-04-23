@@ -20,7 +20,7 @@ namespace ACNHCompanion
 
         public void ApplySchemaChangesBasedOnAppVersion()
         {
-            string pathSQLDDL = "SQL/DDL";
+            string pathSQLDDL = "SQL";
 
             string pathPersonalFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             IEnumerable<string> sqlFilesToApply = Directory.GetFiles(Path.Combine(pathPersonalFolder, pathSQLDDL), "*.sql");
@@ -42,19 +42,26 @@ namespace ACNHCompanion
 
             foreach (string sqlFileToApply in sqlFilesToApply)
             {
-                int sqlFileVersion = int.Parse(Path.GetFileNameWithoutExtension(sqlFileToApply));
+                int sqlFileVersion;
+
+                bool isSqlFileNameValid = int.TryParse(Path.GetFileNameWithoutExtension(sqlFileToApply), out sqlFileVersion);
+                if (!isSqlFileNameValid) { continue; }
+
                 if(configVersionValue < sqlFileVersion)
                 {
                     string sqlContent = File.ReadAllText(sqlFileToApply);
-                    string[] sqlContentLines = sqlContent.Split(';');
+                    string[] sqlContentLines = sqlContent.Split(";".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
 
                     foreach (string sqlCommand in sqlContentLines)
                     {
-                        if (string.IsNullOrEmpty(sqlCommand)) { continue; }
-                        int i = _dbConnection.Execute(sqlCommand);
+                        string sqlCommandToExecute = sqlCommand.TrimStart('\r', '\n');
+                        if(string.IsNullOrEmpty(sqlCommandToExecute)) { continue; }
+
+                        _dbConnection.Execute(sqlCommandToExecute);
                     }
 
                     configVersionParameter.Value = sqlFileVersion.ToString();
+                    UpdateConfigValue(configVersionParameter);
                 }
             }
         }

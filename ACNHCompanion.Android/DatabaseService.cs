@@ -43,7 +43,7 @@ namespace ACNHCompanion.Droid
             }
         }
 
-        private void CopySQLiteDDLFiles()
+        private void CopySQLUpdateFiles()
         {
             Context context = Application.Context;
 
@@ -52,11 +52,13 @@ namespace ACNHCompanion.Droid
 
             int versionCode = info.VersionCode;
 
-            string pathToDDLScriptsSource = "SQL/DDL";
+            string pathToDDLScriptsSource = "SQL";
             string pathToDDLScriptsTarget = Path.Combine(_pathDocumentsDirectory, pathToDDLScriptsSource);
 
             Directory.CreateDirectory(pathToDDLScriptsTarget);
 
+            //Check sql file conforms to naming standard, otherwise risk exceptions here if we int.Parse the file. Better yet, use TryParse.
+            //Or maybe just remove the where condition altogether.
             IEnumerable<string> sqlFiles = Application.Context.Assets.List(pathToDDLScriptsSource).Where(sqlFile => int.Parse(Path.GetFileNameWithoutExtension(sqlFile)) >= versionCode);
 
             foreach (string sqlDDLFile in sqlFiles)
@@ -74,7 +76,7 @@ namespace ACNHCompanion.Droid
 
         public SQLiteConnection CreateConnection()
         {
-            CopySQLiteDDLFiles();
+            CopySQLUpdateFiles();
 
             string pathToSQLDatabase = Path.Combine(_pathDocumentsDirectory, APP_DATA);
 
@@ -83,6 +85,7 @@ namespace ACNHCompanion.Droid
                 CopyAssetFileToLocation(APP_DATA, pathToSQLDatabase);
             }
 
+            //TODO: Remove
             string db = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal) + "/app_data.db";
             System.IO.File.Copy(db, "/sdcard/app_data.db", true);
 
