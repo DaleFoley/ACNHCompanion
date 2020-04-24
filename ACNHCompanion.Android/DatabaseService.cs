@@ -86,8 +86,8 @@ namespace ACNHCompanion.Droid
             }
 
             //TODO: Remove
-            string db = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal) + "/app_data.db";
-            System.IO.File.Copy(db, "/sdcard/app_data.db", true);
+            //string db = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal) + "/app_data.db";
+            //System.IO.File.Copy(db, "/sdcard/app_data.db", true);
 
             return new SQLiteConnection(pathToSQLDatabase, SQLiteOpenFlags.ReadWrite);
         }

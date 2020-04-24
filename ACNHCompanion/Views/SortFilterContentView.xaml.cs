@@ -27,10 +27,34 @@ namespace ACNHCompanion.Views
             BindingContext = _sortFilterViewModel;
         }
 
+        private void RefreshCritterPage(BaseViewModel baseViewModel, string filterString = "")
+        {
+            if (baseViewModel.GetType().Equals(typeof(FishViewModel)))
+            {
+                FishViewModel fishViewModel = (FishViewModel)baseViewModel;
+                fishViewModel.FilterString = filterString;
+                fishViewModel.RefreshViewModel();
+            }
+            else
+            {
+                BugsViewModel bugsViewModel = (BugsViewModel)baseViewModel;
+                bugsViewModel.FilterString = filterString;
+                bugsViewModel.RefreshViewModel();
+            }
+        }
+
         private void CloseButton_Clicked(object sender, EventArgs e)
         {
             IsVisible = false;
             InputTransparent = true;
+        }
+
+        private void ClearButton_Clicked(object sender, EventArgs e)
+        {
+            IsVisible = false;
+            InputTransparent = true;
+
+            RefreshCritterPage(CritterViewModel);
         }
 
         private void ApplyButton_Clicked(object sender, EventArgs e)
@@ -40,8 +64,23 @@ namespace ACNHCompanion.Views
 
             _filterString = "";
 
-            if (IsCatchable.IsToggled) { _filterString = "and IsCatchableBasedOnTime <> 0 and IsCatchableBasedOnMonth <> 0 "; }
-            if (IsDonated.IsToggled) { _filterString += "and IsDonated <> 0 "; }
+            if (IsCatchable.IsToggled)
+            {
+                _filterString = "and IsCatchableBasedOnTime <> 0 and IsCatchableBasedOnMonth <> 0 ";
+            }
+            else
+            {
+                _filterString = "and IsCatchableBasedOnTime == 0 and IsCatchableBasedOnMonth == 0 ";
+            }
+
+            if (IsDonated.IsToggled)
+            {
+                _filterString += "and IsDonated <> 0 ";
+            }
+            else
+            {
+                _filterString += "and IsDonated == 0 ";
+            }
 
             //TODO: Can we utilize DB model here? What if column names change?
             _filterString += "order by ";
@@ -56,19 +95,7 @@ namespace ACNHCompanion.Views
 
             if (isOrderByID) { _filterString += " ID asc"; }
 
-            //TODO: Don't think we have to keep assigning to fvm/bvm.
-            if (CritterViewModel.GetType().Equals(typeof(FishViewModel)))
-            {
-                FishViewModel fvm = (FishViewModel)CritterViewModel;
-                fvm.FilterString = _filterString;
-                fvm.RefreshViewModel();
-            }
-            else
-            {
-                BugsViewModel bvm = (BugsViewModel)CritterViewModel;
-                bvm.FilterString = _filterString;
-                bvm.RefreshViewModel();
-            }
+            RefreshCritterPage(CritterViewModel, _filterString);
         }
     }
 }

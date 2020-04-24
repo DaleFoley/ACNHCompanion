@@ -35,7 +35,7 @@
                             Grid.Column="1"
                             Text="Hide"
                             HorizontalOptions="End"
-                            Clicked="Button_Clicked"></Button>
+                            Clicked="ToggleHideShowBugs_Clicked"></Button>
 
                         <BoxView Grid.Row="1"
                              Grid.Column="0"
@@ -180,7 +180,7 @@
                             Grid.Column="1"
                             Text="Hide"
                             HorizontalOptions="End"
-                            Clicked="Button_Clicked"></Button>
+                            Clicked="ToggleHideShowFish_Clicked"></Button>
 
                         <BoxView Grid.Row="4"
                              Grid.Column="0"
@@ -191,8 +191,10 @@
                         <StackLayout Grid.Row="5"
                                  Grid.Column="0"
                                  Grid.ColumnSpan="2"
-                                 IsVisible="True">
-                            <CollectionView x:Name="collectionFish"
+                                 IsVisible="True"
+                                 VerticalOptions="FillAndExpand"
+                                 x:Name="collectionFish">
+                            <CollectionView 
                                     HorizontalOptions="FillAndExpand"
                                     ItemsSource="{Binding FishDisplay}">
                                 <CollectionView.ItemsLayout>

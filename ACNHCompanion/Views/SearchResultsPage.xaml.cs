@@ -27,50 +27,40 @@ namespace ACNHCompanion.Views
         //DRY - CrittersPage
         void OnDonatedTapped(object sender, EventArgs args)
         {
-            try
-            {
-                TappedEventArgs e = (TappedEventArgs)args;
-
-                Critter critterSelected = (Critter)e.Parameter;
-
-                int critterID = critterSelected.Id;
-                bool isDonated = critterSelected.IsDonated ? false : true;
-
-                App.ApplicationDatabase.UpdateCritterIsDonated(critterID, isDonated);
-                critterSelected.IsDonated = isDonated;
-            }
-            catch (Exception)
-            {
-                //TODO: Logging exceptions..
-                Debugger.Break();
-                throw;
-            }
+            Helper.UpdateCritterIsDonated((TappedEventArgs)args);
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void ToggleHideShowBugs_Clicked(object sender, EventArgs e)
         {
-            //TODO: This logic for fish
-            Grid grid = (Grid)collectionBugs.Parent;
-            object rowID = collectionBugs.GetValue(Grid.RowProperty);
+            ToggleStackLayoutDisplay(collectionBugs, (Button)sender);
+        }
+
+        private void ToggleHideShowFish_Clicked(object sender, EventArgs e)
+        {
+            ToggleStackLayoutDisplay(collectionFish, (Button)sender);
+        }
+
+        private void ToggleStackLayoutDisplay(StackLayout collection, Button button)
+        {
+            Grid grid = (Grid)collection.Parent;
+            object rowID = collection.GetValue(Grid.RowProperty);
 
             GridLength gridLengthShown = new GridLength(1, GridUnitType.Star);
-            GridLength gridLengthHidden = new GridLength(1, GridUnitType.Absolute);
+            GridLength gridLengthHidden = new GridLength(0, GridUnitType.Absolute);
 
-            Button buttonReference = (Button)sender;
-
-            if (collectionBugs.IsVisible)
+            if (collection.IsVisible)
             {
-                collectionBugs.IsVisible = false;
+                collection.IsVisible = false;
                 grid.RowDefinitions[(int)rowID].Height = gridLengthHidden;
 
-                buttonReference.Text = "Show";
+                button.Text = "Show";
             }
             else
             {
-                collectionBugs.IsVisible = true;
+                collection.IsVisible = true;
                 grid.RowDefinitions[(int)rowID].Height = gridLengthShown;
 
-                buttonReference.Text = "Hide";
+                button.Text = "Hide";
             }
         }
     }
