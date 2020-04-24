@@ -19,6 +19,7 @@ namespace ACNHCompanion.Views
     public partial class MasterDetailExtrasMaster : ContentPage
     {
         private MasterDetailExtrasMasterViewModel _view;
+
         public MasterDetailExtrasMaster()
         {
             InitializeComponent();
@@ -39,6 +40,13 @@ namespace ACNHCompanion.Views
             {
                 _view.Hemisphere = "North";
             }
+
+            datePicker.PropertyChanged += DatePicker_PropertyChanged;
+        }
+
+        private void DatePicker_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            Debugger.Break();
         }
 
         private void RefreshTabPages()
@@ -49,6 +57,11 @@ namespace ACNHCompanion.Views
 
             detailPage?.FishTab?.RefreshViewModel();
             detailPage?.BugsTab?.RefreshViewModel();
+        }
+
+        private void SetTimeButton_Clicked(object sender, EventArgs e)
+        {
+            datePicker.Focus();
         }
 
         async private void ResetButton_Clicked(object sender, EventArgs e)

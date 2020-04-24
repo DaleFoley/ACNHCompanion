@@ -9,8 +9,7 @@
              x:Class="ACNHCompanion.Views.DashboardPage"
              Title="Dashboard"
              x:Name="Dashboard"            
-             BackgroundColor="#f3daf4"
-             BindingContext="DashboardViewModel">
+             BackgroundColor="#f3daf4">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem 
@@ -43,10 +42,8 @@
                CornerRadius="10">
                 <StackLayout>
                     <Label Text="Welcome" HorizontalOptions="Center" FontSize="Large"></Label>
-                    <Label Text="{Binding LocalTime, StringFormat='{0:MMM dd yyyy h:mm tt}'}" HorizontalOptions="Center" FontSize="Large">
-                        <Label.BindingContext>
-                            <local:DashboardViewModel />
-                        </Label.BindingContext>
+                    <Label Text="{Binding LocalTime, StringFormat='{0:MMM dd yyyy h:mm tt}'}"
+                           HorizontalOptions="Center" FontSize="Large">
                     </Label>
                 </StackLayout>
             </Frame>
@@ -105,9 +102,10 @@
                    RelativeLayout.WidthConstraint=
            "{ConstraintExpression   Type=RelativeToParent,
                                     Property=Width}">
-            <SearchBar Placeholder="critter name, villager name etc.."
+            <!-- TODO: Uncomment! For whatever reason it is currently break the design previewer..-->
+            <!--<SearchBar Placeholder="critter name, villager name etc.."
                        BackgroundColor="White"
-                       SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+                       SearchButtonPressed="SearchBar_SearchButtonPressed"/>-->
         </Frame>
     </RelativeLayout>
     

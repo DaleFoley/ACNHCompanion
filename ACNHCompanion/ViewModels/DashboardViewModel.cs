@@ -25,20 +25,15 @@ namespace ACNHCompanion.ViewModels
             }
         }
 
-
         public DashboardViewModel()
         {
             Device.StartTimer(TimeSpan.FromSeconds(1), () => UpdateLocalTime());
-            //Task updateLocalDateTimeWork = new Task(() => { UpdateLocalTime(); });
-            //updateLocalDateTimeWork.Start();
         }
 
         public bool UpdateLocalTime()
         {
             this.LocalTime = DateTime.Now;
             return true;
-            //System.Threading.Thread.Sleep(1000);
-            //var datetime = new DateTime();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
