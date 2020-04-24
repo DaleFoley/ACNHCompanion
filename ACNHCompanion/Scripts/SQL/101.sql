@@ -37,7 +37,8 @@ create table villagers (ID integer primary key,
             Birthday text,
             Catchphrase text,
             ImageName text,
-			IconName text);
+			IconName text,
+			IsResident int default 0);
 
 drop view if exists v_base_critters;
 create view v_base_critters

@@ -28,7 +28,8 @@ namespace ACNHCompanion.ViewModels
                     VillagerPersonality = villager.Personality,
                     VillagerCatchPhrase = villager.CatchPhrase,
                     VillagerIcon = villager.IconName,
-                    VillagerImage = villager.ImageName
+                    VillagerImage = villager.ImageName,
+                    IsResident = villager.IsResident
                 };
 
                 VillagersDisplay.Add(villagerToAdd);

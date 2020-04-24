@@ -6,23 +6,23 @@
              mc:Ignorable="d"
              x:Class="ACNHCompanion.Views.VillagersPage">
     <ContentPage.Content>
-        <!--<ContentView>
-            <ScrollView>
+        <ContentView>
                 <CollectionView x:Name="collectionContent"
-                                HorizontalOptions="FillAndExpand"
                                 ItemsSource="{Binding VillagersDisplay}">
                     <CollectionView.ItemsLayout>
-                        <GridItemsLayout Orientation="Vertical"/>
+                        <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="10"/>
                     </CollectionView.ItemsLayout>
 
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout Spacing="10">
-                                <Frame BackgroundColor="#ECE0A4" CornerRadius="10" Margin="5, 5, 5, 5">
-                                    <Grid  HorizontalOptions="FillAndExpand" Margin="-20, -20, -20, -20" >
+                            <!--<StackLayout Spacing="10">-->
+                                <Frame CornerRadius="10"
+                                       Margin="5, 5, 5, 5"
+                                       HeightRequest="165">    
+                                    <Grid Margin="-20, -20, -20, -20" VerticalOptions="Start">
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="auto"></RowDefinition>
-                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="auto"></RowDefinition>
                                         </Grid.RowDefinitions>
 
                                         <Grid.ColumnDefinitions>
@@ -40,11 +40,13 @@
                                             </Grid.ColumnDefinitions>
 
                                             <Image d:Source="villager_icon_Bitty.png"
-                                       Source="{Binding VillageIcon}"
+                                       Source="{Binding VillagerIcon}"
                                        Grid.Row="0"
                                        Grid.Column="0"
                                        HorizontalOptions="Start"
                                        Margin="5, 5, 5, 5"
+                                       HeightRequest="32"
+                                       WidthRequest="32"
                                    ></Image>
 
                                             <Label Grid.Row="0"
@@ -56,35 +58,36 @@
                                    FontSize="Large"></Label>
                                         </Grid>
 
-                                        <Frame BackgroundColor="red"
-                                Grid.Row="1"
-                                Grid.Column="0"
-                                HorizontalOptions="FillAndExpand">
-                                            <Grid BackgroundColor="Blue"
-                                  Margin="-15, -15, -15, -15">
+                                        <Frame Grid.Row="1"
+                                               Grid.Column="0"
+                                               VerticalOptions="Start">
+                                            <Grid Margin="-15, -15, -15, -15">
                                                 <Grid.RowDefinitions>
-                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="auto"></RowDefinition>
                                                     <RowDefinition Height="auto"></RowDefinition>
                                                 </Grid.RowDefinitions>
 
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition Width="auto"></ColumnDefinition>
                                                     <ColumnDefinition Width="auto"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
                                                 </Grid.ColumnDefinitions>
 
                                                 <Image d:Source="villager_Bitty"
-                                           Source="{Binding VillagerImage}"
-                                       Grid.Row="0"
-                                       Grid.Column="0"></Image>
+                                                       Source="{Binding VillagerImage}"
+                                                       Grid.Row="0"
+                                                       Grid.Column="0"
+                                                       WidthRequest="90"
+                                                       HeightRequest="112"
+                                                       VerticalOptions="Start"></Image>
 
-                                                <Grid Grid.Row="0"
-                                      Grid.Column="1"
-                                      BackgroundColor="Green">
-                                                    <Grid.RowDefinitions>
+                                        <Grid Grid.Row="0"
+                                            Grid.Column="1"
+                                            HorizontalOptions="FillAndExpand">  
+                                            <Grid.RowDefinitions>
                                                         <RowDefinition Height="auto"></RowDefinition>
                                                         <RowDefinition Height="auto"></RowDefinition>
                                                         <RowDefinition Height="auto"></RowDefinition>
-                                                        <RowDefinition Height="*"></RowDefinition>
                                                     </Grid.RowDefinitions>
 
                                                     <Grid.ColumnDefinitions>
@@ -104,49 +107,51 @@
                                                Grid.Row="0"
                                                Grid.Column="1"
                                                HorizontalOptions="StartAndExpand"
-                                               VerticalOptions="CenterAndExpand"
-                                               BackgroundColor="Red"></Label>
+                                               VerticalOptions="CenterAndExpand"></Label>
 
                                                     <Label d:Text="Lazy"
                                                Text="{Binding VillagerPersonality}"
                                                Grid.Row="1"
                                                Grid.Column="1"
                                                HorizontalOptions="StartAndExpand"
-                                               VerticalOptions="CenterAndExpand"
-                                               BackgroundColor="Red"></Label>
+                                               VerticalOptions="StartAndExpand"></Label>
 
                                                     <Label d:Text="Gorilla"
                                                Text="{Binding VillagerSpecies}"
                                                Grid.Row="2"
                                                Grid.Column="1"
                                                HorizontalOptions="StartAndExpand"
-                                               VerticalOptions="CenterAndExpand"
-                                               BackgroundColor="Red"></Label>
+                                               VerticalOptions="StartAndExpand"></Label>
                                                 </Grid>
+
+                                                <Button Grid.Row="0"
+                                            Grid.Column="2"
+                                            Grid.ColumnSpan="3"
+                                            HorizontalOptions="Fill"
+                                            VerticalOptions="Start"
+                                            d:Text="My Villager"
+                                            Text="{Binding IsResidentText}"></Button>
 
                                                 <Label Grid.Row="1"
                                            Grid.Column="0"
-                                           Grid.ColumnSpan="3"
+                                           Grid.ColumnSpan="5"
                                            d:Text="Test"
                                            Text="{Binding VillagerCatchPhrase}"
-                                           TextColor="Red"
-                                           HorizontalOptions="Center"
-                                           VerticalOptions="Center"></Label>
+                                           HorizontalOptions="CenterAndExpand"
+                                           VerticalOptions="Center"
+                                           FontAttributes="Italic"></Label>
                                             </Grid>
                                         </Frame>
                                     </Grid>
                                 </Frame>
-                            </StackLayout>
-
+                            <!--</StackLayout>-->
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-            </ScrollView>
-        </ContentView>-->
+        </ContentView>
 
         <!-- Design time stuff, this will go into our collectionview -->
-        <d:ContentView>
-            <ScrollView>
+        <!--<d:ContentView>
                 <StackLayout Spacing="10">
                     <Frame HorizontalOptions="FillAndExpand"
                            BackgroundColor="#ECE0A4"
@@ -204,10 +209,12 @@
                                         <ColumnDefinition Width="*"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
 
-                                    <Image d:Source="villager_Bitty"
+                                    <Image d:Source="villager_Alfonso"
                                            Source="{Binding VillagerImage}"
                                        Grid.Row="0"
-                                       Grid.Column="0"></Image>
+                                       Grid.Column="0"
+                                           WidthRequest="90"
+                                           HeightRequest="112"></Image>
 
                                     <Grid Grid.Row="0"
                                         Grid.Column="1"
@@ -237,7 +244,7 @@
                                                HorizontalOptions="StartAndExpand"
                                                VerticalOptions="CenterAndExpand"></Label>
 
-                                        <Label d:Text="Lazy"
+                                        <Label d:Text="♂ Lazy"
                                                Text="{Binding VillagerPersonality}"
                                                Grid.Row="1"
                                                Grid.Column="1"
@@ -257,7 +264,7 @@
                                             Grid.ColumnSpan="3"
                                             HorizontalOptions="Fill"
                                             VerticalOptions="Start"
-                                            d:Text="My Villager"
+                                            d:Text="Not A Resident"
                                             Text="{Binding IsResidentText}"></Button>
                                     
                                     <Label Grid.Row="1"
@@ -273,7 +280,6 @@
                         </Grid>
                     </Frame>
                 </StackLayout>
-            </ScrollView>
-        </d:ContentView>
+        </d:ContentView>-->
     </ContentPage.Content>
 </ContentPage>
