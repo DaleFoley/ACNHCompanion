@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="ACNHCompanion.Views.CritterContentView">
   <ContentView.Content>
+      <!-- Define refreshview on collectionview-->
         <CollectionView x:Name="collectionContent"
                             HorizontalOptions="FillAndExpand"
                             ItemsSource="{Binding CrittersToDisplay}">

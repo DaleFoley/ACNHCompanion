@@ -33,7 +33,11 @@ namespace ACNHCompanion.Views
             bugsPage.IconImageSource = "bug_Bell_cricket.png";
             bugsPage.Title = "Bugs";
 
-            NavigationPage villagersPage = new NavigationPage(new VillagersPage(VillagersTab));
+            //NavigationPage villagersPage = new NavigationPage(new VillagersPage(VillagersTab));
+            //villagersPage.IconImageSource = "villagers.png";
+            //villagersPage.Title = "Villagers";
+
+            NavigationPage villagersPage = new NavigationPage(new VillagerSummaryPage());
             villagersPage.IconImageSource = "villagers.png";
             villagersPage.Title = "Villagers";
 

@@ -4,36 +4,123 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="ACNHCompanion.Views.VillagerSummaryPage">
+             x:Class="ACNHCompanion.Views.VillagerSummaryPage"
+             BackgroundColor="#f3daf4">
 
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-
-        <Button Grid.Row="0" Grid.Column="0" Text="All villagers"></Button>
-
-        <Grid Grid.Row="1" Grid.Column="0">
+    <ScrollView>
+        <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Row="0" Grid.Column="0" Text="Koalas"></Button>
-            <Button Grid.Row="0" Grid.Column="1" Text="Koalas"></Button>
-            
+            <Frame Grid.Row="0"
+                   Grid.Column="0"
+                   Margin="5, 5, 5, 5"
+                   CornerRadius="15">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="AllVillagersTapGestureRecognizer_Tapped">
+
+                    </TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.Column="0" Source="villagers"></Image>
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text="All Villagers"
+                           FontSize="Large"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"></Label>
+
+                    <Frame Grid.Row="0" Grid.Column="2"
+                           CornerRadius="10"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           Margin="0, 0, 0, 0"
+                           Padding="0"
+                           BackgroundColor="LightGray">
+                        <Label Text="{Binding TotalSpeciesCount}" d:Text="100" Padding="5"></Label>
+                    </Frame>
+                </Grid>
+            </Frame>
+
+            <CollectionView Grid.Row="1"
+                            Grid.Column="0"
+                            ItemsSource="{Binding DistinctVillagerSpecies}">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="10" />
+                </CollectionView.ItemsLayout>
+                
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                            <Frame Grid.Row="0"
+                                   Grid.Column="0"
+                                   Margin="5, 5, 5, 5"
+                                   BackgroundColor="#e3e1d0"
+                                   CornerRadius="15">
+
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="VillagerSpeciesTapGestureRecognizer_Tapped">
+
+                                        </TapGestureRecognizer>
+                                    </Frame.GestureRecognizers>
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Row="0"
+                                       Grid.Column="0"
+                                       Source="{Binding IconName}"></Image>
+
+                                <Label Grid.Row="0"
+                                       Grid.Column="1"
+                                       Text="{Binding Species}"
+                                       FontSize="Large"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"></Label>  
+
+                                <Frame Grid.Row="0"
+                                       Grid.Column="2"
+                                       CornerRadius="15"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Center"
+                                       BackgroundColor="LightGray"
+                                       Margin="5, 5, 5, 5"
+                                       WidthRequest="30"
+                                       Padding="0">
+                                    <Label HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           Text="{Binding VillagerSpeciesCount}"></Label>
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
         </Grid>
-    </Grid>
+    </ScrollView>
 </ContentPage>

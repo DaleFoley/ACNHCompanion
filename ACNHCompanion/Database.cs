@@ -87,6 +87,13 @@ namespace ACNHCompanion
             _dbConnection.Update(configToUpdate);
         }
 
+        public List<SpeciesDistinct> GetDistinctSpecies()
+        {
+            return _dbConnection.Query<SpeciesDistinct>("select distinct Species, IconName, " +
+                "(select count(v.ID) from villagers as v where v.Species = villagers.Species) as VillagerSpeciesCount " +
+                "from villagers group by Species");
+        }
+
         public List<Villagers> GetVillagers(string filterString = "")
         {
             return _dbConnection.Query<Villagers>("select * from [villagers] where 1=1 " + filterString);

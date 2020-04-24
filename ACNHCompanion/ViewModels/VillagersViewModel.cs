@@ -13,9 +13,9 @@ namespace ACNHCompanion.ViewModels
         public List<Villagers> Villagers { get; set; }
         public ObservableCollection<VillagerDisplay> VillagersDisplay { get; set; }
 
-        public VillagersViewModel()
+        public VillagersViewModel(string filterString = "")
         {
-            Villagers = App.ApplicationDatabase.GetVillagers();
+            Villagers = App.ApplicationDatabase.GetVillagers(filterString);
             VillagersDisplay = new ObservableCollection<VillagerDisplay>();
 
             foreach (Villagers villager in Villagers)
