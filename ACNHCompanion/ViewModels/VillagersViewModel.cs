@@ -5,11 +5,15 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace ACNHCompanion.ViewModels
 {
-    public class VillagersViewModel : INotifyPropertyChanged
+    public class VillagersViewModel
     {
+        public ICommand UpdateVillagerIsResident { private set; get; }
+
         public List<Villagers> Villagers { get; set; }
         public ObservableCollection<VillagerDisplay> VillagersDisplay { get; set; }
 
@@ -22,6 +26,7 @@ namespace ACNHCompanion.ViewModels
             {
                 VillagerDisplay villagerToAdd = new VillagerDisplay
                 {
+                    ID = villager.ID,
                     VillagerName = villager.Name,
                     VillagerBirthday = villager.Birthday,
                     VillagerSpecies = villager.Species,
@@ -34,12 +39,26 @@ namespace ACNHCompanion.ViewModels
 
                 VillagersDisplay.Add(villagerToAdd);
             }
+
+            UpdateVillagerIsResident = new Command(OnUpdateIsVillagerResident);
         }
-               
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
+
+        public void OnUpdateIsVillagerResident(object parameter)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
+            if(parameter is null) { return; }
+            VillagerDisplay selectedVillager = parameter as VillagerDisplay;
+
+            //TODO: Change IsResident to bool data type.
+            if (selectedVillager.IsResident == 0)
+            {
+                selectedVillager.IsResident = 1;
+            }
+            else
+            {
+                selectedVillager.IsResident = 0;
+            }
+
+            App.ApplicationDatabase.UpdatedVillagerIsResident(selectedVillager.ID, selectedVillager.IsResident);
         }
     }
 }

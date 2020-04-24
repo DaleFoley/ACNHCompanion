@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace ACNHCompanion.Models
 {
@@ -14,6 +16,7 @@ namespace ACNHCompanion.Models
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
         }
 
+        public int ID { get; set; }
         public string VillagerIcon { get; set; }
         public string VillagerImage { get; set; }
         public string VillagerName { get; set; }
@@ -21,8 +24,14 @@ namespace ACNHCompanion.Models
         public string VillagerPersonality { get; set; }
         public string VillagerSpecies { get; set; }
         public string VillagerCatchPhrase { get; set; }
+
+        private int _isResident;
         public int IsResident
         {
+            get
+            {
+                return _isResident;
+            }
             set
             {
                 if(value != 0)
@@ -33,6 +42,8 @@ namespace ACNHCompanion.Models
                 {
                     IsResidentText = "Not A Resident";
                 }
+
+                _isResident = value;
             }
         }
 
@@ -48,7 +59,7 @@ namespace ACNHCompanion.Models
                 if(value != _isResidentText)
                 {
                     _isResidentText = value;
-                    OnNotifyPropertyChanged(IsResidentText);
+                    OnNotifyPropertyChanged(nameof(IsResidentText));
                 }
             }
         }
