@@ -105,6 +105,7 @@ namespace ACNHCompanion.ViewModels
                     Time = dbCritter.Time,
                     Location = dbCritter.Location,
                     IsDonated = dbCritter.IsDonated,
+                    IsSculpted = dbCritter.IsSculpted,
                     Months = dbCritter.Months,
                     Rarity = dbCritter.Rarity,
                     Icon = dbCritter.ImageName,

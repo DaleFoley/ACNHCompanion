@@ -15,6 +15,7 @@ namespace ACNHCompanion.Models
         public string Type { get; set; }
         public string ImageName { get; set; }
         public bool IsDonated { get; set; }
+        public bool IsSculpted { get; set; }
         public string Months { get; set; }
         public string Rarity { get; set; }
         public bool IsCatchableBasedOnMonth { get; set; }

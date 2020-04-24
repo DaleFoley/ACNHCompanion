@@ -28,6 +28,11 @@ namespace ACNHCompanion.Views
             sortFilterContentView.CritterViewModel = _critterView;
         }
 
+        void OnSculptureTapped(object sender, EventArgs args)
+        {
+
+        }
+
         void OnDonatedTapped(object sender, EventArgs args)
         {
             try

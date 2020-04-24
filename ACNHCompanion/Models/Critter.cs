@@ -32,6 +32,15 @@ namespace ACNHCompanion.Models
             }
         }
 
+        private bool _isSculpted;
+
+        public bool IsSculpted
+        {
+            get { return _isSculpted; }
+            set { _isSculpted = value; OnNotifyPropertyChanged(); }
+        }
+
+
         //Change to auto property.
         private string _name;
         public string Name { get { return _name; } set { _name = value; OnNotifyPropertyChanged(); } }
@@ -97,6 +106,27 @@ namespace ACNHCompanion.Models
                 OnNotifyPropertyChanged();
             }
         }
+
+        private string _sculptedIcon;
+
+        public string SculptedIcon
+        {
+            get { return GetSculptedIcon(); }
+            set { _sculptedIcon = value; OnNotifyPropertyChanged(); }
+        }
+
+        private string GetSculptedIcon()
+        {
+            if (IsSculpted)
+            {
+                return "sculpted.png";
+            }
+            else
+            {
+                return "sculpted_false.png";
+            }
+        }
+
 
         private string GetDonatedIcon()
         {

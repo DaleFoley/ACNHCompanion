@@ -43,7 +43,8 @@
                                             <RowDefinition Height="*"></RowDefinition>
                                             <RowDefinition Height="64"></RowDefinition>
                                             <RowDefinition Height="*"></RowDefinition>
-                                        </Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
 
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -112,29 +113,57 @@
                                        VerticalOptions="StartAndExpand"
                                        HorizontalOptions="StartAndExpand"></Label>
 
+                                    <Grid  Grid.Row="3"
+                                           Grid.Column="0"
+                                           Grid.ColumnSpan="6">     
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="32"></RowDefinition>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+
                                         <Image Source="{Binding DonatedIcon}"
-                                       Grid.Row="2"
-                                       Grid.Column="0"
-                                       HorizontalOptions="StartAndExpand"
-                                       VerticalOptions="StartAndExpand"
-                                       HeightRequest="32"
-                                       WidthRequest="32">
-                                            <Image.GestureRecognizers>
-                                                <TapGestureRecognizer
-                                        Tapped="OnDonatedTapped"
-                                        CommandParameter="{Binding}"
-                                        />
+                                               Grid.Row="0"
+                                               Grid.Column="0"
+                                                HeightRequest="32"
+                                                WidthRequest="32"
+                                               HorizontalOptions="CenterAndExpand"
+                                                VerticalOptions="CenterAndExpand">
+                                                    <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                Tapped="OnDonatedTapped"
+                                                CommandParameter="{Binding}"
+                                                />  
                                             </Image.GestureRecognizers>
                                         </Image>
 
-                                        <BoxView BackgroundColor="LightGray"
-                                         Grid.Row="2"
-                                         Grid.Column="2"
-                                         Grid.ColumnSpan="4"
-                                         CornerRadius="15"
-                                         MinimumHeightRequest="20"></BoxView>
+                                        <Image Source="{Binding SculptedIcon}"
+                                               Grid.Row="0"
+                                               Grid.Column="1"
+                                                HeightRequest="32"
+                                                WidthRequest="32"
+                                               HorizontalOptions="CenterAndExpand"
+                                                VerticalOptions="CenterAndExpand">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer
+                                                Tapped="OnSculptureTapped"
+                                                CommandParameter="{Binding}"
+                                                />
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </Grid>
 
-                                        <Label Text="{Binding Rarity}"
+                                    <BoxView BackgroundColor="LightGray"
+                                        Grid.Row="2"
+                                        Grid.Column="2"
+                                        Grid.ColumnSpan="4"
+                                        CornerRadius="15"
+                                        MinimumHeightRequest="20"></BoxView>
+
+                                    <Label Text="{Binding Rarity}"
                                        Grid.Row="2"
                                        Grid.Column="2"
                                        Grid.ColumnSpan="4"
@@ -164,6 +193,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="64"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="*"></RowDefinition>
                         </Grid.RowDefinitions>
 
@@ -230,20 +260,48 @@
                                        VerticalOptions="StartAndExpand"
                                        HorizontalOptions="StartAndExpand"></Label>
 
-                        <Image Source="donated_false"
-                                       Grid.Row="2"
+                        <Grid  Grid.Row="3"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="6">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="32"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="donated_false"
+                                       Grid.Row="0"
                                        Grid.Column="0"
-                                       HorizontalOptions="StartAndExpand"
-                                       VerticalOptions="StartAndExpand"
-                                       HeightRequest="32"
-                                       WidthRequest="32">
-                            <Image.GestureRecognizers>
-                                <TapGestureRecognizer
+                                        HeightRequest="32"
+                                        WidthRequest="32"
+                                       HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
                                         Tapped="OnDonatedTapped"
                                         CommandParameter="{Binding}"
                                         />
-                            </Image.GestureRecognizers>
-                        </Image>
+                                </Image.GestureRecognizers>
+                            </Image>
+
+                            <Image Source="sculpture"
+                                       Grid.Row="0"
+                                       Grid.Column="1"
+                                        HeightRequest="32"
+                                        WidthRequest="32"
+                                       HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Tapped="OnDonatedTapped"
+                                        CommandParameter="{Binding}"
+                                        />
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </Grid>
 
                         <BoxView BackgroundColor="LightGray"
                                          Grid.Row="2"

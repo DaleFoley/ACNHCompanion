@@ -34,7 +34,7 @@ namespace ACNHCompanion.Views
             bugsPage.Title = "Bugs";
 
             NavigationPage villagersPage = new NavigationPage(new VillagersPage(VillagersTab));
-            villagersPage.IconImageSource = "villagers_icon.png";
+            villagersPage.IconImageSource = "villagers.png";
             villagersPage.Title = "Villagers";
 
             Children.Add(fishPage);
