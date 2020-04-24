@@ -87,6 +87,11 @@ namespace ACNHCompanion
             _dbConnection.Update(configToUpdate);
         }
 
+        public List<Villagers> GetVillagers(string filterString = "")
+        {
+            return _dbConnection.Query<Villagers>("select * from [villagers] where 1=1 " + filterString);
+        }
+
         public List<CritterMonths> GetFishNorthern(string filterString = null)
         {
             return _dbConnection.Query<CritterMonths>("select * from [v_fish_northern] where 1=1 " + filterString);

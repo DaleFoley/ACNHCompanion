@@ -32,6 +32,8 @@ namespace ACNHCompanion.ViewModels
             set
             {
                 _crittersToDisplay = value;
+
+                //TODO: Compare with old value to check if there were any changes first..
                 OnNotifyPropertyChanged(nameof(CrittersToDisplay));
             }
         }
@@ -47,6 +49,8 @@ namespace ACNHCompanion.ViewModels
             set
             {
                 _title = value;
+
+                //TODO: Compare with old value to check if there were any changes first..
                 OnNotifyPropertyChanged(nameof(Title));
             }
         }

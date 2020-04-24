@@ -16,6 +16,8 @@ namespace ACNHCompanion.Views
         public VillagersPage(VillagersViewModel villagerViewModel)
         {
             InitializeComponent();
+
+            BindingContext = villagerViewModel;
         }
     }
 }
