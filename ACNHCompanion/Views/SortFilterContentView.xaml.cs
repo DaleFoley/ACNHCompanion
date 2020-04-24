@@ -57,6 +57,7 @@ namespace ACNHCompanion.Views
             //Should really reference _sortFilterViewModel.Default*Index but the value was changing during runtime, not sure how that was happening...
             FilterByDonated.SelectedItem = _sortFilterViewModel.FilterCriteria[2];
             FilterByCatchable.SelectedItem = _sortFilterViewModel.FilterCriteria[2];
+            FilterBySculpted.SelectedItem = _sortFilterViewModel.FilterCriteria[2];
 
             SortByLocation.SelectedItem = _sortFilterViewModel.SortCriteria[2];
             SortByName.SelectedItem = _sortFilterViewModel.SortCriteria[2];
@@ -89,6 +90,15 @@ namespace ACNHCompanion.Views
             else if (FilterByCatchable.SelectedItem.ToString().ToLower() == "no")
             {
                 _filterString += "and IsCatchableBasedOnTime == 0 and IsCatchableBasedOnMonth == 0 ";
+            }
+
+            if (FilterBySculpted.SelectedItem.ToString().ToLower() == "yes")
+            {
+                _filterString += "and IsSculpted <> 0 ";
+            }
+            else if (FilterBySculpted.SelectedItem.ToString().ToLower() == "no")
+            {
+                _filterString += "and IsSculpted == 0 ";
             }
 
             //TODO: Can we utilize DB model here? What if column names change?

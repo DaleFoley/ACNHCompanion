@@ -8,7 +8,7 @@ create table villagers (ID integer primary key,
             ImageName text,
 			IconName text);
 
-drop view v_base_critters;
+drop view if exists v_base_critters;
 create view v_base_critters
 as
     select critters.ID,

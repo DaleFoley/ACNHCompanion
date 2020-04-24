@@ -37,7 +37,7 @@ namespace ACNHCompanion.Models
         public bool IsSculpted
         {
             get { return _isSculpted; }
-            set { _isSculpted = value; OnNotifyPropertyChanged(); }
+            set { _isSculpted = value; SculptedIcon = GetSculptedIcon(); }
         }
 
 
@@ -119,11 +119,11 @@ namespace ACNHCompanion.Models
         {
             if (IsSculpted)
             {
-                return "sculpted.png";
+                return "sculpture.png";
             }
             else
             {
-                return "sculpted_false.png";
+                return "sculpture_false.png";
             }
         }
 
