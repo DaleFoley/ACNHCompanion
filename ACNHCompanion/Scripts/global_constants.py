@@ -22,3 +22,6 @@ view_name_fish_southern = 'v_fish_southern'
 ascii_checkmark = 10003  # ✓
 
 url_animalcrossing_fandom = 'https://animalcrossing.fandom.com'
+
+url_nookipedia_base = 'https://nookipedia.com'
+url_nookipedia_characters = url_nookipedia_base + '/wiki/Animal_Crossing:_New_Horizons/Characters'

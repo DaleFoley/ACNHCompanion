@@ -89,15 +89,17 @@
                                     Grid.Row="0"
                                     Grid.Column="0"
                                     VerticalOptions="CenterAndExpand"
-                                    Margin="0, 15, 0, 0
-">
+                                    Margin="0, 15, 0, 0">
                         </Label>
 
-                        <Switch     IsToggled="false" 
+                        <Picker     Title="Asc/Desc" 
                                     Grid.Row="0"
                                     Grid.Column="1"
+                                    VerticalOptions="CenterAndExpand"
+                                    ItemsSource="{Binding FilterCriteria}"
+                                    SelectedIndex="{Binding DefaultSelectedFilterIndex}"
                                     Margin="0, 15, 0, 0"
-                                    x:Name="IsDonated"/>
+                                    x:Name="FilterByDonated"/>
 
                         <Label      Text="Catchable Now"
                                     Grid.Row="1"
@@ -105,10 +107,14 @@
                                     VerticalOptions="CenterAndExpand">
                         </Label>
 
-                        <Switch     IsToggled="true" 
+                        <Picker     Title="Asc/Desc" 
                                     Grid.Row="1"
                                     Grid.Column="1"
-                                    x:Name="IsCatchable"/>
+                                    VerticalOptions="CenterAndExpand"
+                                    ItemsSource="{Binding FilterCriteria}"
+                                    SelectedIndex="{Binding DefaultSelectedFilterIndex}"
+                                    Margin="0, 15, 0, 0"
+                                    x:Name="FilterByCatchable"/>
                     </Grid>
 
                     <Label      Text="Sort By"
@@ -150,7 +156,7 @@
                                     Grid.Column="1"
                                     VerticalOptions="CenterAndExpand"
                                     ItemsSource="{Binding SortCriteria}"
-                                    SelectedIndex="{Binding DefaultSelectedIndex}"
+                                    SelectedIndex="{Binding DefaultSelectedSortIndex}"
                                     x:Name="SortByName"/>
 
                         <Label      Text="Price"
@@ -164,7 +170,7 @@
                                     Grid.Column="1"
                                     VerticalOptions="CenterAndExpand"
                                     ItemsSource="{Binding SortCriteria}"
-                                    SelectedIndex="{Binding DefaultSelectedIndex}"
+                                    SelectedIndex="{Binding DefaultSelectedSortIndex}"
                                     x:Name="SortByPrice"/>
 
                         <Label      Text="Rarity"
@@ -178,7 +184,7 @@
                                     Grid.Column="1"
                                     VerticalOptions="CenterAndExpand"
                                     ItemsSource="{Binding SortCriteria}"
-                                    SelectedIndex="{Binding DefaultSelectedIndex}"
+                                    SelectedIndex="{Binding DefaultSelectedSortIndex}"
                                     x:Name="SortByRarity"/>
 
                         <Label  Text="Location"
@@ -192,7 +198,7 @@
                                     Grid.Column="1"
                                     VerticalOptions="CenterAndExpand"
                                     ItemsSource="{Binding SortCriteria}"
-                                    SelectedIndex="{Binding DefaultSelectedIndex}"
+                                    SelectedIndex="{Binding DefaultSelectedSortIndex}"
                                     x:Name="SortByLocation"/>
 
                         <Button Grid.Row="4"

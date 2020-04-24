@@ -23,7 +23,8 @@ def setup_db_schemas(p_db_command):
             Species text,
             Birthday text,
             Catchphrase text,
-            ImageName text)''')
+            ImageName text,
+            IconName text default null)''')
 
     p_db_command.execute('''drop table if exists ''' + table_name_config)
     p_db_command.execute('''create table ''' + table_name_config + ''' (ID integer primary key,

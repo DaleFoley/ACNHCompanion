@@ -54,6 +54,15 @@ namespace ACNHCompanion.Views
             IsVisible = false;
             InputTransparent = true;
 
+            //Should really reference _sortFilterViewModel.Default*Index but the value was changing during runtime, not sure how that was happening...
+            FilterByDonated.SelectedItem = _sortFilterViewModel.FilterCriteria[2];
+            FilterByCatchable.SelectedItem = _sortFilterViewModel.FilterCriteria[2];
+
+            SortByLocation.SelectedItem = _sortFilterViewModel.SortCriteria[2];
+            SortByName.SelectedItem = _sortFilterViewModel.SortCriteria[2];
+            SortByPrice.SelectedItem = _sortFilterViewModel.SortCriteria[2];
+            SortByRarity.SelectedItem = _sortFilterViewModel.SortCriteria[2];
+
             RefreshCritterPage(CritterViewModel);
         }
 
@@ -64,22 +73,22 @@ namespace ACNHCompanion.Views
 
             _filterString = "";
 
-            if (IsCatchable.IsToggled)
-            {
-                _filterString = "and IsCatchableBasedOnTime <> 0 and IsCatchableBasedOnMonth <> 0 ";
-            }
-            else
-            {
-                _filterString = "and IsCatchableBasedOnTime == 0 and IsCatchableBasedOnMonth == 0 ";
-            }
-
-            if (IsDonated.IsToggled)
+            if(FilterByDonated.SelectedItem.ToString().ToLower() == "yes")
             {
                 _filterString += "and IsDonated <> 0 ";
             }
-            else
+            else if(FilterByDonated.SelectedItem.ToString().ToLower() == "no")
             {
                 _filterString += "and IsDonated == 0 ";
+            }
+
+            if (FilterByCatchable.SelectedItem.ToString().ToLower() == "yes")
+            {
+                _filterString += "and IsCatchableBasedOnTime <> 0 and IsCatchableBasedOnMonth <> 0 ";
+            }
+            else if (FilterByCatchable.SelectedItem.ToString().ToLower() == "no")
+            {
+                _filterString += "and IsCatchableBasedOnTime == 0 and IsCatchableBasedOnMonth == 0 ";
             }
 
             //TODO: Can we utilize DB model here? What if column names change?

@@ -128,6 +128,41 @@ def insert_villagers_and_scrape_images(p_html_content):
         download_villager_image(villager_image, villager_image_name)
 
 
+def update_villagers_with_icons(p_html_content):
+    row_count = len(p_html_content)
+
+    for idx in range(1, row_count):
+        villager_row = p_html_content[idx]
+
+        villager_name = villager_row.contents[3].text.strip()
+        villager_icon = villager_row.contents[1]
+
+        villager_icon_name = 'villager_icon_' + villager_name.replace('-', '_').replace(' ', '_').replace('\'', '') +\
+                             ".png"
+
+        db_command.execute('''update ''' + table_name_villagers + ''' set IconName = ? where Name = ?''',
+                           (villager_icon_name,
+                            villager_name))
+
+        download_villager_icon(villager_icon, villager_icon_name)
+
+
+def download_villager_icon(p_image_tag, p_path_image):
+    image_src_url = p_image_tag.contents[0].contents[0].attrs['src']
+    image_response = requests.get(url_nookipedia_base + image_src_url)
+
+    path_saved_image = path_android_assets + p_path_image
+    if image_response.status_code == 200:
+        image_data = image_response.content
+
+        image_file = open(path_saved_image, 'wb')
+        image_file.write(image_data)
+        image_file.close()
+
+        crop_image_to_size(path_saved_image)
+    else:
+        breakpoint()
+
 
 def insert_fish_and_scrape_images(p_html_content):
     row_count = len(p_html_content)
@@ -225,6 +260,15 @@ def download_critter_image(p_image_tag, p_path_image):
 try:
     setup_db_schemas(db_command)
     insert_predefined_values(db_command)
+
+    response = requests.get(url_nookipedia_characters)
+
+    if response.status_code == 200:
+        html_doc = response.text
+        html_source = BeautifulSoup(html_doc, 'html.parser')
+
+        villager_rows = html_source.findAll('table')[2].findAll('tr')
+        update_villagers_with_icons(villager_rows)
 
     response = requests.get(url_animalcrossing_fandom + '/wiki/Villager_list_(New_Horizons)')
 
