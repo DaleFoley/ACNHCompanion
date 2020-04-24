@@ -27,14 +27,14 @@
         <RelativeLayout>
                 <RefreshView IsRefreshing="{Binding IsRefreshing}"
                     Command="{Binding RefreshCommand}">
-                                        
+                <ContentView>
                     <CollectionView x:Name="collectionContent"
                             HorizontalOptions="FillAndExpand"
                             ItemsSource="{Binding CrittersToDisplay}">
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="10"/>
                         </CollectionView.ItemsLayout>
-                        
+
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Frame BackgroundColor="#f5efd1" CornerRadius="15">
@@ -44,7 +44,7 @@
                                             <RowDefinition Height="64"></RowDefinition>
                                             <RowDefinition Height="*"></RowDefinition>
                                             <RowDefinition Height="*"></RowDefinition>
-                                    </Grid.RowDefinitions>
+                                        </Grid.RowDefinitions>
 
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -113,57 +113,57 @@
                                        VerticalOptions="StartAndExpand"
                                        HorizontalOptions="StartAndExpand"></Label>
 
-                                    <Grid  Grid.Row="3"
+                                        <Grid  Grid.Row="3"
                                            Grid.Column="0"
-                                           Grid.ColumnSpan="6">     
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="32"></RowDefinition>
-                                        </Grid.RowDefinitions>
+                                           Grid.ColumnSpan="6">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="32"></RowDefinition>
+                                            </Grid.RowDefinitions>
 
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"></ColumnDefinition>
-                                            <ColumnDefinition Width="*"></ColumnDefinition>
-                                        </Grid.ColumnDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
 
-                                        <Image Source="{Binding DonatedIcon}"
+                                            <Image Source="{Binding DonatedIcon}"
                                                Grid.Row="0"
                                                Grid.Column="0"
                                                 HeightRequest="32"
                                                 WidthRequest="32"
                                                HorizontalOptions="CenterAndExpand"
                                                 VerticalOptions="CenterAndExpand">
-                                                    <Image.GestureRecognizers>
+                                                <Image.GestureRecognizers>
                                                     <TapGestureRecognizer
                                                 Tapped="OnDonatedTapped"
                                                 CommandParameter="{Binding}"
-                                                />  
-                                            </Image.GestureRecognizers>
-                                        </Image>
+                                                />
+                                                </Image.GestureRecognizers>
+                                            </Image>
 
-                                        <Image Source="{Binding SculptedIcon}"
+                                            <Image Source="{Binding SculptedIcon}"
                                                Grid.Row="0"
                                                Grid.Column="1"
                                                 HeightRequest="32"
                                                 WidthRequest="32"
                                                HorizontalOptions="CenterAndExpand"
                                                 VerticalOptions="CenterAndExpand">
-                                            <Image.GestureRecognizers>
-                                                <TapGestureRecognizer
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer
                                                 Tapped="OnSculptureTapped"
                                                 CommandParameter="{Binding}"
                                                 />
-                                            </Image.GestureRecognizers>
-                                        </Image>
-                                    </Grid>
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                        </Grid>
 
-                                    <BoxView BackgroundColor="LightGray"
+                                        <BoxView BackgroundColor="LightGray"
                                         Grid.Row="2"
                                         Grid.Column="2"
                                         Grid.ColumnSpan="4"
                                         CornerRadius="15"
                                         MinimumHeightRequest="20"></BoxView>
 
-                                    <Label Text="{Binding Rarity}"
+                                        <Label Text="{Binding Rarity}"
                                        Grid.Row="2"
                                        Grid.Column="2"
                                        Grid.ColumnSpan="4"
@@ -176,6 +176,7 @@
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
+                </ContentView>                  
                 </RefreshView>
 
             <views:SortFilterContentView x:Name="sortFilterContentView" IsVisible="False" InputTransparent="True">
