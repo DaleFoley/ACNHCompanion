@@ -144,7 +144,7 @@ def update_villagers_with_icons(p_html_content):
                            (villager_icon_name,
                             villager_name))
 
-        download_villager_icon(villager_icon, villager_icon_name)
+        # download_villager_icon(villager_icon, villager_icon_name)
 
 
 def download_villager_icon(p_image_tag, p_path_image):
@@ -258,8 +258,8 @@ def download_critter_image(p_image_tag, p_path_image):
 
 
 try:
-    setup_db_schemas(db_command)
-    insert_predefined_values(db_command)
+    # setup_db_schemas(db_command)
+    # insert_predefined_values(db_command)
 
     response = requests.get(url_nookipedia_characters)
 
@@ -270,42 +270,42 @@ try:
         villager_rows = html_source.findAll('table')[2].findAll('tr')
         update_villagers_with_icons(villager_rows)
 
-    response = requests.get(url_animalcrossing_fandom + '/wiki/Villager_list_(New_Horizons)')
-
-    if response.status_code == 200:
-        html_doc = response.text
-        html_source = BeautifulSoup(html_doc, 'html.parser')
-
-        villager_rows = html_source.findAll('table')[2].findAll('tr')
-        insert_villagers_and_scrape_images(villager_rows)
-
-        breakpoint()
-
-    response = requests.get(url_animalcrossing_fandom + '/wiki/Bugs_(New_Horizons)')
-
-    if response.status_code == 200:
-        html_doc = response.text
-        html_source = BeautifulSoup(html_doc, 'html.parser')
-
-        bug_rows_northern = html_source.findAll('table')[2].findAll('table')[0].findAll('tr')
-        insert_bugs_and_scrape_images(bug_rows_northern)
-        insert_critter_months(bug_rows_northern, table_name_northern_months)
-
-        bug_rows_southern = html_source.findAll('table')[4].findAll('table')[0].findAll('tr')
-        insert_critter_months(bug_rows_southern, table_name_southern_months)
-
-    response = requests.get(url_animalcrossing_fandom + '/wiki/Fish_(New_Horizons)')
-
-    if response.status_code == 200:
-        html_doc = response.text
-        html_source = BeautifulSoup(html_doc, 'html.parser')
-
-        fish_rows_northern = html_source.findAll('table')[2].findAll('tr')
-        insert_fish_and_scrape_images(fish_rows_northern)
-        insert_critter_months(fish_rows_northern, table_name_northern_months, 1)
-
-        fish_rows_southern = html_source.findAll('table')[4].findAll('tr')
-        insert_critter_months(fish_rows_southern, table_name_southern_months, 1)
+    # response = requests.get(url_animalcrossing_fandom + '/wiki/Villager_list_(New_Horizons)')
+    #
+    # if response.status_code == 200:
+    #     html_doc = response.text
+    #     html_source = BeautifulSoup(html_doc, 'html.parser')
+    #
+    #     villager_rows = html_source.findAll('table')[2].findAll('tr')
+    #     insert_villagers_and_scrape_images(villager_rows)
+    #
+    #     breakpoint()
+    #
+    # response = requests.get(url_animalcrossing_fandom + '/wiki/Bugs_(New_Horizons)')
+    #
+    # if response.status_code == 200:
+    #     html_doc = response.text
+    #     html_source = BeautifulSoup(html_doc, 'html.parser')
+    #
+    #     bug_rows_northern = html_source.findAll('table')[2].findAll('table')[0].findAll('tr')
+    #     insert_bugs_and_scrape_images(bug_rows_northern)
+    #     insert_critter_months(bug_rows_northern, table_name_northern_months)
+    #
+    #     bug_rows_southern = html_source.findAll('table')[4].findAll('table')[0].findAll('tr')
+    #     insert_critter_months(bug_rows_southern, table_name_southern_months)
+    #
+    # response = requests.get(url_animalcrossing_fandom + '/wiki/Fish_(New_Horizons)')
+    #
+    # if response.status_code == 200:
+    #     html_doc = response.text
+    #     html_source = BeautifulSoup(html_doc, 'html.parser')
+    #
+    #     fish_rows_northern = html_source.findAll('table')[2].findAll('tr')
+    #     insert_fish_and_scrape_images(fish_rows_northern)
+    #     insert_critter_months(fish_rows_northern, table_name_northern_months, 1)
+    #
+    #     fish_rows_southern = html_source.findAll('table')[4].findAll('tr')
+    #     insert_critter_months(fish_rows_southern, table_name_southern_months, 1)
 
 
 except BaseException as error:
