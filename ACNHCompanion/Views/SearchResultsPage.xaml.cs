@@ -15,16 +15,21 @@ namespace ACNHCompanion.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SearchResultsPage : ContentPage
     {
-        public GlobalSearchViewModel globalSearchViewModel { get; set; }
+        public GlobalSearchViewModel GlobalSearchViewModel { get; set; }
         public SearchResultsPage(string searchCriteria)
         {
             InitializeComponent();
 
-            globalSearchViewModel = new GlobalSearchViewModel(searchCriteria);
-            BindingContext = globalSearchViewModel;
+            GlobalSearchViewModel = new GlobalSearchViewModel(searchCriteria);
+            BindingContext = GlobalSearchViewModel;
+
+            ContentView bugsContentView = critterBugs;
+            bugsContentView.Content.SetBinding(ItemsView.ItemsSourceProperty, "BugsDisplay");
+
+            ContentView fishContentView = critterFish;
+            fishContentView.Content.SetBinding(ItemsView.ItemsSourceProperty, "FishDisplay");
         }
 
-        //DRY - CrittersPage
         void OnDonatedTapped(object sender, EventArgs args)
         {
             Helper.UpdateCritterIsDonated((TappedEventArgs)args);
