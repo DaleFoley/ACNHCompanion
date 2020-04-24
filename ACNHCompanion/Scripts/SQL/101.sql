@@ -1,3 +1,34 @@
+drop table if exists config;
+drop table config (ID integer primary key,
+            Name text,
+            Value text,
+            IsEnabled integer default 1);
+
+drop table if exists critters;
+create table critters (ID integer primary key,
+            CritterName text,
+            SellPrice integer,
+            Location text,
+            Time text,
+            ShadowSize text null,
+            Type text,
+            ImageName text,
+            Rarity text,
+            IsDonated integer default 0,
+			CatchStartTime time default 0 not null,
+			CatchEndTime time default 0 not null,
+			IsSculpted integer default 0);
+
+drop table northern_months;
+create table northern_months (ID integer primary key,
+            CritterName text,
+            Months text);
+
+drop table southern_months;
+create table southern_months (ID integer primary key,
+            CritterName text,
+            Months text);
+
 drop table if exists villagers;
 create table villagers (ID integer primary key,
             Name text,
@@ -27,9 +58,7 @@ as
             end as IsCatchableBasedOnTime
     from critters
     order by critters.CritterName;
-
-
-	   
+   
 drop view if exists v_bugs_northern;
 create view v_bugs_northern
 as 
@@ -129,14 +158,331 @@ as
    inner join southern_months on southern_months.CritterName = v_base_critters.CritterName
    where v_base_critters.Type = 'fish'
    order by v_base_critters.CritterName;		
-	
 
-alter table critters
-	add CatchStartTime time default 0 not null;
+insert into config (ID, Name, Value, IsEnabled) VALUES (1, 'hemisphere', 'North', 1);
+insert into config (ID, Name, Value, IsEnabled) VALUES (2, 'version', '101', 1);
 
-alter table critters
-	add CatchEndTime time default 0 not null;
+insert into northern_months (ID, CritterName, Months) VALUES (1, 'Common butterfly', 'jan feb mar apr may jun sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (2, 'Yellow butterfly', 'mar apr may jun sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (3, 'Tiger butterfly', 'mar apr may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (4, 'Peacock butterfly', 'mar apr may jun');
+insert into northern_months (ID, CritterName, Months) VALUES (5, 'Common bluebottle', 'apr may jun jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (6, 'Paper kite butterfly', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (7, 'Great purple emperor', 'may jun jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (8, 'Monarch butterfly', 'sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (9, 'Emperor butterfly', 'jan feb mar jun jul aug sep dec');
+insert into northern_months (ID, CritterName, Months) VALUES (10, 'Agrias butterfly', 'apr may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (11, 'Rajah Brooke''s birdwing', 'jan feb apr may jun jul aug sep dec');
+insert into northern_months (ID, CritterName, Months) VALUES (12, 'Queen Alexandra''s birdwing', 'may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (13, 'Moth', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (14, 'Atlas moth', 'apr may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (15, 'Madagascan sunset moth', 'apr may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (16, 'Long locust', 'apr may jun jul aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (17, 'Migratory locust', 'aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (18, 'Rice grasshopper', 'aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (19, 'Grasshopper', 'jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (20, 'Cricket', 'sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (21, 'Bell cricket', 'sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (22, 'Mantis', 'mar apr may jun jul aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (23, 'Orchid mantis', 'mar apr may jun jul aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (24, 'Honeybee', 'mar apr may jun jul');
+insert into northern_months (ID, CritterName, Months) VALUES (25, 'Wasp', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (26, 'Brown cicada', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (27, 'Robust cicada', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (28, 'Giant cicada', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (29, 'Walker cicada', 'aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (30, 'Evening cicada', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (31, 'Cicada shell', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (32, 'Red dragonfly', 'sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (33, 'Darner dragonfly', 'apr may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (34, 'Banded dragonfly', 'may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (35, 'Damselfly', 'jan feb nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (36, 'Firefly', 'jun');
+insert into northern_months (ID, CritterName, Months) VALUES (37, 'Mole cricket', 'jan feb mar apr may nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (38, 'Pondskater', 'may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (39, 'Diving beetle', 'may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (40, 'Giant water bug', 'apr may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (41, 'Stinkbug', 'mar apr may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (42, 'Man-faced stink bug', 'mar apr may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (43, 'Ladybug', 'mar apr may jun oct');
+insert into northern_months (ID, CritterName, Months) VALUES (44, 'Tiger beetle', 'feb mar apr may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (45, 'Jewel beetle', 'apr may jun jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (46, 'Violin beetle', 'may jun sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (47, 'Citrus long-horned beetle', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (48, 'Rosalia batesi beetle', 'may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (49, 'Blue weevil beetle', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (50, 'Dung beetle', 'jan feb dec');
+insert into northern_months (ID, CritterName, Months) VALUES (51, 'Earth-boring dung beetle', 'jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (52, 'Scarab beetle', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (53, 'Drone beetle', 'jun jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (54, 'Goliath beetle', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (55, 'Saw stag', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (56, 'Miyama stag', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (57, 'Giant stag', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (58, 'Rainbow stag', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (59, 'Cyclommatus stag', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (60, 'Golden stag', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (61, 'Giraffe stag', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (62, 'Horned dynastid', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (63, 'Horned atlas', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (64, 'Horned elephant', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (65, 'Horned hercules', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (66, 'Walking stick', 'jul aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (67, 'Walking leaf', 'jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (68, 'Bagworm', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (69, 'Ant', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (70, 'Hermit crab', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (71, 'Wharf roach', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (72, 'Fly', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (73, 'Mosquito', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (74, 'Flea', 'apr may jun jul aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (75, 'Snail', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (76, 'Pill bug', 'jan feb mar apr may jun sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (77, 'Centipede', 'jan feb mar apr may jun sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (78, 'Spider', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (79, 'Tarantula', 'jan feb mar apr nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (80, 'Scorpion', 'may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (81, 'Bitterling', 'jan feb mar nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (82, 'Pale chub', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (83, 'Crucian carp', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (84, 'Dace', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (85, 'Carp', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (86, 'Koi', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (87, 'Goldfish', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (88, 'Pop-eyed goldfish', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (89, 'Ranchu goldfish', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (90, 'Killifish', 'apr may jun jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (91, 'Crawfish', 'apr may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (92, 'Soft-shelled turtle', 'aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (93, 'Snapping Turtle', 'apr may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (94, 'Tadpole', 'mar apr may jun jul');
+insert into northern_months (ID, CritterName, Months) VALUES (95, 'Frog', 'may jun jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (96, 'Freshwater goby', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (97, 'Loach', 'mar apr may');
+insert into northern_months (ID, CritterName, Months) VALUES (98, 'Catfish', 'may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (99, 'Giant snakehead', 'jun jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (100, 'Bluegill', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (101, 'Yellow perch', 'jan feb mar oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (102, 'Black bass', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (103, 'Tilapia', 'jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (104, 'Pike', 'sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (105, 'Pond smelt', 'jan feb dec');
+insert into northern_months (ID, CritterName, Months) VALUES (106, 'Sweetfish', 'jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (107, 'Cherry salmon', 'mar apr may jun sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (108, 'Char', 'mar apr may jun sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (109, 'Golden trout', 'mar apr may sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (110, 'Stringfish', 'jan feb mar dec');
+insert into northern_months (ID, CritterName, Months) VALUES (111, 'Salmon', 'sep');
+insert into northern_months (ID, CritterName, Months) VALUES (112, 'King salmon', 'sep');
+insert into northern_months (ID, CritterName, Months) VALUES (113, 'Mitten crab', 'sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (114, 'Guppy', 'apr may jun jul aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (115, 'Nibble fish', 'may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (116, 'Angelfish', 'may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (117, 'Betta', 'may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (118, 'Neon tetra', 'apr may jun jul aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (119, 'Rainbowfish', 'may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (120, 'Piranha', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (121, 'Arowana', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (122, 'Dorado', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (123, 'Gar', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (124, 'Arapaima', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (125, 'Saddled bichir', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (126, 'Sturgeon', 'jan feb mar sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (127, 'Sea butterfly', 'jan feb mar dec');
+insert into northern_months (ID, CritterName, Months) VALUES (128, 'Sea horse', 'apr may jun jul aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (129, 'Clown fish', 'apr may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (130, 'Surgeonfish', 'apr may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (131, 'Butterfly fish', 'apr may jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (132, 'Napoleonfish', 'jul aug');
+insert into northern_months (ID, CritterName, Months) VALUES (133, 'Zebra turkeyfish', 'apr may jun jul aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (134, 'Blowfish', 'jan feb nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (135, 'Puffer fish', 'jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (136, 'Anchovy', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (137, 'Horse mackerel', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (138, 'Barred knifejaw', 'mar apr may jun jul aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (139, 'Sea bass', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (140, 'Red snapper', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (141, 'Dab', 'jan feb mar apr oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (142, 'Olive flounder', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (143, 'Squid', 'jan feb mar apr may jun jul aug dec');
+insert into northern_months (ID, CritterName, Months) VALUES (144, 'Moray eel', 'aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (145, 'Ribbon eel', 'jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (146, 'Tuna', 'jan feb mar apr nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (147, 'Blue marlin', 'jan feb mar apr jul aug sep nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (148, 'Giant trevally', 'may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (149, 'Mahi-mahi', 'may jun jul aug sep oct');
+insert into northern_months (ID, CritterName, Months) VALUES (150, 'Ocean sunfish', 'jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (151, 'Ray', 'aug sep oct nov');
+insert into northern_months (ID, CritterName, Months) VALUES (152, 'Saw shark', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (153, 'Hammerhead shark', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (154, 'Great white shark', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (155, 'Whale shark', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (156, 'Suckerfish', 'jun jul aug sep');
+insert into northern_months (ID, CritterName, Months) VALUES (157, 'Football fish', 'jan feb mar nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (158, 'Oarfish', 'jan feb mar apr may dec');
+insert into northern_months (ID, CritterName, Months) VALUES (159, 'Barreleye', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into northern_months (ID, CritterName, Months) VALUES (160, 'Coelacanth', 'jan feb mar apr may jun jul aug sep oct nov dec');
 
+insert into southern_months (ID, CritterName, Months) VALUES (1, 'Common butterfly', 'mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (2, 'Yellow butterfly', 'mar apr sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (3, 'Tiger butterfly', 'jan feb mar sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (4, 'Peacock butterfly', 'sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (5, 'Common bluebottle', 'jan feb oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (6, 'Paper kite butterfly', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (7, 'Great purple emperor', 'jan feb nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (8, 'Monarch butterfly', 'mar apr may');
+insert into southern_months (ID, CritterName, Months) VALUES (9, 'Emperor butterfly', 'jan feb mar jun jul aug sep dec');
+insert into southern_months (ID, CritterName, Months) VALUES (10, 'Agrias butterfly', 'jan feb mar oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (11, 'Rajah Brooke''s birdwing', 'jan feb mar jun jul aug oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (12, 'Queen Alexandra''s birdwing', 'jan feb mar nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (13, 'Moth', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (14, 'Atlas moth', 'jan feb mar oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (15, 'Madagascan sunset moth', 'jan feb mar oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (16, 'Long locust', 'jan feb mar apr may oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (17, 'Migratory locust', 'feb mar apr may');
+insert into southern_months (ID, CritterName, Months) VALUES (18, 'Rice grasshopper', 'feb mar apr may');
+insert into southern_months (ID, CritterName, Months) VALUES (19, 'Grasshopper', 'jan feb mar');
+insert into southern_months (ID, CritterName, Months) VALUES (20, 'Cricket', 'mar apr may');
+insert into southern_months (ID, CritterName, Months) VALUES (21, 'Bell cricket', 'mar apr');
+insert into southern_months (ID, CritterName, Months) VALUES (22, 'Mantis', 'jan feb mar apr may sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (23, 'Orchid mantis', 'jan feb mar apr may sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (24, 'Honeybee', 'jan sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (25, 'Wasp', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (26, 'Brown cicada', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (27, 'Robust cicada', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (28, 'Giant cicada', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (29, 'Walker cicada', 'feb mar');
+insert into southern_months (ID, CritterName, Months) VALUES (30, 'Evening cicada', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (31, 'Cicada shell', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (32, 'Red dragonfly', 'mar apr');
+insert into southern_months (ID, CritterName, Months) VALUES (33, 'Darner dragonfly', 'jan feb mar apr oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (34, 'Banded dragonfly', 'jan feb mar apr nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (35, 'Damselfly', 'may jun jul aug');
+insert into southern_months (ID, CritterName, Months) VALUES (36, 'Firefly', 'dec');
+insert into southern_months (ID, CritterName, Months) VALUES (37, 'Mole cricket', 'may jun jul aug sep oct nov');
+insert into southern_months (ID, CritterName, Months) VALUES (38, 'Pondskater', 'jan feb mar nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (39, 'Diving beetle', 'jan feb mar nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (40, 'Giant water bug', 'jan feb mar oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (41, 'Stinkbug', 'jan feb mar apr sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (42, 'Man-faced stink bug', 'jan feb mar apr sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (43, 'Ladybug', 'apr sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (44, 'Tiger beetle', 'jan feb mar apr aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (45, 'Jewel beetle', 'jan feb oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (46, 'Violin beetle', 'mar apr may nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (47, 'Citrus long-horned beetle', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (48, 'Rosalia batesi beetle', 'jan feb mar nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (49, 'Blue weevil beetle', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (50, 'Dung beetle', 'jun jul aug');
+insert into southern_months (ID, CritterName, Months) VALUES (51, 'Earth-boring dung beetle', 'jan feb mar');
+insert into southern_months (ID, CritterName, Months) VALUES (52, 'Scarab beetle', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (53, 'Drone beetle', 'jan feb dec');
+insert into southern_months (ID, CritterName, Months) VALUES (54, 'Goliath beetle', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (55, 'Saw stag', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (56, 'Miyama stag', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (57, 'Giant stag', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (58, 'Rainbow stag', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (59, 'Cyclommatus stag', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (60, 'Golden stag', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (61, 'Giraffe stag', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (62, 'Horned dynastid', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (63, 'Horned atlas', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (64, 'Horned elephant', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (65, 'Horned hercules', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (66, 'Walking stick', 'jan feb mar apr may');
+insert into southern_months (ID, CritterName, Months) VALUES (67, 'Walking leaf', 'jan feb mar');
+insert into southern_months (ID, CritterName, Months) VALUES (68, 'Bagworm', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (69, 'Ant', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (70, 'Hermit crab', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (71, 'Wharf roach', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (72, 'Fly', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (73, 'Mosquito', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (74, 'Flea', 'jan feb mar apr may oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (75, 'Snail', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (76, 'Pill bug', 'mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (77, 'Centipede', 'mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (78, 'Spider', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (79, 'Tarantula', 'may jun jul aug sep oct');
+insert into southern_months (ID, CritterName, Months) VALUES (80, 'Scorpion', 'jan feb mar apr nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (81, 'Bitterling', 'may jun jul aug sep');
+insert into southern_months (ID, CritterName, Months) VALUES (82, 'Pale chub', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (83, 'Crucian carp', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (84, 'Dace', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (85, 'Carp', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (86, 'Koi', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (87, 'Goldfish', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (88, 'Pop-eyed goldfish', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (89, 'Ranchu goldfish', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (90, 'Killifish', 'jan feb oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (91, 'Crawfish', 'jan feb mar oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (92, 'Soft-shelled turtle', 'feb mar');
+insert into southern_months (ID, CritterName, Months) VALUES (93, 'Snapping turtle', 'jan feb mar apr oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (94, 'Tadpole', 'jan sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (95, 'Frog', 'jan feb nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (96, 'Freshwater goby', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (97, 'Loach', 'sep oct nov');
+insert into southern_months (ID, CritterName, Months) VALUES (98, 'Catfish', 'jan feb mar apr nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (99, 'Giant snakehead', 'jan feb dec');
+insert into southern_months (ID, CritterName, Months) VALUES (100, 'Bluegill', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (101, 'Yellow perch', 'apr may jun jul aug sep');
+insert into southern_months (ID, CritterName, Months) VALUES (102, 'Black bass', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (103, 'Tilapia', 'jan feb mar apr dec');
+insert into southern_months (ID, CritterName, Months) VALUES (104, 'Pike', 'mar apr may jun');
+insert into southern_months (ID, CritterName, Months) VALUES (105, 'Pond smelt', 'jun jul aug');
+insert into southern_months (ID, CritterName, Months) VALUES (106, 'Sweetfish', 'jan feb mar');
+insert into southern_months (ID, CritterName, Months) VALUES (107, 'Cherry salmon', 'mar apr may sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (108, 'Char', 'mar apr may sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (109, 'Golden trout', 'mar apr may sep oct nov');
+insert into southern_months (ID, CritterName, Months) VALUES (110, 'Stringfish', 'jun jul aug sep');
+insert into southern_months (ID, CritterName, Months) VALUES (111, 'Salmon', 'mar');
+insert into southern_months (ID, CritterName, Months) VALUES (112, 'King salmon', 'mar');
+insert into southern_months (ID, CritterName, Months) VALUES (113, 'Mitten crab', 'mar apr may');
+insert into southern_months (ID, CritterName, Months) VALUES (114, 'Guppy', 'jan feb mar apr may oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (115, 'Nibble fish', 'jan feb mar nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (116, 'Angelfish', 'jan feb mar apr nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (117, 'Betta', 'jan feb mar apr nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (118, 'Neon tetra', 'jan feb mar apr may oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (119, 'Rainbowfish', 'jan feb mar apr nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (120, 'Piranha', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (121, 'Arowana', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (122, 'Dorado', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (123, 'Gar', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (124, 'Arapaima', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (125, 'Saddled bichir', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (126, 'Sturgeon', 'mar apr may jun jul aug sep');
+insert into southern_months (ID, CritterName, Months) VALUES (127, 'Sea butterfly', 'jun jul aug sep');
+insert into southern_months (ID, CritterName, Months) VALUES (128, 'Sea horse', 'jan feb mar apr may oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (129, 'Clown fish', 'jan feb mar oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (130, 'Surgeonfish', 'jan feb mar oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (131, 'Butterfly fish', 'jan feb mar oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (132, 'Napoleonfish', 'jan feb');
+insert into southern_months (ID, CritterName, Months) VALUES (133, 'Zebra turkeyfish', 'jan feb mar apr may oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (134, 'Blowfish', 'may jun jul aug');
+insert into southern_months (ID, CritterName, Months) VALUES (135, 'Puffer fish', 'jan feb mar');
+insert into southern_months (ID, CritterName, Months) VALUES (136, 'Anchovy', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (137, 'Horse mackerel', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (138, 'Barred knifejaw', 'jan feb mar apr may sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (139, 'Sea bass', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (140, 'Red snapper', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (141, 'Dab', 'apr may jun jul aug sep oct');
+insert into southern_months (ID, CritterName, Months) VALUES (142, 'Olive flounder', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (143, 'Squid', 'jan feb jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (144, 'Moray eel', 'feb mar apr');
+insert into southern_months (ID, CritterName, Months) VALUES (145, 'Ribbon eel', 'jan feb mar apr dec');
+insert into southern_months (ID, CritterName, Months) VALUES (146, 'Tuna', 'may jun jul aug sep oct');
+insert into southern_months (ID, CritterName, Months) VALUES (147, 'Blue marlin', 'jan feb mar may jun jul aug sep oct');
+insert into southern_months (ID, CritterName, Months) VALUES (148, 'Giant trevally', 'jan feb mar apr nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (149, 'Mahi-mahi', 'jan feb mar apr nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (150, 'Ocean sunfish', 'jan feb mar');
+insert into southern_months (ID, CritterName, Months) VALUES (151, 'Ray', 'feb mar apr may');
+insert into southern_months (ID, CritterName, Months) VALUES (152, 'Saw shark', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (153, 'Hammerhead shark', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (154, 'Great white shark', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (155, 'Whale shark', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (156, 'Suckerfish', 'jan feb mar dec');
+insert into southern_months (ID, CritterName, Months) VALUES (157, 'Football fish', 'may jun jul aug sep');
+insert into southern_months (ID, CritterName, Months) VALUES (158, 'Oarfish', 'jun jul aug sep oct nov');
+insert into southern_months (ID, CritterName, Months) VALUES (159, 'Barreleye', 'jan feb mar apr may jun jul aug sep oct nov dec');
+insert into southern_months (ID, CritterName, Months) VALUES (160, 'Coelacanth', 'jan feb mar apr may jun jul aug sep oct nov dec');
 
 insert into villagers (ID, Name, Personality, Species, Birthday, Catchphrase, ImageName) VALUES (1, 'Admiral', '♂ Cranky', 'Bird', 'January 27th', '"aye aye"', 'villager_Admiral.png');
 insert into villagers (ID, Name, Personality, Species, Birthday, Catchphrase, ImageName) VALUES (2, 'Agent S', '♀ Peppy', 'Squirrel', 'July 2nd', '"sidekick"', 'villager_Agent_S.png');
