@@ -20,6 +20,9 @@ namespace ACNHCompanion.Views
     {
         private MasterDetailExtrasMasterViewModel _view;
 
+        private DateTime _selectedDate;
+        private TimeSpan _selectedTime;
+
         public MasterDetailExtrasMaster()
         {
             InitializeComponent();
@@ -41,14 +44,51 @@ namespace ACNHCompanion.Views
                 _view.Hemisphere = "North";
             }
 
-            datePicker.PropertyChanged += DatePicker_PropertyChanged;
+            datePicker.DateSelected += DatePicker_DateSelected;
+            timePicker.PropertyChanged += TimePicker_PropertyChanged;
         }
 
-        private void DatePicker_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void TimePicker_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            Debugger.Break();
+            TimePicker timePickerControl = (TimePicker)sender;
+            if (timePickerControl.Time == TimeSpan.Zero) { return; }
+
+            TimeSpan s = timePickerControl.Time;
+
+            _selectedDate = new DateTime(_selectedDate.Year, _selectedDate.Month, _selectedDate.Day, s.Hours, s.Minutes, 0);
+
+            DateTime now = DateTime.Now;
+            TimeSpan newDateTimeInterval = _selectedDate.Subtract(now);
+
+            string totalMinutesDifference = "";
+            if(newDateTimeInterval.TotalMinutes < 0)
+            {
+                totalMinutesDifference = newDateTimeInterval.TotalMinutes.ToString();
+            }
+            else
+            {
+                totalMinutesDifference = "+" + newDateTimeInterval.TotalMinutes.ToString();
+            }
+
+            timePickerControl.Time = TimeSpan.Zero;
+
+            Config timeDifferenceConfig = new Config
+            {
+                IsEnabled = 1,
+                Name = "customUserTimeDifference",
+                Value = totalMinutesDifference
+            };
+
+            App.ApplicationDatabase.InsertOrReplaceConfigValue(timeDifferenceConfig);
         }
 
+        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            DatePicker datePickerControl = (DatePicker)sender;
+            _selectedDate = datePickerControl.Date;
+
+            timePicker.Focus();
+        }
         private void RefreshTabPages()
         {
             MasterDetailPage parentPage = (MasterDetailPage)this.Parent;

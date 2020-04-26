@@ -87,6 +87,11 @@ namespace ACNHCompanion
             _dbConnection.Update(configToUpdate);
         }
 
+        public void InsertOrReplaceConfigValue(Config configToInsertOrReplace)
+        {
+            _dbConnection.InsertOrReplace(configToInsertOrReplace);
+        }
+
         public List<SpeciesDistinct> GetDistinctSpecies()
         {
             return _dbConnection.Query<SpeciesDistinct>("select distinct Species, IconName, " +

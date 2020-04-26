@@ -71,6 +71,10 @@
                         VerticalOptions="Start"
                         IsVisible="False"
                         x:Name="datePicker"/>
+                <TimePicker Grid.Row="4"
+                            Grid.Column="0" 
+                            IsVisible="False"
+                            x:Name="timePicker"/>
                 
                 <Button Grid.Row="4"
                         Grid.Column="0"

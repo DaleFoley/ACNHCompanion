@@ -43,22 +43,25 @@ create table villagers (ID integer primary key,
 drop view if exists v_base_critters;
 create view v_base_critters
 as
-    select critters.ID,
-           critters.CritterName,
-           critters.SellPrice,
-           critters.Location,
-           critters.Time,
-           critters.ShadowSize,
-           critters.Type,
-           critters.ImageName,
-           critters.Rarity,
-           critters.IsDonated,
-           critters.IsSculpted,
-          case
-            when datetime('now', 'localtime') >= datetime(date('now') || critters.CatchStartTime) and datetime('now', 'localtime') <= (case when datetime(date('now') || critters.CatchEndTime) < datetime(date('now') || critters.CatchStartTime) then datetime(date('now') || critters.CatchEndTime, '+1 day') else critters.CatchEndTime end) then true else false
-            end as IsCatchableBasedOnTime
-    from critters
-    order by critters.CritterName;
+	select critters.ID,
+		   critters.CritterName,
+		   critters.SellPrice,
+		   critters.Location,
+		   critters.Time,
+		   critters.ShadowSize,
+		   critters.Type,
+		   critters.ImageName,
+		   critters.Rarity,
+		   critters.IsDonated,
+		   critters.IsSculpted,
+		  case
+			when time('now', 'localtime') >= critters.CatchStartTime and time('now', 'localtime') <= critters.CatchEndTime then true
+			when time(critters.CatchEndTime) < time(critters.CatchStartTime) then
+				(case when time('now', 'localtime') <= critters.CatchEndTime and datetime('now', 'localtime') >= datetime(date('now', 'localtime') || critters.CatchStartTime, '-1 day') then true else false end)
+			else false
+		  end as IsCatchableBasedOnTime
+	from critters
+	order by critters.CritterName;
 
 drop view if exists v_bugs_northern;
 create view v_bugs_northern
@@ -163,6 +166,7 @@ as
 begin transaction;
     replace into config (ID, Name, Value, IsEnabled) values (1, 'hemisphere', 'North', 1);
     replace into config (ID, Name, Value, IsEnabled) values (2, 'version', '101', 1);
+    replace into config (ID, Name, Value, IsEnabled) values (3, 'customUserTimeDifference', '+0 minute', 1);
 commit;
 
 begin transaction;
