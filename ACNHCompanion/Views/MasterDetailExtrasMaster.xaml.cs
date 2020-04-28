@@ -50,6 +50,7 @@ namespace ACNHCompanion.Views
 
         private void TimePicker_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+            //TODO: Fix logic in SQL views to account month based on current time for critters
             TimePicker timePickerControl = (TimePicker)sender;
             if (timePickerControl.Time == TimeSpan.Zero) { return; }
 
@@ -60,7 +61,7 @@ namespace ACNHCompanion.Views
             DateTime now = DateTime.Now;
             TimeSpan newDateTimeInterval = _selectedDate.Subtract(now);
 
-            string totalMinutesDifference = "";
+            string totalMinutesDifference;
             if(newDateTimeInterval.TotalMinutes < 0)
             {
                 totalMinutesDifference = newDateTimeInterval.TotalMinutes.ToString();

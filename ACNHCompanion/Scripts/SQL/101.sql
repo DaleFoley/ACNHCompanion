@@ -55,9 +55,9 @@ as
 		   critters.IsDonated,
 		   critters.IsSculpted,
 		  case
-			when time('now', 'localtime') >= critters.CatchStartTime and time('now', 'localtime') <= critters.CatchEndTime then true
+			when time('now', 'localtime', (select Value from config where config.ID = 3)) >= critters.CatchStartTime and time('now', 'localtime', (select Value from config where config.ID = 3)) <= critters.CatchEndTime then true
 			when time(critters.CatchEndTime) < time(critters.CatchStartTime) then
-				(case when time('now', 'localtime') <= critters.CatchEndTime and datetime('now', 'localtime') >= datetime(date('now', 'localtime') || critters.CatchStartTime, '-1 day') then true else false end)
+				(case when datetime('now', 'localtime', (select Value from config where config.ID = 3)) >= datetime(date('now', 'localtime') || critters.CatchStartTime, (select Value from config where config.ID = 3)) and datetime('now', 'localtime', (select Value from config where config.ID = 3)) <= datetime(date('now', 'localtime') || critters.CatchEndTime, '+1 day', (select Value from config where config.ID = 3)) then true else false end)
 			else false
 		  end as IsCatchableBasedOnTime
 	from critters
