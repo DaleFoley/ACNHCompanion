@@ -80,10 +80,10 @@ namespace ACNHCompanion.Droid
 
             string pathToSQLDatabase = Path.Combine(_pathDocumentsDirectory, APP_DATA);
 
-            //if (!File.Exists(pathToSQLDatabase))
-            //{
+            if (!File.Exists(pathToSQLDatabase))
+            {
                 CopyAssetFileToLocation(APP_DATA, pathToSQLDatabase);
-            //}
+            }
 
             //TODO: Remove
             string db = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal) + "/app_data.db";

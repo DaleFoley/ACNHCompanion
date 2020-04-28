@@ -75,6 +75,8 @@ namespace ACNHCompanion.Views
             MasterDetailPage parentPage = (MasterDetailPage)this.Parent;
             Home detailPage = (Home)parentPage.Detail;
             NavigationPage nv = (NavigationPage)detailPage.CurrentPage;
+
+            //TODO: Breaks if time set when not on the dashboard!
             DashboardPage dashboardPage = (DashboardPage)nv.RootPage;
 
             DashboardViewModel dbv = (DashboardViewModel)dashboardPage.BindingContext;

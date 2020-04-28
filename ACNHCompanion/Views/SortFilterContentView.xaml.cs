@@ -89,7 +89,7 @@ namespace ACNHCompanion.Views
             }
             else if (FilterByCatchable.SelectedItem.ToString().ToLower() == "no")
             {
-                _filterString += "and IsCatchableBasedOnTime == 0 and IsCatchableBasedOnMonth == 0 ";
+                _filterString += "and IsCatchableBasedOnTime == 0 or IsCatchableBasedOnMonth == 0 ";
             }
 
             if (FilterBySculpted.SelectedItem.ToString().ToLower() == "yes")
@@ -104,15 +104,15 @@ namespace ACNHCompanion.Views
             //TODO: Can we utilize DB model here? What if column names change?
             _filterString += "order by ";
 
-            bool isOrderByID = true;
+            bool isOrderByCritterName = true;
 
-            if (SortByName.SelectedItem.ToString().ToLower() != "none") { _filterString += "CritterName " + SortByName.SelectedItem + ", "; isOrderByID = false; }
-            if (SortByPrice.SelectedItem.ToString().ToLower() != "none") { _filterString += "SellPrice " + SortByPrice.SelectedItem + ", "; isOrderByID = false; }
-            if (SortByRarity.SelectedItem.ToString().ToLower() != "none") { _filterString += "Rarity " + SortByRarity.SelectedItem + ", "; isOrderByID = false; }
-            if (SortByLocation.SelectedItem.ToString().ToLower() != "none") { _filterString += "Location " + SortByLocation.SelectedItem; isOrderByID = false; }
+            if (SortByName.SelectedItem.ToString().ToLower() != "none") { _filterString += "CritterName " + SortByName.SelectedItem + ", "; isOrderByCritterName = false; }
+            if (SortByPrice.SelectedItem.ToString().ToLower() != "none") { _filterString += "SellPrice " + SortByPrice.SelectedItem + ", "; isOrderByCritterName = false; }
+            if (SortByRarity.SelectedItem.ToString().ToLower() != "none") { _filterString += "Rarity " + SortByRarity.SelectedItem + ", "; isOrderByCritterName = false; }
+            if (SortByLocation.SelectedItem.ToString().ToLower() != "none") { _filterString += "Location " + SortByLocation.SelectedItem; isOrderByCritterName = false; }
             _filterString = _filterString.TrimEnd(',', ' ');
 
-            if (isOrderByID) { _filterString += " ID asc"; }
+            if (isOrderByCritterName) { _filterString += " CritterName asc"; }
 
             RefreshCritterPage(CritterViewModel, _filterString);
         }

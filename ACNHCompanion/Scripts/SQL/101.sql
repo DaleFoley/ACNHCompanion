@@ -58,8 +58,9 @@ as
 		   critters.IsSculpted,
 		  case
 			when time('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')) >= critters.CatchStartTime and time('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')) <= critters.CatchEndTime then true
-			when time(critters.CatchEndTime) < time(critters.CatchStartTime) and time('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')) >= time(critters.CatchStartTime) or time('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')) <= time(critters.CatchEndTime) then true
-			  else false
+			when time(critters.CatchEndTime) < time(critters.CatchStartTime) then
+				(case when time('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')) >= time(critters.CatchStartTime) or time('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')) <= time(critters.CatchEndTime) then true else false end)
+			else false
 		  end as IsCatchableBasedOnTime
 	from critters
 	order by critters.CritterName;
@@ -70,7 +71,7 @@ as
 select v_base_critters.*,
 	   northern_months.months,
 	   case when instr(northern_months.months,
-		   case strftime('%m', date('now', 'localtime', (select Value from config where config.ID = 3)))
+		   case strftime('%m', date('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')))
 			when '01' then 'Jan'
 			when '02' then 'Feb'
 			when '03' then 'Mar'
@@ -95,7 +96,7 @@ as
    select v_base_critters.*,
 	   southern_months.months,
 	   case when instr(southern_months.months,
-		   case strftime('%m', date('now', 'localtime', (select Value from config where config.ID = 3)))
+		   case strftime('%m', date('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')))
 			when '01' then 'Jan'
 			when '02' then 'Feb'
 			when '03' then 'Mar'
@@ -120,7 +121,7 @@ as
    select v_base_critters.*,
 		  northern_months.months,
 		  case when instr(northern_months.months,
-		   case strftime('%m', date('now', 'localtime', (select Value from config where config.ID = 3)))
+		   case strftime('%m', date('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')))
 				when '01' then 'Jan'
 				when '02' then 'Feb'
 				when '03' then 'Mar'
@@ -145,7 +146,7 @@ as
    select v_base_critters.*,
 		  southern_months.months,
 		  case when instr(southern_months.months,
-			case strftime('%m', date('now', 'localtime', (select Value from config where config.ID = 3)))
+		   case strftime('%m', date('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')))
 		when '01' then 'Jan'
 		when '02' then 'Feb'
 		when '03' then 'Mar'

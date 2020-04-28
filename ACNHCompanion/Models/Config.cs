@@ -7,8 +7,6 @@ namespace ACNHCompanion.Models
 {
     public class Config
     {
-        [PrimaryKey, AutoIncrement]
-        public int ID { get; set; }
         [PrimaryKey]
         public string Name { get; set; }
         public string Value { get; set; }
