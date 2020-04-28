@@ -9,6 +9,7 @@ namespace ACNHCompanion.Models
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
+        [PrimaryKey]
         public string Name { get; set; }
         public string Value { get; set; }
         public int IsEnabled { get; set; }

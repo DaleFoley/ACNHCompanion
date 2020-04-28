@@ -3,26 +3,20 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using Xamarin.Forms;
 
 namespace ACNHCompanion.ViewModels
 {
-    public class MasterDetailExtrasMasterViewModel : INotifyPropertyChanged
+    public class MasterDetailExtrasMasterViewModel : ObservableObject
     {
-        public MasterDetailExtrasMasterViewModel()
-        {
-            _hemisphere = "North";
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
-        }
+        private DateTime _selectedDate;
+        private TimeSpan _selectedTime;
 
         private string _hemisphere;
+
         public string Hemisphere
         {
             get
@@ -31,10 +25,63 @@ namespace ACNHCompanion.ViewModels
             }
             set
             {
-                _hemisphere = value;
-                OnNotifyPropertyChanged();
+                if(value != _hemisphere)
+                {
+                    _hemisphere = value;
+                    OnNotifyPropertyChanged(nameof(Hemisphere));
+                }
             }
         }
 
+        public MasterDetailExtrasMasterViewModel()
+        {
+            SetHemipshere();
+        }
+
+        public void SetHemipshere()
+        {
+            Config hemisphere = App.Config.Where(config => config.Name == "hemisphere").FirstOrDefault();
+            string hemisphereValue = hemisphere.Value;
+
+            if (hemisphereValue.ToLower() == "south")
+            {
+                Hemisphere = "South";
+            }
+            else
+            {
+                Hemisphere = "North";
+            }
+        }
+
+        public void SetDatePickerDate(DatePicker datePicker)
+        {
+            _selectedDate = datePicker.Date;
+        }
+
+        public void SetTimePickerTime(TimePicker timePicker)
+        {
+            _selectedTime = timePicker.Time;
+        }
+
+        public string GetNewDateTimeMinutesInterval()
+        {
+            _selectedDate = new DateTime(_selectedDate.Year,
+                 _selectedDate.Month, _selectedDate.Day, _selectedTime.Hours, _selectedTime.Minutes, 0);
+
+            DateTime currentDateTime = DateTime.Now;
+            TimeSpan newDateTimeInterval = _selectedDate.Subtract(currentDateTime);
+
+            string totalMinutesDifference;
+            if (newDateTimeInterval.TotalMinutes < 0)
+            {
+                totalMinutesDifference = newDateTimeInterval.TotalMinutes.ToString() + " minute";
+            }
+            else
+            {
+                totalMinutesDifference = "+" + newDateTimeInterval.TotalMinutes.ToString() + " minute";
+            }
+
+            return totalMinutesDifference;
+        }
     }
 }

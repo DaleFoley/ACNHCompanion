@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace ACNHCompanion.ViewModels
 {
-    public class DashboardViewModel : INotifyPropertyChanged
+    public class DashboardViewModel : ObservableObject
     {
         private DateTime _localTime;
         public DateTime LocalTime
@@ -20,27 +21,29 @@ namespace ACNHCompanion.ViewModels
 
             set
             {
-                _localTime = value;
-                OnNotifyPropertyChanged(nameof(LocalTime));
+                if(value != _localTime)
+                {
+                    _localTime = value;
+                    OnNotifyPropertyChanged(nameof(LocalTime));
+                }
             }
         }
 
         public DashboardViewModel()
         {
+            RefreshLocalTime();
             Device.StartTimer(TimeSpan.FromSeconds(1), () => UpdateLocalTime());
+        }
+
+        public void RefreshLocalTime()
+        {
+            _localTime = Helper.GetUserCustomDateTime();
         }
 
         public bool UpdateLocalTime()
         {
-            this.LocalTime = DateTime.Now;
+            this.LocalTime = this.LocalTime.AddSeconds(1);
             return true;
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
-        }
-
     }
 }

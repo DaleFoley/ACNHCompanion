@@ -1,6 +1,7 @@
 ﻿using ACNHCompanion.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Xamarin.Forms;
 
@@ -17,6 +18,32 @@ namespace ACNHCompanion
 
             App.ApplicationDatabase.UpdateCritterIsDonated(critterID, isDonated);
             critterSelected.IsDonated = isDonated;
+        }
+
+        public static DateTime GetUserCustomDateTime()
+        {
+            DateTime newDateTime = DateTime.Now;
+
+            Config customUserTimeDifference = App.Config.Where(config => config.Name == "customUserTimeDifference").FirstOrDefault();
+            string customUserTimeDifferenceValue = customUserTimeDifference.Value;
+
+            if (!string.IsNullOrEmpty(customUserTimeDifferenceValue))
+            {
+                DateTime currentDateTime = DateTime.Now;
+
+                //TODO: constant minute string.
+                customUserTimeDifferenceValue = customUserTimeDifferenceValue.Replace(" minute", "");
+
+                double totalMinutes;
+                bool isTotalMinutesValid = double.TryParse(customUserTimeDifferenceValue, out totalMinutes);
+
+                if (isTotalMinutesValid)
+                {
+                    newDateTime = currentDateTime.AddMinutes(totalMinutes);
+                }
+            }
+
+            return newDateTime;
         }
     }
 }

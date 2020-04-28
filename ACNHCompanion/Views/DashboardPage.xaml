@@ -42,7 +42,7 @@
                CornerRadius="10">
                 <StackLayout>
                     <Label Text="Welcome" HorizontalOptions="Center" FontSize="Large"></Label>
-                    <Label Text="{Binding LocalTime, StringFormat='{0:MMM dd yyyy h:mm tt}'}"
+                    <Label Text="{Binding LocalTime, StringFormat='{0:MMM dd yyyy h:mm:ss tt}'}"
                            HorizontalOptions="Center" FontSize="Large">
                     </Label>
                 </StackLayout>

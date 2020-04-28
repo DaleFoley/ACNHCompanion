@@ -7,14 +7,8 @@ using Xamarin.Forms;
 
 namespace ACNHCompanion.Models
 {
-    public class Critter : INotifyPropertyChanged
+    public class Critter : ObservableObject
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
-        }
-
         public int Id { get; set; }
 
         private bool _isDonated;
@@ -37,13 +31,13 @@ namespace ACNHCompanion.Models
         public bool IsSculpted
         {
             get { return _isSculpted; }
-            set { _isSculpted = value; SculptedIcon = GetSculptedIcon(); }
+            set { if (value != _isSculpted) { _isSculpted = value; SculptedIcon = GetSculptedIcon(); } }
         }
 
 
         //Change to auto property.
         private string _name;
-        public string Name { get { return _name; } set { _name = value; OnNotifyPropertyChanged(); } }
+        public string Name { get { return _name; } set { _name = value; OnNotifyPropertyChanged(nameof(Name)); } }
 
         public string SellIcon { get; set; }
         public string ShadowSizeIcon { get; set; }
@@ -56,16 +50,8 @@ namespace ACNHCompanion.Models
         public string _months;
         public string Months
         {
-            get
-            {
-                return _months;
-            }
-
-            set
-            {
-                _months = value;
-                OnNotifyPropertyChanged("Months");
-            }
+            get { return _months; }
+            set { if (value != _months) { _months = value; OnNotifyPropertyChanged(nameof(Months)); } }
         }
 
         public string Rarity { get; set; }
@@ -95,16 +81,8 @@ namespace ACNHCompanion.Models
         private string _donatedIcon;
         public string DonatedIcon
         {
-            get
-            {
-                return GetDonatedIcon();
-            }
-
-            set
-            {
-                _donatedIcon = value;
-                OnNotifyPropertyChanged();
-            }
+            get { return GetDonatedIcon(); }
+            set { if (value != _donatedIcon) { _donatedIcon = value; OnNotifyPropertyChanged(nameof(DonatedIcon)); } }
         }
 
         private string _sculptedIcon;
@@ -112,7 +90,7 @@ namespace ACNHCompanion.Models
         public string SculptedIcon
         {
             get { return GetSculptedIcon(); }
-            set { _sculptedIcon = value; OnNotifyPropertyChanged(); }
+            set { if (value != _sculptedIcon) { _sculptedIcon = value; OnNotifyPropertyChanged(nameof(SculptedIcon)); } }
         }
 
         private string GetSculptedIcon()
@@ -126,7 +104,6 @@ namespace ACNHCompanion.Models
                 return "sculpture_false.png";
             }
         }
-
 
         private string GetDonatedIcon()
         {

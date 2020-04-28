@@ -18,10 +18,7 @@ namespace ACNHCompanion.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MasterDetailExtrasMaster : ContentPage
     {
-        private MasterDetailExtrasMasterViewModel _view;
-
-        private DateTime _selectedDate;
-        private TimeSpan _selectedTime;
+        private MasterDetailExtrasMasterViewModel _masterView;
 
         public MasterDetailExtrasMaster()
         {
@@ -30,49 +27,37 @@ namespace ACNHCompanion.Views
             MasterDetailExtrasMasterViewModel _view = new MasterDetailExtrasMasterViewModel();
             this.BindingContext = _view;
 
-            _view = (MasterDetailExtrasMasterViewModel)this.BindingContext;
+            DateTime userCustomerDateTime = Helper.GetUserCustomDateTime();
 
-            Config hemisphereCurrent = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
-            string hemisphereValue = hemisphereCurrent.Value;
+            datePicker.Date = userCustomerDateTime;
+            timePicker.Time = userCustomerDateTime.TimeOfDay;
 
-            if (hemisphereValue.ToLower() == "south")
-            {
-                _view.Hemisphere = "South";
-            }
-            else
-            {
-                _view.Hemisphere = "North";
-            }
-
-            datePicker.DateSelected += DatePicker_DateSelected;
+            //datePicker.DateSelected += DatePicker_DateSelected;
+            datePicker.Unfocused += DatePicker_Unfocused;
             timePicker.PropertyChanged += TimePicker_PropertyChanged;
+        }
+
+        private void DatePicker_Unfocused(object sender, FocusEventArgs e)
+        {
+            if(!e.IsFocused)
+            {
+                //Why is _view null here the first time we reference it? When it is assigned in the ctor..
+                if (_masterView is null) { _masterView = (MasterDetailExtrasMasterViewModel)BindingContext; }
+                _masterView.SetDatePickerDate((DatePicker)sender);
+
+                timePicker.Focus();
+            }
         }
 
         private void TimePicker_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            //TODO: Fix logic in SQL views to account month based on current time for critters
-            TimePicker timePickerControl = (TimePicker)sender;
-            if (timePickerControl.Time == TimeSpan.Zero) { return; }
+            if (e.PropertyName != "Time") { return; }
+            if (timePicker.Time == TimeSpan.Zero) { return; }
 
-            TimeSpan s = timePickerControl.Time;
+            if (_masterView is null) { _masterView = (MasterDetailExtrasMasterViewModel)BindingContext; }
+            _masterView.SetTimePickerTime((TimePicker)sender);
 
-            _selectedDate = new DateTime(_selectedDate.Year, _selectedDate.Month, _selectedDate.Day, s.Hours, s.Minutes, 0);
-
-            DateTime now = DateTime.Now;
-            TimeSpan newDateTimeInterval = _selectedDate.Subtract(now);
-
-            string totalMinutesDifference;
-            if(newDateTimeInterval.TotalMinutes < 0)
-            {
-                totalMinutesDifference = newDateTimeInterval.TotalMinutes.ToString();
-            }
-            else
-            {
-                totalMinutesDifference = "+" + newDateTimeInterval.TotalMinutes.ToString();
-            }
-
-            timePickerControl.Time = TimeSpan.Zero;
-
+            string totalMinutesDifference = _masterView.GetNewDateTimeMinutesInterval();
             Config timeDifferenceConfig = new Config
             {
                 IsEnabled = 1,
@@ -81,19 +66,35 @@ namespace ACNHCompanion.Views
             };
 
             App.ApplicationDatabase.InsertOrReplaceConfigValue(timeDifferenceConfig);
+            App.Config = App.ApplicationDatabase.GetConfigValues();
+
+            timePicker.Time = TimeSpan.Zero;
+
+            //There must be a far more elegant way to do this, we want to update localTime on DashboardPage view after
+            //user manually changes time.
+            MasterDetailPage parentPage = (MasterDetailPage)this.Parent;
+            Home detailPage = (Home)parentPage.Detail;
+            NavigationPage nv = (NavigationPage)detailPage.CurrentPage;
+            DashboardPage dashboardPage = (DashboardPage)nv.RootPage;
+
+            DashboardViewModel dbv = (DashboardViewModel)dashboardPage.BindingContext;
+            dbv.RefreshLocalTime();
+
+            RefreshTabPages();
         }
 
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e)
         {
-            DatePicker datePickerControl = (DatePicker)sender;
-            _selectedDate = datePickerControl.Date;
+            //Why is _view null here the first time we reference it? When it is assigned in the ctor..
+            if (_masterView is null) { _masterView = (MasterDetailExtrasMasterViewModel)BindingContext; }
+            _masterView.SetDatePickerDate((DatePicker)sender);
 
             timePicker.Focus();
         }
+
         private void RefreshTabPages()
         {
             MasterDetailPage parentPage = (MasterDetailPage)this.Parent;
-
             Home detailPage = (Home)parentPage.Detail;
 
             detailPage?.FishTab?.RefreshViewModel();
@@ -123,19 +124,19 @@ namespace ACNHCompanion.Views
 
         private void HemisphereButton_Clicked(object sender, EventArgs e)
         {
-            _view = (MasterDetailExtrasMasterViewModel)this.BindingContext;
+            _masterView = (MasterDetailExtrasMasterViewModel)this.BindingContext;
 
             Config hemisphereCurrent = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
             string hemisphereValue = hemisphereCurrent.Value;
 
             if (hemisphereValue.ToLower() == "north")
             {
-                _view.Hemisphere = "South";
+                _masterView.Hemisphere = "South";
                 hemisphereCurrent.Value = "South";
             }
             else
             {
-                _view.Hemisphere = "North";
+                _masterView.Hemisphere = "North";
                 hemisphereCurrent.Value = "North";
             }
 
