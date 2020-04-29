@@ -28,6 +28,12 @@ namespace ACNHCompanion.Views
 
             ContentView fishContentView = critterFish;
             fishContentView.Content.SetBinding(ItemsView.ItemsSourceProperty, "FishDisplay");
+
+            string villagerFilter = "and Name like '" + searchCriteria + "%'";
+            VillagersViewModel villagerViewModel = new VillagersViewModel(villagerFilter);
+            ContentView villagerContentView = new VillagersContentView(villagerViewModel);            
+
+            collectionVillagers.Children.Add(villagerContentView);
         }
 
         private void ToggleHideShowBugs_Clicked(object sender, EventArgs e)
@@ -38,6 +44,10 @@ namespace ACNHCompanion.Views
         private void ToggleHideShowFish_Clicked(object sender, EventArgs e)
         {
             ToggleStackLayoutDisplay(collectionFish, (Button)sender);
+        }
+        private void ToggleHideShowVillagers_Clicked(object sender, EventArgs e)
+        {
+            ToggleStackLayoutDisplay(collectionVillagers, (Button)sender);
         }
 
         private void ToggleStackLayoutDisplay(StackLayout collection, Button button)
