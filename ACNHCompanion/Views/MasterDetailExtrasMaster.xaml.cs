@@ -20,6 +20,8 @@ namespace ACNHCompanion.Views
     {
         private MasterDetailExtrasMasterViewModel _masterView;
 
+        public DashboardViewModel DashboardViewModel { get; set; }
+
         public MasterDetailExtrasMaster()
         {
             InitializeComponent();
@@ -32,7 +34,6 @@ namespace ACNHCompanion.Views
             datePicker.Date = userCustomerDateTime;
             timePicker.Time = userCustomerDateTime.TimeOfDay;
 
-            //datePicker.DateSelected += DatePicker_DateSelected;
             datePicker.Unfocused += DatePicker_Unfocused;
             timePicker.PropertyChanged += TimePicker_PropertyChanged;
         }
@@ -61,7 +62,7 @@ namespace ACNHCompanion.Views
             Config timeDifferenceConfig = new Config
             {
                 IsEnabled = 1,
-                Name = "customUserTimeDifference",
+                Name = Strings.Config.CUSTOM_USER_TIME_DIFFERENCE,
                 Value = totalMinutesDifference
             };
 

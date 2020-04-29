@@ -2,6 +2,7 @@
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -20,11 +21,25 @@ namespace ACNHCompanion.Views
 
             _villagersSummaryViewModel = new VillagerSummaryViewModel();
             BindingContext = _villagersSummaryViewModel;
+
+            this.Appearing += VillagerSummaryPage_Appearing;
+        }
+
+        private void VillagerSummaryPage_Appearing(object sender, EventArgs e)
+        {
+            _villagersSummaryViewModel?.SetResidentCount();
         }
 
         private void AllVillagersTapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             VillagersViewModel villagerViewModel = new VillagersViewModel();
+            Navigation.PushModalAsync(new VillagersPage(villagerViewModel));
+        }
+
+        private void ResidentsTapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            string filter = "and IsResident <> 0";
+            VillagersViewModel villagerViewModel = new VillagersViewModel(filter);
             Navigation.PushModalAsync(new VillagersPage(villagerViewModel));
         }
 

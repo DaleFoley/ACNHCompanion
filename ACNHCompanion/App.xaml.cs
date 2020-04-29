@@ -16,7 +16,6 @@ namespace ACNHCompanion
         public static List<Config> Config;
         public App()
         {
-            //TODO: Fix custom time logic!!!!
             InitializeComponent();
 
             TestPermissions();

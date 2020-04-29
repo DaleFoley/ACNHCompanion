@@ -9,7 +9,7 @@
             mc:Ignorable="d"
             x:Class="ACNHCompanion.Views.Home"
             BackgroundColor="#f3daf4">
-    <NavigationPage Title="Dashboard" IconImageSource="house_true.png">
+    <NavigationPage Title="Dashboard" IconImageSource="resident_icon">
         <x:Arguments>
             <local:DashboardPage />
         </x:Arguments>

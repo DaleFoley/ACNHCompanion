@@ -11,6 +11,7 @@
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
@@ -39,7 +40,11 @@
                         <ColumnDefinition Width="auto"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <Image Grid.Row="0" Grid.Column="0" Source="villagers"></Image>
+                    <Image Grid.Row="0"
+                           Grid.Column="0"
+                           Source="villagers"
+                           HeightRequest="64"
+                           WidthRequest="64"></Image>
 
                     <Label Grid.Row="0" Grid.Column="1"
                            Text="All Villagers"
@@ -59,7 +64,52 @@
                 </Grid>
             </Frame>
 
-            <CollectionView Grid.Row="1"
+            <Frame Grid.Row="1"
+                   Grid.Column="0"
+                   Margin="5, 5, 5, 5"
+                   CornerRadius="15">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ResidentsTapGestureRecognizer_Tapped">
+
+                    </TapGestureRecognizer>
+                </Frame.GestureRecognizers>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0"
+                           Grid.Column="0"
+                           Source="resident_icon"
+                           HeightRequest="64"
+                           WidthRequest="64"></Image>
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text="Residents"
+                           FontSize="Large"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"></Label>
+
+                    <Frame Grid.Row="0" Grid.Column="2"
+                           CornerRadius="10"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"
+                           Margin="0, 0, 0, 0"
+                           Padding="0"
+                           BackgroundColor="LightGray">
+                        <Label Text="{Binding ResidentCount}" d:Text="100" Padding="5"></Label>
+                    </Frame>
+                </Grid>
+            </Frame>
+
+            <CollectionView Grid.Row="2"
                             Grid.Column="0"
                             ItemsSource="{Binding DistinctVillagerSpecies}">
                 <CollectionView.ItemsLayout>
@@ -93,7 +143,9 @@
 
                                 <Image Grid.Row="0"
                                        Grid.Column="0"
-                                       Source="{Binding IconName}"></Image>
+                                       Source="{Binding IconName}"
+                                       HeightRequest="32"
+                                       WidthRequest="32"></Image>
 
                                 <Label Grid.Row="0"
                                        Grid.Column="1"

@@ -140,19 +140,24 @@ def update_villagers_with_icons(p_html_content):
         villager_icon_name = 'villager_icon_' + villager_name.replace('-', '_').replace(' ', '_').replace('\'', '') +\
                              ".png"
 
-        db_command.execute('''update ''' + table_name_villagers + ''' set IconName = ? where Name = ?''',
-                           (villager_icon_name,
-                            villager_name))
+        # db_command.execute('''update ''' + table_name_villagers + ''' set IconName = ? where Name = ?''',
+        #                    (villager_icon_name,
+        #                     villager_name))
 
-        # download_villager_icon(villager_icon, villager_icon_name)
+        download_villager_icon(villager_icon, villager_icon_name)
 
 
 def download_villager_icon(p_image_tag, p_path_image):
-    image_src_url = p_image_tag.contents[0].contents[0].attrs['src']
+    image_tag = p_image_tag.contents[0].contents[0]
+    image_alt = image_tag.attrs['alt'].replace(' ', '_')
+
+    image_src_url = image_tag.attrs['src'].replace('/thumb/', '/').replace('/32px-' + image_alt, '')
+
     image_response = requests.get(url_nookipedia_base + image_src_url)
 
     path_saved_image = path_android_assets + p_path_image
     if image_response.status_code == 200:
+
         image_data = image_response.content
 
         image_file = open(path_saved_image, 'wb')

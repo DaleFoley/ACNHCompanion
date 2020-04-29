@@ -5,10 +5,13 @@ using System.Text;
 
 namespace ACNHCompanion.ViewModels
 {
-    public class VillagerSummaryViewModel
+    public class VillagerSummaryViewModel : ObservableObject
     {
         public List<SpeciesDistinct> DistinctVillagerSpecies { get; set; }
         public int TotalSpeciesCount { get; set; }
+
+        private int _residentCount;
+        public int ResidentCount { get { return _residentCount; } set { if (value != _residentCount) { _residentCount = value; OnNotifyPropertyChanged(nameof(ResidentCount)); } } }
         public VillagerSummaryViewModel()
         {
             DistinctVillagerSpecies = new List<SpeciesDistinct>();
@@ -18,6 +21,13 @@ namespace ACNHCompanion.ViewModels
             {
                 TotalSpeciesCount += distinctSpecies.VillagerSpeciesCount;
             }
+
+            SetResidentCount();
+        }
+
+        public void SetResidentCount()
+        {
+            ResidentCount = App.ApplicationDatabase.GetVillagerResidents().Count;
         }
     }
 }

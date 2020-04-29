@@ -25,12 +25,12 @@ namespace ACNHCompanion
             string pathPersonalFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
             IEnumerable<string> sqlFilesToApply = Directory.GetFiles(Path.Combine(pathPersonalFolder, pathSQLDDL), "*.sql");
 
-            Config configVersionParameter = GetConfigValues("version").FirstOrDefault();
+            Config configVersionParameter = GetConfigValues(Strings.Config.VERSION).FirstOrDefault();
             if (configVersionParameter is null)
             {
                 configVersionParameter = new Config
                 {
-                    Name = "version",
+                    Name = Strings.Config.VERSION,
                     Value = "100",
                     IsEnabled = 1
                 };
@@ -97,6 +97,11 @@ namespace ACNHCompanion
             return _dbConnection.Query<SpeciesDistinct>("select distinct Species, IconName, " +
                 "(select count(v.ID) from villagers as v where v.Species = villagers.Species) as VillagerSpeciesCount " +
                 "from villagers group by Species");
+        }
+
+        public List<Villagers> GetVillagerResidents()
+        {
+            return _dbConnection.Query<Villagers>("select * from villagers where IsResident <> 0");
         }
 
         public List<Villagers> GetVillagers(string filterString = "")

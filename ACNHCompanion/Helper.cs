@@ -24,7 +24,7 @@ namespace ACNHCompanion
         {
             DateTime newDateTime = DateTime.Now;
 
-            Config customUserTimeDifference = App.Config.Where(config => config.Name == "customUserTimeDifference").FirstOrDefault();
+            Config customUserTimeDifference = App.Config.Where(config => config.Name == Strings.Config.CUSTOM_USER_TIME_DIFFERENCE).FirstOrDefault();
             string customUserTimeDifferenceValue = customUserTimeDifference.Value;
 
             if (!string.IsNullOrEmpty(customUserTimeDifferenceValue))
