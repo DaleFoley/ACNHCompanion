@@ -30,11 +30,6 @@ namespace ACNHCompanion.Views
             fishContentView.Content.SetBinding(ItemsView.ItemsSourceProperty, "FishDisplay");
         }
 
-        void OnDonatedTapped(object sender, EventArgs args)
-        {
-            Helper.UpdateCritterIsDonated((TappedEventArgs)args);
-        }
-
         private void ToggleHideShowBugs_Clicked(object sender, EventArgs e)
         {
             ToggleStackLayoutDisplay(collectionBugs, (Button)sender);

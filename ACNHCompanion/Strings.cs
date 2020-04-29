@@ -10,6 +10,7 @@ namespace ACNHCompanion
         {
             public const string CUSTOM_USER_TIME_DIFFERENCE = "customUserTimeDifference";
             public const string VERSION = "version";
+            public const string HEMISPHERE = "hemisphere";
         }
     }
 }

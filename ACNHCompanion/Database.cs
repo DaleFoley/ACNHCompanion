@@ -155,6 +155,12 @@ namespace ACNHCompanion
             sqLiteCommand.ExecuteNonQuery();
         }
 
+        public void UpdateCritterIsCaptured(int ID, bool isCaptured)
+        {
+            SQLiteCommand sqLiteCommand = _dbConnection.CreateCommand("update [critters] set IsCaptured = ? where ID = ?", isCaptured, ID);
+            sqLiteCommand.ExecuteNonQuery();
+        }
+
         public void UpdatedVillagerIsResident(int ID, int isResident)
         {
             SQLiteCommand sqLiteCommand = _dbConnection.CreateCommand("update [villagers] set isResident = ? where ID = ?", isResident, ID);

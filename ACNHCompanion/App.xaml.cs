@@ -18,7 +18,8 @@ namespace ACNHCompanion
         {
             InitializeComponent();
 
-            TestPermissions();
+            //Uncomment to test persmissions.
+            //TestPermissions();
 
             if (!DesignMode.IsDesignModeEnabled)
             {

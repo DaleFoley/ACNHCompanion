@@ -31,6 +31,7 @@
                     <RowDefinition Height="1"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="auto"></RowDefinition>
+                    <RowDefinition Height="auto"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
 
@@ -57,24 +58,6 @@
                          Grid.Column="0"
                          Grid.ColumnSpan="2"
                          BackgroundColor="Gray"></BoxView>
-
-                <Label Grid.Row="3"
-                       Grid.Column="0"
-                       Text="Set the time: "
-                       FontSize="Large"
-                       VerticalOptions="Start"
-                       Margin="5, 0, 0, 0"></Label>
-
-                <DatePicker Grid.Row="4"
-                        Grid.Column="0"
-                        Grid.ColumnSpan="2"
-                        VerticalOptions="Start"
-                        IsVisible="False"
-                        x:Name="datePicker"/>
-                <TimePicker Grid.Row="4"
-                            Grid.Column="0" 
-                            IsVisible="False"
-                            x:Name="timePicker"/>
                 
                 <Button Grid.Row="4"
                         Grid.Column="0"
@@ -83,7 +66,11 @@
                         Clicked="SetTimeButton_Clicked"
                         VerticalOptions="Start"/>
 
-                <Button Grid.Row="5"
+                <!--<Label Grid.Row="5"
+                       Grid.Column="0"
+                       Text="Birthday Reminder"/>-->
+
+                <Button Grid.Row="6"
                         Grid.Column="0"
                         Grid.ColumnSpan="2"
                         VerticalOptions="End"
@@ -92,10 +79,17 @@
                         BackgroundColor="Red"
                         Clicked="ResetButton_Clicked"/>
 
-                <!--<BoxView Grid.Row="4"
-                         Grid.Column="0"
-                         Grid.ColumnSpan="2"
-                         BackgroundColor="Gray"></BoxView>-->
+                <DatePicker Grid.Row="0"
+                        Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                        VerticalOptions="Start"
+                        IsVisible="False"
+                        x:Name="datePicker"/>
+
+                <TimePicker Grid.Row="0"
+                            Grid.Column="0" 
+                            IsVisible="False"
+                            x:Name="timePicker"/>
             </Grid>
             
         </Grid>

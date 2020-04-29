@@ -102,10 +102,10 @@
                    RelativeLayout.WidthConstraint=
            "{ConstraintExpression   Type=RelativeToParent,
                                     Property=Width}">
-            <!-- TODO: Uncomment! For whatever reason it is currently break the design previewer..-->
-            <!--<SearchBar Placeholder="critter name, villager name etc.."
+            
+            <SearchBar Placeholder="critter name, villager name etc.."
                        BackgroundColor="White"
-                       SearchButtonPressed="SearchBar_SearchButtonPressed"/>-->
+                       SearchButtonPressed="SearchBar_SearchButtonPressed"/>
         </Frame>
     </RelativeLayout>
     

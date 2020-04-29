@@ -40,7 +40,7 @@ namespace ACNHCompanion.ViewModels
 
         public void SetHemipshere()
         {
-            Config hemisphere = App.Config.Where(config => config.Name == "hemisphere").FirstOrDefault();
+            Config hemisphere = App.Config.Where(config => config.Name == Strings.Config.HEMISPHERE).FirstOrDefault();
             string hemisphereValue = hemisphere.Value;
 
             if (hemisphereValue.ToLower() == "south")

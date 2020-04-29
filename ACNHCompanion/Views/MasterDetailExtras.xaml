@@ -6,10 +6,4 @@
              mc:Ignorable="d"
              x:Class="ACNHCompanion.Views.MasterDetailExtras"
              xmlns:pages="clr-namespace:ACNHCompanion.Views">
-  <MasterDetailPage.Master>
-    <pages:MasterDetailExtrasMaster x:Name="MasterPage" />
-  </MasterDetailPage.Master>
-  <MasterDetailPage.Detail>
-        <pages:Home/>
-    </MasterDetailPage.Detail>
 </MasterDetailPage>

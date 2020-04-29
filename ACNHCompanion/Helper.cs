@@ -18,6 +18,40 @@ namespace ACNHCompanion
 
             App.ApplicationDatabase.UpdateCritterIsDonated(critterID, isDonated);
             critterSelected.IsDonated = isDonated;
+
+            if (isDonated)
+            {
+                App.ApplicationDatabase.UpdateCritterIsCaptured(critterID, isDonated);
+                critterSelected.IsCaptured = isDonated;
+            }
+        }
+
+        public static void UpdateCritterIsCaptured(TappedEventArgs args)
+        {
+            Critter critterSelected = (Critter)args.Parameter;
+
+            int critterID = critterSelected.Id;
+            bool isCaptured = critterSelected.IsCaptured ? false : true;
+
+            App.ApplicationDatabase.UpdateCritterIsCaptured(critterID, isCaptured);
+            critterSelected.IsCaptured = isCaptured;
+
+            if (!isCaptured)
+            {
+                App.ApplicationDatabase.UpdateCritterIsDonated(critterID, isCaptured);
+                critterSelected.IsDonated = isCaptured;
+            }
+        }
+
+        public static void UpdateCritterIsSculpted(TappedEventArgs args)
+        {
+            Critter critterSelected = (Critter)args.Parameter;
+
+            int critterID = critterSelected.Id;
+            bool isSculpted = critterSelected.IsSculpted ? false : true;
+
+            App.ApplicationDatabase.UpdateCritterIsSculpted(critterID, isSculpted);
+            critterSelected.IsSculpted = isSculpted;
         }
 
         public static DateTime GetUserCustomDateTime()

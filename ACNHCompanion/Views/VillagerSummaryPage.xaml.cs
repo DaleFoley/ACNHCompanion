@@ -15,6 +15,8 @@ namespace ACNHCompanion.Views
     public partial class VillagerSummaryPage : ContentPage
     {
         private VillagerSummaryViewModel _villagersSummaryViewModel;
+        private VillagersPage _villagerPage;
+
         public VillagerSummaryPage()
         {
             InitializeComponent();
@@ -33,14 +35,22 @@ namespace ACNHCompanion.Views
         private void AllVillagersTapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             VillagersViewModel villagerViewModel = new VillagersViewModel();
-            Navigation.PushModalAsync(new VillagersPage(villagerViewModel));
+
+            _villagerPage = new VillagersPage();
+            _villagerPage.Content = new VillagersContentView(villagerViewModel);
+
+            Navigation.PushModalAsync(_villagerPage);
         }
 
         private void ResidentsTapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             string filter = "and IsResident <> 0";
             VillagersViewModel villagerViewModel = new VillagersViewModel(filter);
-            Navigation.PushModalAsync(new VillagersPage(villagerViewModel));
+
+            _villagerPage = new VillagersPage();
+            _villagerPage.Content = new VillagersContentView(villagerViewModel);
+
+            Navigation.PushModalAsync(_villagerPage);
         }
 
         private void VillagerSpeciesTapGestureRecognizer_Tapped(object sender, EventArgs e)
@@ -49,10 +59,14 @@ namespace ACNHCompanion.Views
             Grid frameGrid = (Grid)frame.Children[0];
             Label speciesLabel = (Label)frameGrid.Children[1];
 
-            string villagerSpecies = "and Species = '" + speciesLabel.Text + "'";
+            string filter = "and Species = '" + speciesLabel.Text + "'";
 
-            VillagersViewModel villagerViewModel = new VillagersViewModel(villagerSpecies);
-            Navigation.PushModalAsync(new VillagersPage(villagerViewModel));
+            VillagersViewModel villagerViewModel = new VillagersViewModel(filter);
+
+            _villagerPage = new VillagersPage();
+            _villagerPage.Content = new VillagersContentView(villagerViewModel);
+
+            Navigation.PushModalAsync(_villagerPage);
         }
     }
 }

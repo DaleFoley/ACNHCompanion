@@ -32,7 +32,7 @@ namespace ACNHCompanion.ViewModels
 
         public void RefreshViewModel()
         {
-            Config hemisphereConfig = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
+            Config hemisphereConfig = App.Config.Where(c => c.Name == Strings.Config.HEMISPHERE).FirstOrDefault();
             List<CritterMonths> dbBugs = null;
 
             if(hemisphereConfig.Value.ToLower() == "north")

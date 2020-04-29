@@ -12,15 +12,9 @@ using System.Collections.ObjectModel;
 
 namespace ACNHCompanion.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+    public class BaseViewModel : ObservableObject
     {
         public string FilterString;
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnNotifyPropertyChanged([CallerMemberName] string memberName = "")
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(memberName));
-        }
 
         private ObservableCollection<Critter> _crittersToDisplay;
         public ObservableCollection<Critter> CrittersToDisplay 
@@ -31,10 +25,11 @@ namespace ACNHCompanion.ViewModels
             }
             set
             {
-                _crittersToDisplay = value;
-
-                //TODO: Compare with old value to check if there were any changes first..
-                OnNotifyPropertyChanged(nameof(CrittersToDisplay));
+                if(value != _crittersToDisplay)
+                {
+                    _crittersToDisplay = value;
+                    OnNotifyPropertyChanged(nameof(CrittersToDisplay));
+                }
             }
         }
 
@@ -48,12 +43,29 @@ namespace ACNHCompanion.ViewModels
 
             set
             {
-                _title = value;
-
-                //TODO: Compare with old value to check if there were any changes first..
-                OnNotifyPropertyChanged(nameof(Title));
+                if(value != _title)
+                {
+                    _title = value;
+                    OnNotifyPropertyChanged(nameof(Title));
+                }
             }
         }
+
+        private string _filterCount;
+
+        public string FilterCount
+        {
+            get { return _filterCount; }
+            set { if (value != _filterCount) { _filterCount = value; OnNotifyPropertyChanged(nameof(FilterCount)); } }
+        }
+
+        private string _maxCritterCount;
+        public string MaxCritterCount
+        {
+            get { return _maxCritterCount; }
+            set { _maxCritterCount = value; }
+        }
+
 
         public BaseViewModel()
         {
@@ -110,6 +122,7 @@ namespace ACNHCompanion.ViewModels
                     Location = dbCritter.Location,
                     IsDonated = dbCritter.IsDonated,
                     IsSculpted = dbCritter.IsSculpted,
+                    IsCaptured = dbCritter.IsCaptured,
                     Months = dbCritter.Months,
                     Rarity = dbCritter.Rarity,
                     Icon = dbCritter.ImageName,

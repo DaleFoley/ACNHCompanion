@@ -17,7 +17,8 @@ create table critters (ID integer primary key,
             IsDonated integer default 0,
 			CatchStartTime time default 0 not null,
 			CatchEndTime time default 0 not null,
-			IsSculpted integer default 0);
+			IsSculpted integer default 0,
+			IsCaptured integer default 0);
 
 drop table if exists northern_months;
 create table northern_months (ID integer primary key,
@@ -56,6 +57,7 @@ as
 		   critters.Rarity,
 		   critters.IsDonated,
 		   critters.IsSculpted,
+		   critters.IsCaptured,
 		  case
 			when time('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')) >= critters.CatchStartTime and time('now', 'localtime', (select Value from config where config.Name = 'customUserTimeDifference')) <= critters.CatchEndTime then true
 			when time(critters.CatchEndTime) < time(critters.CatchStartTime) then

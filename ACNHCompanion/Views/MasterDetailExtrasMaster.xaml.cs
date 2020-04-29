@@ -20,7 +20,7 @@ namespace ACNHCompanion.Views
     {
         private MasterDetailExtrasMasterViewModel _masterView;
 
-        public DashboardViewModel DashboardViewModel { get; set; }
+        public DashboardViewModel DashboardVM { get; set; }
 
         public MasterDetailExtrasMaster()
         {
@@ -71,18 +71,7 @@ namespace ACNHCompanion.Views
 
             timePicker.Time = TimeSpan.Zero;
 
-            //There must be a far more elegant way to do this, we want to update localTime on DashboardPage view after
-            //user manually changes time.
-            MasterDetailPage parentPage = (MasterDetailPage)this.Parent;
-            Home detailPage = (Home)parentPage.Detail;
-            NavigationPage nv = (NavigationPage)detailPage.CurrentPage;
-
-            //TODO: Breaks if time set when not on the dashboard!
-            DashboardPage dashboardPage = (DashboardPage)nv.RootPage;
-
-            DashboardViewModel dbv = (DashboardViewModel)dashboardPage.BindingContext;
-            dbv.RefreshLocalTime();
-
+            DashboardVM?.RefreshLocalTime();
             RefreshTabPages();
         }
 

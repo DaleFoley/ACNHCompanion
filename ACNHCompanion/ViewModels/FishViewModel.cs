@@ -15,6 +15,7 @@ namespace ACNHCompanion.ViewModels
     {
         public FishViewModel()
         {
+            MaxCritterCount = App.ApplicationDatabase.GetFishNorthern().Count.ToString();
             RefreshViewModel();
         }
 
@@ -35,7 +36,7 @@ namespace ACNHCompanion.ViewModels
 
         public void RefreshViewModel()
         {
-            Config hemisphereConfig = App.Config.Where(c => c.Name == "hemisphere").FirstOrDefault();
+            Config hemisphereConfig = App.Config.Where(c => c.Name == Strings.Config.HEMISPHERE).FirstOrDefault();
             List<CritterMonths> dbFish = null;
 
             if (hemisphereConfig.Value.ToLower() == "north")
@@ -47,7 +48,9 @@ namespace ACNHCompanion.ViewModels
                 dbFish = App.ApplicationDatabase.GetFishSouthern(FilterString);
             }
 
-            Title = "Fish - " + hemisphereConfig.Value;
+            FilterCount = dbFish.Count.ToString();
+            Title = "Fish - " + hemisphereConfig.Value + " (" + FilterCount + "/" + MaxCritterCount + ")";
+
             CrittersToDisplay = GetCritterViewModelCollection(dbFish);
         }
     }

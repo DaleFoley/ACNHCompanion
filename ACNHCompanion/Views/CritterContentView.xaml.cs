@@ -20,28 +20,17 @@ namespace ACNHCompanion.Views
 
         void OnSculptureTapped(object sender, EventArgs args)
         {
-            TappedEventArgs e = (TappedEventArgs)args;
-
-            Critter critterSelected = (Critter)e.Parameter;
-
-            int critterID = critterSelected.Id;
-            bool isSculpted = critterSelected.IsSculpted ? false : true;
-
-            App.ApplicationDatabase.UpdateCritterIsSculpted(critterID, isSculpted);
-            critterSelected.IsSculpted = isSculpted;
+            Helper.UpdateCritterIsSculpted((TappedEventArgs)args);
         }
 
         void OnDonatedTapped(object sender, EventArgs args)
         {
-            TappedEventArgs e = (TappedEventArgs)args;
+            Helper.UpdateCritterIsDonated((TappedEventArgs)args);
+        }
 
-            Critter critterSelected = (Critter)e.Parameter;
-
-            int critterID = critterSelected.Id;
-            bool isDonated = critterSelected.IsDonated ? false : true;
-
-            App.ApplicationDatabase.UpdateCritterIsDonated(critterID, isDonated);
-            critterSelected.IsDonated = isDonated;
+        void OnCapturedTapped(object sender, EventArgs args)
+        {
+            Helper.UpdateCritterIsCaptured((TappedEventArgs)args);
         }
     }
 }

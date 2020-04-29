@@ -22,7 +22,6 @@ namespace ACNHCompanion.Views
         public DashboardPage()
         {
             InitializeComponent();
-            BindingContext = new DashboardViewModel();
         }
 
         private void SearchBarGlobal_SearchButtonPressed(object sender, EventArgs e)

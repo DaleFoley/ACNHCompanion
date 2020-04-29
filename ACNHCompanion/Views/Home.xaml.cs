@@ -17,10 +17,25 @@ namespace ACNHCompanion.Views
         public FishViewModel FishTab { get; set; }
         public BugsViewModel BugsTab { get; set; }
         public VillagersViewModel VillagersTab { get; set; }
+        public DashboardViewModel DashboardTab { get; set; }
 
         public Home()
         {
             InitializeComponent();
+        }
+
+        public void SetupTabs()
+        {
+            DashboardPage dashboardPage = new DashboardPage();
+            dashboardPage.BindingContext = DashboardTab;
+
+            NavigationPage dashboardNavigationPage = new NavigationPage(dashboardPage);
+            dashboardNavigationPage.Title = "Dashboard";
+            dashboardNavigationPage.IconImageSource = "resident_icon";
+
+            Children.Add(dashboardNavigationPage);
+
+            this.CurrentPage = dashboardNavigationPage;
 
             FishTab = new FishViewModel();
             BugsTab = new BugsViewModel();

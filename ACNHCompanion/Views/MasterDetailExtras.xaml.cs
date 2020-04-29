@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACNHCompanion.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -16,6 +17,19 @@ namespace ACNHCompanion.Views
         public MasterDetailExtras()
         {
             InitializeComponent();
+
+            DashboardViewModel dashboardVM = new DashboardViewModel();
+
+            MasterDetailExtrasMaster masterDetailExtrasMaster = new MasterDetailExtrasMaster();
+            masterDetailExtrasMaster.DashboardVM = dashboardVM;
+
+            this.Master = masterDetailExtrasMaster;
+
+            Home homePage = new Home();
+            homePage.DashboardTab = dashboardVM;
+            homePage.SetupTabs();
+
+            this.Detail = homePage;
         }
     }
 }

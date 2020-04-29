@@ -69,6 +69,8 @@ namespace ACNHCompanion.Views
 
         private void ApplyButton_Clicked(object sender, EventArgs e)
         {
+            //TODO: Can we utilize DB model here? What if column names change?
+
             IsVisible = false;
             InputTransparent = true;
 
@@ -83,13 +85,13 @@ namespace ACNHCompanion.Views
                 _filterString += "and IsDonated == 0 ";
             }
 
-            if (FilterByCatchable.SelectedItem.ToString().ToLower() == "yes")
+            if (FilterByCaptured.SelectedItem.ToString().ToLower() == "yes")
             {
-                _filterString += "and IsCatchableBasedOnTime <> 0 and IsCatchableBasedOnMonth <> 0 ";
+                _filterString += "and IsCaptured <> 0 ";
             }
-            else if (FilterByCatchable.SelectedItem.ToString().ToLower() == "no")
+            else if (FilterByCaptured.SelectedItem.ToString().ToLower() == "no")
             {
-                _filterString += "and IsCatchableBasedOnTime == 0 or IsCatchableBasedOnMonth == 0 ";
+                _filterString += "and IsCaptured == 0 ";
             }
 
             if (FilterBySculpted.SelectedItem.ToString().ToLower() == "yes")
@@ -101,7 +103,15 @@ namespace ACNHCompanion.Views
                 _filterString += "and IsSculpted == 0 ";
             }
 
-            //TODO: Can we utilize DB model here? What if column names change?
+            if (FilterByCatchable.SelectedItem.ToString().ToLower() == "yes")
+            {
+                _filterString += "and IsCatchableBasedOnTime <> 0 and IsCatchableBasedOnMonth <> 0 ";
+            }
+            else if (FilterByCatchable.SelectedItem.ToString().ToLower() == "no")
+            {
+                _filterString += "and IsCatchableBasedOnTime == 0 or IsCatchableBasedOnMonth == 0 ";
+            }
+
             _filterString += "order by ";
 
             bool isOrderByCritterName = true;

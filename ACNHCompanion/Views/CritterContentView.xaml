@@ -102,6 +102,7 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
                                     <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
 
                                 <Image Source="{Binding DonatedIcon}"
@@ -119,9 +120,24 @@
                                     </Image.GestureRecognizers>
                                 </Image>
 
+                                <Image Source="{Binding CapturedIcon}"
+                                       Grid.Row="0"
+                                       Grid.Column="1"
+                                        HeightRequest="32"
+                                        WidthRequest="32"
+                                        HorizontalOptions="CenterAndExpand"
+                                        VerticalOptions="CenterAndExpand">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                        Tapped="OnCapturedTapped"
+                                        CommandParameter="{Binding}"
+                                        />
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                
                                 <Image Source="{Binding SculptedIcon}"
                                                Grid.Row="0"
-                                               Grid.Column="1"
+                                               Grid.Column="2"
                                                 HeightRequest="32"
                                                 WidthRequest="32"
                                                HorizontalOptions="CenterAndExpand"
