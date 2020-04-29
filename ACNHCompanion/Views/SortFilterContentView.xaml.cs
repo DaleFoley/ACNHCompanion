@@ -29,6 +29,7 @@ namespace ACNHCompanion.Views
 
         private void RefreshCritterPage(BaseViewModel baseViewModel, string filterString = "")
         {
+            //DRY
             if (baseViewModel.GetType().Equals(typeof(FishViewModel)))
             {
                 FishViewModel fishViewModel = (FishViewModel)baseViewModel;

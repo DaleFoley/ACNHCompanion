@@ -105,7 +105,8 @@
             
             <SearchBar Placeholder="critter name, villager name etc.."
                        BackgroundColor="White"
-                       SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+                       SearchButtonPressed="SearchBar_SearchButtonPressed"
+                       Unfocused="SearchBar_Unfocused"/>
         </Frame>
     </RelativeLayout>
     

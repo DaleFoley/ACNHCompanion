@@ -14,13 +14,14 @@
                  IconImageSource="search.png"
                  Order="Primary"
                  Priority="0"
-                 Text="Search"/>
+                 Text="Search"
+                 Clicked="SearchBar_SearchButtonPressed"/>
         <ToolbarItem 
                  IconImageSource="filter.png"
                  Order="Primary"
                  Priority="1"
-                 Text="Search"
-                 Clicked="ToolbarItem_Clicked"/>
+                 Text="Filter"
+                 Clicked="Filter_Clicked"/>
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
@@ -34,6 +35,30 @@
 
             <views:SortFilterContentView x:Name="sortFilterContentView" IsVisible="False" InputTransparent="True">
             </views:SortFilterContentView>
+
+            <Frame BackgroundColor="#C0808080"
+               IsVisible="False"
+               InputTransparent="True"
+               x:Name="SearchFrame"
+               RelativeLayout.XConstraint =
+          "{ConstraintExpression    Type=RelativeToParent,
+                                    Property=X,
+                                    Factor=0,
+                                    Constant=0}"
+                   RelativeLayout.YConstraint =
+          "{ConstraintExpression    Type=RelativeToParent,
+                                    Property=Y,
+                                    Factor=0,
+                                    Constant=0}"
+                   RelativeLayout.WidthConstraint=
+           "{ConstraintExpression   Type=RelativeToParent,
+                                    Property=Width}">
+
+                <SearchBar Placeholder="critter name.."
+                       BackgroundColor="White"
+                       SearchButtonPressed="SearchBar_Submitted"
+                       Unfocused="SearchBar_Unfocused"/>
+            </Frame>
         </RelativeLayout>
 
     </ContentPage.Content>

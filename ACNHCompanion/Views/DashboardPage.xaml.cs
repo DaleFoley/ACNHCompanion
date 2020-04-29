@@ -26,8 +26,7 @@ namespace ACNHCompanion.Views
 
         private void SearchBarGlobal_SearchButtonPressed(object sender, EventArgs e)
         {
-            SearchFrame.IsVisible = SearchFrame.IsVisible ? false : true;
-            SearchFrame.InputTransparent = SearchFrame.InputTransparent ? true : false;
+            Helper.ToggleVisualElementVisibility(SearchFrame);
         }
 
         async private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
@@ -36,6 +35,11 @@ namespace ACNHCompanion.Views
             string searchCriteria = searchBar.Text;
 
             await Navigation.PushModalAsync(new SearchResultsPage(searchCriteria));
+        }
+
+        private void SearchBar_Unfocused(object sender, FocusEventArgs e)
+        {
+            Helper.ToggleVisualElementVisibility(SearchFrame);
         }
     }
 }

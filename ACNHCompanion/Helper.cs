@@ -9,6 +9,12 @@ namespace ACNHCompanion
 {
     public static class Helper
     {
+        public static void ToggleVisualElementVisibility(VisualElement frame)
+        {
+            frame.IsVisible = frame.IsVisible ? false : true;
+            frame.InputTransparent = frame.InputTransparent ? false : true;
+        }
+
         public static void UpdateCritterIsDonated(TappedEventArgs args)
         {
             Critter critterSelected = (Critter)args.Parameter;
