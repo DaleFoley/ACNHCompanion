@@ -88,7 +88,7 @@ select v_base_critters.*,
 			when '12' then 'Dec'
 			else '' end) > 0 then true else false end as IsCatchableBasedOnMonth
 from v_base_critters
-inner join northern_months on northern_months.CritterName = v_base_critters.CritterName
+inner join northern_months on northern_months.ID = v_base_critters.ID
 where v_base_critters.Type = 'bug'
 order by v_base_critters.CritterName;
 
@@ -113,7 +113,7 @@ as
 			when '12' then 'Dec'
 			else '' end) > 0 then true else false end as IsCatchableBasedOnMonth
 	   from v_base_critters
-	   inner join southern_months on southern_months.CritterName = v_base_critters.CritterName
+	   inner join southern_months on southern_months.ID = v_base_critters.ID
 	   where v_base_critters.Type = 'bug'
 	   order by v_base_critters.CritterName;
 
@@ -138,7 +138,7 @@ as
 				when '12' then 'Dec'
 				else '' end) > 0 then true else false end as IsCatchableBasedOnMonth
    from v_base_critters
-   inner join northern_months on northern_months.CritterName = v_base_critters.CritterName
+   inner join northern_months on northern_months.ID = v_base_critters.ID
    where v_base_critters.Type = 'fish'
    order by v_base_critters.CritterName;
 
@@ -163,7 +163,7 @@ as
 		when '12' then 'Dec'
 		else '' end) > 0 then true else false end as IsCatchableBasedOnMonth
    from v_base_critters
-   inner join southern_months on southern_months.CritterName = v_base_critters.CritterName
+   inner join southern_months on southern_months.ID = v_base_critters.ID
    where v_base_critters.Type = 'fish'
    order by v_base_critters.CritterName;
 

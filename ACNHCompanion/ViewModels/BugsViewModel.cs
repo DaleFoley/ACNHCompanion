@@ -12,6 +12,7 @@ namespace ACNHCompanion.ViewModels
     {
         public BugsViewModel()
         {
+            MaxCritterCount = App.ApplicationDatabase.GetBugsNorthern().Count.ToString();
             RefreshViewModel();
         }
 
@@ -44,7 +45,9 @@ namespace ACNHCompanion.ViewModels
                 dbBugs = App.ApplicationDatabase.GetBugsSouthern(FilterString);
             }
 
-            Title = "Bugs - " + hemisphereConfig.Value;
+            FilterCount = dbBugs.Count.ToString();
+            Title = "Bugs - " + hemisphereConfig.Value + " (" + FilterCount + "/" + MaxCritterCount + ")";
+
             CrittersToDisplay = GetCritterViewModelCollection(dbBugs);
         }
     }
