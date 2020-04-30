@@ -34,6 +34,33 @@ namespace ACNHCompanion.Views
             ContentView villagerContentView = new VillagersContentView(villagerViewModel);            
 
             collectionVillagers.Children.Add(villagerContentView);
+
+            //Clean up duplication logic here...
+            GridLength gridLengthHidden = new GridLength(0, GridUnitType.Absolute);
+
+            if (GlobalSearchViewModel.BugsDisplay.Count == 0)
+            {
+                collectionBugs.IsVisible = false;
+                Grid grid = (Grid)collectionBugs.Parent;
+
+                object rowID = collectionBugs.GetValue(Grid.RowProperty);
+
+                grid.RowDefinitions[(int)rowID].Height = gridLengthHidden;
+
+                bugButton.Text = "Show";
+            }
+
+            if(GlobalSearchViewModel.FishDisplay.Count == 0)
+            {
+                collectionFish.IsVisible = false;
+                Grid grid = (Grid)collectionFish.Parent;
+
+                object rowID = collectionFish.GetValue(Grid.RowProperty);
+
+                grid.RowDefinitions[(int)rowID].Height = gridLengthHidden;
+
+                fishButton.Text = "Show";
+            }
         }
 
         private void ToggleHideShowBugs_Clicked(object sender, EventArgs e)

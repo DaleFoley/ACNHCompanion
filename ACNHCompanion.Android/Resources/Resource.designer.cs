@@ -8459,3010 +8459,3013 @@ namespace ACNHCompanion.Droid
 			public const int abc_vector_test = 2131165273;
 			
 			// aapt resource value: 0x7F07005A
-			public const int avd_hide_password = 2131165274;
+			public const int AppIcon = 2131165274;
 			
 			// aapt resource value: 0x7F07005B
-			public const int avd_show_password = 2131165275;
+			public const int avd_hide_password = 2131165275;
 			
 			// aapt resource value: 0x7F07005C
-			public const int BellCoin = 2131165276;
+			public const int avd_show_password = 2131165276;
 			
 			// aapt resource value: 0x7F07005D
-			public const int bug_Agrias_butterfly = 2131165277;
+			public const int BellCoin = 2131165277;
 			
 			// aapt resource value: 0x7F07005E
-			public const int bug_Ant = 2131165278;
+			public const int bug_Agrias_butterfly = 2131165278;
 			
 			// aapt resource value: 0x7F07005F
-			public const int bug_Atlas_moth = 2131165279;
+			public const int bug_Ant = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int bug_Bagworm = 2131165280;
+			public const int bug_Atlas_moth = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int bug_Banded_dragonfly = 2131165281;
+			public const int bug_Bagworm = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int bug_Bell_cricket = 2131165282;
+			public const int bug_Banded_dragonfly = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int bug_Blue_weevil_beetle = 2131165283;
+			public const int bug_Bell_cricket = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int bug_Brown_cicada = 2131165284;
+			public const int bug_Blue_weevil_beetle = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int bug_Centipede = 2131165285;
+			public const int bug_Brown_cicada = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int bug_Cicada_shell = 2131165286;
+			public const int bug_Centipede = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int bug_Citrus_long_horned_beetle = 2131165287;
+			public const int bug_Cicada_shell = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int bug_Common_bluebottle = 2131165288;
+			public const int bug_Citrus_long_horned_beetle = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int bug_Common_butterfly = 2131165289;
+			public const int bug_Common_bluebottle = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int bug_Cricket = 2131165290;
+			public const int bug_Common_butterfly = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int bug_Cyclommatus_stag = 2131165291;
+			public const int bug_Cricket = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int bug_Damselfly = 2131165292;
+			public const int bug_Cyclommatus_stag = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int bug_Darner_dragonfly = 2131165293;
+			public const int bug_Damselfly = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int bug_Diving_beetle = 2131165294;
+			public const int bug_Darner_dragonfly = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int bug_Drone_beetle = 2131165295;
+			public const int bug_Diving_beetle = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int bug_Dung_beetle = 2131165296;
+			public const int bug_Drone_beetle = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int bug_Earth_boring_dung_beetle = 2131165297;
+			public const int bug_Dung_beetle = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int bug_Emperor_butterfly = 2131165298;
+			public const int bug_Earth_boring_dung_beetle = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int bug_Evening_cicada = 2131165299;
+			public const int bug_Emperor_butterfly = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int bug_Firefly = 2131165300;
+			public const int bug_Evening_cicada = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int bug_Flea = 2131165301;
+			public const int bug_Firefly = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int bug_Fly = 2131165302;
+			public const int bug_Flea = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int bug_Giant_cicada = 2131165303;
+			public const int bug_Fly = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int bug_Giant_stag = 2131165304;
+			public const int bug_Giant_cicada = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int bug_Giant_water_bug = 2131165305;
+			public const int bug_Giant_stag = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int bug_Giraffe_stag = 2131165306;
+			public const int bug_Giant_water_bug = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int bug_Golden_stag = 2131165307;
+			public const int bug_Giraffe_stag = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int bug_Goliath_beetle = 2131165308;
+			public const int bug_Golden_stag = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int bug_Grasshopper = 2131165309;
+			public const int bug_Goliath_beetle = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int bug_Great_purple_emperor = 2131165310;
+			public const int bug_Grasshopper = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int bug_Hermit_crab = 2131165311;
+			public const int bug_Great_purple_emperor = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int bug_Honeybee = 2131165312;
+			public const int bug_Hermit_crab = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int bug_Horned_atlas = 2131165313;
+			public const int bug_Honeybee = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int bug_Horned_dynastid = 2131165314;
+			public const int bug_Horned_atlas = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int bug_Horned_elephant = 2131165315;
+			public const int bug_Horned_dynastid = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int bug_Horned_hercules = 2131165316;
+			public const int bug_Horned_elephant = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int bug_Jewel_beetle = 2131165317;
+			public const int bug_Horned_hercules = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int bug_Ladybug = 2131165318;
+			public const int bug_Jewel_beetle = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int bug_Long_locust = 2131165319;
+			public const int bug_Ladybug = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int bug_Madagascan_sunset_moth = 2131165320;
-			
-			// aapt resource value: 0x7F07008A
-			public const int bug_Mantis = 2131165322;
+			public const int bug_Long_locust = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int bug_Man_faced_stink_bug = 2131165321;
+			public const int bug_Madagascan_sunset_moth = 2131165321;
 			
 			// aapt resource value: 0x7F07008B
-			public const int bug_Migratory_locust = 2131165323;
+			public const int bug_Mantis = 2131165323;
+			
+			// aapt resource value: 0x7F07008A
+			public const int bug_Man_faced_stink_bug = 2131165322;
 			
 			// aapt resource value: 0x7F07008C
-			public const int bug_Miyama_stag = 2131165324;
+			public const int bug_Migratory_locust = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int bug_Mole_cricket = 2131165325;
+			public const int bug_Miyama_stag = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int bug_Monarch_butterfly = 2131165326;
+			public const int bug_Mole_cricket = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int bug_Mosquito = 2131165327;
+			public const int bug_Monarch_butterfly = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int bug_Moth = 2131165328;
+			public const int bug_Mosquito = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int bug_Orchid_mantis = 2131165329;
+			public const int bug_Moth = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int bug_Paper_kite_butterfly = 2131165330;
+			public const int bug_Orchid_mantis = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int bug_Peacock_butterfly = 2131165331;
+			public const int bug_Paper_kite_butterfly = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int bug_Pill_bug = 2131165332;
+			public const int bug_Peacock_butterfly = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int bug_Pondskater = 2131165333;
+			public const int bug_Pill_bug = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int bug_Queen_Alexandras_birdwing = 2131165334;
+			public const int bug_Pondskater = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int bug_Rainbow_stag = 2131165335;
+			public const int bug_Queen_Alexandras_birdwing = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int bug_Rajah_Brookes_birdwing = 2131165336;
+			public const int bug_Rainbow_stag = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int bug_Red_dragonfly = 2131165337;
+			public const int bug_Rajah_Brookes_birdwing = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int bug_Rice_grasshopper = 2131165338;
+			public const int bug_Red_dragonfly = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int bug_Robust_cicada = 2131165339;
+			public const int bug_Rice_grasshopper = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int bug_Rosalia_batesi_beetle = 2131165340;
+			public const int bug_Robust_cicada = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int bug_Saw_stag = 2131165341;
+			public const int bug_Rosalia_batesi_beetle = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int bug_Scarab_beetle = 2131165342;
+			public const int bug_Saw_stag = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int bug_Scorpion = 2131165343;
+			public const int bug_Scarab_beetle = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int bug_Snail = 2131165344;
+			public const int bug_Scorpion = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int bug_Spider = 2131165345;
+			public const int bug_Snail = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int bug_Stinkbug = 2131165346;
+			public const int bug_Spider = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int bug_Tarantula = 2131165347;
+			public const int bug_Stinkbug = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int bug_Tiger_beetle = 2131165348;
+			public const int bug_Tarantula = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int bug_Tiger_butterfly = 2131165349;
+			public const int bug_Tiger_beetle = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int bug_Violin_beetle = 2131165350;
+			public const int bug_Tiger_butterfly = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int bug_Walker_cicada = 2131165351;
+			public const int bug_Violin_beetle = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int bug_Walking_leaf = 2131165352;
+			public const int bug_Walker_cicada = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int bug_Walking_stick = 2131165353;
+			public const int bug_Walking_leaf = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int bug_Wasp = 2131165354;
+			public const int bug_Walking_stick = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int bug_Wharf_roach = 2131165355;
+			public const int bug_Wasp = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int bug_Yellow_butterfly = 2131165356;
+			public const int bug_Wharf_roach = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int captured = 2131165357;
+			public const int bug_Yellow_butterfly = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int captured_false = 2131165358;
+			public const int captured = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int close = 2131165359;
+			public const int captured_false = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int design_bottom_navigation_item_background = 2131165360;
+			public const int close = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int design_fab_background = 2131165361;
+			public const int design_bottom_navigation_item_background = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int design_ic_visibility = 2131165362;
+			public const int design_fab_background = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int design_ic_visibility_off = 2131165363;
+			public const int design_ic_visibility = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int design_password_eye = 2131165364;
+			public const int design_ic_visibility_off = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int design_snackbar_background = 2131165365;
+			public const int design_password_eye = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int donated = 2131165366;
+			public const int design_snackbar_background = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int donated_false = 2131165367;
+			public const int donated = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int events = 2131165368;
+			public const int donated_false = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int filter = 2131165369;
+			public const int events = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int fish_Anchovy = 2131165370;
+			public const int filter = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int fish_Angelfish = 2131165371;
+			public const int fish_Anchovy = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int fish_Arapaima = 2131165372;
+			public const int fish_Angelfish = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int fish_Arowana = 2131165373;
+			public const int fish_Arapaima = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int fish_Barred_knifejaw = 2131165374;
+			public const int fish_Arowana = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int fish_Barreleye = 2131165375;
+			public const int fish_Barred_knifejaw = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int fish_Betta = 2131165376;
+			public const int fish_Barreleye = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int fish_Bitterling = 2131165377;
+			public const int fish_Betta = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int fish_Black_bass = 2131165378;
+			public const int fish_Bitterling = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int fish_Blowfish = 2131165379;
-			
-			// aapt resource value: 0x7F0700C5
-			public const int fish_Bluegill = 2131165381;
+			public const int fish_Black_bass = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int fish_Blue_marlin = 2131165380;
+			public const int fish_Blowfish = 2131165380;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int fish_Butterfly_fish = 2131165382;
+			public const int fish_Bluegill = 2131165382;
+			
+			// aapt resource value: 0x7F0700C5
+			public const int fish_Blue_marlin = 2131165381;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int fish_Carp = 2131165383;
+			public const int fish_Butterfly_fish = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int fish_Catfish = 2131165384;
+			public const int fish_Carp = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int fish_Char = 2131165385;
+			public const int fish_Catfish = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int fish_Cherry_salmon = 2131165386;
+			public const int fish_Char = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int fish_Clown_fish = 2131165387;
+			public const int fish_Cherry_salmon = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int fish_Coelacanth = 2131165388;
+			public const int fish_Clown_fish = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int fish_Crawfish = 2131165389;
+			public const int fish_Coelacanth = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int fish_Crucian_carp = 2131165390;
+			public const int fish_Crawfish = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int fish_Dab = 2131165391;
+			public const int fish_Crucian_carp = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int fish_Dace = 2131165392;
+			public const int fish_Dab = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int fish_Dorado = 2131165393;
+			public const int fish_Dace = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int fish_Football_fish = 2131165394;
+			public const int fish_Dorado = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int fish_Freshwater_goby = 2131165395;
+			public const int fish_Football_fish = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int fish_Frog = 2131165396;
+			public const int fish_Freshwater_goby = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int fish_Gar = 2131165397;
+			public const int fish_Frog = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int fish_Giant_snakehead = 2131165398;
+			public const int fish_Gar = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int fish_Giant_trevally = 2131165399;
+			public const int fish_Giant_snakehead = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int fish_Golden_trout = 2131165400;
+			public const int fish_Giant_trevally = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int fish_Goldfish = 2131165401;
+			public const int fish_Golden_trout = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int fish_Great_white_shark = 2131165402;
+			public const int fish_Goldfish = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int fish_Guppy = 2131165403;
+			public const int fish_Great_white_shark = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int fish_Hammerhead_shark = 2131165404;
+			public const int fish_Guppy = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int fish_Horse_mackerel = 2131165405;
+			public const int fish_Hammerhead_shark = 2131165405;
 			
 			// aapt resource value: 0x7F0700DE
-			public const int fish_Killifish = 2131165406;
+			public const int fish_Horse_mackerel = 2131165406;
 			
 			// aapt resource value: 0x7F0700DF
-			public const int fish_King_salmon = 2131165407;
+			public const int fish_Killifish = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int fish_Koi = 2131165408;
+			public const int fish_King_salmon = 2131165408;
 			
 			// aapt resource value: 0x7F0700E1
-			public const int fish_Loach = 2131165409;
+			public const int fish_Koi = 2131165409;
 			
 			// aapt resource value: 0x7F0700E2
-			public const int fish_Mahi_mahi = 2131165410;
+			public const int fish_Loach = 2131165410;
 			
 			// aapt resource value: 0x7F0700E3
-			public const int fish_Mitten_crab = 2131165411;
+			public const int fish_Mahi_mahi = 2131165411;
 			
 			// aapt resource value: 0x7F0700E4
-			public const int fish_Moray_eel = 2131165412;
+			public const int fish_Mitten_crab = 2131165412;
 			
 			// aapt resource value: 0x7F0700E5
-			public const int fish_Napoleonfish = 2131165413;
+			public const int fish_Moray_eel = 2131165413;
 			
 			// aapt resource value: 0x7F0700E6
-			public const int fish_Neon_tetra = 2131165414;
+			public const int fish_Napoleonfish = 2131165414;
 			
 			// aapt resource value: 0x7F0700E7
-			public const int fish_Nibble_fish = 2131165415;
+			public const int fish_Neon_tetra = 2131165415;
 			
 			// aapt resource value: 0x7F0700E8
-			public const int fish_Oarfish = 2131165416;
+			public const int fish_Nibble_fish = 2131165416;
 			
 			// aapt resource value: 0x7F0700E9
-			public const int fish_Ocean_sunfish = 2131165417;
+			public const int fish_Oarfish = 2131165417;
 			
 			// aapt resource value: 0x7F0700EA
-			public const int fish_Olive_flounder = 2131165418;
+			public const int fish_Ocean_sunfish = 2131165418;
 			
 			// aapt resource value: 0x7F0700EB
-			public const int fish_Pale_chub = 2131165419;
+			public const int fish_Olive_flounder = 2131165419;
 			
 			// aapt resource value: 0x7F0700EC
-			public const int fish_Pike = 2131165420;
+			public const int fish_Pale_chub = 2131165420;
 			
 			// aapt resource value: 0x7F0700ED
-			public const int fish_Piranha = 2131165421;
+			public const int fish_Pike = 2131165421;
 			
 			// aapt resource value: 0x7F0700EE
-			public const int fish_Pond_smelt = 2131165422;
+			public const int fish_Piranha = 2131165422;
 			
 			// aapt resource value: 0x7F0700EF
-			public const int fish_Pop_eyed_goldfish = 2131165423;
+			public const int fish_Pond_smelt = 2131165423;
 			
 			// aapt resource value: 0x7F0700F0
-			public const int fish_Puffer_fish = 2131165424;
+			public const int fish_Pop_eyed_goldfish = 2131165424;
 			
 			// aapt resource value: 0x7F0700F1
-			public const int fish_Rainbowfish = 2131165425;
+			public const int fish_Puffer_fish = 2131165425;
 			
 			// aapt resource value: 0x7F0700F2
-			public const int fish_Ranchu_goldfish = 2131165426;
+			public const int fish_Rainbowfish = 2131165426;
 			
 			// aapt resource value: 0x7F0700F3
-			public const int fish_Ray = 2131165427;
+			public const int fish_Ranchu_goldfish = 2131165427;
 			
 			// aapt resource value: 0x7F0700F4
-			public const int fish_Red_snapper = 2131165428;
+			public const int fish_Ray = 2131165428;
 			
 			// aapt resource value: 0x7F0700F5
-			public const int fish_Ribbon_eel = 2131165429;
+			public const int fish_Red_snapper = 2131165429;
 			
 			// aapt resource value: 0x7F0700F6
-			public const int fish_Saddled_bichir = 2131165430;
+			public const int fish_Ribbon_eel = 2131165430;
 			
 			// aapt resource value: 0x7F0700F7
-			public const int fish_Salmon = 2131165431;
+			public const int fish_Saddled_bichir = 2131165431;
 			
 			// aapt resource value: 0x7F0700F8
-			public const int fish_Saw_shark = 2131165432;
+			public const int fish_Salmon = 2131165432;
 			
 			// aapt resource value: 0x7F0700F9
-			public const int fish_Sea_bass = 2131165433;
+			public const int fish_Saw_shark = 2131165433;
 			
 			// aapt resource value: 0x7F0700FA
-			public const int fish_Sea_butterfly = 2131165434;
+			public const int fish_Sea_bass = 2131165434;
 			
 			// aapt resource value: 0x7F0700FB
-			public const int fish_Sea_horse = 2131165435;
+			public const int fish_Sea_butterfly = 2131165435;
 			
 			// aapt resource value: 0x7F0700FC
-			public const int fish_shadow_size_1 = 2131165436;
+			public const int fish_Sea_horse = 2131165436;
 			
 			// aapt resource value: 0x7F0700FD
-			public const int fish_shadow_size_2 = 2131165437;
+			public const int fish_shadow_size_1 = 2131165437;
 			
 			// aapt resource value: 0x7F0700FE
-			public const int fish_shadow_size_3 = 2131165438;
+			public const int fish_shadow_size_2 = 2131165438;
 			
 			// aapt resource value: 0x7F0700FF
-			public const int fish_shadow_size_4 = 2131165439;
+			public const int fish_shadow_size_3 = 2131165439;
 			
 			// aapt resource value: 0x7F070100
-			public const int fish_shadow_size_5 = 2131165440;
+			public const int fish_shadow_size_4 = 2131165440;
 			
 			// aapt resource value: 0x7F070101
-			public const int fish_shadow_size_6 = 2131165441;
+			public const int fish_shadow_size_5 = 2131165441;
 			
 			// aapt resource value: 0x7F070102
-			public const int fish_Snapping_Turtle = 2131165442;
+			public const int fish_shadow_size_6 = 2131165442;
 			
 			// aapt resource value: 0x7F070103
-			public const int fish_Soft_shelled_turtle = 2131165443;
+			public const int fish_Snapping_Turtle = 2131165443;
 			
 			// aapt resource value: 0x7F070104
-			public const int fish_Squid = 2131165444;
+			public const int fish_Soft_shelled_turtle = 2131165444;
 			
 			// aapt resource value: 0x7F070105
-			public const int fish_Stringfish = 2131165445;
+			public const int fish_Squid = 2131165445;
 			
 			// aapt resource value: 0x7F070106
-			public const int fish_Sturgeon = 2131165446;
+			public const int fish_Stringfish = 2131165446;
 			
 			// aapt resource value: 0x7F070107
-			public const int fish_Suckerfish = 2131165447;
+			public const int fish_Sturgeon = 2131165447;
 			
 			// aapt resource value: 0x7F070108
-			public const int fish_Surgeonfish = 2131165448;
+			public const int fish_Suckerfish = 2131165448;
 			
 			// aapt resource value: 0x7F070109
-			public const int fish_Sweetfish = 2131165449;
+			public const int fish_Surgeonfish = 2131165449;
 			
 			// aapt resource value: 0x7F07010A
-			public const int fish_Tadpole = 2131165450;
+			public const int fish_Sweetfish = 2131165450;
 			
 			// aapt resource value: 0x7F07010B
-			public const int fish_Tilapia = 2131165451;
+			public const int fish_Tadpole = 2131165451;
 			
 			// aapt resource value: 0x7F07010C
-			public const int fish_Tuna = 2131165452;
+			public const int fish_Tilapia = 2131165452;
 			
 			// aapt resource value: 0x7F07010D
-			public const int fish_Whale_shark = 2131165453;
+			public const int fish_Tuna = 2131165453;
 			
 			// aapt resource value: 0x7F07010E
-			public const int fish_Yellow_perch = 2131165454;
+			public const int fish_Whale_shark = 2131165454;
 			
 			// aapt resource value: 0x7F07010F
-			public const int fish_Zebra_turkeyfish = 2131165455;
+			public const int fish_Yellow_perch = 2131165455;
 			
 			// aapt resource value: 0x7F070110
-			public const int gift = 2131165456;
+			public const int fish_Zebra_turkeyfish = 2131165456;
 			
 			// aapt resource value: 0x7F070111
-			public const int house_false = 2131165457;
+			public const int gift = 2131165457;
 			
 			// aapt resource value: 0x7F070112
-			public const int house_true = 2131165458;
+			public const int house_false = 2131165458;
 			
 			// aapt resource value: 0x7F070113
-			public const int ic_mtrl_chip_checked_black = 2131165459;
+			public const int house_true = 2131165459;
 			
 			// aapt resource value: 0x7F070114
-			public const int ic_mtrl_chip_checked_circle = 2131165460;
+			public const int ic_mtrl_chip_checked_black = 2131165460;
 			
 			// aapt resource value: 0x7F070115
-			public const int ic_mtrl_chip_close_circle = 2131165461;
+			public const int ic_mtrl_chip_checked_circle = 2131165461;
 			
 			// aapt resource value: 0x7F070116
-			public const int loading = 2131165462;
+			public const int ic_mtrl_chip_close_circle = 2131165462;
 			
 			// aapt resource value: 0x7F070117
-			public const int mtrl_snackbar_background = 2131165463;
+			public const int loading = 2131165463;
 			
 			// aapt resource value: 0x7F070118
-			public const int mtrl_tabs_default_indicator = 2131165464;
+			public const int mtrl_snackbar_background = 2131165464;
 			
 			// aapt resource value: 0x7F070119
-			public const int navigation_empty_icon = 2131165465;
+			public const int mtrl_tabs_default_indicator = 2131165465;
 			
 			// aapt resource value: 0x7F07011A
-			public const int north_hemi_selected = 2131165466;
+			public const int navigation_empty_icon = 2131165466;
 			
 			// aapt resource value: 0x7F07011B
-			public const int notification_action_background = 2131165467;
+			public const int north_hemi_selected = 2131165467;
 			
 			// aapt resource value: 0x7F07011C
-			public const int notification_bg = 2131165468;
+			public const int notification_action_background = 2131165468;
 			
 			// aapt resource value: 0x7F07011D
-			public const int notification_bg_low = 2131165469;
+			public const int notification_bg = 2131165469;
 			
 			// aapt resource value: 0x7F07011E
-			public const int notification_bg_low_normal = 2131165470;
+			public const int notification_bg_low = 2131165470;
 			
 			// aapt resource value: 0x7F07011F
-			public const int notification_bg_low_pressed = 2131165471;
+			public const int notification_bg_low_normal = 2131165471;
 			
 			// aapt resource value: 0x7F070120
-			public const int notification_bg_normal = 2131165472;
+			public const int notification_bg_low_pressed = 2131165472;
 			
 			// aapt resource value: 0x7F070121
-			public const int notification_bg_normal_pressed = 2131165473;
+			public const int notification_bg_normal = 2131165473;
 			
 			// aapt resource value: 0x7F070122
-			public const int notification_icon_background = 2131165474;
+			public const int notification_bg_normal_pressed = 2131165474;
 			
 			// aapt resource value: 0x7F070123
-			public const int notification_template_icon_bg = 2131165475;
+			public const int notification_icon_background = 2131165475;
 			
 			// aapt resource value: 0x7F070124
-			public const int notification_template_icon_low_bg = 2131165476;
+			public const int notification_template_icon_bg = 2131165476;
 			
 			// aapt resource value: 0x7F070125
-			public const int notification_tile_bg = 2131165477;
+			public const int notification_template_icon_low_bg = 2131165477;
 			
 			// aapt resource value: 0x7F070126
-			public const int notify_panel_notification_icon_bg = 2131165478;
+			public const int notification_tile_bg = 2131165478;
 			
 			// aapt resource value: 0x7F070127
-			public const int resident_icon = 2131165479;
+			public const int notify_panel_notification_icon_bg = 2131165479;
 			
 			// aapt resource value: 0x7F070128
-			public const int sculpture = 2131165480;
+			public const int resident_icon = 2131165480;
 			
 			// aapt resource value: 0x7F070129
-			public const int sculpture_false = 2131165481;
+			public const int sculpture = 2131165481;
 			
 			// aapt resource value: 0x7F07012A
-			public const int search = 2131165482;
+			public const int sculpture_false = 2131165482;
 			
 			// aapt resource value: 0x7F07012B
-			public const int south_hemi_selected = 2131165483;
+			public const int search = 2131165483;
 			
 			// aapt resource value: 0x7F07012C
-			public const int splashscreen = 2131165484;
-			
-			// aapt resource value: 0x7F07012E
-			public const int tomnook = 2131165486;
+			public const int south_hemi_selected = 2131165484;
 			
 			// aapt resource value: 0x7F07012D
-			public const int tom_nook_face = 2131165485;
+			public const int splashscreen = 2131165485;
 			
 			// aapt resource value: 0x7F07012F
-			public const int tooltip_frame_dark = 2131165487;
+			public const int tomnook = 2131165487;
+			
+			// aapt resource value: 0x7F07012E
+			public const int tom_nook_face = 2131165486;
 			
 			// aapt resource value: 0x7F070130
-			public const int tooltip_frame_light = 2131165488;
-			
-			// aapt resource value: 0x7F070441
-			public const int villagers = 2131166273;
-			
-			// aapt resource value: 0x7F070442
-			public const int villagers_icon = 2131166274;
+			public const int tooltip_frame_dark = 2131165488;
 			
 			// aapt resource value: 0x7F070131
-			public const int villager_add = 2131165489;
+			public const int tooltip_frame_light = 2131165489;
 			
-			// aapt resource value: 0x7F070132
-			public const int villager_Admiral = 2131165490;
-			
-			// aapt resource value: 0x7F070133
-			public const int villager_Agent_S = 2131165491;
-			
-			// aapt resource value: 0x7F070134
-			public const int villager_Agnes = 2131165492;
-			
-			// aapt resource value: 0x7F070135
-			public const int villager_Al = 2131165493;
-			
-			// aapt resource value: 0x7F070136
-			public const int villager_Alfonso = 2131165494;
-			
-			// aapt resource value: 0x7F070137
-			public const int villager_Alice = 2131165495;
-			
-			// aapt resource value: 0x7F070138
-			public const int villager_Alli = 2131165496;
-			
-			// aapt resource value: 0x7F070139
-			public const int villager_Amelia = 2131165497;
-			
-			// aapt resource value: 0x7F07013A
-			public const int villager_Anabelle = 2131165498;
-			
-			// aapt resource value: 0x7F07013B
-			public const int villager_Anchovy = 2131165499;
-			
-			// aapt resource value: 0x7F07013C
-			public const int villager_Angus = 2131165500;
-			
-			// aapt resource value: 0x7F07013D
-			public const int villager_Anicotti = 2131165501;
-			
-			// aapt resource value: 0x7F07013E
-			public const int villager_Ankha = 2131165502;
-			
-			// aapt resource value: 0x7F07013F
-			public const int villager_Annalisa = 2131165503;
-			
-			// aapt resource value: 0x7F070140
-			public const int villager_Annalise = 2131165504;
-			
-			// aapt resource value: 0x7F070141
-			public const int villager_Antonio = 2131165505;
-			
-			// aapt resource value: 0x7F070142
-			public const int villager_Apollo = 2131165506;
-			
-			// aapt resource value: 0x7F070143
-			public const int villager_Apple = 2131165507;
-			
-			// aapt resource value: 0x7F070144
-			public const int villager_Astrid = 2131165508;
-			
-			// aapt resource value: 0x7F070145
-			public const int villager_Audie = 2131165509;
-			
-			// aapt resource value: 0x7F070146
-			public const int villager_Aurora = 2131165510;
-			
-			// aapt resource value: 0x7F070147
-			public const int villager_Ava = 2131165511;
-			
-			// aapt resource value: 0x7F070148
-			public const int villager_Avery = 2131165512;
-			
-			// aapt resource value: 0x7F070149
-			public const int villager_Axel = 2131165513;
-			
-			// aapt resource value: 0x7F07014A
-			public const int villager_Baabara = 2131165514;
-			
-			// aapt resource value: 0x7F07014B
-			public const int villager_Bam = 2131165515;
-			
-			// aapt resource value: 0x7F07014C
-			public const int villager_Bangle = 2131165516;
-			
-			// aapt resource value: 0x7F07014D
-			public const int villager_Barold = 2131165517;
-			
-			// aapt resource value: 0x7F07014E
-			public const int villager_Bea = 2131165518;
-			
-			// aapt resource value: 0x7F07014F
-			public const int villager_Beardo = 2131165519;
-			
-			// aapt resource value: 0x7F070150
-			public const int villager_Beau = 2131165520;
-			
-			// aapt resource value: 0x7F070151
-			public const int villager_Becky = 2131165521;
-			
-			// aapt resource value: 0x7F070152
-			public const int villager_Bella = 2131165522;
-			
-			// aapt resource value: 0x7F070153
-			public const int villager_Benedict = 2131165523;
-			
-			// aapt resource value: 0x7F070154
-			public const int villager_Benjamin = 2131165524;
-			
-			// aapt resource value: 0x7F070155
-			public const int villager_Bertha = 2131165525;
-			
-			// aapt resource value: 0x7F070156
-			public const int villager_Bettina = 2131165526;
-			
-			// aapt resource value: 0x7F070157
-			public const int villager_Bianca = 2131165527;
-			
-			// aapt resource value: 0x7F070158
-			public const int villager_Biff = 2131165528;
-			
-			// aapt resource value: 0x7F070159
-			public const int villager_Big_Top = 2131165529;
-			
-			// aapt resource value: 0x7F07015A
-			public const int villager_Bill = 2131165530;
-			
-			// aapt resource value: 0x7F07015B
-			public const int villager_Billy = 2131165531;
-			
-			// aapt resource value: 0x7F07015C
-			public const int villager_Biskit = 2131165532;
-			
-			// aapt resource value: 0x7F07015D
-			public const int villager_Bitty = 2131165533;
-			
-			// aapt resource value: 0x7F07015E
-			public const int villager_Blaire = 2131165534;
-			
-			// aapt resource value: 0x7F07015F
-			public const int villager_Blanche = 2131165535;
-			
-			// aapt resource value: 0x7F070160
-			public const int villager_Bluebear = 2131165536;
-			
-			// aapt resource value: 0x7F070161
-			public const int villager_Bob = 2131165537;
-			
-			// aapt resource value: 0x7F070162
-			public const int villager_Bonbon = 2131165538;
-			
-			// aapt resource value: 0x7F070163
-			public const int villager_Bones = 2131165539;
-			
-			// aapt resource value: 0x7F070164
-			public const int villager_Boomer = 2131165540;
-			
-			// aapt resource value: 0x7F070165
-			public const int villager_Boone = 2131165541;
-			
-			// aapt resource value: 0x7F070166
-			public const int villager_Boots = 2131165542;
-			
-			// aapt resource value: 0x7F070167
-			public const int villager_Boris = 2131165543;
-			
-			// aapt resource value: 0x7F070168
-			public const int villager_Boyd = 2131165544;
-			
-			// aapt resource value: 0x7F070169
-			public const int villager_Bree = 2131165545;
-			
-			// aapt resource value: 0x7F07016A
-			public const int villager_Broccolo = 2131165546;
-			
-			// aapt resource value: 0x7F07016B
-			public const int villager_Broffina = 2131165547;
-			
-			// aapt resource value: 0x7F07016C
-			public const int villager_Bruce = 2131165548;
-			
-			// aapt resource value: 0x7F07016D
-			public const int villager_Bubbles = 2131165549;
-			
-			// aapt resource value: 0x7F07016E
-			public const int villager_Buck = 2131165550;
-			
-			// aapt resource value: 0x7F07016F
-			public const int villager_Bud = 2131165551;
-			
-			// aapt resource value: 0x7F070170
-			public const int villager_Bunnie = 2131165552;
-			
-			// aapt resource value: 0x7F070171
-			public const int villager_Butch = 2131165553;
-			
-			// aapt resource value: 0x7F070172
-			public const int villager_Buzz = 2131165554;
-			
-			// aapt resource value: 0x7F070173
-			public const int villager_Cally = 2131165555;
-			
-			// aapt resource value: 0x7F070174
-			public const int villager_Camofrog = 2131165556;
-			
-			// aapt resource value: 0x7F070175
-			public const int villager_Canberra = 2131165557;
-			
-			// aapt resource value: 0x7F070176
-			public const int villager_Candi = 2131165558;
-			
-			// aapt resource value: 0x7F070177
-			public const int villager_Carmen = 2131165559;
-			
-			// aapt resource value: 0x7F070178
-			public const int villager_Caroline = 2131165560;
-			
-			// aapt resource value: 0x7F070179
-			public const int villager_Carrie = 2131165561;
-			
-			// aapt resource value: 0x7F07017A
-			public const int villager_Cashmere = 2131165562;
-			
-			// aapt resource value: 0x7F07017B
-			public const int villager_Celia = 2131165563;
-			
-			// aapt resource value: 0x7F07017C
-			public const int villager_Cesar = 2131165564;
-			
-			// aapt resource value: 0x7F07017D
-			public const int villager_Chadder = 2131165565;
-			
-			// aapt resource value: 0x7F07017E
-			public const int villager_Charlise = 2131165566;
-			
-			// aapt resource value: 0x7F07017F
-			public const int villager_Cheri = 2131165567;
-			
-			// aapt resource value: 0x7F070180
-			public const int villager_Cherry = 2131165568;
-			
-			// aapt resource value: 0x7F070181
-			public const int villager_Chester = 2131165569;
-			
-			// aapt resource value: 0x7F070182
-			public const int villager_Chevre = 2131165570;
-			
-			// aapt resource value: 0x7F070183
-			public const int villager_Chief = 2131165571;
-			
-			// aapt resource value: 0x7F070184
-			public const int villager_Chops = 2131165572;
-			
-			// aapt resource value: 0x7F070185
-			public const int villager_Chow = 2131165573;
-			
-			// aapt resource value: 0x7F070186
-			public const int villager_Chrissy = 2131165574;
-			
-			// aapt resource value: 0x7F070187
-			public const int villager_Claude = 2131165575;
-			
-			// aapt resource value: 0x7F070188
-			public const int villager_Claudia = 2131165576;
-			
-			// aapt resource value: 0x7F070189
-			public const int villager_Clay = 2131165577;
-			
-			// aapt resource value: 0x7F07018A
-			public const int villager_Cleo = 2131165578;
-			
-			// aapt resource value: 0x7F07018B
-			public const int villager_Clyde = 2131165579;
-			
-			// aapt resource value: 0x7F07018C
-			public const int villager_Coach = 2131165580;
-			
-			// aapt resource value: 0x7F07018D
-			public const int villager_Cobb = 2131165581;
-			
-			// aapt resource value: 0x7F07018E
-			public const int villager_Coco = 2131165582;
-			
-			// aapt resource value: 0x7F07018F
-			public const int villager_Cole = 2131165583;
-			
-			// aapt resource value: 0x7F070190
-			public const int villager_Colton = 2131165584;
-			
-			// aapt resource value: 0x7F070191
-			public const int villager_Cookie = 2131165585;
-			
-			// aapt resource value: 0x7F070192
-			public const int villager_Cousteau = 2131165586;
-			
-			// aapt resource value: 0x7F070193
-			public const int villager_Cranston = 2131165587;
-			
-			// aapt resource value: 0x7F070194
-			public const int villager_Croque = 2131165588;
-			
-			// aapt resource value: 0x7F070195
-			public const int villager_Cube = 2131165589;
-			
-			// aapt resource value: 0x7F070196
-			public const int villager_Curlos = 2131165590;
-			
-			// aapt resource value: 0x7F070197
-			public const int villager_Curly = 2131165591;
-			
-			// aapt resource value: 0x7F070198
-			public const int villager_Curt = 2131165592;
-			
-			// aapt resource value: 0x7F070199
-			public const int villager_Cyd = 2131165593;
-			
-			// aapt resource value: 0x7F07019A
-			public const int villager_Cyrano = 2131165594;
-			
-			// aapt resource value: 0x7F07019B
-			public const int villager_Daisy = 2131165595;
-			
-			// aapt resource value: 0x7F07019C
-			public const int villager_Deena = 2131165596;
-			
-			// aapt resource value: 0x7F07019D
-			public const int villager_Deirdre = 2131165597;
-			
-			// aapt resource value: 0x7F07019E
-			public const int villager_Del = 2131165598;
-			
-			// aapt resource value: 0x7F07019F
-			public const int villager_Deli = 2131165599;
-			
-			// aapt resource value: 0x7F0701A0
-			public const int villager_Derwin = 2131165600;
-			
-			// aapt resource value: 0x7F0701A1
-			public const int villager_Diana = 2131165601;
-			
-			// aapt resource value: 0x7F0701A2
-			public const int villager_Diva = 2131165602;
-			
-			// aapt resource value: 0x7F0701A3
-			public const int villager_Dizzy = 2131165603;
-			
-			// aapt resource value: 0x7F0701A4
-			public const int villager_Dobie = 2131165604;
-			
-			// aapt resource value: 0x7F0701A5
-			public const int villager_Doc = 2131165605;
-			
-			// aapt resource value: 0x7F0701A6
-			public const int villager_Dom = 2131165606;
-			
-			// aapt resource value: 0x7F0701A7
-			public const int villager_Dora = 2131165607;
-			
-			// aapt resource value: 0x7F0701A8
-			public const int villager_Dotty = 2131165608;
-			
-			// aapt resource value: 0x7F0701A9
-			public const int villager_Drago = 2131165609;
-			
-			// aapt resource value: 0x7F0701AA
-			public const int villager_Drake = 2131165610;
-			
-			// aapt resource value: 0x7F0701AB
-			public const int villager_Drift = 2131165611;
-			
-			// aapt resource value: 0x7F0701AC
-			public const int villager_Ed = 2131165612;
-			
-			// aapt resource value: 0x7F0701AD
-			public const int villager_Egbert = 2131165613;
-			
-			// aapt resource value: 0x7F0701AE
-			public const int villager_Elise = 2131165614;
-			
-			// aapt resource value: 0x7F0701AF
-			public const int villager_Ellie = 2131165615;
-			
-			// aapt resource value: 0x7F0701B0
-			public const int villager_Elmer = 2131165616;
-			
-			// aapt resource value: 0x7F0701B1
-			public const int villager_Eloise = 2131165617;
-			
-			// aapt resource value: 0x7F0701B2
-			public const int villager_Elvis = 2131165618;
-			
-			// aapt resource value: 0x7F0701B3
-			public const int villager_Erik = 2131165619;
-			
-			// aapt resource value: 0x7F0701B4
-			public const int villager_Eugene = 2131165620;
-			
-			// aapt resource value: 0x7F0701B5
-			public const int villager_Eunice = 2131165621;
-			
-			// aapt resource value: 0x7F0701B6
-			public const int villager_Fang = 2131165622;
-			
-			// aapt resource value: 0x7F0701B7
-			public const int villager_Fauna = 2131165623;
-			
-			// aapt resource value: 0x7F0701B8
-			public const int villager_Felicity = 2131165624;
-			
-			// aapt resource value: 0x7F0701B9
-			public const int villager_Filbert = 2131165625;
-			
-			// aapt resource value: 0x7F0701BA
-			public const int villager_Flip = 2131165626;
-			
-			// aapt resource value: 0x7F0701BB
-			public const int villager_Flo = 2131165627;
-			
-			// aapt resource value: 0x7F0701BC
-			public const int villager_Flora = 2131165628;
-			
-			// aapt resource value: 0x7F0701BD
-			public const int villager_Flurry = 2131165629;
-			
-			// aapt resource value: 0x7F0701BE
-			public const int villager_Francine = 2131165630;
-			
-			// aapt resource value: 0x7F0701BF
-			public const int villager_Frank = 2131165631;
-			
-			// aapt resource value: 0x7F0701C0
-			public const int villager_Freckles = 2131165632;
-			
-			// aapt resource value: 0x7F0701C1
-			public const int villager_Freya = 2131165633;
-			
-			// aapt resource value: 0x7F0701C2
-			public const int villager_Friga = 2131165634;
-			
-			// aapt resource value: 0x7F0701C3
-			public const int villager_Frita = 2131165635;
-			
-			// aapt resource value: 0x7F0701C4
-			public const int villager_Frobert = 2131165636;
-			
-			// aapt resource value: 0x7F0701C5
-			public const int villager_Fuchsia = 2131165637;
-			
-			// aapt resource value: 0x7F0701C6
-			public const int villager_Gabi = 2131165638;
-			
-			// aapt resource value: 0x7F0701C7
-			public const int villager_Gala = 2131165639;
-			
-			// aapt resource value: 0x7F0701C8
-			public const int villager_Gaston = 2131165640;
-			
-			// aapt resource value: 0x7F0701C9
-			public const int villager_Gayle = 2131165641;
-			
-			// aapt resource value: 0x7F0701CA
-			public const int villager_Genji = 2131165642;
-			
-			// aapt resource value: 0x7F0701CB
-			public const int villager_Gigi = 2131165643;
-			
-			// aapt resource value: 0x7F0701CC
-			public const int villager_Gladys = 2131165644;
-			
-			// aapt resource value: 0x7F0701CD
-			public const int villager_Gloria = 2131165645;
-			
-			// aapt resource value: 0x7F0701CE
-			public const int villager_Goldie = 2131165646;
-			
-			// aapt resource value: 0x7F0701CF
-			public const int villager_Gonzo = 2131165647;
-			
-			// aapt resource value: 0x7F0701D0
-			public const int villager_Goose = 2131165648;
-			
-			// aapt resource value: 0x7F0701D1
-			public const int villager_Graham = 2131165649;
-			
-			// aapt resource value: 0x7F0701D2
-			public const int villager_Greta = 2131165650;
-			
-			// aapt resource value: 0x7F0701D3
-			public const int villager_Grizzly = 2131165651;
-			
-			// aapt resource value: 0x7F0701D4
-			public const int villager_Groucho = 2131165652;
-			
-			// aapt resource value: 0x7F0701D5
-			public const int villager_Gruff = 2131165653;
-			
-			// aapt resource value: 0x7F0701D6
-			public const int villager_Gwen = 2131165654;
-			
-			// aapt resource value: 0x7F0701D7
-			public const int villager_Hamlet = 2131165655;
-			
-			// aapt resource value: 0x7F0701D8
-			public const int villager_Hamphrey = 2131165656;
-			
-			// aapt resource value: 0x7F0701D9
-			public const int villager_Hans = 2131165657;
-			
-			// aapt resource value: 0x7F0701DA
-			public const int villager_Harry = 2131165658;
-			
-			// aapt resource value: 0x7F0701DB
-			public const int villager_Hazel = 2131165659;
-			
-			// aapt resource value: 0x7F0701DC
-			public const int villager_Henry = 2131165660;
-			
-			// aapt resource value: 0x7F0701DD
-			public const int villager_Hippeux = 2131165661;
-			
-			// aapt resource value: 0x7F0701DE
-			public const int villager_Hopkins = 2131165662;
-			
-			// aapt resource value: 0x7F0701DF
-			public const int villager_Hopper = 2131165663;
-			
-			// aapt resource value: 0x7F0701E0
-			public const int villager_Hornsby = 2131165664;
-			
-			// aapt resource value: 0x7F0701E1
-			public const int villager_Huck = 2131165665;
-			
-			// aapt resource value: 0x7F0701E2
-			public const int villager_Hugh = 2131165666;
-			
-			// aapt resource value: 0x7F0701E3
-			public const int villager_icon_Admiral = 2131165667;
-			
-			// aapt resource value: 0x7F0701E4
-			public const int villager_icon_Agent_S = 2131165668;
-			
-			// aapt resource value: 0x7F0701E5
-			public const int villager_icon_Agnes = 2131165669;
-			
-			// aapt resource value: 0x7F0701E6
-			public const int villager_icon_Al = 2131165670;
-			
-			// aapt resource value: 0x7F0701E7
-			public const int villager_icon_Alfonso = 2131165671;
-			
-			// aapt resource value: 0x7F0701E8
-			public const int villager_icon_Alice = 2131165672;
-			
-			// aapt resource value: 0x7F0701E9
-			public const int villager_icon_Alli = 2131165673;
-			
-			// aapt resource value: 0x7F0701EA
-			public const int villager_icon_Amelia = 2131165674;
-			
-			// aapt resource value: 0x7F0701EB
-			public const int villager_icon_Anabelle = 2131165675;
-			
-			// aapt resource value: 0x7F0701EC
-			public const int villager_icon_Anchovy = 2131165676;
-			
-			// aapt resource value: 0x7F0701ED
-			public const int villager_icon_Angus = 2131165677;
-			
-			// aapt resource value: 0x7F0701EE
-			public const int villager_icon_Anicotti = 2131165678;
-			
-			// aapt resource value: 0x7F0701EF
-			public const int villager_icon_Ankha = 2131165679;
-			
-			// aapt resource value: 0x7F0701F0
-			public const int villager_icon_Annalisa = 2131165680;
-			
-			// aapt resource value: 0x7F0701F1
-			public const int villager_icon_Annalise = 2131165681;
-			
-			// aapt resource value: 0x7F0701F2
-			public const int villager_icon_Antonio = 2131165682;
-			
-			// aapt resource value: 0x7F0701F3
-			public const int villager_icon_Apollo = 2131165683;
-			
-			// aapt resource value: 0x7F0701F4
-			public const int villager_icon_Apple = 2131165684;
-			
-			// aapt resource value: 0x7F0701F5
-			public const int villager_icon_Astrid = 2131165685;
-			
-			// aapt resource value: 0x7F0701F6
-			public const int villager_icon_Audie = 2131165686;
-			
-			// aapt resource value: 0x7F0701F7
-			public const int villager_icon_Aurora = 2131165687;
-			
-			// aapt resource value: 0x7F0701F8
-			public const int villager_icon_Ava = 2131165688;
-			
-			// aapt resource value: 0x7F0701F9
-			public const int villager_icon_Avery = 2131165689;
-			
-			// aapt resource value: 0x7F0701FA
-			public const int villager_icon_Axel = 2131165690;
-			
-			// aapt resource value: 0x7F0701FB
-			public const int villager_icon_Baabara = 2131165691;
-			
-			// aapt resource value: 0x7F0701FC
-			public const int villager_icon_Bam = 2131165692;
-			
-			// aapt resource value: 0x7F0701FD
-			public const int villager_icon_Bangle = 2131165693;
-			
-			// aapt resource value: 0x7F0701FE
-			public const int villager_icon_Barold = 2131165694;
-			
-			// aapt resource value: 0x7F0701FF
-			public const int villager_icon_Bea = 2131165695;
-			
-			// aapt resource value: 0x7F070200
-			public const int villager_icon_Beardo = 2131165696;
-			
-			// aapt resource value: 0x7F070201
-			public const int villager_icon_Beau = 2131165697;
-			
-			// aapt resource value: 0x7F070202
-			public const int villager_icon_Becky = 2131165698;
-			
-			// aapt resource value: 0x7F070203
-			public const int villager_icon_Bella = 2131165699;
-			
-			// aapt resource value: 0x7F070204
-			public const int villager_icon_Benedict = 2131165700;
-			
-			// aapt resource value: 0x7F070205
-			public const int villager_icon_Benjamin = 2131165701;
-			
-			// aapt resource value: 0x7F070206
-			public const int villager_icon_Bertha = 2131165702;
-			
-			// aapt resource value: 0x7F070207
-			public const int villager_icon_Bettina = 2131165703;
-			
-			// aapt resource value: 0x7F070208
-			public const int villager_icon_Bianca = 2131165704;
-			
-			// aapt resource value: 0x7F070209
-			public const int villager_icon_Biff = 2131165705;
-			
-			// aapt resource value: 0x7F07020A
-			public const int villager_icon_Big_Top = 2131165706;
-			
-			// aapt resource value: 0x7F07020B
-			public const int villager_icon_Bill = 2131165707;
-			
-			// aapt resource value: 0x7F07020C
-			public const int villager_icon_Billy = 2131165708;
-			
-			// aapt resource value: 0x7F07020D
-			public const int villager_icon_Biskit = 2131165709;
-			
-			// aapt resource value: 0x7F07020E
-			public const int villager_icon_Bitty = 2131165710;
-			
-			// aapt resource value: 0x7F07020F
-			public const int villager_icon_Blaire = 2131165711;
-			
-			// aapt resource value: 0x7F070210
-			public const int villager_icon_Blanche = 2131165712;
-			
-			// aapt resource value: 0x7F070211
-			public const int villager_icon_Bluebear = 2131165713;
-			
-			// aapt resource value: 0x7F070212
-			public const int villager_icon_Bob = 2131165714;
-			
-			// aapt resource value: 0x7F070213
-			public const int villager_icon_Bonbon = 2131165715;
-			
-			// aapt resource value: 0x7F070214
-			public const int villager_icon_Bones = 2131165716;
-			
-			// aapt resource value: 0x7F070215
-			public const int villager_icon_Boomer = 2131165717;
-			
-			// aapt resource value: 0x7F070216
-			public const int villager_icon_Boone = 2131165718;
-			
-			// aapt resource value: 0x7F070217
-			public const int villager_icon_Boots = 2131165719;
-			
-			// aapt resource value: 0x7F070218
-			public const int villager_icon_Boris = 2131165720;
-			
-			// aapt resource value: 0x7F070219
-			public const int villager_icon_Boyd = 2131165721;
-			
-			// aapt resource value: 0x7F07021A
-			public const int villager_icon_Bree = 2131165722;
-			
-			// aapt resource value: 0x7F07021B
-			public const int villager_icon_Broccolo = 2131165723;
-			
-			// aapt resource value: 0x7F07021C
-			public const int villager_icon_Broffina = 2131165724;
-			
-			// aapt resource value: 0x7F07021D
-			public const int villager_icon_Bruce = 2131165725;
-			
-			// aapt resource value: 0x7F07021E
-			public const int villager_icon_Bubbles = 2131165726;
-			
-			// aapt resource value: 0x7F07021F
-			public const int villager_icon_Buck = 2131165727;
-			
-			// aapt resource value: 0x7F070220
-			public const int villager_icon_Bud = 2131165728;
-			
-			// aapt resource value: 0x7F070221
-			public const int villager_icon_Bunnie = 2131165729;
-			
-			// aapt resource value: 0x7F070222
-			public const int villager_icon_Butch = 2131165730;
-			
-			// aapt resource value: 0x7F070223
-			public const int villager_icon_Buzz = 2131165731;
-			
-			// aapt resource value: 0x7F070224
-			public const int villager_icon_Cally = 2131165732;
-			
-			// aapt resource value: 0x7F070225
-			public const int villager_icon_Camofrog = 2131165733;
-			
-			// aapt resource value: 0x7F070226
-			public const int villager_icon_Canberra = 2131165734;
-			
-			// aapt resource value: 0x7F070227
-			public const int villager_icon_Candi = 2131165735;
-			
-			// aapt resource value: 0x7F070228
-			public const int villager_icon_Carmen = 2131165736;
-			
-			// aapt resource value: 0x7F070229
-			public const int villager_icon_Caroline = 2131165737;
-			
-			// aapt resource value: 0x7F07022A
-			public const int villager_icon_Carrie = 2131165738;
-			
-			// aapt resource value: 0x7F07022B
-			public const int villager_icon_Cashmere = 2131165739;
-			
-			// aapt resource value: 0x7F07022C
-			public const int villager_icon_Celia = 2131165740;
-			
-			// aapt resource value: 0x7F07022D
-			public const int villager_icon_Cesar = 2131165741;
-			
-			// aapt resource value: 0x7F07022E
-			public const int villager_icon_Chadder = 2131165742;
-			
-			// aapt resource value: 0x7F07022F
-			public const int villager_icon_Charlise = 2131165743;
-			
-			// aapt resource value: 0x7F070230
-			public const int villager_icon_Cheri = 2131165744;
-			
-			// aapt resource value: 0x7F070231
-			public const int villager_icon_Cherry = 2131165745;
-			
-			// aapt resource value: 0x7F070232
-			public const int villager_icon_Chester = 2131165746;
-			
-			// aapt resource value: 0x7F070233
-			public const int villager_icon_Chevre = 2131165747;
-			
-			// aapt resource value: 0x7F070234
-			public const int villager_icon_Chief = 2131165748;
-			
-			// aapt resource value: 0x7F070235
-			public const int villager_icon_Chops = 2131165749;
-			
-			// aapt resource value: 0x7F070236
-			public const int villager_icon_Chow = 2131165750;
-			
-			// aapt resource value: 0x7F070237
-			public const int villager_icon_Chrissy = 2131165751;
-			
-			// aapt resource value: 0x7F070238
-			public const int villager_icon_Claude = 2131165752;
-			
-			// aapt resource value: 0x7F070239
-			public const int villager_icon_Claudia = 2131165753;
-			
-			// aapt resource value: 0x7F07023A
-			public const int villager_icon_Clay = 2131165754;
-			
-			// aapt resource value: 0x7F07023B
-			public const int villager_icon_Cleo = 2131165755;
-			
-			// aapt resource value: 0x7F07023C
-			public const int villager_icon_Clyde = 2131165756;
-			
-			// aapt resource value: 0x7F07023D
-			public const int villager_icon_Coach = 2131165757;
-			
-			// aapt resource value: 0x7F07023E
-			public const int villager_icon_Cobb = 2131165758;
-			
-			// aapt resource value: 0x7F07023F
-			public const int villager_icon_Coco = 2131165759;
-			
-			// aapt resource value: 0x7F070240
-			public const int villager_icon_Cole = 2131165760;
-			
-			// aapt resource value: 0x7F070241
-			public const int villager_icon_Colton = 2131165761;
-			
-			// aapt resource value: 0x7F070242
-			public const int villager_icon_Cookie = 2131165762;
-			
-			// aapt resource value: 0x7F070243
-			public const int villager_icon_Cousteau = 2131165763;
-			
-			// aapt resource value: 0x7F070244
-			public const int villager_icon_Cranston = 2131165764;
-			
-			// aapt resource value: 0x7F070245
-			public const int villager_icon_Croque = 2131165765;
-			
-			// aapt resource value: 0x7F070246
-			public const int villager_icon_Cube = 2131165766;
-			
-			// aapt resource value: 0x7F070247
-			public const int villager_icon_Curlos = 2131165767;
-			
-			// aapt resource value: 0x7F070248
-			public const int villager_icon_Curly = 2131165768;
-			
-			// aapt resource value: 0x7F070249
-			public const int villager_icon_Curt = 2131165769;
-			
-			// aapt resource value: 0x7F07024A
-			public const int villager_icon_Cyd = 2131165770;
-			
-			// aapt resource value: 0x7F07024B
-			public const int villager_icon_Cyrano = 2131165771;
-			
-			// aapt resource value: 0x7F07024C
-			public const int villager_icon_Daisy = 2131165772;
-			
-			// aapt resource value: 0x7F07024D
-			public const int villager_icon_Deena = 2131165773;
-			
-			// aapt resource value: 0x7F07024E
-			public const int villager_icon_Deirdre = 2131165774;
-			
-			// aapt resource value: 0x7F07024F
-			public const int villager_icon_Del = 2131165775;
-			
-			// aapt resource value: 0x7F070250
-			public const int villager_icon_Deli = 2131165776;
-			
-			// aapt resource value: 0x7F070251
-			public const int villager_icon_Derwin = 2131165777;
-			
-			// aapt resource value: 0x7F070252
-			public const int villager_icon_Diana = 2131165778;
-			
-			// aapt resource value: 0x7F070253
-			public const int villager_icon_Diva = 2131165779;
-			
-			// aapt resource value: 0x7F070254
-			public const int villager_icon_Dizzy = 2131165780;
-			
-			// aapt resource value: 0x7F070255
-			public const int villager_icon_Dobie = 2131165781;
-			
-			// aapt resource value: 0x7F070256
-			public const int villager_icon_Doc = 2131165782;
-			
-			// aapt resource value: 0x7F070257
-			public const int villager_icon_Dom = 2131165783;
-			
-			// aapt resource value: 0x7F070258
-			public const int villager_icon_Dora = 2131165784;
-			
-			// aapt resource value: 0x7F070259
-			public const int villager_icon_Dotty = 2131165785;
-			
-			// aapt resource value: 0x7F07025A
-			public const int villager_icon_Drago = 2131165786;
-			
-			// aapt resource value: 0x7F07025B
-			public const int villager_icon_Drake = 2131165787;
-			
-			// aapt resource value: 0x7F07025C
-			public const int villager_icon_Drift = 2131165788;
-			
-			// aapt resource value: 0x7F07025D
-			public const int villager_icon_Ed = 2131165789;
-			
-			// aapt resource value: 0x7F07025E
-			public const int villager_icon_Egbert = 2131165790;
-			
-			// aapt resource value: 0x7F07025F
-			public const int villager_icon_Elise = 2131165791;
-			
-			// aapt resource value: 0x7F070260
-			public const int villager_icon_Ellie = 2131165792;
-			
-			// aapt resource value: 0x7F070261
-			public const int villager_icon_Elmer = 2131165793;
-			
-			// aapt resource value: 0x7F070262
-			public const int villager_icon_Eloise = 2131165794;
-			
-			// aapt resource value: 0x7F070263
-			public const int villager_icon_Elvis = 2131165795;
-			
-			// aapt resource value: 0x7F070264
-			public const int villager_icon_Erik = 2131165796;
-			
-			// aapt resource value: 0x7F070265
-			public const int villager_icon_Eugene = 2131165797;
-			
-			// aapt resource value: 0x7F070266
-			public const int villager_icon_Eunice = 2131165798;
-			
-			// aapt resource value: 0x7F070267
-			public const int villager_icon_Fang = 2131165799;
-			
-			// aapt resource value: 0x7F070268
-			public const int villager_icon_Fauna = 2131165800;
-			
-			// aapt resource value: 0x7F070269
-			public const int villager_icon_Felicity = 2131165801;
-			
-			// aapt resource value: 0x7F07026A
-			public const int villager_icon_Filbert = 2131165802;
-			
-			// aapt resource value: 0x7F07026B
-			public const int villager_icon_Flip = 2131165803;
-			
-			// aapt resource value: 0x7F07026C
-			public const int villager_icon_Flo = 2131165804;
-			
-			// aapt resource value: 0x7F07026D
-			public const int villager_icon_Flora = 2131165805;
-			
-			// aapt resource value: 0x7F07026E
-			public const int villager_icon_Flurry = 2131165806;
-			
-			// aapt resource value: 0x7F07026F
-			public const int villager_icon_Francine = 2131165807;
-			
-			// aapt resource value: 0x7F070270
-			public const int villager_icon_Frank = 2131165808;
-			
-			// aapt resource value: 0x7F070271
-			public const int villager_icon_Freckles = 2131165809;
-			
-			// aapt resource value: 0x7F070272
-			public const int villager_icon_Freya = 2131165810;
-			
-			// aapt resource value: 0x7F070273
-			public const int villager_icon_Friga = 2131165811;
-			
-			// aapt resource value: 0x7F070274
-			public const int villager_icon_Frita = 2131165812;
-			
-			// aapt resource value: 0x7F070275
-			public const int villager_icon_Frobert = 2131165813;
-			
-			// aapt resource value: 0x7F070276
-			public const int villager_icon_Fuchsia = 2131165814;
-			
-			// aapt resource value: 0x7F070277
-			public const int villager_icon_Gabi = 2131165815;
-			
-			// aapt resource value: 0x7F070278
-			public const int villager_icon_Gala = 2131165816;
-			
-			// aapt resource value: 0x7F070279
-			public const int villager_icon_Gaston = 2131165817;
-			
-			// aapt resource value: 0x7F07027A
-			public const int villager_icon_Gayle = 2131165818;
-			
-			// aapt resource value: 0x7F07027B
-			public const int villager_icon_Genji = 2131165819;
-			
-			// aapt resource value: 0x7F07027C
-			public const int villager_icon_Gigi = 2131165820;
-			
-			// aapt resource value: 0x7F07027D
-			public const int villager_icon_Gladys = 2131165821;
-			
-			// aapt resource value: 0x7F07027E
-			public const int villager_icon_Gloria = 2131165822;
-			
-			// aapt resource value: 0x7F07027F
-			public const int villager_icon_Goldie = 2131165823;
-			
-			// aapt resource value: 0x7F070280
-			public const int villager_icon_Gonzo = 2131165824;
-			
-			// aapt resource value: 0x7F070281
-			public const int villager_icon_Goose = 2131165825;
-			
-			// aapt resource value: 0x7F070282
-			public const int villager_icon_Graham = 2131165826;
-			
-			// aapt resource value: 0x7F070283
-			public const int villager_icon_Greta = 2131165827;
-			
-			// aapt resource value: 0x7F070284
-			public const int villager_icon_Grizzly = 2131165828;
-			
-			// aapt resource value: 0x7F070285
-			public const int villager_icon_Groucho = 2131165829;
-			
-			// aapt resource value: 0x7F070286
-			public const int villager_icon_Gruff = 2131165830;
-			
-			// aapt resource value: 0x7F070287
-			public const int villager_icon_Gwen = 2131165831;
-			
-			// aapt resource value: 0x7F070288
-			public const int villager_icon_Hamlet = 2131165832;
-			
-			// aapt resource value: 0x7F070289
-			public const int villager_icon_Hamphrey = 2131165833;
-			
-			// aapt resource value: 0x7F07028A
-			public const int villager_icon_Hans = 2131165834;
-			
-			// aapt resource value: 0x7F07028B
-			public const int villager_icon_Harry = 2131165835;
-			
-			// aapt resource value: 0x7F07028C
-			public const int villager_icon_Hazel = 2131165836;
-			
-			// aapt resource value: 0x7F07028D
-			public const int villager_icon_Henry = 2131165837;
-			
-			// aapt resource value: 0x7F07028E
-			public const int villager_icon_Hippeux = 2131165838;
-			
-			// aapt resource value: 0x7F07028F
-			public const int villager_icon_Hopkins = 2131165839;
-			
-			// aapt resource value: 0x7F070290
-			public const int villager_icon_Hopper = 2131165840;
-			
-			// aapt resource value: 0x7F070291
-			public const int villager_icon_Hornsby = 2131165841;
-			
-			// aapt resource value: 0x7F070292
-			public const int villager_icon_Huck = 2131165842;
-			
-			// aapt resource value: 0x7F070293
-			public const int villager_icon_Hugh = 2131165843;
-			
-			// aapt resource value: 0x7F070294
-			public const int villager_icon_Iggly = 2131165844;
-			
-			// aapt resource value: 0x7F070295
-			public const int villager_icon_Ike = 2131165845;
-			
-			// aapt resource value: 0x7F070296
-			public const int villager_icon_Jacob = 2131165846;
-			
-			// aapt resource value: 0x7F070297
-			public const int villager_icon_Jacques = 2131165847;
-			
-			// aapt resource value: 0x7F070298
-			public const int villager_icon_Jambette = 2131165848;
-			
-			// aapt resource value: 0x7F070299
-			public const int villager_icon_Jay = 2131165849;
-			
-			// aapt resource value: 0x7F07029A
-			public const int villager_icon_Jeremiah = 2131165850;
-			
-			// aapt resource value: 0x7F07029B
-			public const int villager_icon_Jitters = 2131165851;
-			
-			// aapt resource value: 0x7F07029C
-			public const int villager_icon_Joey = 2131165852;
-			
-			// aapt resource value: 0x7F07029D
-			public const int villager_icon_Judy = 2131165853;
-			
-			// aapt resource value: 0x7F07029E
-			public const int villager_icon_Julia = 2131165854;
-			
-			// aapt resource value: 0x7F07029F
-			public const int villager_icon_Julian = 2131165855;
-			
-			// aapt resource value: 0x7F0702A0
-			public const int villager_icon_June = 2131165856;
-			
-			// aapt resource value: 0x7F0702A1
-			public const int villager_icon_Kabuki = 2131165857;
-			
-			// aapt resource value: 0x7F0702A2
-			public const int villager_icon_Katt = 2131165858;
-			
-			// aapt resource value: 0x7F0702A3
-			public const int villager_icon_Keaton = 2131165859;
-			
-			// aapt resource value: 0x7F0702A4
-			public const int villager_icon_Ken = 2131165860;
-			
-			// aapt resource value: 0x7F0702A5
-			public const int villager_icon_Ketchup = 2131165861;
-			
-			// aapt resource value: 0x7F0702A6
-			public const int villager_icon_Kevin = 2131165862;
-			
-			// aapt resource value: 0x7F0702A8
-			public const int villager_icon_Kidd = 2131165864;
-			
-			// aapt resource value: 0x7F0702A7
-			public const int villager_icon_Kid_Cat = 2131165863;
-			
-			// aapt resource value: 0x7F0702A9
-			public const int villager_icon_Kiki = 2131165865;
-			
-			// aapt resource value: 0x7F0702AA
-			public const int villager_icon_Kitt = 2131165866;
-			
-			// aapt resource value: 0x7F0702AB
-			public const int villager_icon_Kitty = 2131165867;
-			
-			// aapt resource value: 0x7F0702AC
-			public const int villager_icon_Klaus = 2131165868;
-			
-			// aapt resource value: 0x7F0702AD
-			public const int villager_icon_Knox = 2131165869;
-			
-			// aapt resource value: 0x7F0702AE
-			public const int villager_icon_Kody = 2131165870;
-			
-			// aapt resource value: 0x7F0702AF
-			public const int villager_icon_Kyle = 2131165871;
-			
-			// aapt resource value: 0x7F0702B0
-			public const int villager_icon_Leonardo = 2131165872;
-			
-			// aapt resource value: 0x7F0702B1
-			public const int villager_icon_Leopold = 2131165873;
-			
-			// aapt resource value: 0x7F0702B2
-			public const int villager_icon_Lily = 2131165874;
-			
-			// aapt resource value: 0x7F0702B3
-			public const int villager_icon_Limberg = 2131165875;
-			
-			// aapt resource value: 0x7F0702B4
-			public const int villager_icon_Lionel = 2131165876;
-			
-			// aapt resource value: 0x7F0702B5
-			public const int villager_icon_Lobo = 2131165877;
-			
-			// aapt resource value: 0x7F0702B6
-			public const int villager_icon_Lolly = 2131165878;
-			
-			// aapt resource value: 0x7F0702B7
-			public const int villager_icon_Lopez = 2131165879;
-			
-			// aapt resource value: 0x7F0702B8
-			public const int villager_icon_Louie = 2131165880;
-			
-			// aapt resource value: 0x7F0702B9
-			public const int villager_icon_Lucha = 2131165881;
-			
-			// aapt resource value: 0x7F0702BA
-			public const int villager_icon_Lucky = 2131165882;
-			
-			// aapt resource value: 0x7F0702BB
-			public const int villager_icon_Lucy = 2131165883;
-			
-			// aapt resource value: 0x7F0702BC
-			public const int villager_icon_Lyman = 2131165884;
-			
-			// aapt resource value: 0x7F0702BD
-			public const int villager_icon_Mac = 2131165885;
-			
-			// aapt resource value: 0x7F0702BE
-			public const int villager_icon_Maddie = 2131165886;
-			
-			// aapt resource value: 0x7F0702BF
-			public const int villager_icon_Maelle = 2131165887;
-			
-			// aapt resource value: 0x7F0702C0
-			public const int villager_icon_Maggie = 2131165888;
-			
-			// aapt resource value: 0x7F0702C1
-			public const int villager_icon_Mallary = 2131165889;
-			
-			// aapt resource value: 0x7F0702C2
-			public const int villager_icon_Maple = 2131165890;
-			
-			// aapt resource value: 0x7F0702C3
-			public const int villager_icon_Marcel = 2131165891;
-			
-			// aapt resource value: 0x7F0702C4
-			public const int villager_icon_Marcie = 2131165892;
-			
-			// aapt resource value: 0x7F0702C5
-			public const int villager_icon_Margie = 2131165893;
-			
-			// aapt resource value: 0x7F0702C6
-			public const int villager_icon_Marina = 2131165894;
-			
-			// aapt resource value: 0x7F0702C7
-			public const int villager_icon_Marshal = 2131165895;
-			
-			// aapt resource value: 0x7F0702C8
-			public const int villager_icon_Mathilda = 2131165896;
-			
-			// aapt resource value: 0x7F0702C9
-			public const int villager_icon_Megan = 2131165897;
-			
-			// aapt resource value: 0x7F0702CA
-			public const int villager_icon_Melba = 2131165898;
-			
-			// aapt resource value: 0x7F0702CB
-			public const int villager_icon_Merengue = 2131165899;
-			
-			// aapt resource value: 0x7F0702CC
-			public const int villager_icon_Merry = 2131165900;
-			
-			// aapt resource value: 0x7F0702CD
-			public const int villager_icon_Midge = 2131165901;
-			
-			// aapt resource value: 0x7F0702CE
-			public const int villager_icon_Mint = 2131165902;
-			
-			// aapt resource value: 0x7F0702CF
-			public const int villager_icon_Mira = 2131165903;
-			
-			// aapt resource value: 0x7F0702D0
-			public const int villager_icon_Miranda = 2131165904;
-			
-			// aapt resource value: 0x7F0702D1
-			public const int villager_icon_Mitzi = 2131165905;
-			
-			// aapt resource value: 0x7F0702D2
-			public const int villager_icon_Moe = 2131165906;
-			
-			// aapt resource value: 0x7F0702D3
-			public const int villager_icon_Molly = 2131165907;
-			
-			// aapt resource value: 0x7F0702D4
-			public const int villager_icon_Monique = 2131165908;
-			
-			// aapt resource value: 0x7F0702D5
-			public const int villager_icon_Monty = 2131165909;
-			
-			// aapt resource value: 0x7F0702D6
-			public const int villager_icon_Moose = 2131165910;
-			
-			// aapt resource value: 0x7F0702D7
-			public const int villager_icon_Mott = 2131165911;
-			
-			// aapt resource value: 0x7F0702D8
-			public const int villager_icon_Muffy = 2131165912;
-			
-			// aapt resource value: 0x7F0702D9
-			public const int villager_icon_Murphy = 2131165913;
-			
-			// aapt resource value: 0x7F0702DA
-			public const int villager_icon_Nan = 2131165914;
-			
-			// aapt resource value: 0x7F0702DB
-			public const int villager_icon_Nana = 2131165915;
-			
-			// aapt resource value: 0x7F0702DC
-			public const int villager_icon_Naomi = 2131165916;
-			
-			// aapt resource value: 0x7F0702DD
-			public const int villager_icon_Nate = 2131165917;
-			
-			// aapt resource value: 0x7F0702DE
-			public const int villager_icon_Nibbles = 2131165918;
-			
-			// aapt resource value: 0x7F0702DF
-			public const int villager_icon_Norma = 2131165919;
-			
-			// aapt resource value: 0x7F0702E0
-			public const int villager_icon_Octavian = 2131165920;
-			
-			// aapt resource value: 0x7F0702E1
-			public const int villager_icon_OHare = 2131165921;
-			
-			// aapt resource value: 0x7F0702E2
-			public const int villager_icon_Olaf = 2131165922;
-			
-			// aapt resource value: 0x7F0702E3
-			public const int villager_icon_Olive = 2131165923;
-			
-			// aapt resource value: 0x7F0702E4
-			public const int villager_icon_Olivia = 2131165924;
-			
-			// aapt resource value: 0x7F0702E5
-			public const int villager_icon_Opal = 2131165925;
-			
-			// aapt resource value: 0x7F0702E6
-			public const int villager_icon_Ozzie = 2131165926;
-			
-			// aapt resource value: 0x7F0702E7
-			public const int villager_icon_Pancetti = 2131165927;
-			
-			// aapt resource value: 0x7F0702E8
-			public const int villager_icon_Pango = 2131165928;
-			
-			// aapt resource value: 0x7F0702E9
-			public const int villager_icon_Paolo = 2131165929;
-			
-			// aapt resource value: 0x7F0702EA
-			public const int villager_icon_Papi = 2131165930;
-			
-			// aapt resource value: 0x7F0702EB
-			public const int villager_icon_Pashmina = 2131165931;
-			
-			// aapt resource value: 0x7F0702EC
-			public const int villager_icon_Pate = 2131165932;
-			
-			// aapt resource value: 0x7F0702ED
-			public const int villager_icon_Patty = 2131165933;
-			
-			// aapt resource value: 0x7F0702EE
-			public const int villager_icon_Paula = 2131165934;
-			
-			// aapt resource value: 0x7F0702EF
-			public const int villager_icon_Peaches = 2131165935;
-			
-			// aapt resource value: 0x7F0702F0
-			public const int villager_icon_Peanut = 2131165936;
-			
-			// aapt resource value: 0x7F0702F1
-			public const int villager_icon_Pecan = 2131165937;
-			
-			// aapt resource value: 0x7F0702F2
-			public const int villager_icon_Peck = 2131165938;
-			
-			// aapt resource value: 0x7F0702F3
-			public const int villager_icon_Peewee = 2131165939;
-			
-			// aapt resource value: 0x7F0702F4
-			public const int villager_icon_Peggy = 2131165940;
-			
-			// aapt resource value: 0x7F0702F5
-			public const int villager_icon_Pekoe = 2131165941;
-			
-			// aapt resource value: 0x7F0702F6
-			public const int villager_icon_Penelope = 2131165942;
-			
-			// aapt resource value: 0x7F0702F7
-			public const int villager_icon_Phil = 2131165943;
-			
-			// aapt resource value: 0x7F0702F8
-			public const int villager_icon_Phoebe = 2131165944;
-			
-			// aapt resource value: 0x7F0702F9
-			public const int villager_icon_Pierce = 2131165945;
-			
-			// aapt resource value: 0x7F0702FA
-			public const int villager_icon_Pietro = 2131165946;
-			
-			// aapt resource value: 0x7F0702FB
-			public const int villager_icon_Pinky = 2131165947;
-			
-			// aapt resource value: 0x7F0702FC
-			public const int villager_icon_Piper = 2131165948;
-			
-			// aapt resource value: 0x7F0702FD
-			public const int villager_icon_Pippy = 2131165949;
-			
-			// aapt resource value: 0x7F0702FE
-			public const int villager_icon_Plucky = 2131165950;
-			
-			// aapt resource value: 0x7F0702FF
-			public const int villager_icon_Pompom = 2131165951;
-			
-			// aapt resource value: 0x7F070300
-			public const int villager_icon_Poncho = 2131165952;
-			
-			// aapt resource value: 0x7F070301
-			public const int villager_icon_Poppy = 2131165953;
-			
-			// aapt resource value: 0x7F070302
-			public const int villager_icon_Portia = 2131165954;
-			
-			// aapt resource value: 0x7F070303
-			public const int villager_icon_Prince = 2131165955;
-			
-			// aapt resource value: 0x7F070304
-			public const int villager_icon_Puck = 2131165956;
-			
-			// aapt resource value: 0x7F070305
-			public const int villager_icon_Puddles = 2131165957;
-			
-			// aapt resource value: 0x7F070306
-			public const int villager_icon_Pudge = 2131165958;
-			
-			// aapt resource value: 0x7F070307
-			public const int villager_icon_Punchy = 2131165959;
-			
-			// aapt resource value: 0x7F070308
-			public const int villager_icon_Purrl = 2131165960;
-			
-			// aapt resource value: 0x7F070309
-			public const int villager_icon_Queenie = 2131165961;
-			
-			// aapt resource value: 0x7F07030A
-			public const int villager_icon_Quillson = 2131165962;
-			
-			// aapt resource value: 0x7F07030B
-			public const int villager_icon_Raddle = 2131165963;
-			
-			// aapt resource value: 0x7F07030C
-			public const int villager_icon_Rasher = 2131165964;
-			
-			// aapt resource value: 0x7F07030D
-			public const int villager_icon_Raymond = 2131165965;
-			
-			// aapt resource value: 0x7F07030E
-			public const int villager_icon_Renee = 2131165966;
-			
-			// aapt resource value: 0x7F07030F
-			public const int villager_icon_Reneigh = 2131165967;
-			
-			// aapt resource value: 0x7F070310
-			public const int villager_icon_Rex = 2131165968;
-			
-			// aapt resource value: 0x7F070311
-			public const int villager_icon_Rhonda = 2131165969;
-			
-			// aapt resource value: 0x7F070312
-			public const int villager_icon_Ribbot = 2131165970;
-			
-			// aapt resource value: 0x7F070313
-			public const int villager_icon_Ricky = 2131165971;
-			
-			// aapt resource value: 0x7F070314
-			public const int villager_icon_Rizzo = 2131165972;
-			
-			// aapt resource value: 0x7F070315
-			public const int villager_icon_Roald = 2131165973;
-			
-			// aapt resource value: 0x7F070316
-			public const int villager_icon_Robin = 2131165974;
-			
-			// aapt resource value: 0x7F070317
-			public const int villager_icon_Rocco = 2131165975;
-			
-			// aapt resource value: 0x7F070318
-			public const int villager_icon_Rocket = 2131165976;
-			
-			// aapt resource value: 0x7F070319
-			public const int villager_icon_Rod = 2131165977;
-			
-			// aapt resource value: 0x7F07031A
-			public const int villager_icon_Rodeo = 2131165978;
-			
-			// aapt resource value: 0x7F07031B
-			public const int villager_icon_Rodney = 2131165979;
-			
-			// aapt resource value: 0x7F07031C
-			public const int villager_icon_Rolf = 2131165980;
-			
-			// aapt resource value: 0x7F07031D
-			public const int villager_icon_Rooney = 2131165981;
-			
-			// aapt resource value: 0x7F07031E
-			public const int villager_icon_Rory = 2131165982;
-			
-			// aapt resource value: 0x7F07031F
-			public const int villager_icon_Roscoe = 2131165983;
-			
-			// aapt resource value: 0x7F070320
-			public const int villager_icon_Rosie = 2131165984;
-			
-			// aapt resource value: 0x7F070321
-			public const int villager_icon_Rowan = 2131165985;
-			
-			// aapt resource value: 0x7F070322
-			public const int villager_icon_Ruby = 2131165986;
-			
-			// aapt resource value: 0x7F070323
-			public const int villager_icon_Rudy = 2131165987;
-			
-			// aapt resource value: 0x7F070324
-			public const int villager_icon_Sally = 2131165988;
-			
-			// aapt resource value: 0x7F070325
-			public const int villager_icon_Samson = 2131165989;
-			
-			// aapt resource value: 0x7F070326
-			public const int villager_icon_Sandy = 2131165990;
-			
-			// aapt resource value: 0x7F070327
-			public const int villager_icon_Savannah = 2131165991;
-			
-			// aapt resource value: 0x7F070328
-			public const int villager_icon_Scoot = 2131165992;
-			
-			// aapt resource value: 0x7F070329
-			public const int villager_icon_Shari = 2131165993;
-			
-			// aapt resource value: 0x7F07032A
-			public const int villager_icon_Sheldon = 2131165994;
-			
-			// aapt resource value: 0x7F07032B
-			public const int villager_icon_Shep = 2131165995;
-			
-			// aapt resource value: 0x7F07032C
-			public const int villager_icon_Sherb = 2131165996;
-			
-			// aapt resource value: 0x7F07032D
-			public const int villager_icon_Simon = 2131165997;
-			
-			// aapt resource value: 0x7F07032E
-			public const int villager_icon_Skye = 2131165998;
-			
-			// aapt resource value: 0x7F07032F
-			public const int villager_icon_Sly = 2131165999;
-			
-			// aapt resource value: 0x7F070330
-			public const int villager_icon_Snake = 2131166000;
-			
-			// aapt resource value: 0x7F070331
-			public const int villager_icon_Snooty = 2131166001;
-			
-			// aapt resource value: 0x7F070332
-			public const int villager_icon_Soleil = 2131166002;
-			
-			// aapt resource value: 0x7F070333
-			public const int villager_icon_Sparro = 2131166003;
-			
-			// aapt resource value: 0x7F070334
-			public const int villager_icon_Spike = 2131166004;
-			
-			// aapt resource value: 0x7F070335
-			public const int villager_icon_Spork = 2131166005;
-			
-			// aapt resource value: 0x7F070336
-			public const int villager_icon_Sprinkle = 2131166006;
-			
-			// aapt resource value: 0x7F070337
-			public const int villager_icon_Sprocket = 2131166007;
-			
-			// aapt resource value: 0x7F070338
-			public const int villager_icon_Static = 2131166008;
-			
-			// aapt resource value: 0x7F070339
-			public const int villager_icon_Stella = 2131166009;
-			
-			// aapt resource value: 0x7F07033A
-			public const int villager_icon_Sterling = 2131166010;
-			
-			// aapt resource value: 0x7F07033B
-			public const int villager_icon_Stinky = 2131166011;
-			
-			// aapt resource value: 0x7F07033C
-			public const int villager_icon_Stitches = 2131166012;
-			
-			// aapt resource value: 0x7F07033D
-			public const int villager_icon_Stu = 2131166013;
-			
-			// aapt resource value: 0x7F07033E
-			public const int villager_icon_Sydney = 2131166014;
-			
-			// aapt resource value: 0x7F07033F
-			public const int villager_icon_Sylvana = 2131166015;
-			
-			// aapt resource value: 0x7F070340
-			public const int villager_icon_Sylvia = 2131166016;
-			
-			// aapt resource value: 0x7F070342
-			public const int villager_icon_Tabby = 2131166018;
-			
-			// aapt resource value: 0x7F070343
-			public const int villager_icon_Tad = 2131166019;
-			
-			// aapt resource value: 0x7F070344
-			public const int villager_icon_Tammi = 2131166020;
-			
-			// aapt resource value: 0x7F070345
-			public const int villager_icon_Tammy = 2131166021;
-			
-			// aapt resource value: 0x7F070346
-			public const int villager_icon_Tangy = 2131166022;
-			
-			// aapt resource value: 0x7F070347
-			public const int villager_icon_Tank = 2131166023;
-			
-			// aapt resource value: 0x7F070348
-			public const int villager_icon_Tasha = 2131166024;
-			
-			// aapt resource value: 0x7F070349
-			public const int villager_icon_Teddy = 2131166025;
-			
-			// aapt resource value: 0x7F07034A
-			public const int villager_icon_Tex = 2131166026;
-			
-			// aapt resource value: 0x7F07034B
-			public const int villager_icon_Tia = 2131166027;
-			
-			// aapt resource value: 0x7F07034C
-			public const int villager_icon_Tiffany = 2131166028;
-			
-			// aapt resource value: 0x7F07034D
-			public const int villager_icon_Timbra = 2131166029;
-			
-			// aapt resource value: 0x7F07034E
-			public const int villager_icon_Tipper = 2131166030;
-			
-			// aapt resource value: 0x7F07034F
-			public const int villager_icon_Tom = 2131166031;
-			
-			// aapt resource value: 0x7F070350
-			public const int villager_icon_Truffles = 2131166032;
-			
-			// aapt resource value: 0x7F070351
-			public const int villager_icon_Tucker = 2131166033;
-			
-			// aapt resource value: 0x7F070352
-			public const int villager_icon_Tutu = 2131166034;
-			
-			// aapt resource value: 0x7F070353
-			public const int villager_icon_Twiggy = 2131166035;
-			
-			// aapt resource value: 0x7F070354
-			public const int villager_icon_Tybalt = 2131166036;
-			
-			// aapt resource value: 0x7F070341
-			public const int villager_icon_T_Bone = 2131166017;
-			
-			// aapt resource value: 0x7F070355
-			public const int villager_icon_Ursala = 2131166037;
-			
-			// aapt resource value: 0x7F070356
-			public const int villager_icon_Velma = 2131166038;
-			
-			// aapt resource value: 0x7F070357
-			public const int villager_icon_Vesta = 2131166039;
-			
-			// aapt resource value: 0x7F070358
-			public const int villager_icon_Vic = 2131166040;
-			
-			// aapt resource value: 0x7F070359
-			public const int villager_icon_Victoria = 2131166041;
-			
-			// aapt resource value: 0x7F07035A
-			public const int villager_icon_Violet = 2131166042;
-			
-			// aapt resource value: 0x7F07035B
-			public const int villager_icon_Vivian = 2131166043;
-			
-			// aapt resource value: 0x7F07035C
-			public const int villager_icon_Vladimir = 2131166044;
-			
-			// aapt resource value: 0x7F07035D
-			public const int villager_icon_Wade = 2131166045;
-			
-			// aapt resource value: 0x7F07035E
-			public const int villager_icon_Walker = 2131166046;
-			
-			// aapt resource value: 0x7F07035F
-			public const int villager_icon_Walt = 2131166047;
-			
-			// aapt resource value: 0x7F070360
-			public const int villager_icon_Wart_Jr = 2131166048;
-			
-			// aapt resource value: 0x7F070361
-			public const int villager_icon_Weber = 2131166049;
-			
-			// aapt resource value: 0x7F070362
-			public const int villager_icon_Wendy = 2131166050;
-			
-			// aapt resource value: 0x7F070363
-			public const int villager_icon_Whitney = 2131166051;
-			
-			// aapt resource value: 0x7F070364
-			public const int villager_icon_Willow = 2131166052;
-			
-			// aapt resource value: 0x7F070365
-			public const int villager_icon_Winnie = 2131166053;
-			
-			// aapt resource value: 0x7F070366
-			public const int villager_icon_Wolfgang = 2131166054;
-			
-			// aapt resource value: 0x7F070367
-			public const int villager_icon_Yuka = 2131166055;
-			
-			// aapt resource value: 0x7F070368
-			public const int villager_icon_Zell = 2131166056;
-			
-			// aapt resource value: 0x7F070369
-			public const int villager_icon_Zucker = 2131166057;
-			
-			// aapt resource value: 0x7F07036A
-			public const int villager_Iggly = 2131166058;
-			
-			// aapt resource value: 0x7F07036B
-			public const int villager_Ike = 2131166059;
-			
-			// aapt resource value: 0x7F07036C
-			public const int villager_Jacob = 2131166060;
-			
-			// aapt resource value: 0x7F07036D
-			public const int villager_Jacques = 2131166061;
-			
-			// aapt resource value: 0x7F07036E
-			public const int villager_Jambette = 2131166062;
-			
-			// aapt resource value: 0x7F07036F
-			public const int villager_Jay = 2131166063;
-			
-			// aapt resource value: 0x7F070370
-			public const int villager_Jeremiah = 2131166064;
-			
-			// aapt resource value: 0x7F070371
-			public const int villager_Jitters = 2131166065;
-			
-			// aapt resource value: 0x7F070372
-			public const int villager_Joey = 2131166066;
-			
-			// aapt resource value: 0x7F070373
-			public const int villager_Judy = 2131166067;
-			
-			// aapt resource value: 0x7F070374
-			public const int villager_Julia = 2131166068;
-			
-			// aapt resource value: 0x7F070375
-			public const int villager_Julian = 2131166069;
-			
-			// aapt resource value: 0x7F070376
-			public const int villager_June = 2131166070;
-			
-			// aapt resource value: 0x7F070377
-			public const int villager_Kabuki = 2131166071;
-			
-			// aapt resource value: 0x7F070378
-			public const int villager_Katt = 2131166072;
-			
-			// aapt resource value: 0x7F070379
-			public const int villager_Keaton = 2131166073;
-			
-			// aapt resource value: 0x7F07037A
-			public const int villager_Ken = 2131166074;
-			
-			// aapt resource value: 0x7F07037B
-			public const int villager_Ketchup = 2131166075;
-			
-			// aapt resource value: 0x7F07037C
-			public const int villager_Kevin = 2131166076;
-			
-			// aapt resource value: 0x7F07037E
-			public const int villager_Kidd = 2131166078;
-			
-			// aapt resource value: 0x7F07037D
-			public const int villager_Kid_Cat = 2131166077;
-			
-			// aapt resource value: 0x7F07037F
-			public const int villager_Kiki = 2131166079;
-			
-			// aapt resource value: 0x7F070380
-			public const int villager_Kitt = 2131166080;
-			
-			// aapt resource value: 0x7F070381
-			public const int villager_Kitty = 2131166081;
-			
-			// aapt resource value: 0x7F070382
-			public const int villager_Klaus = 2131166082;
-			
-			// aapt resource value: 0x7F070383
-			public const int villager_Knox = 2131166083;
-			
-			// aapt resource value: 0x7F070384
-			public const int villager_Kody = 2131166084;
-			
-			// aapt resource value: 0x7F070385
-			public const int villager_Kyle = 2131166085;
-			
-			// aapt resource value: 0x7F070386
-			public const int villager_Leonardo = 2131166086;
-			
-			// aapt resource value: 0x7F070387
-			public const int villager_Leopold = 2131166087;
-			
-			// aapt resource value: 0x7F070388
-			public const int villager_Lily = 2131166088;
-			
-			// aapt resource value: 0x7F070389
-			public const int villager_Limberg = 2131166089;
-			
-			// aapt resource value: 0x7F07038A
-			public const int villager_Lionel = 2131166090;
-			
-			// aapt resource value: 0x7F07038B
-			public const int villager_Lobo = 2131166091;
-			
-			// aapt resource value: 0x7F07038C
-			public const int villager_Lolly = 2131166092;
-			
-			// aapt resource value: 0x7F07038D
-			public const int villager_Lopez = 2131166093;
-			
-			// aapt resource value: 0x7F07038E
-			public const int villager_Louie = 2131166094;
-			
-			// aapt resource value: 0x7F07038F
-			public const int villager_Lucha = 2131166095;
-			
-			// aapt resource value: 0x7F070390
-			public const int villager_Lucky = 2131166096;
-			
-			// aapt resource value: 0x7F070391
-			public const int villager_Lucy = 2131166097;
-			
-			// aapt resource value: 0x7F070392
-			public const int villager_Lyman = 2131166098;
-			
-			// aapt resource value: 0x7F070393
-			public const int villager_Mac = 2131166099;
-			
-			// aapt resource value: 0x7F070394
-			public const int villager_Maddie = 2131166100;
-			
-			// aapt resource value: 0x7F070395
-			public const int villager_Maelle = 2131166101;
-			
-			// aapt resource value: 0x7F070396
-			public const int villager_Maggie = 2131166102;
-			
-			// aapt resource value: 0x7F070397
-			public const int villager_Mallary = 2131166103;
-			
-			// aapt resource value: 0x7F070398
-			public const int villager_Maple = 2131166104;
-			
-			// aapt resource value: 0x7F070399
-			public const int villager_Marcel = 2131166105;
-			
-			// aapt resource value: 0x7F07039A
-			public const int villager_Marcie = 2131166106;
-			
-			// aapt resource value: 0x7F07039B
-			public const int villager_Margie = 2131166107;
-			
-			// aapt resource value: 0x7F07039C
-			public const int villager_Marina = 2131166108;
-			
-			// aapt resource value: 0x7F07039D
-			public const int villager_Marshal = 2131166109;
-			
-			// aapt resource value: 0x7F07039E
-			public const int villager_Mathilda = 2131166110;
-			
-			// aapt resource value: 0x7F07039F
-			public const int villager_Megan = 2131166111;
-			
-			// aapt resource value: 0x7F0703A0
-			public const int villager_Melba = 2131166112;
-			
-			// aapt resource value: 0x7F0703A1
-			public const int villager_Merengue = 2131166113;
-			
-			// aapt resource value: 0x7F0703A2
-			public const int villager_Merry = 2131166114;
-			
-			// aapt resource value: 0x7F0703A3
-			public const int villager_Midge = 2131166115;
-			
-			// aapt resource value: 0x7F0703A4
-			public const int villager_Mint = 2131166116;
-			
-			// aapt resource value: 0x7F0703A5
-			public const int villager_Mira = 2131166117;
-			
-			// aapt resource value: 0x7F0703A6
-			public const int villager_Miranda = 2131166118;
-			
-			// aapt resource value: 0x7F0703A7
-			public const int villager_Mitzi = 2131166119;
-			
-			// aapt resource value: 0x7F0703A8
-			public const int villager_Moe = 2131166120;
-			
-			// aapt resource value: 0x7F0703A9
-			public const int villager_Molly = 2131166121;
-			
-			// aapt resource value: 0x7F0703AA
-			public const int villager_Monique = 2131166122;
-			
-			// aapt resource value: 0x7F0703AB
-			public const int villager_Monty = 2131166123;
-			
-			// aapt resource value: 0x7F0703AC
-			public const int villager_Moose = 2131166124;
-			
-			// aapt resource value: 0x7F0703AD
-			public const int villager_Mott = 2131166125;
-			
-			// aapt resource value: 0x7F0703AE
-			public const int villager_Muffy = 2131166126;
-			
-			// aapt resource value: 0x7F0703AF
-			public const int villager_Murphy = 2131166127;
-			
-			// aapt resource value: 0x7F0703B0
-			public const int villager_Nan = 2131166128;
-			
-			// aapt resource value: 0x7F0703B1
-			public const int villager_Nana = 2131166129;
-			
-			// aapt resource value: 0x7F0703B2
-			public const int villager_Naomi = 2131166130;
-			
-			// aapt resource value: 0x7F0703B3
-			public const int villager_Nate = 2131166131;
-			
-			// aapt resource value: 0x7F0703B4
-			public const int villager_Nibbles = 2131166132;
-			
-			// aapt resource value: 0x7F0703B5
-			public const int villager_Norma = 2131166133;
-			
-			// aapt resource value: 0x7F0703B6
-			public const int villager_Octavian = 2131166134;
-			
-			// aapt resource value: 0x7F0703B7
-			public const int villager_OHare = 2131166135;
-			
-			// aapt resource value: 0x7F0703B8
-			public const int villager_Olaf = 2131166136;
-			
-			// aapt resource value: 0x7F0703B9
-			public const int villager_Olive = 2131166137;
-			
-			// aapt resource value: 0x7F0703BA
-			public const int villager_Olivia = 2131166138;
-			
-			// aapt resource value: 0x7F0703BB
-			public const int villager_Opal = 2131166139;
-			
-			// aapt resource value: 0x7F0703BC
-			public const int villager_Ozzie = 2131166140;
-			
-			// aapt resource value: 0x7F0703BD
-			public const int villager_Pancetti = 2131166141;
-			
-			// aapt resource value: 0x7F0703BE
-			public const int villager_Pango = 2131166142;
-			
-			// aapt resource value: 0x7F0703BF
-			public const int villager_Paolo = 2131166143;
-			
-			// aapt resource value: 0x7F0703C0
-			public const int villager_Papi = 2131166144;
-			
-			// aapt resource value: 0x7F0703C1
-			public const int villager_Pashmina = 2131166145;
-			
-			// aapt resource value: 0x7F0703C2
-			public const int villager_Pate = 2131166146;
-			
-			// aapt resource value: 0x7F0703C3
-			public const int villager_Patty = 2131166147;
-			
-			// aapt resource value: 0x7F0703C4
-			public const int villager_Paula = 2131166148;
-			
-			// aapt resource value: 0x7F0703C5
-			public const int villager_Peaches = 2131166149;
-			
-			// aapt resource value: 0x7F0703C6
-			public const int villager_Peanut = 2131166150;
-			
-			// aapt resource value: 0x7F0703C7
-			public const int villager_Pecan = 2131166151;
-			
-			// aapt resource value: 0x7F0703C8
-			public const int villager_Peck = 2131166152;
-			
-			// aapt resource value: 0x7F0703C9
-			public const int villager_Peewee = 2131166153;
-			
-			// aapt resource value: 0x7F0703CA
-			public const int villager_Peggy = 2131166154;
-			
-			// aapt resource value: 0x7F0703CB
-			public const int villager_Pekoe = 2131166155;
-			
-			// aapt resource value: 0x7F0703CC
-			public const int villager_Penelope = 2131166156;
-			
-			// aapt resource value: 0x7F0703CD
-			public const int villager_Phil = 2131166157;
-			
-			// aapt resource value: 0x7F0703CE
-			public const int villager_Phoebe = 2131166158;
-			
-			// aapt resource value: 0x7F0703CF
-			public const int villager_Pierce = 2131166159;
-			
-			// aapt resource value: 0x7F0703D0
-			public const int villager_Pietro = 2131166160;
-			
-			// aapt resource value: 0x7F0703D1
-			public const int villager_Pinky = 2131166161;
-			
-			// aapt resource value: 0x7F0703D2
-			public const int villager_Piper = 2131166162;
-			
-			// aapt resource value: 0x7F0703D3
-			public const int villager_Pippy = 2131166163;
-			
-			// aapt resource value: 0x7F0703D4
-			public const int villager_Plucky = 2131166164;
-			
-			// aapt resource value: 0x7F0703D5
-			public const int villager_Pompom = 2131166165;
-			
-			// aapt resource value: 0x7F0703D6
-			public const int villager_Poncho = 2131166166;
-			
-			// aapt resource value: 0x7F0703D7
-			public const int villager_Poppy = 2131166167;
-			
-			// aapt resource value: 0x7F0703D8
-			public const int villager_Portia = 2131166168;
-			
-			// aapt resource value: 0x7F0703D9
-			public const int villager_Prince = 2131166169;
-			
-			// aapt resource value: 0x7F0703DA
-			public const int villager_Puck = 2131166170;
-			
-			// aapt resource value: 0x7F0703DB
-			public const int villager_Puddles = 2131166171;
-			
-			// aapt resource value: 0x7F0703DC
-			public const int villager_Pudge = 2131166172;
-			
-			// aapt resource value: 0x7F0703DD
-			public const int villager_Punchy = 2131166173;
-			
-			// aapt resource value: 0x7F0703DE
-			public const int villager_Purrl = 2131166174;
-			
-			// aapt resource value: 0x7F0703DF
-			public const int villager_Queenie = 2131166175;
-			
-			// aapt resource value: 0x7F0703E0
-			public const int villager_Quillson = 2131166176;
-			
-			// aapt resource value: 0x7F0703E1
-			public const int villager_Raddle = 2131166177;
-			
-			// aapt resource value: 0x7F0703E2
-			public const int villager_Rasher = 2131166178;
-			
-			// aapt resource value: 0x7F0703E3
-			public const int villager_Raymond = 2131166179;
-			
-			// aapt resource value: 0x7F0703E4
-			public const int villager_remove = 2131166180;
-			
-			// aapt resource value: 0x7F0703E5
-			public const int villager_Renee = 2131166181;
-			
-			// aapt resource value: 0x7F0703E6
-			public const int villager_Reneigh = 2131166182;
-			
-			// aapt resource value: 0x7F0703E7
-			public const int villager_Rex = 2131166183;
-			
-			// aapt resource value: 0x7F0703E8
-			public const int villager_Rhonda = 2131166184;
-			
-			// aapt resource value: 0x7F0703E9
-			public const int villager_Ribbot = 2131166185;
-			
-			// aapt resource value: 0x7F0703EA
-			public const int villager_Ricky = 2131166186;
-			
-			// aapt resource value: 0x7F0703EB
-			public const int villager_Rizzo = 2131166187;
-			
-			// aapt resource value: 0x7F0703EC
-			public const int villager_Roald = 2131166188;
-			
-			// aapt resource value: 0x7F0703ED
-			public const int villager_Robin = 2131166189;
-			
-			// aapt resource value: 0x7F0703EE
-			public const int villager_Rocco = 2131166190;
-			
-			// aapt resource value: 0x7F0703EF
-			public const int villager_Rocket = 2131166191;
-			
-			// aapt resource value: 0x7F0703F0
-			public const int villager_Rod = 2131166192;
-			
-			// aapt resource value: 0x7F0703F1
-			public const int villager_Rodeo = 2131166193;
-			
-			// aapt resource value: 0x7F0703F2
-			public const int villager_Rodney = 2131166194;
-			
-			// aapt resource value: 0x7F0703F3
-			public const int villager_Rolf = 2131166195;
-			
-			// aapt resource value: 0x7F0703F4
-			public const int villager_Rooney = 2131166196;
-			
-			// aapt resource value: 0x7F0703F5
-			public const int villager_Rory = 2131166197;
-			
-			// aapt resource value: 0x7F0703F6
-			public const int villager_Roscoe = 2131166198;
-			
-			// aapt resource value: 0x7F0703F7
-			public const int villager_Rosie = 2131166199;
-			
-			// aapt resource value: 0x7F0703F8
-			public const int villager_Rowan = 2131166200;
-			
-			// aapt resource value: 0x7F0703F9
-			public const int villager_Ruby = 2131166201;
-			
-			// aapt resource value: 0x7F0703FA
-			public const int villager_Rudy = 2131166202;
-			
-			// aapt resource value: 0x7F0703FB
-			public const int villager_Sally = 2131166203;
-			
-			// aapt resource value: 0x7F0703FC
-			public const int villager_Samson = 2131166204;
-			
-			// aapt resource value: 0x7F0703FD
-			public const int villager_Sandy = 2131166205;
-			
-			// aapt resource value: 0x7F0703FE
-			public const int villager_Savannah = 2131166206;
-			
-			// aapt resource value: 0x7F0703FF
-			public const int villager_Scoot = 2131166207;
-			
-			// aapt resource value: 0x7F070400
-			public const int villager_Shari = 2131166208;
-			
-			// aapt resource value: 0x7F070401
-			public const int villager_Sheldon = 2131166209;
-			
-			// aapt resource value: 0x7F070402
-			public const int villager_Shep = 2131166210;
-			
-			// aapt resource value: 0x7F070403
-			public const int villager_Sherb = 2131166211;
-			
-			// aapt resource value: 0x7F070404
-			public const int villager_Simon = 2131166212;
-			
-			// aapt resource value: 0x7F070405
-			public const int villager_Skye = 2131166213;
-			
-			// aapt resource value: 0x7F070406
-			public const int villager_Sly = 2131166214;
-			
-			// aapt resource value: 0x7F070407
-			public const int villager_Snake = 2131166215;
-			
-			// aapt resource value: 0x7F070408
-			public const int villager_Snooty = 2131166216;
-			
-			// aapt resource value: 0x7F070409
-			public const int villager_Soleil = 2131166217;
-			
-			// aapt resource value: 0x7F07040A
-			public const int villager_Sparro = 2131166218;
-			
-			// aapt resource value: 0x7F07040B
-			public const int villager_Spike = 2131166219;
-			
-			// aapt resource value: 0x7F07040C
-			public const int villager_Spork = 2131166220;
-			
-			// aapt resource value: 0x7F07040D
-			public const int villager_Sprinkle = 2131166221;
-			
-			// aapt resource value: 0x7F07040E
-			public const int villager_Sprocket = 2131166222;
-			
-			// aapt resource value: 0x7F07040F
-			public const int villager_Static = 2131166223;
-			
-			// aapt resource value: 0x7F070410
-			public const int villager_Stella = 2131166224;
-			
-			// aapt resource value: 0x7F070411
-			public const int villager_Sterling = 2131166225;
-			
-			// aapt resource value: 0x7F070412
-			public const int villager_Stinky = 2131166226;
-			
-			// aapt resource value: 0x7F070413
-			public const int villager_Stitches = 2131166227;
-			
-			// aapt resource value: 0x7F070414
-			public const int villager_Stu = 2131166228;
-			
-			// aapt resource value: 0x7F070415
-			public const int villager_Sydney = 2131166229;
-			
-			// aapt resource value: 0x7F070416
-			public const int villager_Sylvana = 2131166230;
-			
-			// aapt resource value: 0x7F070417
-			public const int villager_Sylvia = 2131166231;
-			
-			// aapt resource value: 0x7F070419
-			public const int villager_Tabby = 2131166233;
-			
-			// aapt resource value: 0x7F07041A
-			public const int villager_Tad = 2131166234;
-			
-			// aapt resource value: 0x7F07041B
-			public const int villager_Tammi = 2131166235;
-			
-			// aapt resource value: 0x7F07041C
-			public const int villager_Tammy = 2131166236;
-			
-			// aapt resource value: 0x7F07041D
-			public const int villager_Tangy = 2131166237;
-			
-			// aapt resource value: 0x7F07041E
-			public const int villager_Tank = 2131166238;
-			
-			// aapt resource value: 0x7F07041F
-			public const int villager_Tasha = 2131166239;
-			
-			// aapt resource value: 0x7F070420
-			public const int villager_Teddy = 2131166240;
-			
-			// aapt resource value: 0x7F070421
-			public const int villager_Tex = 2131166241;
-			
-			// aapt resource value: 0x7F070422
-			public const int villager_Tia = 2131166242;
-			
-			// aapt resource value: 0x7F070423
-			public const int villager_Tiffany = 2131166243;
-			
-			// aapt resource value: 0x7F070424
-			public const int villager_Timbra = 2131166244;
-			
-			// aapt resource value: 0x7F070425
-			public const int villager_Tipper = 2131166245;
-			
-			// aapt resource value: 0x7F070426
-			public const int villager_Tom = 2131166246;
-			
-			// aapt resource value: 0x7F070427
-			public const int villager_Truffles = 2131166247;
-			
-			// aapt resource value: 0x7F070428
-			public const int villager_Tucker = 2131166248;
-			
-			// aapt resource value: 0x7F070429
-			public const int villager_Tutu = 2131166249;
-			
-			// aapt resource value: 0x7F07042A
-			public const int villager_Twiggy = 2131166250;
-			
-			// aapt resource value: 0x7F07042B
-			public const int villager_Tybalt = 2131166251;
-			
-			// aapt resource value: 0x7F070418
-			public const int villager_T_Bone = 2131166232;
-			
-			// aapt resource value: 0x7F07042C
-			public const int villager_Ursala = 2131166252;
-			
-			// aapt resource value: 0x7F07042D
-			public const int villager_Velma = 2131166253;
-			
-			// aapt resource value: 0x7F07042E
-			public const int villager_Vesta = 2131166254;
-			
-			// aapt resource value: 0x7F07042F
-			public const int villager_Vic = 2131166255;
-			
-			// aapt resource value: 0x7F070430
-			public const int villager_Victoria = 2131166256;
-			
-			// aapt resource value: 0x7F070431
-			public const int villager_Violet = 2131166257;
-			
-			// aapt resource value: 0x7F070432
-			public const int villager_Vivian = 2131166258;
-			
-			// aapt resource value: 0x7F070433
-			public const int villager_Vladimir = 2131166259;
-			
-			// aapt resource value: 0x7F070434
-			public const int villager_Wade = 2131166260;
-			
-			// aapt resource value: 0x7F070435
-			public const int villager_Walker = 2131166261;
-			
-			// aapt resource value: 0x7F070436
-			public const int villager_Walt = 2131166262;
-			
-			// aapt resource value: 0x7F070437
-			public const int villager_Wart_Jr = 2131166263;
-			
-			// aapt resource value: 0x7F070438
-			public const int villager_Weber = 2131166264;
-			
-			// aapt resource value: 0x7F070439
-			public const int villager_Wendy = 2131166265;
-			
-			// aapt resource value: 0x7F07043A
-			public const int villager_Whitney = 2131166266;
-			
-			// aapt resource value: 0x7F07043B
-			public const int villager_Willow = 2131166267;
-			
-			// aapt resource value: 0x7F07043C
-			public const int villager_Winnie = 2131166268;
-			
-			// aapt resource value: 0x7F07043D
-			public const int villager_Wolfgang = 2131166269;
-			
-			// aapt resource value: 0x7F07043E
-			public const int villager_Yuka = 2131166270;
-			
-			// aapt resource value: 0x7F07043F
-			public const int villager_Zell = 2131166271;
-			
-			// aapt resource value: 0x7F070440
-			public const int villager_Zucker = 2131166272;
+			// aapt resource value: 0x7F070442
+			public const int villagers = 2131166274;
 			
 			// aapt resource value: 0x7F070443
-			public const int xamarin_logo = 2131166275;
+			public const int villagers_icon = 2131166275;
+			
+			// aapt resource value: 0x7F070132
+			public const int villager_add = 2131165490;
+			
+			// aapt resource value: 0x7F070133
+			public const int villager_Admiral = 2131165491;
+			
+			// aapt resource value: 0x7F070134
+			public const int villager_Agent_S = 2131165492;
+			
+			// aapt resource value: 0x7F070135
+			public const int villager_Agnes = 2131165493;
+			
+			// aapt resource value: 0x7F070136
+			public const int villager_Al = 2131165494;
+			
+			// aapt resource value: 0x7F070137
+			public const int villager_Alfonso = 2131165495;
+			
+			// aapt resource value: 0x7F070138
+			public const int villager_Alice = 2131165496;
+			
+			// aapt resource value: 0x7F070139
+			public const int villager_Alli = 2131165497;
+			
+			// aapt resource value: 0x7F07013A
+			public const int villager_Amelia = 2131165498;
+			
+			// aapt resource value: 0x7F07013B
+			public const int villager_Anabelle = 2131165499;
+			
+			// aapt resource value: 0x7F07013C
+			public const int villager_Anchovy = 2131165500;
+			
+			// aapt resource value: 0x7F07013D
+			public const int villager_Angus = 2131165501;
+			
+			// aapt resource value: 0x7F07013E
+			public const int villager_Anicotti = 2131165502;
+			
+			// aapt resource value: 0x7F07013F
+			public const int villager_Ankha = 2131165503;
+			
+			// aapt resource value: 0x7F070140
+			public const int villager_Annalisa = 2131165504;
+			
+			// aapt resource value: 0x7F070141
+			public const int villager_Annalise = 2131165505;
+			
+			// aapt resource value: 0x7F070142
+			public const int villager_Antonio = 2131165506;
+			
+			// aapt resource value: 0x7F070143
+			public const int villager_Apollo = 2131165507;
+			
+			// aapt resource value: 0x7F070144
+			public const int villager_Apple = 2131165508;
+			
+			// aapt resource value: 0x7F070145
+			public const int villager_Astrid = 2131165509;
+			
+			// aapt resource value: 0x7F070146
+			public const int villager_Audie = 2131165510;
+			
+			// aapt resource value: 0x7F070147
+			public const int villager_Aurora = 2131165511;
+			
+			// aapt resource value: 0x7F070148
+			public const int villager_Ava = 2131165512;
+			
+			// aapt resource value: 0x7F070149
+			public const int villager_Avery = 2131165513;
+			
+			// aapt resource value: 0x7F07014A
+			public const int villager_Axel = 2131165514;
+			
+			// aapt resource value: 0x7F07014B
+			public const int villager_Baabara = 2131165515;
+			
+			// aapt resource value: 0x7F07014C
+			public const int villager_Bam = 2131165516;
+			
+			// aapt resource value: 0x7F07014D
+			public const int villager_Bangle = 2131165517;
+			
+			// aapt resource value: 0x7F07014E
+			public const int villager_Barold = 2131165518;
+			
+			// aapt resource value: 0x7F07014F
+			public const int villager_Bea = 2131165519;
+			
+			// aapt resource value: 0x7F070150
+			public const int villager_Beardo = 2131165520;
+			
+			// aapt resource value: 0x7F070151
+			public const int villager_Beau = 2131165521;
+			
+			// aapt resource value: 0x7F070152
+			public const int villager_Becky = 2131165522;
+			
+			// aapt resource value: 0x7F070153
+			public const int villager_Bella = 2131165523;
+			
+			// aapt resource value: 0x7F070154
+			public const int villager_Benedict = 2131165524;
+			
+			// aapt resource value: 0x7F070155
+			public const int villager_Benjamin = 2131165525;
+			
+			// aapt resource value: 0x7F070156
+			public const int villager_Bertha = 2131165526;
+			
+			// aapt resource value: 0x7F070157
+			public const int villager_Bettina = 2131165527;
+			
+			// aapt resource value: 0x7F070158
+			public const int villager_Bianca = 2131165528;
+			
+			// aapt resource value: 0x7F070159
+			public const int villager_Biff = 2131165529;
+			
+			// aapt resource value: 0x7F07015A
+			public const int villager_Big_Top = 2131165530;
+			
+			// aapt resource value: 0x7F07015B
+			public const int villager_Bill = 2131165531;
+			
+			// aapt resource value: 0x7F07015C
+			public const int villager_Billy = 2131165532;
+			
+			// aapt resource value: 0x7F07015D
+			public const int villager_Biskit = 2131165533;
+			
+			// aapt resource value: 0x7F07015E
+			public const int villager_Bitty = 2131165534;
+			
+			// aapt resource value: 0x7F07015F
+			public const int villager_Blaire = 2131165535;
+			
+			// aapt resource value: 0x7F070160
+			public const int villager_Blanche = 2131165536;
+			
+			// aapt resource value: 0x7F070161
+			public const int villager_Bluebear = 2131165537;
+			
+			// aapt resource value: 0x7F070162
+			public const int villager_Bob = 2131165538;
+			
+			// aapt resource value: 0x7F070163
+			public const int villager_Bonbon = 2131165539;
+			
+			// aapt resource value: 0x7F070164
+			public const int villager_Bones = 2131165540;
+			
+			// aapt resource value: 0x7F070165
+			public const int villager_Boomer = 2131165541;
+			
+			// aapt resource value: 0x7F070166
+			public const int villager_Boone = 2131165542;
+			
+			// aapt resource value: 0x7F070167
+			public const int villager_Boots = 2131165543;
+			
+			// aapt resource value: 0x7F070168
+			public const int villager_Boris = 2131165544;
+			
+			// aapt resource value: 0x7F070169
+			public const int villager_Boyd = 2131165545;
+			
+			// aapt resource value: 0x7F07016A
+			public const int villager_Bree = 2131165546;
+			
+			// aapt resource value: 0x7F07016B
+			public const int villager_Broccolo = 2131165547;
+			
+			// aapt resource value: 0x7F07016C
+			public const int villager_Broffina = 2131165548;
+			
+			// aapt resource value: 0x7F07016D
+			public const int villager_Bruce = 2131165549;
+			
+			// aapt resource value: 0x7F07016E
+			public const int villager_Bubbles = 2131165550;
+			
+			// aapt resource value: 0x7F07016F
+			public const int villager_Buck = 2131165551;
+			
+			// aapt resource value: 0x7F070170
+			public const int villager_Bud = 2131165552;
+			
+			// aapt resource value: 0x7F070171
+			public const int villager_Bunnie = 2131165553;
+			
+			// aapt resource value: 0x7F070172
+			public const int villager_Butch = 2131165554;
+			
+			// aapt resource value: 0x7F070173
+			public const int villager_Buzz = 2131165555;
+			
+			// aapt resource value: 0x7F070174
+			public const int villager_Cally = 2131165556;
+			
+			// aapt resource value: 0x7F070175
+			public const int villager_Camofrog = 2131165557;
+			
+			// aapt resource value: 0x7F070176
+			public const int villager_Canberra = 2131165558;
+			
+			// aapt resource value: 0x7F070177
+			public const int villager_Candi = 2131165559;
+			
+			// aapt resource value: 0x7F070178
+			public const int villager_Carmen = 2131165560;
+			
+			// aapt resource value: 0x7F070179
+			public const int villager_Caroline = 2131165561;
+			
+			// aapt resource value: 0x7F07017A
+			public const int villager_Carrie = 2131165562;
+			
+			// aapt resource value: 0x7F07017B
+			public const int villager_Cashmere = 2131165563;
+			
+			// aapt resource value: 0x7F07017C
+			public const int villager_Celia = 2131165564;
+			
+			// aapt resource value: 0x7F07017D
+			public const int villager_Cesar = 2131165565;
+			
+			// aapt resource value: 0x7F07017E
+			public const int villager_Chadder = 2131165566;
+			
+			// aapt resource value: 0x7F07017F
+			public const int villager_Charlise = 2131165567;
+			
+			// aapt resource value: 0x7F070180
+			public const int villager_Cheri = 2131165568;
+			
+			// aapt resource value: 0x7F070181
+			public const int villager_Cherry = 2131165569;
+			
+			// aapt resource value: 0x7F070182
+			public const int villager_Chester = 2131165570;
+			
+			// aapt resource value: 0x7F070183
+			public const int villager_Chevre = 2131165571;
+			
+			// aapt resource value: 0x7F070184
+			public const int villager_Chief = 2131165572;
+			
+			// aapt resource value: 0x7F070185
+			public const int villager_Chops = 2131165573;
+			
+			// aapt resource value: 0x7F070186
+			public const int villager_Chow = 2131165574;
+			
+			// aapt resource value: 0x7F070187
+			public const int villager_Chrissy = 2131165575;
+			
+			// aapt resource value: 0x7F070188
+			public const int villager_Claude = 2131165576;
+			
+			// aapt resource value: 0x7F070189
+			public const int villager_Claudia = 2131165577;
+			
+			// aapt resource value: 0x7F07018A
+			public const int villager_Clay = 2131165578;
+			
+			// aapt resource value: 0x7F07018B
+			public const int villager_Cleo = 2131165579;
+			
+			// aapt resource value: 0x7F07018C
+			public const int villager_Clyde = 2131165580;
+			
+			// aapt resource value: 0x7F07018D
+			public const int villager_Coach = 2131165581;
+			
+			// aapt resource value: 0x7F07018E
+			public const int villager_Cobb = 2131165582;
+			
+			// aapt resource value: 0x7F07018F
+			public const int villager_Coco = 2131165583;
+			
+			// aapt resource value: 0x7F070190
+			public const int villager_Cole = 2131165584;
+			
+			// aapt resource value: 0x7F070191
+			public const int villager_Colton = 2131165585;
+			
+			// aapt resource value: 0x7F070192
+			public const int villager_Cookie = 2131165586;
+			
+			// aapt resource value: 0x7F070193
+			public const int villager_Cousteau = 2131165587;
+			
+			// aapt resource value: 0x7F070194
+			public const int villager_Cranston = 2131165588;
+			
+			// aapt resource value: 0x7F070195
+			public const int villager_Croque = 2131165589;
+			
+			// aapt resource value: 0x7F070196
+			public const int villager_Cube = 2131165590;
+			
+			// aapt resource value: 0x7F070197
+			public const int villager_Curlos = 2131165591;
+			
+			// aapt resource value: 0x7F070198
+			public const int villager_Curly = 2131165592;
+			
+			// aapt resource value: 0x7F070199
+			public const int villager_Curt = 2131165593;
+			
+			// aapt resource value: 0x7F07019A
+			public const int villager_Cyd = 2131165594;
+			
+			// aapt resource value: 0x7F07019B
+			public const int villager_Cyrano = 2131165595;
+			
+			// aapt resource value: 0x7F07019C
+			public const int villager_Daisy = 2131165596;
+			
+			// aapt resource value: 0x7F07019D
+			public const int villager_Deena = 2131165597;
+			
+			// aapt resource value: 0x7F07019E
+			public const int villager_Deirdre = 2131165598;
+			
+			// aapt resource value: 0x7F07019F
+			public const int villager_Del = 2131165599;
+			
+			// aapt resource value: 0x7F0701A0
+			public const int villager_Deli = 2131165600;
+			
+			// aapt resource value: 0x7F0701A1
+			public const int villager_Derwin = 2131165601;
+			
+			// aapt resource value: 0x7F0701A2
+			public const int villager_Diana = 2131165602;
+			
+			// aapt resource value: 0x7F0701A3
+			public const int villager_Diva = 2131165603;
+			
+			// aapt resource value: 0x7F0701A4
+			public const int villager_Dizzy = 2131165604;
+			
+			// aapt resource value: 0x7F0701A5
+			public const int villager_Dobie = 2131165605;
+			
+			// aapt resource value: 0x7F0701A6
+			public const int villager_Doc = 2131165606;
+			
+			// aapt resource value: 0x7F0701A7
+			public const int villager_Dom = 2131165607;
+			
+			// aapt resource value: 0x7F0701A8
+			public const int villager_Dora = 2131165608;
+			
+			// aapt resource value: 0x7F0701A9
+			public const int villager_Dotty = 2131165609;
+			
+			// aapt resource value: 0x7F0701AA
+			public const int villager_Drago = 2131165610;
+			
+			// aapt resource value: 0x7F0701AB
+			public const int villager_Drake = 2131165611;
+			
+			// aapt resource value: 0x7F0701AC
+			public const int villager_Drift = 2131165612;
+			
+			// aapt resource value: 0x7F0701AD
+			public const int villager_Ed = 2131165613;
+			
+			// aapt resource value: 0x7F0701AE
+			public const int villager_Egbert = 2131165614;
+			
+			// aapt resource value: 0x7F0701AF
+			public const int villager_Elise = 2131165615;
+			
+			// aapt resource value: 0x7F0701B0
+			public const int villager_Ellie = 2131165616;
+			
+			// aapt resource value: 0x7F0701B1
+			public const int villager_Elmer = 2131165617;
+			
+			// aapt resource value: 0x7F0701B2
+			public const int villager_Eloise = 2131165618;
+			
+			// aapt resource value: 0x7F0701B3
+			public const int villager_Elvis = 2131165619;
+			
+			// aapt resource value: 0x7F0701B4
+			public const int villager_Erik = 2131165620;
+			
+			// aapt resource value: 0x7F0701B5
+			public const int villager_Eugene = 2131165621;
+			
+			// aapt resource value: 0x7F0701B6
+			public const int villager_Eunice = 2131165622;
+			
+			// aapt resource value: 0x7F0701B7
+			public const int villager_Fang = 2131165623;
+			
+			// aapt resource value: 0x7F0701B8
+			public const int villager_Fauna = 2131165624;
+			
+			// aapt resource value: 0x7F0701B9
+			public const int villager_Felicity = 2131165625;
+			
+			// aapt resource value: 0x7F0701BA
+			public const int villager_Filbert = 2131165626;
+			
+			// aapt resource value: 0x7F0701BB
+			public const int villager_Flip = 2131165627;
+			
+			// aapt resource value: 0x7F0701BC
+			public const int villager_Flo = 2131165628;
+			
+			// aapt resource value: 0x7F0701BD
+			public const int villager_Flora = 2131165629;
+			
+			// aapt resource value: 0x7F0701BE
+			public const int villager_Flurry = 2131165630;
+			
+			// aapt resource value: 0x7F0701BF
+			public const int villager_Francine = 2131165631;
+			
+			// aapt resource value: 0x7F0701C0
+			public const int villager_Frank = 2131165632;
+			
+			// aapt resource value: 0x7F0701C1
+			public const int villager_Freckles = 2131165633;
+			
+			// aapt resource value: 0x7F0701C2
+			public const int villager_Freya = 2131165634;
+			
+			// aapt resource value: 0x7F0701C3
+			public const int villager_Friga = 2131165635;
+			
+			// aapt resource value: 0x7F0701C4
+			public const int villager_Frita = 2131165636;
+			
+			// aapt resource value: 0x7F0701C5
+			public const int villager_Frobert = 2131165637;
+			
+			// aapt resource value: 0x7F0701C6
+			public const int villager_Fuchsia = 2131165638;
+			
+			// aapt resource value: 0x7F0701C7
+			public const int villager_Gabi = 2131165639;
+			
+			// aapt resource value: 0x7F0701C8
+			public const int villager_Gala = 2131165640;
+			
+			// aapt resource value: 0x7F0701C9
+			public const int villager_Gaston = 2131165641;
+			
+			// aapt resource value: 0x7F0701CA
+			public const int villager_Gayle = 2131165642;
+			
+			// aapt resource value: 0x7F0701CB
+			public const int villager_Genji = 2131165643;
+			
+			// aapt resource value: 0x7F0701CC
+			public const int villager_Gigi = 2131165644;
+			
+			// aapt resource value: 0x7F0701CD
+			public const int villager_Gladys = 2131165645;
+			
+			// aapt resource value: 0x7F0701CE
+			public const int villager_Gloria = 2131165646;
+			
+			// aapt resource value: 0x7F0701CF
+			public const int villager_Goldie = 2131165647;
+			
+			// aapt resource value: 0x7F0701D0
+			public const int villager_Gonzo = 2131165648;
+			
+			// aapt resource value: 0x7F0701D1
+			public const int villager_Goose = 2131165649;
+			
+			// aapt resource value: 0x7F0701D2
+			public const int villager_Graham = 2131165650;
+			
+			// aapt resource value: 0x7F0701D3
+			public const int villager_Greta = 2131165651;
+			
+			// aapt resource value: 0x7F0701D4
+			public const int villager_Grizzly = 2131165652;
+			
+			// aapt resource value: 0x7F0701D5
+			public const int villager_Groucho = 2131165653;
+			
+			// aapt resource value: 0x7F0701D6
+			public const int villager_Gruff = 2131165654;
+			
+			// aapt resource value: 0x7F0701D7
+			public const int villager_Gwen = 2131165655;
+			
+			// aapt resource value: 0x7F0701D8
+			public const int villager_Hamlet = 2131165656;
+			
+			// aapt resource value: 0x7F0701D9
+			public const int villager_Hamphrey = 2131165657;
+			
+			// aapt resource value: 0x7F0701DA
+			public const int villager_Hans = 2131165658;
+			
+			// aapt resource value: 0x7F0701DB
+			public const int villager_Harry = 2131165659;
+			
+			// aapt resource value: 0x7F0701DC
+			public const int villager_Hazel = 2131165660;
+			
+			// aapt resource value: 0x7F0701DD
+			public const int villager_Henry = 2131165661;
+			
+			// aapt resource value: 0x7F0701DE
+			public const int villager_Hippeux = 2131165662;
+			
+			// aapt resource value: 0x7F0701DF
+			public const int villager_Hopkins = 2131165663;
+			
+			// aapt resource value: 0x7F0701E0
+			public const int villager_Hopper = 2131165664;
+			
+			// aapt resource value: 0x7F0701E1
+			public const int villager_Hornsby = 2131165665;
+			
+			// aapt resource value: 0x7F0701E2
+			public const int villager_Huck = 2131165666;
+			
+			// aapt resource value: 0x7F0701E3
+			public const int villager_Hugh = 2131165667;
+			
+			// aapt resource value: 0x7F0701E4
+			public const int villager_icon_Admiral = 2131165668;
+			
+			// aapt resource value: 0x7F0701E5
+			public const int villager_icon_Agent_S = 2131165669;
+			
+			// aapt resource value: 0x7F0701E6
+			public const int villager_icon_Agnes = 2131165670;
+			
+			// aapt resource value: 0x7F0701E7
+			public const int villager_icon_Al = 2131165671;
+			
+			// aapt resource value: 0x7F0701E8
+			public const int villager_icon_Alfonso = 2131165672;
+			
+			// aapt resource value: 0x7F0701E9
+			public const int villager_icon_Alice = 2131165673;
+			
+			// aapt resource value: 0x7F0701EA
+			public const int villager_icon_Alli = 2131165674;
+			
+			// aapt resource value: 0x7F0701EB
+			public const int villager_icon_Amelia = 2131165675;
+			
+			// aapt resource value: 0x7F0701EC
+			public const int villager_icon_Anabelle = 2131165676;
+			
+			// aapt resource value: 0x7F0701ED
+			public const int villager_icon_Anchovy = 2131165677;
+			
+			// aapt resource value: 0x7F0701EE
+			public const int villager_icon_Angus = 2131165678;
+			
+			// aapt resource value: 0x7F0701EF
+			public const int villager_icon_Anicotti = 2131165679;
+			
+			// aapt resource value: 0x7F0701F0
+			public const int villager_icon_Ankha = 2131165680;
+			
+			// aapt resource value: 0x7F0701F1
+			public const int villager_icon_Annalisa = 2131165681;
+			
+			// aapt resource value: 0x7F0701F2
+			public const int villager_icon_Annalise = 2131165682;
+			
+			// aapt resource value: 0x7F0701F3
+			public const int villager_icon_Antonio = 2131165683;
+			
+			// aapt resource value: 0x7F0701F4
+			public const int villager_icon_Apollo = 2131165684;
+			
+			// aapt resource value: 0x7F0701F5
+			public const int villager_icon_Apple = 2131165685;
+			
+			// aapt resource value: 0x7F0701F6
+			public const int villager_icon_Astrid = 2131165686;
+			
+			// aapt resource value: 0x7F0701F7
+			public const int villager_icon_Audie = 2131165687;
+			
+			// aapt resource value: 0x7F0701F8
+			public const int villager_icon_Aurora = 2131165688;
+			
+			// aapt resource value: 0x7F0701F9
+			public const int villager_icon_Ava = 2131165689;
+			
+			// aapt resource value: 0x7F0701FA
+			public const int villager_icon_Avery = 2131165690;
+			
+			// aapt resource value: 0x7F0701FB
+			public const int villager_icon_Axel = 2131165691;
+			
+			// aapt resource value: 0x7F0701FC
+			public const int villager_icon_Baabara = 2131165692;
+			
+			// aapt resource value: 0x7F0701FD
+			public const int villager_icon_Bam = 2131165693;
+			
+			// aapt resource value: 0x7F0701FE
+			public const int villager_icon_Bangle = 2131165694;
+			
+			// aapt resource value: 0x7F0701FF
+			public const int villager_icon_Barold = 2131165695;
+			
+			// aapt resource value: 0x7F070200
+			public const int villager_icon_Bea = 2131165696;
+			
+			// aapt resource value: 0x7F070201
+			public const int villager_icon_Beardo = 2131165697;
+			
+			// aapt resource value: 0x7F070202
+			public const int villager_icon_Beau = 2131165698;
+			
+			// aapt resource value: 0x7F070203
+			public const int villager_icon_Becky = 2131165699;
+			
+			// aapt resource value: 0x7F070204
+			public const int villager_icon_Bella = 2131165700;
+			
+			// aapt resource value: 0x7F070205
+			public const int villager_icon_Benedict = 2131165701;
+			
+			// aapt resource value: 0x7F070206
+			public const int villager_icon_Benjamin = 2131165702;
+			
+			// aapt resource value: 0x7F070207
+			public const int villager_icon_Bertha = 2131165703;
+			
+			// aapt resource value: 0x7F070208
+			public const int villager_icon_Bettina = 2131165704;
+			
+			// aapt resource value: 0x7F070209
+			public const int villager_icon_Bianca = 2131165705;
+			
+			// aapt resource value: 0x7F07020A
+			public const int villager_icon_Biff = 2131165706;
+			
+			// aapt resource value: 0x7F07020B
+			public const int villager_icon_Big_Top = 2131165707;
+			
+			// aapt resource value: 0x7F07020C
+			public const int villager_icon_Bill = 2131165708;
+			
+			// aapt resource value: 0x7F07020D
+			public const int villager_icon_Billy = 2131165709;
+			
+			// aapt resource value: 0x7F07020E
+			public const int villager_icon_Biskit = 2131165710;
+			
+			// aapt resource value: 0x7F07020F
+			public const int villager_icon_Bitty = 2131165711;
+			
+			// aapt resource value: 0x7F070210
+			public const int villager_icon_Blaire = 2131165712;
+			
+			// aapt resource value: 0x7F070211
+			public const int villager_icon_Blanche = 2131165713;
+			
+			// aapt resource value: 0x7F070212
+			public const int villager_icon_Bluebear = 2131165714;
+			
+			// aapt resource value: 0x7F070213
+			public const int villager_icon_Bob = 2131165715;
+			
+			// aapt resource value: 0x7F070214
+			public const int villager_icon_Bonbon = 2131165716;
+			
+			// aapt resource value: 0x7F070215
+			public const int villager_icon_Bones = 2131165717;
+			
+			// aapt resource value: 0x7F070216
+			public const int villager_icon_Boomer = 2131165718;
+			
+			// aapt resource value: 0x7F070217
+			public const int villager_icon_Boone = 2131165719;
+			
+			// aapt resource value: 0x7F070218
+			public const int villager_icon_Boots = 2131165720;
+			
+			// aapt resource value: 0x7F070219
+			public const int villager_icon_Boris = 2131165721;
+			
+			// aapt resource value: 0x7F07021A
+			public const int villager_icon_Boyd = 2131165722;
+			
+			// aapt resource value: 0x7F07021B
+			public const int villager_icon_Bree = 2131165723;
+			
+			// aapt resource value: 0x7F07021C
+			public const int villager_icon_Broccolo = 2131165724;
+			
+			// aapt resource value: 0x7F07021D
+			public const int villager_icon_Broffina = 2131165725;
+			
+			// aapt resource value: 0x7F07021E
+			public const int villager_icon_Bruce = 2131165726;
+			
+			// aapt resource value: 0x7F07021F
+			public const int villager_icon_Bubbles = 2131165727;
+			
+			// aapt resource value: 0x7F070220
+			public const int villager_icon_Buck = 2131165728;
+			
+			// aapt resource value: 0x7F070221
+			public const int villager_icon_Bud = 2131165729;
+			
+			// aapt resource value: 0x7F070222
+			public const int villager_icon_Bunnie = 2131165730;
+			
+			// aapt resource value: 0x7F070223
+			public const int villager_icon_Butch = 2131165731;
+			
+			// aapt resource value: 0x7F070224
+			public const int villager_icon_Buzz = 2131165732;
+			
+			// aapt resource value: 0x7F070225
+			public const int villager_icon_Cally = 2131165733;
+			
+			// aapt resource value: 0x7F070226
+			public const int villager_icon_Camofrog = 2131165734;
+			
+			// aapt resource value: 0x7F070227
+			public const int villager_icon_Canberra = 2131165735;
+			
+			// aapt resource value: 0x7F070228
+			public const int villager_icon_Candi = 2131165736;
+			
+			// aapt resource value: 0x7F070229
+			public const int villager_icon_Carmen = 2131165737;
+			
+			// aapt resource value: 0x7F07022A
+			public const int villager_icon_Caroline = 2131165738;
+			
+			// aapt resource value: 0x7F07022B
+			public const int villager_icon_Carrie = 2131165739;
+			
+			// aapt resource value: 0x7F07022C
+			public const int villager_icon_Cashmere = 2131165740;
+			
+			// aapt resource value: 0x7F07022D
+			public const int villager_icon_Celia = 2131165741;
+			
+			// aapt resource value: 0x7F07022E
+			public const int villager_icon_Cesar = 2131165742;
+			
+			// aapt resource value: 0x7F07022F
+			public const int villager_icon_Chadder = 2131165743;
+			
+			// aapt resource value: 0x7F070230
+			public const int villager_icon_Charlise = 2131165744;
+			
+			// aapt resource value: 0x7F070231
+			public const int villager_icon_Cheri = 2131165745;
+			
+			// aapt resource value: 0x7F070232
+			public const int villager_icon_Cherry = 2131165746;
+			
+			// aapt resource value: 0x7F070233
+			public const int villager_icon_Chester = 2131165747;
+			
+			// aapt resource value: 0x7F070234
+			public const int villager_icon_Chevre = 2131165748;
+			
+			// aapt resource value: 0x7F070235
+			public const int villager_icon_Chief = 2131165749;
+			
+			// aapt resource value: 0x7F070236
+			public const int villager_icon_Chops = 2131165750;
+			
+			// aapt resource value: 0x7F070237
+			public const int villager_icon_Chow = 2131165751;
+			
+			// aapt resource value: 0x7F070238
+			public const int villager_icon_Chrissy = 2131165752;
+			
+			// aapt resource value: 0x7F070239
+			public const int villager_icon_Claude = 2131165753;
+			
+			// aapt resource value: 0x7F07023A
+			public const int villager_icon_Claudia = 2131165754;
+			
+			// aapt resource value: 0x7F07023B
+			public const int villager_icon_Clay = 2131165755;
+			
+			// aapt resource value: 0x7F07023C
+			public const int villager_icon_Cleo = 2131165756;
+			
+			// aapt resource value: 0x7F07023D
+			public const int villager_icon_Clyde = 2131165757;
+			
+			// aapt resource value: 0x7F07023E
+			public const int villager_icon_Coach = 2131165758;
+			
+			// aapt resource value: 0x7F07023F
+			public const int villager_icon_Cobb = 2131165759;
+			
+			// aapt resource value: 0x7F070240
+			public const int villager_icon_Coco = 2131165760;
+			
+			// aapt resource value: 0x7F070241
+			public const int villager_icon_Cole = 2131165761;
+			
+			// aapt resource value: 0x7F070242
+			public const int villager_icon_Colton = 2131165762;
+			
+			// aapt resource value: 0x7F070243
+			public const int villager_icon_Cookie = 2131165763;
+			
+			// aapt resource value: 0x7F070244
+			public const int villager_icon_Cousteau = 2131165764;
+			
+			// aapt resource value: 0x7F070245
+			public const int villager_icon_Cranston = 2131165765;
+			
+			// aapt resource value: 0x7F070246
+			public const int villager_icon_Croque = 2131165766;
+			
+			// aapt resource value: 0x7F070247
+			public const int villager_icon_Cube = 2131165767;
+			
+			// aapt resource value: 0x7F070248
+			public const int villager_icon_Curlos = 2131165768;
+			
+			// aapt resource value: 0x7F070249
+			public const int villager_icon_Curly = 2131165769;
+			
+			// aapt resource value: 0x7F07024A
+			public const int villager_icon_Curt = 2131165770;
+			
+			// aapt resource value: 0x7F07024B
+			public const int villager_icon_Cyd = 2131165771;
+			
+			// aapt resource value: 0x7F07024C
+			public const int villager_icon_Cyrano = 2131165772;
+			
+			// aapt resource value: 0x7F07024D
+			public const int villager_icon_Daisy = 2131165773;
+			
+			// aapt resource value: 0x7F07024E
+			public const int villager_icon_Deena = 2131165774;
+			
+			// aapt resource value: 0x7F07024F
+			public const int villager_icon_Deirdre = 2131165775;
+			
+			// aapt resource value: 0x7F070250
+			public const int villager_icon_Del = 2131165776;
+			
+			// aapt resource value: 0x7F070251
+			public const int villager_icon_Deli = 2131165777;
+			
+			// aapt resource value: 0x7F070252
+			public const int villager_icon_Derwin = 2131165778;
+			
+			// aapt resource value: 0x7F070253
+			public const int villager_icon_Diana = 2131165779;
+			
+			// aapt resource value: 0x7F070254
+			public const int villager_icon_Diva = 2131165780;
+			
+			// aapt resource value: 0x7F070255
+			public const int villager_icon_Dizzy = 2131165781;
+			
+			// aapt resource value: 0x7F070256
+			public const int villager_icon_Dobie = 2131165782;
+			
+			// aapt resource value: 0x7F070257
+			public const int villager_icon_Doc = 2131165783;
+			
+			// aapt resource value: 0x7F070258
+			public const int villager_icon_Dom = 2131165784;
+			
+			// aapt resource value: 0x7F070259
+			public const int villager_icon_Dora = 2131165785;
+			
+			// aapt resource value: 0x7F07025A
+			public const int villager_icon_Dotty = 2131165786;
+			
+			// aapt resource value: 0x7F07025B
+			public const int villager_icon_Drago = 2131165787;
+			
+			// aapt resource value: 0x7F07025C
+			public const int villager_icon_Drake = 2131165788;
+			
+			// aapt resource value: 0x7F07025D
+			public const int villager_icon_Drift = 2131165789;
+			
+			// aapt resource value: 0x7F07025E
+			public const int villager_icon_Ed = 2131165790;
+			
+			// aapt resource value: 0x7F07025F
+			public const int villager_icon_Egbert = 2131165791;
+			
+			// aapt resource value: 0x7F070260
+			public const int villager_icon_Elise = 2131165792;
+			
+			// aapt resource value: 0x7F070261
+			public const int villager_icon_Ellie = 2131165793;
+			
+			// aapt resource value: 0x7F070262
+			public const int villager_icon_Elmer = 2131165794;
+			
+			// aapt resource value: 0x7F070263
+			public const int villager_icon_Eloise = 2131165795;
+			
+			// aapt resource value: 0x7F070264
+			public const int villager_icon_Elvis = 2131165796;
+			
+			// aapt resource value: 0x7F070265
+			public const int villager_icon_Erik = 2131165797;
+			
+			// aapt resource value: 0x7F070266
+			public const int villager_icon_Eugene = 2131165798;
+			
+			// aapt resource value: 0x7F070267
+			public const int villager_icon_Eunice = 2131165799;
+			
+			// aapt resource value: 0x7F070268
+			public const int villager_icon_Fang = 2131165800;
+			
+			// aapt resource value: 0x7F070269
+			public const int villager_icon_Fauna = 2131165801;
+			
+			// aapt resource value: 0x7F07026A
+			public const int villager_icon_Felicity = 2131165802;
+			
+			// aapt resource value: 0x7F07026B
+			public const int villager_icon_Filbert = 2131165803;
+			
+			// aapt resource value: 0x7F07026C
+			public const int villager_icon_Flip = 2131165804;
+			
+			// aapt resource value: 0x7F07026D
+			public const int villager_icon_Flo = 2131165805;
+			
+			// aapt resource value: 0x7F07026E
+			public const int villager_icon_Flora = 2131165806;
+			
+			// aapt resource value: 0x7F07026F
+			public const int villager_icon_Flurry = 2131165807;
+			
+			// aapt resource value: 0x7F070270
+			public const int villager_icon_Francine = 2131165808;
+			
+			// aapt resource value: 0x7F070271
+			public const int villager_icon_Frank = 2131165809;
+			
+			// aapt resource value: 0x7F070272
+			public const int villager_icon_Freckles = 2131165810;
+			
+			// aapt resource value: 0x7F070273
+			public const int villager_icon_Freya = 2131165811;
+			
+			// aapt resource value: 0x7F070274
+			public const int villager_icon_Friga = 2131165812;
+			
+			// aapt resource value: 0x7F070275
+			public const int villager_icon_Frita = 2131165813;
+			
+			// aapt resource value: 0x7F070276
+			public const int villager_icon_Frobert = 2131165814;
+			
+			// aapt resource value: 0x7F070277
+			public const int villager_icon_Fuchsia = 2131165815;
+			
+			// aapt resource value: 0x7F070278
+			public const int villager_icon_Gabi = 2131165816;
+			
+			// aapt resource value: 0x7F070279
+			public const int villager_icon_Gala = 2131165817;
+			
+			// aapt resource value: 0x7F07027A
+			public const int villager_icon_Gaston = 2131165818;
+			
+			// aapt resource value: 0x7F07027B
+			public const int villager_icon_Gayle = 2131165819;
+			
+			// aapt resource value: 0x7F07027C
+			public const int villager_icon_Genji = 2131165820;
+			
+			// aapt resource value: 0x7F07027D
+			public const int villager_icon_Gigi = 2131165821;
+			
+			// aapt resource value: 0x7F07027E
+			public const int villager_icon_Gladys = 2131165822;
+			
+			// aapt resource value: 0x7F07027F
+			public const int villager_icon_Gloria = 2131165823;
+			
+			// aapt resource value: 0x7F070280
+			public const int villager_icon_Goldie = 2131165824;
+			
+			// aapt resource value: 0x7F070281
+			public const int villager_icon_Gonzo = 2131165825;
+			
+			// aapt resource value: 0x7F070282
+			public const int villager_icon_Goose = 2131165826;
+			
+			// aapt resource value: 0x7F070283
+			public const int villager_icon_Graham = 2131165827;
+			
+			// aapt resource value: 0x7F070284
+			public const int villager_icon_Greta = 2131165828;
+			
+			// aapt resource value: 0x7F070285
+			public const int villager_icon_Grizzly = 2131165829;
+			
+			// aapt resource value: 0x7F070286
+			public const int villager_icon_Groucho = 2131165830;
+			
+			// aapt resource value: 0x7F070287
+			public const int villager_icon_Gruff = 2131165831;
+			
+			// aapt resource value: 0x7F070288
+			public const int villager_icon_Gwen = 2131165832;
+			
+			// aapt resource value: 0x7F070289
+			public const int villager_icon_Hamlet = 2131165833;
+			
+			// aapt resource value: 0x7F07028A
+			public const int villager_icon_Hamphrey = 2131165834;
+			
+			// aapt resource value: 0x7F07028B
+			public const int villager_icon_Hans = 2131165835;
+			
+			// aapt resource value: 0x7F07028C
+			public const int villager_icon_Harry = 2131165836;
+			
+			// aapt resource value: 0x7F07028D
+			public const int villager_icon_Hazel = 2131165837;
+			
+			// aapt resource value: 0x7F07028E
+			public const int villager_icon_Henry = 2131165838;
+			
+			// aapt resource value: 0x7F07028F
+			public const int villager_icon_Hippeux = 2131165839;
+			
+			// aapt resource value: 0x7F070290
+			public const int villager_icon_Hopkins = 2131165840;
+			
+			// aapt resource value: 0x7F070291
+			public const int villager_icon_Hopper = 2131165841;
+			
+			// aapt resource value: 0x7F070292
+			public const int villager_icon_Hornsby = 2131165842;
+			
+			// aapt resource value: 0x7F070293
+			public const int villager_icon_Huck = 2131165843;
+			
+			// aapt resource value: 0x7F070294
+			public const int villager_icon_Hugh = 2131165844;
+			
+			// aapt resource value: 0x7F070295
+			public const int villager_icon_Iggly = 2131165845;
+			
+			// aapt resource value: 0x7F070296
+			public const int villager_icon_Ike = 2131165846;
+			
+			// aapt resource value: 0x7F070297
+			public const int villager_icon_Jacob = 2131165847;
+			
+			// aapt resource value: 0x7F070298
+			public const int villager_icon_Jacques = 2131165848;
+			
+			// aapt resource value: 0x7F070299
+			public const int villager_icon_Jambette = 2131165849;
+			
+			// aapt resource value: 0x7F07029A
+			public const int villager_icon_Jay = 2131165850;
+			
+			// aapt resource value: 0x7F07029B
+			public const int villager_icon_Jeremiah = 2131165851;
+			
+			// aapt resource value: 0x7F07029C
+			public const int villager_icon_Jitters = 2131165852;
+			
+			// aapt resource value: 0x7F07029D
+			public const int villager_icon_Joey = 2131165853;
+			
+			// aapt resource value: 0x7F07029E
+			public const int villager_icon_Judy = 2131165854;
+			
+			// aapt resource value: 0x7F07029F
+			public const int villager_icon_Julia = 2131165855;
+			
+			// aapt resource value: 0x7F0702A0
+			public const int villager_icon_Julian = 2131165856;
+			
+			// aapt resource value: 0x7F0702A1
+			public const int villager_icon_June = 2131165857;
+			
+			// aapt resource value: 0x7F0702A2
+			public const int villager_icon_Kabuki = 2131165858;
+			
+			// aapt resource value: 0x7F0702A3
+			public const int villager_icon_Katt = 2131165859;
+			
+			// aapt resource value: 0x7F0702A4
+			public const int villager_icon_Keaton = 2131165860;
+			
+			// aapt resource value: 0x7F0702A5
+			public const int villager_icon_Ken = 2131165861;
+			
+			// aapt resource value: 0x7F0702A6
+			public const int villager_icon_Ketchup = 2131165862;
+			
+			// aapt resource value: 0x7F0702A7
+			public const int villager_icon_Kevin = 2131165863;
+			
+			// aapt resource value: 0x7F0702A9
+			public const int villager_icon_Kidd = 2131165865;
+			
+			// aapt resource value: 0x7F0702A8
+			public const int villager_icon_Kid_Cat = 2131165864;
+			
+			// aapt resource value: 0x7F0702AA
+			public const int villager_icon_Kiki = 2131165866;
+			
+			// aapt resource value: 0x7F0702AB
+			public const int villager_icon_Kitt = 2131165867;
+			
+			// aapt resource value: 0x7F0702AC
+			public const int villager_icon_Kitty = 2131165868;
+			
+			// aapt resource value: 0x7F0702AD
+			public const int villager_icon_Klaus = 2131165869;
+			
+			// aapt resource value: 0x7F0702AE
+			public const int villager_icon_Knox = 2131165870;
+			
+			// aapt resource value: 0x7F0702AF
+			public const int villager_icon_Kody = 2131165871;
+			
+			// aapt resource value: 0x7F0702B0
+			public const int villager_icon_Kyle = 2131165872;
+			
+			// aapt resource value: 0x7F0702B1
+			public const int villager_icon_Leonardo = 2131165873;
+			
+			// aapt resource value: 0x7F0702B2
+			public const int villager_icon_Leopold = 2131165874;
+			
+			// aapt resource value: 0x7F0702B3
+			public const int villager_icon_Lily = 2131165875;
+			
+			// aapt resource value: 0x7F0702B4
+			public const int villager_icon_Limberg = 2131165876;
+			
+			// aapt resource value: 0x7F0702B5
+			public const int villager_icon_Lionel = 2131165877;
+			
+			// aapt resource value: 0x7F0702B6
+			public const int villager_icon_Lobo = 2131165878;
+			
+			// aapt resource value: 0x7F0702B7
+			public const int villager_icon_Lolly = 2131165879;
+			
+			// aapt resource value: 0x7F0702B8
+			public const int villager_icon_Lopez = 2131165880;
+			
+			// aapt resource value: 0x7F0702B9
+			public const int villager_icon_Louie = 2131165881;
+			
+			// aapt resource value: 0x7F0702BA
+			public const int villager_icon_Lucha = 2131165882;
+			
+			// aapt resource value: 0x7F0702BB
+			public const int villager_icon_Lucky = 2131165883;
+			
+			// aapt resource value: 0x7F0702BC
+			public const int villager_icon_Lucy = 2131165884;
+			
+			// aapt resource value: 0x7F0702BD
+			public const int villager_icon_Lyman = 2131165885;
+			
+			// aapt resource value: 0x7F0702BE
+			public const int villager_icon_Mac = 2131165886;
+			
+			// aapt resource value: 0x7F0702BF
+			public const int villager_icon_Maddie = 2131165887;
+			
+			// aapt resource value: 0x7F0702C0
+			public const int villager_icon_Maelle = 2131165888;
+			
+			// aapt resource value: 0x7F0702C1
+			public const int villager_icon_Maggie = 2131165889;
+			
+			// aapt resource value: 0x7F0702C2
+			public const int villager_icon_Mallary = 2131165890;
+			
+			// aapt resource value: 0x7F0702C3
+			public const int villager_icon_Maple = 2131165891;
+			
+			// aapt resource value: 0x7F0702C4
+			public const int villager_icon_Marcel = 2131165892;
+			
+			// aapt resource value: 0x7F0702C5
+			public const int villager_icon_Marcie = 2131165893;
+			
+			// aapt resource value: 0x7F0702C6
+			public const int villager_icon_Margie = 2131165894;
+			
+			// aapt resource value: 0x7F0702C7
+			public const int villager_icon_Marina = 2131165895;
+			
+			// aapt resource value: 0x7F0702C8
+			public const int villager_icon_Marshal = 2131165896;
+			
+			// aapt resource value: 0x7F0702C9
+			public const int villager_icon_Mathilda = 2131165897;
+			
+			// aapt resource value: 0x7F0702CA
+			public const int villager_icon_Megan = 2131165898;
+			
+			// aapt resource value: 0x7F0702CB
+			public const int villager_icon_Melba = 2131165899;
+			
+			// aapt resource value: 0x7F0702CC
+			public const int villager_icon_Merengue = 2131165900;
+			
+			// aapt resource value: 0x7F0702CD
+			public const int villager_icon_Merry = 2131165901;
+			
+			// aapt resource value: 0x7F0702CE
+			public const int villager_icon_Midge = 2131165902;
+			
+			// aapt resource value: 0x7F0702CF
+			public const int villager_icon_Mint = 2131165903;
+			
+			// aapt resource value: 0x7F0702D0
+			public const int villager_icon_Mira = 2131165904;
+			
+			// aapt resource value: 0x7F0702D1
+			public const int villager_icon_Miranda = 2131165905;
+			
+			// aapt resource value: 0x7F0702D2
+			public const int villager_icon_Mitzi = 2131165906;
+			
+			// aapt resource value: 0x7F0702D3
+			public const int villager_icon_Moe = 2131165907;
+			
+			// aapt resource value: 0x7F0702D4
+			public const int villager_icon_Molly = 2131165908;
+			
+			// aapt resource value: 0x7F0702D5
+			public const int villager_icon_Monique = 2131165909;
+			
+			// aapt resource value: 0x7F0702D6
+			public const int villager_icon_Monty = 2131165910;
+			
+			// aapt resource value: 0x7F0702D7
+			public const int villager_icon_Moose = 2131165911;
+			
+			// aapt resource value: 0x7F0702D8
+			public const int villager_icon_Mott = 2131165912;
+			
+			// aapt resource value: 0x7F0702D9
+			public const int villager_icon_Muffy = 2131165913;
+			
+			// aapt resource value: 0x7F0702DA
+			public const int villager_icon_Murphy = 2131165914;
+			
+			// aapt resource value: 0x7F0702DB
+			public const int villager_icon_Nan = 2131165915;
+			
+			// aapt resource value: 0x7F0702DC
+			public const int villager_icon_Nana = 2131165916;
+			
+			// aapt resource value: 0x7F0702DD
+			public const int villager_icon_Naomi = 2131165917;
+			
+			// aapt resource value: 0x7F0702DE
+			public const int villager_icon_Nate = 2131165918;
+			
+			// aapt resource value: 0x7F0702DF
+			public const int villager_icon_Nibbles = 2131165919;
+			
+			// aapt resource value: 0x7F0702E0
+			public const int villager_icon_Norma = 2131165920;
+			
+			// aapt resource value: 0x7F0702E1
+			public const int villager_icon_Octavian = 2131165921;
+			
+			// aapt resource value: 0x7F0702E2
+			public const int villager_icon_OHare = 2131165922;
+			
+			// aapt resource value: 0x7F0702E3
+			public const int villager_icon_Olaf = 2131165923;
+			
+			// aapt resource value: 0x7F0702E4
+			public const int villager_icon_Olive = 2131165924;
+			
+			// aapt resource value: 0x7F0702E5
+			public const int villager_icon_Olivia = 2131165925;
+			
+			// aapt resource value: 0x7F0702E6
+			public const int villager_icon_Opal = 2131165926;
+			
+			// aapt resource value: 0x7F0702E7
+			public const int villager_icon_Ozzie = 2131165927;
+			
+			// aapt resource value: 0x7F0702E8
+			public const int villager_icon_Pancetti = 2131165928;
+			
+			// aapt resource value: 0x7F0702E9
+			public const int villager_icon_Pango = 2131165929;
+			
+			// aapt resource value: 0x7F0702EA
+			public const int villager_icon_Paolo = 2131165930;
+			
+			// aapt resource value: 0x7F0702EB
+			public const int villager_icon_Papi = 2131165931;
+			
+			// aapt resource value: 0x7F0702EC
+			public const int villager_icon_Pashmina = 2131165932;
+			
+			// aapt resource value: 0x7F0702ED
+			public const int villager_icon_Pate = 2131165933;
+			
+			// aapt resource value: 0x7F0702EE
+			public const int villager_icon_Patty = 2131165934;
+			
+			// aapt resource value: 0x7F0702EF
+			public const int villager_icon_Paula = 2131165935;
+			
+			// aapt resource value: 0x7F0702F0
+			public const int villager_icon_Peaches = 2131165936;
+			
+			// aapt resource value: 0x7F0702F1
+			public const int villager_icon_Peanut = 2131165937;
+			
+			// aapt resource value: 0x7F0702F2
+			public const int villager_icon_Pecan = 2131165938;
+			
+			// aapt resource value: 0x7F0702F3
+			public const int villager_icon_Peck = 2131165939;
+			
+			// aapt resource value: 0x7F0702F4
+			public const int villager_icon_Peewee = 2131165940;
+			
+			// aapt resource value: 0x7F0702F5
+			public const int villager_icon_Peggy = 2131165941;
+			
+			// aapt resource value: 0x7F0702F6
+			public const int villager_icon_Pekoe = 2131165942;
+			
+			// aapt resource value: 0x7F0702F7
+			public const int villager_icon_Penelope = 2131165943;
+			
+			// aapt resource value: 0x7F0702F8
+			public const int villager_icon_Phil = 2131165944;
+			
+			// aapt resource value: 0x7F0702F9
+			public const int villager_icon_Phoebe = 2131165945;
+			
+			// aapt resource value: 0x7F0702FA
+			public const int villager_icon_Pierce = 2131165946;
+			
+			// aapt resource value: 0x7F0702FB
+			public const int villager_icon_Pietro = 2131165947;
+			
+			// aapt resource value: 0x7F0702FC
+			public const int villager_icon_Pinky = 2131165948;
+			
+			// aapt resource value: 0x7F0702FD
+			public const int villager_icon_Piper = 2131165949;
+			
+			// aapt resource value: 0x7F0702FE
+			public const int villager_icon_Pippy = 2131165950;
+			
+			// aapt resource value: 0x7F0702FF
+			public const int villager_icon_Plucky = 2131165951;
+			
+			// aapt resource value: 0x7F070300
+			public const int villager_icon_Pompom = 2131165952;
+			
+			// aapt resource value: 0x7F070301
+			public const int villager_icon_Poncho = 2131165953;
+			
+			// aapt resource value: 0x7F070302
+			public const int villager_icon_Poppy = 2131165954;
+			
+			// aapt resource value: 0x7F070303
+			public const int villager_icon_Portia = 2131165955;
+			
+			// aapt resource value: 0x7F070304
+			public const int villager_icon_Prince = 2131165956;
+			
+			// aapt resource value: 0x7F070305
+			public const int villager_icon_Puck = 2131165957;
+			
+			// aapt resource value: 0x7F070306
+			public const int villager_icon_Puddles = 2131165958;
+			
+			// aapt resource value: 0x7F070307
+			public const int villager_icon_Pudge = 2131165959;
+			
+			// aapt resource value: 0x7F070308
+			public const int villager_icon_Punchy = 2131165960;
+			
+			// aapt resource value: 0x7F070309
+			public const int villager_icon_Purrl = 2131165961;
+			
+			// aapt resource value: 0x7F07030A
+			public const int villager_icon_Queenie = 2131165962;
+			
+			// aapt resource value: 0x7F07030B
+			public const int villager_icon_Quillson = 2131165963;
+			
+			// aapt resource value: 0x7F07030C
+			public const int villager_icon_Raddle = 2131165964;
+			
+			// aapt resource value: 0x7F07030D
+			public const int villager_icon_Rasher = 2131165965;
+			
+			// aapt resource value: 0x7F07030E
+			public const int villager_icon_Raymond = 2131165966;
+			
+			// aapt resource value: 0x7F07030F
+			public const int villager_icon_Renee = 2131165967;
+			
+			// aapt resource value: 0x7F070310
+			public const int villager_icon_Reneigh = 2131165968;
+			
+			// aapt resource value: 0x7F070311
+			public const int villager_icon_Rex = 2131165969;
+			
+			// aapt resource value: 0x7F070312
+			public const int villager_icon_Rhonda = 2131165970;
+			
+			// aapt resource value: 0x7F070313
+			public const int villager_icon_Ribbot = 2131165971;
+			
+			// aapt resource value: 0x7F070314
+			public const int villager_icon_Ricky = 2131165972;
+			
+			// aapt resource value: 0x7F070315
+			public const int villager_icon_Rizzo = 2131165973;
+			
+			// aapt resource value: 0x7F070316
+			public const int villager_icon_Roald = 2131165974;
+			
+			// aapt resource value: 0x7F070317
+			public const int villager_icon_Robin = 2131165975;
+			
+			// aapt resource value: 0x7F070318
+			public const int villager_icon_Rocco = 2131165976;
+			
+			// aapt resource value: 0x7F070319
+			public const int villager_icon_Rocket = 2131165977;
+			
+			// aapt resource value: 0x7F07031A
+			public const int villager_icon_Rod = 2131165978;
+			
+			// aapt resource value: 0x7F07031B
+			public const int villager_icon_Rodeo = 2131165979;
+			
+			// aapt resource value: 0x7F07031C
+			public const int villager_icon_Rodney = 2131165980;
+			
+			// aapt resource value: 0x7F07031D
+			public const int villager_icon_Rolf = 2131165981;
+			
+			// aapt resource value: 0x7F07031E
+			public const int villager_icon_Rooney = 2131165982;
+			
+			// aapt resource value: 0x7F07031F
+			public const int villager_icon_Rory = 2131165983;
+			
+			// aapt resource value: 0x7F070320
+			public const int villager_icon_Roscoe = 2131165984;
+			
+			// aapt resource value: 0x7F070321
+			public const int villager_icon_Rosie = 2131165985;
+			
+			// aapt resource value: 0x7F070322
+			public const int villager_icon_Rowan = 2131165986;
+			
+			// aapt resource value: 0x7F070323
+			public const int villager_icon_Ruby = 2131165987;
+			
+			// aapt resource value: 0x7F070324
+			public const int villager_icon_Rudy = 2131165988;
+			
+			// aapt resource value: 0x7F070325
+			public const int villager_icon_Sally = 2131165989;
+			
+			// aapt resource value: 0x7F070326
+			public const int villager_icon_Samson = 2131165990;
+			
+			// aapt resource value: 0x7F070327
+			public const int villager_icon_Sandy = 2131165991;
+			
+			// aapt resource value: 0x7F070328
+			public const int villager_icon_Savannah = 2131165992;
+			
+			// aapt resource value: 0x7F070329
+			public const int villager_icon_Scoot = 2131165993;
+			
+			// aapt resource value: 0x7F07032A
+			public const int villager_icon_Shari = 2131165994;
+			
+			// aapt resource value: 0x7F07032B
+			public const int villager_icon_Sheldon = 2131165995;
+			
+			// aapt resource value: 0x7F07032C
+			public const int villager_icon_Shep = 2131165996;
+			
+			// aapt resource value: 0x7F07032D
+			public const int villager_icon_Sherb = 2131165997;
+			
+			// aapt resource value: 0x7F07032E
+			public const int villager_icon_Simon = 2131165998;
+			
+			// aapt resource value: 0x7F07032F
+			public const int villager_icon_Skye = 2131165999;
+			
+			// aapt resource value: 0x7F070330
+			public const int villager_icon_Sly = 2131166000;
+			
+			// aapt resource value: 0x7F070331
+			public const int villager_icon_Snake = 2131166001;
+			
+			// aapt resource value: 0x7F070332
+			public const int villager_icon_Snooty = 2131166002;
+			
+			// aapt resource value: 0x7F070333
+			public const int villager_icon_Soleil = 2131166003;
+			
+			// aapt resource value: 0x7F070334
+			public const int villager_icon_Sparro = 2131166004;
+			
+			// aapt resource value: 0x7F070335
+			public const int villager_icon_Spike = 2131166005;
+			
+			// aapt resource value: 0x7F070336
+			public const int villager_icon_Spork = 2131166006;
+			
+			// aapt resource value: 0x7F070337
+			public const int villager_icon_Sprinkle = 2131166007;
+			
+			// aapt resource value: 0x7F070338
+			public const int villager_icon_Sprocket = 2131166008;
+			
+			// aapt resource value: 0x7F070339
+			public const int villager_icon_Static = 2131166009;
+			
+			// aapt resource value: 0x7F07033A
+			public const int villager_icon_Stella = 2131166010;
+			
+			// aapt resource value: 0x7F07033B
+			public const int villager_icon_Sterling = 2131166011;
+			
+			// aapt resource value: 0x7F07033C
+			public const int villager_icon_Stinky = 2131166012;
+			
+			// aapt resource value: 0x7F07033D
+			public const int villager_icon_Stitches = 2131166013;
+			
+			// aapt resource value: 0x7F07033E
+			public const int villager_icon_Stu = 2131166014;
+			
+			// aapt resource value: 0x7F07033F
+			public const int villager_icon_Sydney = 2131166015;
+			
+			// aapt resource value: 0x7F070340
+			public const int villager_icon_Sylvana = 2131166016;
+			
+			// aapt resource value: 0x7F070341
+			public const int villager_icon_Sylvia = 2131166017;
+			
+			// aapt resource value: 0x7F070343
+			public const int villager_icon_Tabby = 2131166019;
+			
+			// aapt resource value: 0x7F070344
+			public const int villager_icon_Tad = 2131166020;
+			
+			// aapt resource value: 0x7F070345
+			public const int villager_icon_Tammi = 2131166021;
+			
+			// aapt resource value: 0x7F070346
+			public const int villager_icon_Tammy = 2131166022;
+			
+			// aapt resource value: 0x7F070347
+			public const int villager_icon_Tangy = 2131166023;
+			
+			// aapt resource value: 0x7F070348
+			public const int villager_icon_Tank = 2131166024;
+			
+			// aapt resource value: 0x7F070349
+			public const int villager_icon_Tasha = 2131166025;
+			
+			// aapt resource value: 0x7F07034A
+			public const int villager_icon_Teddy = 2131166026;
+			
+			// aapt resource value: 0x7F07034B
+			public const int villager_icon_Tex = 2131166027;
+			
+			// aapt resource value: 0x7F07034C
+			public const int villager_icon_Tia = 2131166028;
+			
+			// aapt resource value: 0x7F07034D
+			public const int villager_icon_Tiffany = 2131166029;
+			
+			// aapt resource value: 0x7F07034E
+			public const int villager_icon_Timbra = 2131166030;
+			
+			// aapt resource value: 0x7F07034F
+			public const int villager_icon_Tipper = 2131166031;
+			
+			// aapt resource value: 0x7F070350
+			public const int villager_icon_Tom = 2131166032;
+			
+			// aapt resource value: 0x7F070351
+			public const int villager_icon_Truffles = 2131166033;
+			
+			// aapt resource value: 0x7F070352
+			public const int villager_icon_Tucker = 2131166034;
+			
+			// aapt resource value: 0x7F070353
+			public const int villager_icon_Tutu = 2131166035;
+			
+			// aapt resource value: 0x7F070354
+			public const int villager_icon_Twiggy = 2131166036;
+			
+			// aapt resource value: 0x7F070355
+			public const int villager_icon_Tybalt = 2131166037;
+			
+			// aapt resource value: 0x7F070342
+			public const int villager_icon_T_Bone = 2131166018;
+			
+			// aapt resource value: 0x7F070356
+			public const int villager_icon_Ursala = 2131166038;
+			
+			// aapt resource value: 0x7F070357
+			public const int villager_icon_Velma = 2131166039;
+			
+			// aapt resource value: 0x7F070358
+			public const int villager_icon_Vesta = 2131166040;
+			
+			// aapt resource value: 0x7F070359
+			public const int villager_icon_Vic = 2131166041;
+			
+			// aapt resource value: 0x7F07035A
+			public const int villager_icon_Victoria = 2131166042;
+			
+			// aapt resource value: 0x7F07035B
+			public const int villager_icon_Violet = 2131166043;
+			
+			// aapt resource value: 0x7F07035C
+			public const int villager_icon_Vivian = 2131166044;
+			
+			// aapt resource value: 0x7F07035D
+			public const int villager_icon_Vladimir = 2131166045;
+			
+			// aapt resource value: 0x7F07035E
+			public const int villager_icon_Wade = 2131166046;
+			
+			// aapt resource value: 0x7F07035F
+			public const int villager_icon_Walker = 2131166047;
+			
+			// aapt resource value: 0x7F070360
+			public const int villager_icon_Walt = 2131166048;
+			
+			// aapt resource value: 0x7F070361
+			public const int villager_icon_Wart_Jr = 2131166049;
+			
+			// aapt resource value: 0x7F070362
+			public const int villager_icon_Weber = 2131166050;
+			
+			// aapt resource value: 0x7F070363
+			public const int villager_icon_Wendy = 2131166051;
+			
+			// aapt resource value: 0x7F070364
+			public const int villager_icon_Whitney = 2131166052;
+			
+			// aapt resource value: 0x7F070365
+			public const int villager_icon_Willow = 2131166053;
+			
+			// aapt resource value: 0x7F070366
+			public const int villager_icon_Winnie = 2131166054;
+			
+			// aapt resource value: 0x7F070367
+			public const int villager_icon_Wolfgang = 2131166055;
+			
+			// aapt resource value: 0x7F070368
+			public const int villager_icon_Yuka = 2131166056;
+			
+			// aapt resource value: 0x7F070369
+			public const int villager_icon_Zell = 2131166057;
+			
+			// aapt resource value: 0x7F07036A
+			public const int villager_icon_Zucker = 2131166058;
+			
+			// aapt resource value: 0x7F07036B
+			public const int villager_Iggly = 2131166059;
+			
+			// aapt resource value: 0x7F07036C
+			public const int villager_Ike = 2131166060;
+			
+			// aapt resource value: 0x7F07036D
+			public const int villager_Jacob = 2131166061;
+			
+			// aapt resource value: 0x7F07036E
+			public const int villager_Jacques = 2131166062;
+			
+			// aapt resource value: 0x7F07036F
+			public const int villager_Jambette = 2131166063;
+			
+			// aapt resource value: 0x7F070370
+			public const int villager_Jay = 2131166064;
+			
+			// aapt resource value: 0x7F070371
+			public const int villager_Jeremiah = 2131166065;
+			
+			// aapt resource value: 0x7F070372
+			public const int villager_Jitters = 2131166066;
+			
+			// aapt resource value: 0x7F070373
+			public const int villager_Joey = 2131166067;
+			
+			// aapt resource value: 0x7F070374
+			public const int villager_Judy = 2131166068;
+			
+			// aapt resource value: 0x7F070375
+			public const int villager_Julia = 2131166069;
+			
+			// aapt resource value: 0x7F070376
+			public const int villager_Julian = 2131166070;
+			
+			// aapt resource value: 0x7F070377
+			public const int villager_June = 2131166071;
+			
+			// aapt resource value: 0x7F070378
+			public const int villager_Kabuki = 2131166072;
+			
+			// aapt resource value: 0x7F070379
+			public const int villager_Katt = 2131166073;
+			
+			// aapt resource value: 0x7F07037A
+			public const int villager_Keaton = 2131166074;
+			
+			// aapt resource value: 0x7F07037B
+			public const int villager_Ken = 2131166075;
+			
+			// aapt resource value: 0x7F07037C
+			public const int villager_Ketchup = 2131166076;
+			
+			// aapt resource value: 0x7F07037D
+			public const int villager_Kevin = 2131166077;
+			
+			// aapt resource value: 0x7F07037F
+			public const int villager_Kidd = 2131166079;
+			
+			// aapt resource value: 0x7F07037E
+			public const int villager_Kid_Cat = 2131166078;
+			
+			// aapt resource value: 0x7F070380
+			public const int villager_Kiki = 2131166080;
+			
+			// aapt resource value: 0x7F070381
+			public const int villager_Kitt = 2131166081;
+			
+			// aapt resource value: 0x7F070382
+			public const int villager_Kitty = 2131166082;
+			
+			// aapt resource value: 0x7F070383
+			public const int villager_Klaus = 2131166083;
+			
+			// aapt resource value: 0x7F070384
+			public const int villager_Knox = 2131166084;
+			
+			// aapt resource value: 0x7F070385
+			public const int villager_Kody = 2131166085;
+			
+			// aapt resource value: 0x7F070386
+			public const int villager_Kyle = 2131166086;
+			
+			// aapt resource value: 0x7F070387
+			public const int villager_Leonardo = 2131166087;
+			
+			// aapt resource value: 0x7F070388
+			public const int villager_Leopold = 2131166088;
+			
+			// aapt resource value: 0x7F070389
+			public const int villager_Lily = 2131166089;
+			
+			// aapt resource value: 0x7F07038A
+			public const int villager_Limberg = 2131166090;
+			
+			// aapt resource value: 0x7F07038B
+			public const int villager_Lionel = 2131166091;
+			
+			// aapt resource value: 0x7F07038C
+			public const int villager_Lobo = 2131166092;
+			
+			// aapt resource value: 0x7F07038D
+			public const int villager_Lolly = 2131166093;
+			
+			// aapt resource value: 0x7F07038E
+			public const int villager_Lopez = 2131166094;
+			
+			// aapt resource value: 0x7F07038F
+			public const int villager_Louie = 2131166095;
+			
+			// aapt resource value: 0x7F070390
+			public const int villager_Lucha = 2131166096;
+			
+			// aapt resource value: 0x7F070391
+			public const int villager_Lucky = 2131166097;
+			
+			// aapt resource value: 0x7F070392
+			public const int villager_Lucy = 2131166098;
+			
+			// aapt resource value: 0x7F070393
+			public const int villager_Lyman = 2131166099;
+			
+			// aapt resource value: 0x7F070394
+			public const int villager_Mac = 2131166100;
+			
+			// aapt resource value: 0x7F070395
+			public const int villager_Maddie = 2131166101;
+			
+			// aapt resource value: 0x7F070396
+			public const int villager_Maelle = 2131166102;
+			
+			// aapt resource value: 0x7F070397
+			public const int villager_Maggie = 2131166103;
+			
+			// aapt resource value: 0x7F070398
+			public const int villager_Mallary = 2131166104;
+			
+			// aapt resource value: 0x7F070399
+			public const int villager_Maple = 2131166105;
+			
+			// aapt resource value: 0x7F07039A
+			public const int villager_Marcel = 2131166106;
+			
+			// aapt resource value: 0x7F07039B
+			public const int villager_Marcie = 2131166107;
+			
+			// aapt resource value: 0x7F07039C
+			public const int villager_Margie = 2131166108;
+			
+			// aapt resource value: 0x7F07039D
+			public const int villager_Marina = 2131166109;
+			
+			// aapt resource value: 0x7F07039E
+			public const int villager_Marshal = 2131166110;
+			
+			// aapt resource value: 0x7F07039F
+			public const int villager_Mathilda = 2131166111;
+			
+			// aapt resource value: 0x7F0703A0
+			public const int villager_Megan = 2131166112;
+			
+			// aapt resource value: 0x7F0703A1
+			public const int villager_Melba = 2131166113;
+			
+			// aapt resource value: 0x7F0703A2
+			public const int villager_Merengue = 2131166114;
+			
+			// aapt resource value: 0x7F0703A3
+			public const int villager_Merry = 2131166115;
+			
+			// aapt resource value: 0x7F0703A4
+			public const int villager_Midge = 2131166116;
+			
+			// aapt resource value: 0x7F0703A5
+			public const int villager_Mint = 2131166117;
+			
+			// aapt resource value: 0x7F0703A6
+			public const int villager_Mira = 2131166118;
+			
+			// aapt resource value: 0x7F0703A7
+			public const int villager_Miranda = 2131166119;
+			
+			// aapt resource value: 0x7F0703A8
+			public const int villager_Mitzi = 2131166120;
+			
+			// aapt resource value: 0x7F0703A9
+			public const int villager_Moe = 2131166121;
+			
+			// aapt resource value: 0x7F0703AA
+			public const int villager_Molly = 2131166122;
+			
+			// aapt resource value: 0x7F0703AB
+			public const int villager_Monique = 2131166123;
+			
+			// aapt resource value: 0x7F0703AC
+			public const int villager_Monty = 2131166124;
+			
+			// aapt resource value: 0x7F0703AD
+			public const int villager_Moose = 2131166125;
+			
+			// aapt resource value: 0x7F0703AE
+			public const int villager_Mott = 2131166126;
+			
+			// aapt resource value: 0x7F0703AF
+			public const int villager_Muffy = 2131166127;
+			
+			// aapt resource value: 0x7F0703B0
+			public const int villager_Murphy = 2131166128;
+			
+			// aapt resource value: 0x7F0703B1
+			public const int villager_Nan = 2131166129;
+			
+			// aapt resource value: 0x7F0703B2
+			public const int villager_Nana = 2131166130;
+			
+			// aapt resource value: 0x7F0703B3
+			public const int villager_Naomi = 2131166131;
+			
+			// aapt resource value: 0x7F0703B4
+			public const int villager_Nate = 2131166132;
+			
+			// aapt resource value: 0x7F0703B5
+			public const int villager_Nibbles = 2131166133;
+			
+			// aapt resource value: 0x7F0703B6
+			public const int villager_Norma = 2131166134;
+			
+			// aapt resource value: 0x7F0703B7
+			public const int villager_Octavian = 2131166135;
+			
+			// aapt resource value: 0x7F0703B8
+			public const int villager_OHare = 2131166136;
+			
+			// aapt resource value: 0x7F0703B9
+			public const int villager_Olaf = 2131166137;
+			
+			// aapt resource value: 0x7F0703BA
+			public const int villager_Olive = 2131166138;
+			
+			// aapt resource value: 0x7F0703BB
+			public const int villager_Olivia = 2131166139;
+			
+			// aapt resource value: 0x7F0703BC
+			public const int villager_Opal = 2131166140;
+			
+			// aapt resource value: 0x7F0703BD
+			public const int villager_Ozzie = 2131166141;
+			
+			// aapt resource value: 0x7F0703BE
+			public const int villager_Pancetti = 2131166142;
+			
+			// aapt resource value: 0x7F0703BF
+			public const int villager_Pango = 2131166143;
+			
+			// aapt resource value: 0x7F0703C0
+			public const int villager_Paolo = 2131166144;
+			
+			// aapt resource value: 0x7F0703C1
+			public const int villager_Papi = 2131166145;
+			
+			// aapt resource value: 0x7F0703C2
+			public const int villager_Pashmina = 2131166146;
+			
+			// aapt resource value: 0x7F0703C3
+			public const int villager_Pate = 2131166147;
+			
+			// aapt resource value: 0x7F0703C4
+			public const int villager_Patty = 2131166148;
+			
+			// aapt resource value: 0x7F0703C5
+			public const int villager_Paula = 2131166149;
+			
+			// aapt resource value: 0x7F0703C6
+			public const int villager_Peaches = 2131166150;
+			
+			// aapt resource value: 0x7F0703C7
+			public const int villager_Peanut = 2131166151;
+			
+			// aapt resource value: 0x7F0703C8
+			public const int villager_Pecan = 2131166152;
+			
+			// aapt resource value: 0x7F0703C9
+			public const int villager_Peck = 2131166153;
+			
+			// aapt resource value: 0x7F0703CA
+			public const int villager_Peewee = 2131166154;
+			
+			// aapt resource value: 0x7F0703CB
+			public const int villager_Peggy = 2131166155;
+			
+			// aapt resource value: 0x7F0703CC
+			public const int villager_Pekoe = 2131166156;
+			
+			// aapt resource value: 0x7F0703CD
+			public const int villager_Penelope = 2131166157;
+			
+			// aapt resource value: 0x7F0703CE
+			public const int villager_Phil = 2131166158;
+			
+			// aapt resource value: 0x7F0703CF
+			public const int villager_Phoebe = 2131166159;
+			
+			// aapt resource value: 0x7F0703D0
+			public const int villager_Pierce = 2131166160;
+			
+			// aapt resource value: 0x7F0703D1
+			public const int villager_Pietro = 2131166161;
+			
+			// aapt resource value: 0x7F0703D2
+			public const int villager_Pinky = 2131166162;
+			
+			// aapt resource value: 0x7F0703D3
+			public const int villager_Piper = 2131166163;
+			
+			// aapt resource value: 0x7F0703D4
+			public const int villager_Pippy = 2131166164;
+			
+			// aapt resource value: 0x7F0703D5
+			public const int villager_Plucky = 2131166165;
+			
+			// aapt resource value: 0x7F0703D6
+			public const int villager_Pompom = 2131166166;
+			
+			// aapt resource value: 0x7F0703D7
+			public const int villager_Poncho = 2131166167;
+			
+			// aapt resource value: 0x7F0703D8
+			public const int villager_Poppy = 2131166168;
+			
+			// aapt resource value: 0x7F0703D9
+			public const int villager_Portia = 2131166169;
+			
+			// aapt resource value: 0x7F0703DA
+			public const int villager_Prince = 2131166170;
+			
+			// aapt resource value: 0x7F0703DB
+			public const int villager_Puck = 2131166171;
+			
+			// aapt resource value: 0x7F0703DC
+			public const int villager_Puddles = 2131166172;
+			
+			// aapt resource value: 0x7F0703DD
+			public const int villager_Pudge = 2131166173;
+			
+			// aapt resource value: 0x7F0703DE
+			public const int villager_Punchy = 2131166174;
+			
+			// aapt resource value: 0x7F0703DF
+			public const int villager_Purrl = 2131166175;
+			
+			// aapt resource value: 0x7F0703E0
+			public const int villager_Queenie = 2131166176;
+			
+			// aapt resource value: 0x7F0703E1
+			public const int villager_Quillson = 2131166177;
+			
+			// aapt resource value: 0x7F0703E2
+			public const int villager_Raddle = 2131166178;
+			
+			// aapt resource value: 0x7F0703E3
+			public const int villager_Rasher = 2131166179;
+			
+			// aapt resource value: 0x7F0703E4
+			public const int villager_Raymond = 2131166180;
+			
+			// aapt resource value: 0x7F0703E5
+			public const int villager_remove = 2131166181;
+			
+			// aapt resource value: 0x7F0703E6
+			public const int villager_Renee = 2131166182;
+			
+			// aapt resource value: 0x7F0703E7
+			public const int villager_Reneigh = 2131166183;
+			
+			// aapt resource value: 0x7F0703E8
+			public const int villager_Rex = 2131166184;
+			
+			// aapt resource value: 0x7F0703E9
+			public const int villager_Rhonda = 2131166185;
+			
+			// aapt resource value: 0x7F0703EA
+			public const int villager_Ribbot = 2131166186;
+			
+			// aapt resource value: 0x7F0703EB
+			public const int villager_Ricky = 2131166187;
+			
+			// aapt resource value: 0x7F0703EC
+			public const int villager_Rizzo = 2131166188;
+			
+			// aapt resource value: 0x7F0703ED
+			public const int villager_Roald = 2131166189;
+			
+			// aapt resource value: 0x7F0703EE
+			public const int villager_Robin = 2131166190;
+			
+			// aapt resource value: 0x7F0703EF
+			public const int villager_Rocco = 2131166191;
+			
+			// aapt resource value: 0x7F0703F0
+			public const int villager_Rocket = 2131166192;
+			
+			// aapt resource value: 0x7F0703F1
+			public const int villager_Rod = 2131166193;
+			
+			// aapt resource value: 0x7F0703F2
+			public const int villager_Rodeo = 2131166194;
+			
+			// aapt resource value: 0x7F0703F3
+			public const int villager_Rodney = 2131166195;
+			
+			// aapt resource value: 0x7F0703F4
+			public const int villager_Rolf = 2131166196;
+			
+			// aapt resource value: 0x7F0703F5
+			public const int villager_Rooney = 2131166197;
+			
+			// aapt resource value: 0x7F0703F6
+			public const int villager_Rory = 2131166198;
+			
+			// aapt resource value: 0x7F0703F7
+			public const int villager_Roscoe = 2131166199;
+			
+			// aapt resource value: 0x7F0703F8
+			public const int villager_Rosie = 2131166200;
+			
+			// aapt resource value: 0x7F0703F9
+			public const int villager_Rowan = 2131166201;
+			
+			// aapt resource value: 0x7F0703FA
+			public const int villager_Ruby = 2131166202;
+			
+			// aapt resource value: 0x7F0703FB
+			public const int villager_Rudy = 2131166203;
+			
+			// aapt resource value: 0x7F0703FC
+			public const int villager_Sally = 2131166204;
+			
+			// aapt resource value: 0x7F0703FD
+			public const int villager_Samson = 2131166205;
+			
+			// aapt resource value: 0x7F0703FE
+			public const int villager_Sandy = 2131166206;
+			
+			// aapt resource value: 0x7F0703FF
+			public const int villager_Savannah = 2131166207;
+			
+			// aapt resource value: 0x7F070400
+			public const int villager_Scoot = 2131166208;
+			
+			// aapt resource value: 0x7F070401
+			public const int villager_Shari = 2131166209;
+			
+			// aapt resource value: 0x7F070402
+			public const int villager_Sheldon = 2131166210;
+			
+			// aapt resource value: 0x7F070403
+			public const int villager_Shep = 2131166211;
+			
+			// aapt resource value: 0x7F070404
+			public const int villager_Sherb = 2131166212;
+			
+			// aapt resource value: 0x7F070405
+			public const int villager_Simon = 2131166213;
+			
+			// aapt resource value: 0x7F070406
+			public const int villager_Skye = 2131166214;
+			
+			// aapt resource value: 0x7F070407
+			public const int villager_Sly = 2131166215;
+			
+			// aapt resource value: 0x7F070408
+			public const int villager_Snake = 2131166216;
+			
+			// aapt resource value: 0x7F070409
+			public const int villager_Snooty = 2131166217;
+			
+			// aapt resource value: 0x7F07040A
+			public const int villager_Soleil = 2131166218;
+			
+			// aapt resource value: 0x7F07040B
+			public const int villager_Sparro = 2131166219;
+			
+			// aapt resource value: 0x7F07040C
+			public const int villager_Spike = 2131166220;
+			
+			// aapt resource value: 0x7F07040D
+			public const int villager_Spork = 2131166221;
+			
+			// aapt resource value: 0x7F07040E
+			public const int villager_Sprinkle = 2131166222;
+			
+			// aapt resource value: 0x7F07040F
+			public const int villager_Sprocket = 2131166223;
+			
+			// aapt resource value: 0x7F070410
+			public const int villager_Static = 2131166224;
+			
+			// aapt resource value: 0x7F070411
+			public const int villager_Stella = 2131166225;
+			
+			// aapt resource value: 0x7F070412
+			public const int villager_Sterling = 2131166226;
+			
+			// aapt resource value: 0x7F070413
+			public const int villager_Stinky = 2131166227;
+			
+			// aapt resource value: 0x7F070414
+			public const int villager_Stitches = 2131166228;
+			
+			// aapt resource value: 0x7F070415
+			public const int villager_Stu = 2131166229;
+			
+			// aapt resource value: 0x7F070416
+			public const int villager_Sydney = 2131166230;
+			
+			// aapt resource value: 0x7F070417
+			public const int villager_Sylvana = 2131166231;
+			
+			// aapt resource value: 0x7F070418
+			public const int villager_Sylvia = 2131166232;
+			
+			// aapt resource value: 0x7F07041A
+			public const int villager_Tabby = 2131166234;
+			
+			// aapt resource value: 0x7F07041B
+			public const int villager_Tad = 2131166235;
+			
+			// aapt resource value: 0x7F07041C
+			public const int villager_Tammi = 2131166236;
+			
+			// aapt resource value: 0x7F07041D
+			public const int villager_Tammy = 2131166237;
+			
+			// aapt resource value: 0x7F07041E
+			public const int villager_Tangy = 2131166238;
+			
+			// aapt resource value: 0x7F07041F
+			public const int villager_Tank = 2131166239;
+			
+			// aapt resource value: 0x7F070420
+			public const int villager_Tasha = 2131166240;
+			
+			// aapt resource value: 0x7F070421
+			public const int villager_Teddy = 2131166241;
+			
+			// aapt resource value: 0x7F070422
+			public const int villager_Tex = 2131166242;
+			
+			// aapt resource value: 0x7F070423
+			public const int villager_Tia = 2131166243;
+			
+			// aapt resource value: 0x7F070424
+			public const int villager_Tiffany = 2131166244;
+			
+			// aapt resource value: 0x7F070425
+			public const int villager_Timbra = 2131166245;
+			
+			// aapt resource value: 0x7F070426
+			public const int villager_Tipper = 2131166246;
+			
+			// aapt resource value: 0x7F070427
+			public const int villager_Tom = 2131166247;
+			
+			// aapt resource value: 0x7F070428
+			public const int villager_Truffles = 2131166248;
+			
+			// aapt resource value: 0x7F070429
+			public const int villager_Tucker = 2131166249;
+			
+			// aapt resource value: 0x7F07042A
+			public const int villager_Tutu = 2131166250;
+			
+			// aapt resource value: 0x7F07042B
+			public const int villager_Twiggy = 2131166251;
+			
+			// aapt resource value: 0x7F07042C
+			public const int villager_Tybalt = 2131166252;
+			
+			// aapt resource value: 0x7F070419
+			public const int villager_T_Bone = 2131166233;
+			
+			// aapt resource value: 0x7F07042D
+			public const int villager_Ursala = 2131166253;
+			
+			// aapt resource value: 0x7F07042E
+			public const int villager_Velma = 2131166254;
+			
+			// aapt resource value: 0x7F07042F
+			public const int villager_Vesta = 2131166255;
+			
+			// aapt resource value: 0x7F070430
+			public const int villager_Vic = 2131166256;
+			
+			// aapt resource value: 0x7F070431
+			public const int villager_Victoria = 2131166257;
+			
+			// aapt resource value: 0x7F070432
+			public const int villager_Violet = 2131166258;
+			
+			// aapt resource value: 0x7F070433
+			public const int villager_Vivian = 2131166259;
+			
+			// aapt resource value: 0x7F070434
+			public const int villager_Vladimir = 2131166260;
+			
+			// aapt resource value: 0x7F070435
+			public const int villager_Wade = 2131166261;
+			
+			// aapt resource value: 0x7F070436
+			public const int villager_Walker = 2131166262;
+			
+			// aapt resource value: 0x7F070437
+			public const int villager_Walt = 2131166263;
+			
+			// aapt resource value: 0x7F070438
+			public const int villager_Wart_Jr = 2131166264;
+			
+			// aapt resource value: 0x7F070439
+			public const int villager_Weber = 2131166265;
+			
+			// aapt resource value: 0x7F07043A
+			public const int villager_Wendy = 2131166266;
+			
+			// aapt resource value: 0x7F07043B
+			public const int villager_Whitney = 2131166267;
+			
+			// aapt resource value: 0x7F07043C
+			public const int villager_Willow = 2131166268;
+			
+			// aapt resource value: 0x7F07043D
+			public const int villager_Winnie = 2131166269;
+			
+			// aapt resource value: 0x7F07043E
+			public const int villager_Wolfgang = 2131166270;
+			
+			// aapt resource value: 0x7F07043F
+			public const int villager_Yuka = 2131166271;
+			
+			// aapt resource value: 0x7F070440
+			public const int villager_Zell = 2131166272;
+			
+			// aapt resource value: 0x7F070441
+			public const int villager_Zucker = 2131166273;
+			
+			// aapt resource value: 0x7F070444
+			public const int xamarin_logo = 2131166276;
 			
 			static Drawable()
 			{

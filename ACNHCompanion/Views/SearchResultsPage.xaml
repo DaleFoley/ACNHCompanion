@@ -15,13 +15,13 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
                             <RowDefinition Height="auto"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
@@ -39,7 +39,8 @@
                             Grid.Column="1"
                             Text="Hide"
                             HorizontalOptions="End"
-                            Clicked="ToggleHideShowBugs_Clicked"></Button>
+                            Clicked="ToggleHideShowBugs_Clicked"
+                            x:Name="bugButton"></Button>
 
                         <BoxView Grid.Row="1"
                              Grid.Column="0"
@@ -66,7 +67,8 @@
                             Grid.Column="1"
                             Text="Hide"
                             HorizontalOptions="End"
-                            Clicked="ToggleHideShowFish_Clicked"></Button>
+                            Clicked="ToggleHideShowFish_Clicked"
+                            x:Name="fishButton"></Button>
 
                         <BoxView Grid.Row="4"
                              Grid.Column="0"
@@ -93,7 +95,8 @@
                             Grid.Column="1"
                             Text="Hide"
                             HorizontalOptions="End"
-                            Clicked="ToggleHideShowVillagers_Clicked"></Button>
+                            Clicked="ToggleHideShowVillagers_Clicked"
+                            x:Name="villagerButton"></Button>
 
                         <BoxView Grid.Row="7"
                              Grid.Column="0"
@@ -108,13 +111,9 @@
                                  VerticalOptions="FillAndExpand"
                                  x:Name="collectionVillagers">
                         </StackLayout>
-
-
                     </Grid>
                 </Frame>
-
             </StackLayout>
-
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
