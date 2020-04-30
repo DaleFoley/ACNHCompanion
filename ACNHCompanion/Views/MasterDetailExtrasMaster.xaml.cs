@@ -29,7 +29,11 @@ namespace ACNHCompanion.Views
             MasterDetailExtrasMasterViewModel _view = new MasterDetailExtrasMasterViewModel();
             this.BindingContext = _view;
 
-            DateTime userCustomerDateTime = Helper.GetUserCustomDateTime();
+            DateTime userCustomerDateTime = DateTime.Now;
+            if (!DesignMode.IsDesignModeEnabled)
+            {
+                userCustomerDateTime = Helper.GetUserCustomDateTime();
+            }
 
             datePicker.Date = userCustomerDateTime;
             timePicker.Time = userCustomerDateTime.TimeOfDay;

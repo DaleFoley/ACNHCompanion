@@ -45,11 +45,12 @@
                     </Label>
                 </StackLayout>
             </Frame>
-            
+
             <Frame Padding="8"
-               BackgroundColor="#f5efd1"
-               CornerRadius="10">
-                <Grid>
+                   BackgroundColor="#f5efd1"
+                   CornerRadius="10"
+                   VerticalOptions="Start">
+                <Grid VerticalOptions="Start">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto"></RowDefinition>
                     </Grid.RowDefinitions>
@@ -63,7 +64,7 @@
                     <Image Source="gift.png"
                        Grid.Column="0"
                        Grid.Row="0"
-                       VerticalOptions="Center"
+                       VerticalOptions="Start"
                        HorizontalOptions="Center">
                     </Image>
 
@@ -89,60 +90,65 @@
 
                         <Label Grid.Row="0"
                                Grid.Column="0"
-                               Text="Birthday's Next 7 Days:"
+                               Text="Birthday's This Month:"
                                HorizontalOptions="Center"
                                VerticalOptions="Center"></Label>
 
-                        <FlexLayout Grid.Row="1"
-                                    Grid.Column="0"
-                                    Wrap="Wrap"
-                                    AlignItems="Start"
-                                    JustifyContent="SpaceAround"
-                                    IsVisible="True"
-                                    InputTransparent="False">
+                        <StackLayout Grid.Row="1"
+                                     Grid.Column="0"
+                                     BindableLayout.ItemsSource="{Binding VillagersWithBirthdays}"
+                                     IsVisible="True"
+                                     InputTransparent="False">
+                            <BindableLayout.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
 
-                            <CollectionView VerticalOptions="Start"
-                                            ItemsSource="{Binding VillagersWithBirthdays}">
-                                <CollectionView.ItemTemplate>                                    
-                                    <DataTemplate>
-                                        
                                         <Frame CornerRadius="25"
                                                BackgroundColor="Aquamarine"
-                                               Padding="8">
+                                               Padding="8"
+                                               Margin="5"
+                                               Grid.Row="0"
+                                               Grid.Column="0">
                                             <Image Source="{Binding IconName}"                                   
-                                                    HeightRequest="32"
-                                                    WidthRequest="32">
-                                        <Image.GestureRecognizers>
-                                            <TapGestureRecognizer
-                                                NumberOfTapsRequired="1"
-                                                Command="{Binding TestCommand}"
-                                                CommandParameter="{Binding ID}"></TapGestureRecognizer>
-                                        </Image.GestureRecognizers>
+                                               HeightRequest="32"
+                                               WidthRequest="32">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer
+                                                    NumberOfTapsRequired="1"
+                                                    Command="{Binding TestCommand}"
+                                                    CommandParameter="{Binding ID}"></TapGestureRecognizer>
+                                                </Image.GestureRecognizers>
                                             </Image>
                                         </Frame>
-                                    </DataTemplate>
-                                </CollectionView.ItemTemplate>    
-                            </CollectionView>
-                            
-                            <d:Frame CornerRadius="25"
-                                   BackgroundColor="Aquamarine"
-                                   Padding="8">                            
-                                <Image Source="villager_icon_Erik"                                   
-                                   HeightRequest="32"
-                                   WidthRequest="32">
-                                    <Image.GestureRecognizers>
-                                        <TapGestureRecognizer
-                                            NumberOfTapsRequired="1"
-                                            Command="{Binding TestCommand}"
-                                            CommandParameter="{Binding ID}"></TapGestureRecognizer>
-                                    </Image.GestureRecognizers>
-                                </Image>
-                            </d:Frame>
 
-                        </FlexLayout>
+                                        <Label Grid.Row="0"
+                                               Grid.Column="1"
+                                               Text="{Binding Name}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center">                                            
+                                        </Label>
+
+                                        <Label Grid.Row="0"
+                                               Grid.Column="2"
+                                               Text="{Binding Birthday}"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="Center"></Label>
+                                    </Grid>
+                                </DataTemplate>
+                            </BindableLayout.ItemTemplate>
+                        </StackLayout>
                     </Grid>
                 </Grid>
             </Frame>
+
 
         </StackLayout>
 

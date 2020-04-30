@@ -64,22 +64,25 @@ namespace ACNHCompanion
         {
             DateTime newDateTime = DateTime.Now;
 
-            Config customUserTimeDifference = App.Config.Where(config => config.Name == Strings.Config.CUSTOM_USER_TIME_DIFFERENCE).FirstOrDefault();
-            string customUserTimeDifferenceValue = customUserTimeDifference.Value;
-
-            if (!string.IsNullOrEmpty(customUserTimeDifferenceValue))
+            if(!DesignMode.IsDesignModeEnabled)
             {
-                DateTime currentDateTime = DateTime.Now;
+                Config customUserTimeDifference = App.Config.Where(config => config.Name == Strings.Config.CUSTOM_USER_TIME_DIFFERENCE).FirstOrDefault();
+                string customUserTimeDifferenceValue = customUserTimeDifference.Value;
 
-                //TODO: constant minute string.
-                customUserTimeDifferenceValue = customUserTimeDifferenceValue.Replace(" minute", "");
-
-                double totalMinutes;
-                bool isTotalMinutesValid = double.TryParse(customUserTimeDifferenceValue, out totalMinutes);
-
-                if (isTotalMinutesValid)
+                if (!string.IsNullOrEmpty(customUserTimeDifferenceValue))
                 {
-                    newDateTime = currentDateTime.AddMinutes(totalMinutes);
+                    DateTime currentDateTime = DateTime.Now;
+
+                    //TODO: constant minute string.
+                    customUserTimeDifferenceValue = customUserTimeDifferenceValue.Replace(" minute", "");
+
+                    double totalMinutes;
+                    bool isTotalMinutesValid = double.TryParse(customUserTimeDifferenceValue, out totalMinutes);
+
+                    if (isTotalMinutesValid)
+                    {
+                        newDateTime = currentDateTime.AddMinutes(totalMinutes);
+                    }
                 }
             }
 

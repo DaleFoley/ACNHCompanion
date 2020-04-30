@@ -104,11 +104,6 @@ namespace ACNHCompanion
             return _dbConnection.Query<Villagers>("select * from villagers where IsResident <> 0");
         }
 
-        public List<Villagers> GetVillagersWithUpcomingBirthdays()
-        {
-            return _dbConnection.Query<Villagers>("select * from villagers limit 12");
-        }
-
         public List<Villagers> GetVillagers(string filterString = "")
         {
             return _dbConnection.Query<Villagers>("select * from [villagers] where 1=1 " + filterString);
