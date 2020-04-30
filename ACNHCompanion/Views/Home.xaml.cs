@@ -22,6 +22,18 @@ namespace ACNHCompanion.Views
         public Home()
         {
             InitializeComponent();
+            this.CurrentPageChanged += Home_CurrentPageChanged;
+        }
+
+        private void Home_CurrentPageChanged(object sender, EventArgs e)
+        {
+            NavigationPage navPage = (NavigationPage)this.CurrentPage;
+            Page currentPage = navPage.CurrentPage;
+
+            if(currentPage.GetType() == typeof(DashboardPage))
+            {
+                DashboardTab.UpdateUpcomingEvent();
+            }
         }
 
         public void SetupTabs()

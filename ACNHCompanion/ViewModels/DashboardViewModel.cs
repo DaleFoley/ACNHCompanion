@@ -57,6 +57,28 @@ namespace ACNHCompanion.ViewModels
             set { if (value != _villagersWithBirthdays) { _villagersWithBirthdays = value; OnNotifyPropertyChanged(nameof(VillagersWithBirthdays)); } }
         }
 
+        private Event _upcomingEvent;
+        public Event UpcomingEvent
+        {
+            get { return _upcomingEvent; }
+            set
+            {
+                if (value != _upcomingEvent)
+                {
+                    _upcomingEvent = value;
+                    OnNotifyPropertyChanged(nameof(UpcomingEvent));
+                }
+            }
+        }
+
+        private string _eventDateDisplay;
+        public string EventDateDisplay
+        {
+            get { return _eventDateDisplay; }
+            set { if (value != _eventDateDisplay) { _eventDateDisplay = value; OnNotifyPropertyChanged(nameof(EventDateDisplay)); } }
+        }
+
+
         public DashboardViewModel()
         {
             RefreshLocalTime();
@@ -65,27 +87,29 @@ namespace ACNHCompanion.ViewModels
             _villagersWithBirthdays = App.ApplicationDatabase.GetVillagerResidents();
             _villagersWithBirthdays = _villagersWithBirthdays.Where(villager => IsVillagerBirthdayThisMonth(villager.Birthday))
                 .OrderBy(villager => villager.Birthday).ToList();
+        }
 
+        public void UpdateUpcomingEvent()
+        {
             Config hemisphereConfig = App.Config.Where(c => c.Name == Strings.Config.HEMISPHERE).FirstOrDefault();
             string selectedHemisphere = hemisphereConfig.Value.ToLower();
 
             List<Event> gameEvents = App.ApplicationDatabase.GetEvents().Where(e => e.Hemisphere.ToLower() == "both" || e.Hemisphere.ToLower() == selectedHemisphere).ToList();
-
-            Event upcomingEvent;
             foreach (Event gameEvent in gameEvents)
             {
                 DateTime nextEventTime = new DateTime(LocalTime.Year, gameEvent.Month, gameEvent.Day);
-                bool isNextEvent = IsNextEvent(gameEvent.IsIntervalBased, LocalTime, nextEventTime);
+                nextEventTime = GetNextEventTime(gameEvent.IsIntervalBased, LocalTime, nextEventTime);
 
-                if(isNextEvent)
+                if (LocalTime < nextEventTime)
                 {
-                    upcomingEvent = gameEvent;
+                    UpcomingEvent = gameEvent;
+                    EventDateDisplay = new DateTime(LocalTime.Year, nextEventTime.Month, nextEventTime.Day).ToString("MMMM dd");
                     break;
                 }
             }
         }
 
-        public bool IsNextEvent(bool isIntervalBased, DateTime currentTime, DateTime eventTime)
+        public DateTime GetNextEventTime(bool isIntervalBased, DateTime currentTime, DateTime eventTime)
         {
             DateTime nextEventDateTime;
 
@@ -98,7 +122,7 @@ namespace ACNHCompanion.ViewModels
                 nextEventDateTime = eventTime;
             }
 
-            return currentTime < nextEventDateTime;
+            return nextEventDateTime;
         }
 
         public DateTime GetEventDateTime(DateTime eventTime)
@@ -113,14 +137,19 @@ namespace ACNHCompanion.ViewModels
             int eventInterval = eventTime.Day;
             int eventIntervalCount = 0;
 
+            eventTime = new DateTime(eventTime.Year, eventTime.Month, 1);
             for (int idx = 0; idx < eventMonthTotalDays; idx++)
             {
-                if(eventIntervalCount == eventInterval) { break; }
+                if(eventIntervalCount == eventInterval) { eventTime = eventTime.AddDays(-1); break; }
 
                 DayOfWeek dow = eventTime.DayOfWeek;
-                if(dow == DayOfWeek.Saturday) { eventIntervalCount++; continue; }
-
                 eventTime = eventTime.AddDays(1);
+
+                if (dow == DayOfWeek.Saturday)
+                {
+                    eventIntervalCount++;
+                    continue;
+                }
             }
 
             return eventTime;

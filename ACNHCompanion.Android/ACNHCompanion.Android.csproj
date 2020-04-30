@@ -3035,5 +3035,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\captured_false.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\events.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

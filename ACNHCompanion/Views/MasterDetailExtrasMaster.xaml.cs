@@ -76,6 +76,8 @@ namespace ACNHCompanion.Views
             timePicker.Time = TimeSpan.Zero;
 
             DashboardVM?.RefreshLocalTime();
+            DashboardVM?.UpdateUpcomingEvent();
+
             RefreshTabPages();
         }
 
