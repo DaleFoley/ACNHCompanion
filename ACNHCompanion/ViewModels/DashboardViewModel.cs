@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACNHCompanion.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -29,10 +30,19 @@ namespace ACNHCompanion.ViewModels
             }
         }
 
+        private List<Villagers> _villagersWithBirthdays;
+        public List<Villagers> VillagersWithBirthdays
+        {
+            get { return _villagersWithBirthdays; }
+            set { if (value != _villagersWithBirthdays) { _villagersWithBirthdays = value; OnNotifyPropertyChanged(nameof(VillagersWithBirthdays)); } }
+        }
+
         public DashboardViewModel()
         {
             RefreshLocalTime();
             Device.StartTimer(TimeSpan.FromSeconds(1), () => UpdateLocalTime());
+
+            _villagersWithBirthdays = App.ApplicationDatabase.GetVillagersWithUpcomingBirthdays();
         }
 
         public void RefreshLocalTime()
