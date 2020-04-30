@@ -104,6 +104,11 @@ namespace ACNHCompanion
             return _dbConnection.Query<Villagers>("select * from villagers where IsResident <> 0");
         }
 
+        public List<Event> GetEvents()
+        {
+            return _dbConnection.Query<Event>("select * from events order by month, day");
+        }
+
         public List<Villagers> GetVillagers(string filterString = "")
         {
             return _dbConnection.Query<Villagers>("select * from [villagers] where 1=1 " + filterString);

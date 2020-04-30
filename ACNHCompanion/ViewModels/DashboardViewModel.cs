@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -65,9 +66,23 @@ namespace ACNHCompanion.ViewModels
             _villagersWithBirthdays = _villagersWithBirthdays.Where(villager => IsVillagerBirthdayThisMonth(villager.Birthday))
                 .OrderBy(villager => villager.Birthday).ToList();
 
-            DateTime nextEventTime = new DateTime(LocalTime.Year, 4, 1);
+            Config hemisphereConfig = App.Config.Where(c => c.Name == Strings.Config.HEMISPHERE).FirstOrDefault();
+            string selectedHemisphere = hemisphereConfig.Value.ToLower();
 
-            IsNextEvent(true, LocalTime, nextEventTime);
+            List<Event> gameEvents = App.ApplicationDatabase.GetEvents().Where(e => e.Hemisphere.ToLower() == "both" || e.Hemisphere.ToLower() == selectedHemisphere).ToList();
+
+            Event upcomingEvent;
+            foreach (Event gameEvent in gameEvents)
+            {
+                DateTime nextEventTime = new DateTime(LocalTime.Year, gameEvent.Month, gameEvent.Day);
+                bool isNextEvent = IsNextEvent(gameEvent.IsIntervalBased, LocalTime, nextEventTime);
+
+                if(isNextEvent)
+                {
+                    upcomingEvent = gameEvent;
+                    break;
+                }
+            }
         }
 
         public bool IsNextEvent(bool isIntervalBased, DateTime currentTime, DateTime eventTime)
@@ -88,6 +103,7 @@ namespace ACNHCompanion.ViewModels
 
         public DateTime GetEventDateTime(DateTime eventTime)
         {
+            //TODO: unit test
             Calendar eventCalendar = CultureInfo.InvariantCulture.Calendar;
 
             int eventMonthTotalDays = eventCalendar.GetDaysInMonth(eventTime.Year, eventTime.Month);
@@ -97,12 +113,14 @@ namespace ACNHCompanion.ViewModels
             int eventInterval = eventTime.Day;
             int eventIntervalCount = 0;
 
-            for (int idx = 0; idx < eventMonthTotalDays || eventIntervalCount == eventInterval; idx++)
+            for (int idx = 0; idx < eventMonthTotalDays; idx++)
             {
+                if(eventIntervalCount == eventInterval) { break; }
+
                 DayOfWeek dow = eventTime.DayOfWeek;
                 if(dow == DayOfWeek.Saturday) { eventIntervalCount++; continue; }
 
-                eventTime.AddDays(1);
+                eventTime = eventTime.AddDays(1);
             }
 
             return eventTime;

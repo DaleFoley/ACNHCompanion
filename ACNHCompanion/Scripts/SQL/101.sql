@@ -40,6 +40,17 @@ create table villagers (ID integer primary key,
             ImageName text,
 			IconName text,
 			IsResident int default 0);
+			
+drop table if exists events;
+create table events
+(
+	ID integer not null primary key,
+	Name text not null,
+	Month int default 0 not null,
+	Day int default 0 not null,
+	IsIntervalBased int default 0 not null,
+	Hemisphere text default 'Both' not null
+);
 
 drop view if exists v_base_critters;
 create view v_base_critters
@@ -1054,4 +1065,31 @@ begin transaction;
 	replace into villagers (ID, Name, Personality, Species, Birthday, Catchphrase, ImageName, IconName, IsResident) values (389, 'Yuka', '♀ Snooty', 'Koala', 'July 20th', '"tsk tsk"', 'villager_Yuka.png', 'villager_icon_Yuka.png', 0);
 	replace into villagers (ID, Name, Personality, Species, Birthday, Catchphrase, ImageName, IconName, IsResident) values (390, 'Zell', '♂ Smug', 'Deer', 'June 7th', '"pronk"', 'villager_Zell.png', 'villager_icon_Zell.png', 0);
 	replace into villagers (ID, Name, Personality, Species, Birthday, Catchphrase, ImageName, IconName, IsResident) values (391, 'Zucker', '♂ Lazy', 'Octopus', 'March 8th', '"bloop"', 'villager_Zucker.png', 'villager_icon_Zucker.png', 0);
+commit;
+
+begin transaction;
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (1, 'New Year''s Day', 1, 1, 0, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (2, 'Fishing Tourney', 1, 2, 1, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (3, 'Bug Off', 1, 3, 1, 'South');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (4, 'Bug Off', 2, 3, 1, 'South');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (5, 'Cherry Blossom Season', 4, 1, 0, 'North');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (6, 'Bunny Day', 4, 1, 0, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (7, 'Fishing Tourney', 4, 2, 1, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (8, 'Nature Day', 4, 23, 0, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (9, 'May Day', 5, 1, 0, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (10, 'Mushrooming Season', 5, 1, 0, 'South');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (11, 'International Museum Day', 5, 18, 0, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (12, 'Wedding Season', 6, 1, 0, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (13, 'Bug Off', 6, 3, 1, 'North');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (14, 'Fishing Tourney', 7, 2, 1, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (15, 'Bug Off', 7, 3, 1, 'North');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (16, 'Bug Off', 8, 3, 1, 'North');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (17, 'Bug Off ', 9, 3, 1, 'North');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (18, 'Cherry Blossom Season', 10, 1, 0, 'South');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (19, 'Fishing Tourney', 10, 2, 1, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (20, 'Mushrooming Season', 11, 1, 0, 'South');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (21, 'Bug Off', 11, 3, 1, 'South');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (22, 'Bug Off', 12, 3, 1, 'South');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (23, 'New Year''s Eve', 12, 31, 0, 'Both');
+	replace into events (ID, Name, Month, Day, IsIntervalBased, Hemisphere) values (24, 'Festive Season', 12, 15, 0, 'Both');
 commit;
