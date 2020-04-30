@@ -42,7 +42,7 @@ namespace ACNHCompanion.ViewModels
 
             set
             {
-                if(value != _localTime)
+                if (value != _localTime)
                 {
                     _localTime = value;
                     OnNotifyPropertyChanged(nameof(LocalTime));
@@ -84,8 +84,14 @@ namespace ACNHCompanion.ViewModels
             RefreshLocalTime();
             Device.StartTimer(TimeSpan.FromSeconds(1), () => UpdateLocalTime());
 
-            _villagersWithBirthdays = App.ApplicationDatabase.GetVillagerResidents();
-            _villagersWithBirthdays = _villagersWithBirthdays.Where(villager => IsVillagerBirthdayThisMonth(villager.Birthday))
+            UpdateUpcomingEvent();
+            UpdateVillagersWithBirthdays();
+        }
+
+        public void UpdateVillagersWithBirthdays()
+        {
+            VillagersWithBirthdays = App.ApplicationDatabase.GetVillagerResidents();
+            VillagersWithBirthdays = VillagersWithBirthdays.Where(villager => IsVillagerBirthdayThisMonth(villager.Birthday))
                 .OrderBy(villager => villager.Birthday).ToList();
         }
 
@@ -98,7 +104,7 @@ namespace ACNHCompanion.ViewModels
             foreach (Event gameEvent in gameEvents)
             {
                 DateTime nextEventTime = new DateTime(LocalTime.Year, gameEvent.Month, gameEvent.Day);
-                nextEventTime = GetNextEventTime(gameEvent.IsIntervalBased, LocalTime, nextEventTime);
+                nextEventTime = GetNextEventTime(gameEvent.IsIntervalBased, nextEventTime);
 
                 if (LocalTime < nextEventTime)
                 {
@@ -109,7 +115,7 @@ namespace ACNHCompanion.ViewModels
             }
         }
 
-        public DateTime GetNextEventTime(bool isIntervalBased, DateTime currentTime, DateTime eventTime)
+        public DateTime GetNextEventTime(bool isIntervalBased, DateTime eventTime)
         {
             DateTime nextEventDateTime;
 

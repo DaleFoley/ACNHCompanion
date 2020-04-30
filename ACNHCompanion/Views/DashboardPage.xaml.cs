@@ -24,17 +24,23 @@ namespace ACNHCompanion.Views
             InitializeComponent();
         }
 
+        override protected void OnAppearing()
+        {
+            DashboardViewModel dvm = (DashboardViewModel)this.BindingContext;
+            dvm.UpdateVillagersWithBirthdays();
+        }
+
         private void SearchBarGlobal_SearchButtonPressed(object sender, EventArgs e)
         {
             Helper.ToggleVisualElementVisibility(SearchFrame);
         }
 
-        async private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
+        private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
         {
             SearchBar searchBar = (SearchBar)sender;
             string searchCriteria = searchBar.Text;
 
-            await Navigation.PushModalAsync(new SearchResultsPage(searchCriteria));
+            Navigation.PushModalAsync(new SearchResultsPage(searchCriteria));
         }
 
         private void SearchBar_Unfocused(object sender, FocusEventArgs e)

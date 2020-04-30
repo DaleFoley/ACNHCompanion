@@ -77,6 +77,7 @@ namespace ACNHCompanion.Views
 
             DashboardVM?.RefreshLocalTime();
             DashboardVM?.UpdateUpcomingEvent();
+            DashboardVM?.UpdateVillagersWithBirthdays();
 
             RefreshTabPages();
         }
