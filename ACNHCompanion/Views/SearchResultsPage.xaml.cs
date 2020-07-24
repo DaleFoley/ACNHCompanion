@@ -23,43 +23,49 @@ namespace ACNHCompanion.Views
             GlobalSearchViewModel = new GlobalSearchViewModel(searchCriteria);
             BindingContext = GlobalSearchViewModel;
 
-            ContentView bugsContentView = critterBugs;
-            bugsContentView.Content.SetBinding(ItemsView.ItemsSourceProperty, "BugsDisplay");
-
-            ContentView fishContentView = critterFish;
-            fishContentView.Content.SetBinding(ItemsView.ItemsSourceProperty, "FishDisplay");
-
-            string villagerFilter = "and Name like '" + searchCriteria + "%'";
-            VillagersViewModel villagerViewModel = new VillagersViewModel(villagerFilter);
-            ContentView villagerContentView = new VillagersContentView(villagerViewModel);            
-
-            collectionVillagers.Children.Add(villagerContentView);
-
-            //Clean up duplication logic here...
-            GridLength gridLengthHidden = new GridLength(0, GridUnitType.Absolute);
-
             if (GlobalSearchViewModel.BugsDisplay.Count == 0)
             {
-                collectionBugs.IsVisible = false;
-                Grid grid = (Grid)collectionBugs.Parent;
+                bugResultLabel.IsVisible = true;
+                bugButton.IsVisible = false;
+            }
+            else
+            {
+                ContentView bugsContentView = new CritterContentView();
+                bugsContentView.Content.SetBinding(ItemsView.ItemsSourceProperty, "BugsDisplay");
 
-                object rowID = collectionBugs.GetValue(Grid.RowProperty);
+                collectionBugs.Children.Add(bugsContentView);
 
-                grid.RowDefinitions[(int)rowID].Height = gridLengthHidden;
-
-                bugButton.Text = "Show";
+                bugsHeaderLabel.Text += " (" + GlobalSearchViewModel.BugsDisplay.Count + ")";
             }
 
-            if(GlobalSearchViewModel.FishDisplay.Count == 0)
+            if (GlobalSearchViewModel.FishDisplay.Count == 0)
             {
-                collectionFish.IsVisible = false;
-                Grid grid = (Grid)collectionFish.Parent;
+                fishResultLabel.IsVisible = true;
+                fishButton.IsVisible = false;
+            }
+            else
+            {
+                ContentView fishContentView = new CritterContentView();
+                fishContentView.Content.SetBinding(ItemsView.ItemsSourceProperty, "FishDisplay");
 
-                object rowID = collectionFish.GetValue(Grid.RowProperty);
+                collectionFish.Children.Add(fishContentView);
 
-                grid.RowDefinitions[(int)rowID].Height = gridLengthHidden;
+                fishHeaderLabel.Text += " (" + GlobalSearchViewModel.FishDisplay.Count + ")";
+            }
 
-                fishButton.Text = "Show";
+            if(GlobalSearchViewModel.VillagersViewModel.VillagersDisplay.Count == 0)
+            {
+                villagerResultLabel.IsVisible = true;
+                villagerButton.IsVisible = false;
+            }
+            else
+            {
+                ContentView villagerContentView = new VillagersContentView(GlobalSearchViewModel.VillagersViewModel);
+                villagerContentView.Content.SetBinding(ItemsView.ItemsSourceProperty, "VillagersDisplay");
+
+                collectionVillagers.Children.Add(villagerContentView);
+
+                villagerHeaderLabel.Text += " (" + GlobalSearchViewModel.VillagersViewModel.VillagersDisplay.Count + ")";
             }
         }
 
@@ -82,7 +88,7 @@ namespace ACNHCompanion.Views
             Grid grid = (Grid)collection.Parent;
             object rowID = collection.GetValue(Grid.RowProperty);
 
-            GridLength gridLengthShown = new GridLength(1, GridUnitType.Star);
+            GridLength gridLengthShown = new GridLength(0, GridUnitType.Auto);
             GridLength gridLengthHidden = new GridLength(0, GridUnitType.Absolute);
 
             if (collection.IsVisible)

@@ -10,6 +10,7 @@ namespace ACNHCompanion.ViewModels
     {
         private string _searchCriteria;
 
+        public VillagersViewModel VillagersViewModel { get; set; }
         public List<CritterMonths> Fish { get; set; }
         public List<CritterMonths> Bugs { get; set; }
         public ObservableCollection<Critter> BugsDisplay { get; set; }
@@ -24,7 +25,9 @@ namespace ACNHCompanion.ViewModels
 
             BugsDisplay = GetCritterViewModelCollection(Bugs);
             FishDisplay = GetCritterViewModelCollection(Fish);
-        }
 
+            string villagerFilter = "and Name like '" + searchCriteria + "%'";
+            VillagersViewModel = new VillagersViewModel(villagerFilter);
+        }
     }
 }

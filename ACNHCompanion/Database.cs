@@ -47,7 +47,7 @@ namespace ACNHCompanion
                 bool isSqlFileNameValid = int.TryParse(Path.GetFileNameWithoutExtension(sqlFileToApply), out sqlFileVersion);
                 if (!isSqlFileNameValid) { continue; }
 
-                if(configVersionValue < sqlFileVersion)
+                if(configVersionValue <= sqlFileVersion)
                 {
                     string sqlContent = File.ReadAllText(sqlFileToApply);
                     string[] sqlContentLines = sqlContent.Split(";".ToCharArray(), StringSplitOptions.RemoveEmptyEntries);

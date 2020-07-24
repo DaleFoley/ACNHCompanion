@@ -33,7 +33,17 @@
                             Grid.Column="0"
                             Text="Bugs"
                             VerticalOptions="CenterAndExpand"
-                            FontSize="Large"></Label>
+                            FontSize="Large"
+                            x:Name="bugsHeaderLabel"></Label>
+
+                        <Label  Grid.Row="0"
+                            Grid.Column="1"
+                            Text="Nothing Found"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="End"
+                            FontSize="Large"
+                            IsVisible="False"
+                            x:Name="bugResultLabel"></Label>
                         
                         <Button Grid.Row="0"
                             Grid.Column="1"
@@ -52,17 +62,26 @@
                                  Grid.Column="0"
                                  Grid.ColumnSpan="2"
                                  IsVisible="True"
-                                 VerticalOptions="FillAndExpand"
+                                 VerticalOptions="Start"
                                  x:Name="collectionBugs">
-                            <views:CritterContentView x:Name="critterBugs"></views:CritterContentView>
                         </StackLayout>
 
                         <Label  Grid.Row="3"
                             Grid.Column="0"
                             Text="Fish"
                             VerticalOptions="CenterAndExpand"
-                            FontSize="Large"></Label>
+                            FontSize="Large"
+                            x:Name="fishHeaderLabel"></Label>
 
+                        <Label  Grid.Row="3"
+                            Grid.Column="1"
+                            Text="Nothing Found"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="End"
+                            FontSize="Large"
+                            IsVisible="False"
+                            x:Name="fishResultLabel"></Label>
+                        
                         <Button Grid.Row="3"
                             Grid.Column="1"
                             Text="Hide"
@@ -80,17 +99,26 @@
                                  Grid.Column="0"
                                  Grid.ColumnSpan="2"
                                  IsVisible="True"
-                                 VerticalOptions="FillAndExpand"
+                                 VerticalOptions="Start"
                                  x:Name="collectionFish">
-                            <views:CritterContentView x:Name="critterFish"></views:CritterContentView>
                         </StackLayout>
 
                         <Label  Grid.Row="6"
                             Grid.Column="0"
                             Text="Villagers"
                             VerticalOptions="CenterAndExpand"
-                            FontSize="Large"></Label>
+                            FontSize="Large"
+                            x:Name="villagerHeaderLabel"></Label>
 
+                        <Label  Grid.Row="6"
+                            Grid.Column="1"
+                            Text="Nothing Found"
+                            VerticalOptions="CenterAndExpand"
+                            HorizontalOptions="End"
+                            FontSize="Large"
+                            IsVisible="False"
+                            x:Name="villagerResultLabel"></Label>
+                        
                         <Button Grid.Row="6"
                             Grid.Column="1"
                             Text="Hide"
@@ -108,7 +136,7 @@
                                  Grid.Column="0"
                                  Grid.ColumnSpan="2"
                                  IsVisible="True"
-                                 VerticalOptions="FillAndExpand"
+                                 VerticalOptions="StartAndExpand"
                                  x:Name="collectionVillagers">
                         </StackLayout>
                     </Grid>
